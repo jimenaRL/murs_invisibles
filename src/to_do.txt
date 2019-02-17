@@ -1,3 +1,2 @@
-- write dedicate servers for each projection space
 - check encoding and deconding
 - fix ugly floating point precision
