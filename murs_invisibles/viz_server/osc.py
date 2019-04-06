@@ -23,7 +23,7 @@ def _readInt(data):
     """Tries to interpret the next 4 bytes of the data
     as a 32-bit integer. """
     if(len(data) < 4):
-        print "Error: too few bytes for int", data, len(data)
+        print("Error: too few bytes for int", data, len(data))
         rest = data
         integer = 0
     else:
@@ -52,7 +52,7 @@ def _readFloat(data):
     """
 
     if(len(data) < 4):
-        print "Error: too few bytes for float", data, len(data)
+        print("Error: too few bytes for float", data, len(data))
         rest = data
         float = 0
     else:
@@ -67,7 +67,7 @@ def decodeOSC(data):
     """
     table = {"i": _readInt, "f": _readFloat, "s": _readString, "b": _readBlob}
     decoded = []
-    address,  rest = _readString(data)
+    address, rest = _readString(data)
     if address.startswith(","):
         typetags = address
         address = ""
