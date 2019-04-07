@@ -74,9 +74,13 @@ class Processer(object):
         return self.replace(s)
 
     def get_out_path(self, in_path):
-        return self.encode(in_path). \
+        out_path = self.encode(in_path). \
             replace('sources', 'm4l'). \
             replace('csv', 'tsv')
+        out_dir = os.path.dirname(out_path)
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
+        return out_path
 
     def to_csv(self, df, in_path):
         out_path = self.get_out_path(in_path)
@@ -86,11 +90,17 @@ class Processer(object):
                   encoding='utf-8',
                   columns=self.out_values,
                   sep=self.out_sep)
+        print(df.head(2))
+        print(df.tail(2))
         print("Saved at {}".format(out_path))
 
     @classmethod
-    def proportion(cls, p):
+    def proportion100(cls, p):
         return abs(p - 50.) / 50
+
+    @classmethod
+    def proportion1(cls, p):
+        return abs(p - .5) / .5
 
     @classmethod
     def girls2boys_ratio(cls, r):
