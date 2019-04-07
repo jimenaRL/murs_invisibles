@@ -13,8 +13,8 @@ proc.rename = {
     'Value': 'value',
 }
 proc.path_fn = {
-    'SYB61_T05_Seats held by Women in Parliament.csv': proc.proportion,
-    'SYB61_T06_Ratio of Girls to Boys in Education.csv': proc.girls2boys_ratio
+    'SYB61_T05_Seats held by Women in Parliament.csv': proc.proportion100,
+    'SYB61_T06_Ratio of Girls to Boys in Education.csv': proc.girls2boys_ratio,
 }
 
 
@@ -39,10 +39,10 @@ for path, fn in proc.path_fn.items():
     df['pays'] = df['pays'].apply(lambda x: proc.encode(x))
 
     # translate formulation
-    df['formulation'] = df['formulation'].apply(lambda x: proc.form_dict_en2fr[x])
+    df['formulation'] = df['formulation'].apply(
+        lambda x: proc.form_dict_en2fr[x])
     # encode formulation
     df['formulation'] = df['formulation'].apply(lambda x: proc.encode(x))
 
     # save
-    print(df.head(2))
     proc.to_csv(df, in_path)
