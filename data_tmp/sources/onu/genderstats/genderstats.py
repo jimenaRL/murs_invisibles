@@ -4,20 +4,21 @@ import pandas as pd
 from murs_invisibles import Processer
 
 
-proc = Processer()
-proc.read_path = os.path.dirname(os.path.realpath(__file__))
-proc.rename = {
-    'Country': 'pays',
-    'Year': 'année',
-    'Indicator Name': 'formulation',
-    'Value': 'value',
-}
-proc.path_fn = {
-    '46 - Share of female police officers_data.csv': proc.proportion1,
-}
+proc = Processer(
+    read_path=os.path.dirname(os.path.realpath(__file__)),
+    rename={
+        'Country': 'pays',
+        'Year': 'année',
+        'Indicator Name': 'formulation',
+        'Value': 'value',
+    },
+    file_fn={
+        '46 - Share of female police officers_data.csv': 'proportion1',
+    }
+)
 
 
-for path, fn in proc.path_fn.items():
+for path, fn in proc.file_fn.items():
 
     in_path = os.path.join(proc.read_path, path)
 
