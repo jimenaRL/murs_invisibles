@@ -18,7 +18,12 @@ FILTER_COUNTRY_PATH = join(os.path.dirname(os.path.realpath(__file__)),
 
 class Processer(object):
 
-    def __init__(self, read_path, file_fn, rename, file_year):
+    def __init__(self,
+                 read_path,
+                 file_fn,
+                 rename,
+                 file_year,
+                 filter_indicator_path=None):
         """
         read_path: str
             path to folder with data files
@@ -28,6 +33,8 @@ class Processer(object):
             dictionary {'filename': 'min_year'}
         rename: dict
             dictionary {'old_columns_name': 'new_columns_name'}
+        filter_indicator_path: str
+            path to filter with indicators to filter
         """
 
         self.read_path = read_path
@@ -60,6 +67,12 @@ class Processer(object):
             "_": " ",
             "__": " ",
         }
+
+        self.filter_indicator = []
+        if filter_indicator_path:
+            with open(filter_indicator_path, 'r', encoding='utf-8') as fp:
+                self.filter_indicator = [
+                    _.replace('\n', '') for _ in fp.readlines()]
 
         with open(FILTER_COUNTRY_PATH, 'r', encoding='utf-8') as fp:
             self.filter_country = [_.replace('\n', '') for _ in fp.readlines()]
@@ -104,7 +117,6 @@ class Processer(object):
                   encoding='utf-8',
                   columns=self.out_values,
                   sep=self.out_sep)
-        print(df.head(2))
         print(df.tail(2))
         print("Saved at {}".format(out_path))
 
