@@ -117,7 +117,7 @@ class Processer(object):
                   encoding='utf-8',
                   columns=self.out_values,
                   sep=self.out_sep)
-        print(df.tail(2))
+        print(df.sample(n=2))
         print("Saved at {}".format(out_path))
 
     @classmethod
