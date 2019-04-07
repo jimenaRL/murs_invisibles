@@ -6,11 +6,14 @@ from murs_invisibles import Processer
 
 proc = Processer(
     read_path=os.path.dirname(os.path.realpath(__file__)),
+    filter_indicator_path=None,
+    header=0,
+    encoding='utf-8',
     rename={
-        'Pays': 'pays',
-        'TIME': 'année',
-        'VAR': 'formulation',
-        'Value': 'value',
+        'country': 'Pays',
+        'year': 'TIME',
+        'indicator': 'VAR',
+        'value': 'Value',
     },
     file_fn={
         # Titres fonciers détenus par les femmes
@@ -18,42 +21,45 @@ proc = Processer(
         # La représentation des femmes aux postes de direction
         'GIDDB2019_02042019002819783.csv': 'proportion1',
     },
-    file_year={
+    file_min_year={
         'GIDDB2014_02042019001335690.csv': 2010,
         'GIDDB2019_02042019002819783.csv': 2010,
     },
+    lang_in='fr',
+    lang_out='fr',
 )
 
+proc.process()
 
-for name, fn in proc.file_fn.items():
+# for name, fn in proc.file_fn.items():
 
-    in_path = os.path.join(proc.read_path, name)
+#     in_path = os.path.join(proc.read_path, name)
 
-    # read data frame
-    df = pd.read_csv(in_path, header=0, encoding='utf-8')
+#     # read data frame
+#     df = pd.read_csv(in_path, header=0, encoding='utf-8')
 
-    # rename columns and drop rest
-    df = df.rename(columns=proc.rename)[proc.rename.values()]
+#     # rename columns and drop rest
+#     df = df.rename(columns=proc.rename)[proc.rename.values()]
 
-    # filter year
-    df = df[df['année'] >= proc.file_year[name]]
+#     # filter year
+#     df = df[df['année'] >= proc.file_year[name]]
 
-    # create map value
-    df['map_value'] = df.value.apply(fn)
+#     # create map value
+#     df['map_value'] = df.value.apply(fn)
 
-    # filter pays
-    df = df[df['pays'].apply(lambda x: x not in proc.filter_country)]
+#     # filter pays
+#     df = df[df['pays'].apply(lambda x: x not in proc.filter_country)]
 
-    # NO translate pays
+#     # NO translate pays
 
-    # encode pays
-    df['pays'] = df['pays'].apply(lambda x: proc.encode(x))
+#     # encode pays
+#     df['pays'] = df['pays'].apply(lambda x: proc.encode(x))
 
-    # translate formulation
-    df['formulation'] = df['formulation'].apply(
-        lambda x: proc.form_dict_en2fr[x])
-    # encode formulation
-    df['formulation'] = df['formulation'].apply(lambda x: proc.encode(x))
+#     # translate formulation
+#     df['formulation'] = df['formulation'].apply(
+#         lambda x: proc.ind_en2fr[x])
+#     # encode formulation
+#     df['formulation'] = df['formulation'].apply(lambda x: proc.encode(x))
 
-    # save
-    proc.to_csv(df, in_path)
+#     # save
+#     proc.to_csv(df, in_path)
