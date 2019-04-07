@@ -18,19 +18,25 @@ FILTER_COUNTRY_PATH = join(os.path.dirname(os.path.realpath(__file__)),
 
 class Processer(object):
 
-    def __init__(self, read_path, file_fn, rename):
+    def __init__(self, read_path, file_fn, rename, file_year):
         """
         read_path: str
             path to folder with data files
         file_fn: dict
             dictionary {'filename': 'processing_fn'}
-        rename_cols: dict
+        file_year: dict
+            dictionary {'filename': 'min_year'}
+        rename: dict
             dictionary {'old_columns_name': 'new_columns_name'}
         """
 
         self.read_path = read_path
+
         self.file_fn = {k: getattr(self, v) for k, v in file_fn.items()}
+
         self.rename = rename
+
+        self.file_year = file_year
 
         self.out_sep = '\t'
 

@@ -15,18 +15,25 @@ proc = Processer(
     file_fn={
         'SYB61_T05_Seats held by Women in Parliament.csv': 'proportion100',
         'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'girls2boys_ratio'
-    }
+    },
+    file_year={
+        'SYB61_T05_Seats held by Women in Parliament.csv': 2010,
+        'SYB61_T06_Ratio of Girls to Boys in Education.csv': 2010
+    },
 )
 
-for path, fn in proc.file_fn.items():
+for name, fn in proc.file_fn.items():
 
-    in_path = os.path.join(proc.read_path, path)
+    in_path = os.path.join(proc.read_path, name)
 
     # read data frame
     df = pd.read_csv(in_path, header=1, encoding='latin1')
 
     # rename columns and drop rest
     df = df.rename(columns=proc.rename)[proc.rename.values()]
+
+    # filter year
+    df = df[df['année'] >= proc.file_year[name]]
 
     # create map value
     df['map_value'] = df.value.apply(fn)
