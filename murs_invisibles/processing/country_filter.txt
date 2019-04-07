@@ -30,7 +30,9 @@ Micronesia
 Polynesia
 Micronesia (Fed. States of)
 Serbia and Monten. [former]
+China  Hong Kong Special Administrative Region
 China, Hong Kong SAR
+China  Macao Special Administrative Region
 China, Macao SAR
 Aruba
 Dominique
@@ -43,3 +45,5 @@ Solomon Islands
 TFYR of Macedonia
 Tokelau
 Dominica
+The former Yugoslav Republic of Macedonia
+Holy See
