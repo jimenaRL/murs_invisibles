@@ -63,7 +63,7 @@ class Processer(object):
         self.out_sep = '\t'
 
         self.out_values = [
-            "coutry",
+            "country",
             "year",
             "indicator",
             "value",
