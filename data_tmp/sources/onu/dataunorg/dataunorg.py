@@ -17,7 +17,7 @@ proc = Processer(
     },
     file_fn={
         'SYB61_T05_Seats held by Women in Parliament.csv': 'proportion100',
-        'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'girls2boys_ratio'
+        'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'women2men_ratio'
     },
     file_min_year={
         'SYB61_T05_Seats held by Women in Parliament.csv': 2010,
