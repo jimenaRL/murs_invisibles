@@ -18,7 +18,7 @@ proc = Processer(
         'indicator': 'Indicator',
         'value': 'Value',
     },
-    file_fn={
+    file_valuemap={
         # All gouvernarce
         'GOV_2017_03042019165415175.csv': 'proportion100',
     },
@@ -31,7 +31,7 @@ proc = Processer(
 
 proc.process()
 
-# for name, fn in proc.file_fn.items():
+# for name, fn in proc.file_valuemap.items():
 
 #     in_path = os.path.join(proc.read_path, name)
 

@@ -15,7 +15,7 @@ proc = Processer(
         'indicator': 'Series',
         'value': 'Value'
     },
-    file_fn={
+    file_valuemap={
         'SYB61_T05_Seats held by Women in Parliament.csv': 'proportion100',
         'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'women2men_ratio'
     },
@@ -29,7 +29,7 @@ proc = Processer(
 
 proc.process()
 
-# for name, fn in proc.file_fn.items():
+# for name, fn in proc.file_valuemap.items():
 
 #     in_path = os.path.join(proc.read_path, name)
 

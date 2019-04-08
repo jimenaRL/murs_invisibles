@@ -15,7 +15,7 @@ proc = Processer(
         'indicator': 'Indicator Name',
         'value': 'Value'
     },
-    file_fn={
+    file_valuemap={
         '46 - Share of female police officers_data.csv': 'proportion1',
     },
     file_min_year={
@@ -27,7 +27,7 @@ proc = Processer(
 
 proc.process()
 
-# for name, fn in proc.file_fn.items():
+# for name, fn in proc.file_valuemap.items():
 
 #     in_path = os.path.join(proc.read_path, name)
 

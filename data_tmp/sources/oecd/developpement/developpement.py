@@ -15,7 +15,7 @@ proc = Processer(
         'indicator': 'VAR',
         'value': 'Value',
     },
-    file_fn={
+    file_valuemap={
         # Titres fonciers détenus par les femmes
         'GIDDB2014_02042019001335690.csv': 'proportion1',
         # La représentation des femmes aux postes de direction
@@ -31,7 +31,7 @@ proc = Processer(
 
 proc.process()
 
-# for name, fn in proc.file_fn.items():
+# for name, fn in proc.file_valuemap.items():
 
 #     in_path = os.path.join(proc.read_path, name)
 
