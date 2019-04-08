@@ -15,6 +15,10 @@ proc = Processer(
         'indicator': 'Series',
         'value': 'Value'
     },
+    file_preprocess={
+        'SYB61_T05_Seats held by Women in Parliament.csv': 'no_preprocess',
+        'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'no_preprocess',
+    },
     file_valuemap={
         'SYB61_T05_Seats held by Women in Parliament.csv': 'proportion100',
         'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'women2men_ratio'

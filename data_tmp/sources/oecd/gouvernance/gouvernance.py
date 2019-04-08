@@ -18,8 +18,10 @@ proc = Processer(
         'indicator': 'Indicator',
         'value': 'Value',
     },
+    file_preprocess={
+        'GOV_2017_03042019165415175.csv': 'no_preprocess',
+    },
     file_valuemap={
-        # All gouvernarce
         'GOV_2017_03042019165415175.csv': 'proportion100',
     },
     file_min_year={

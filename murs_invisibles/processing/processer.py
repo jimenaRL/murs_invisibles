@@ -23,8 +23,9 @@ class Processer(object):
                  encoding,
                  read_path,
                  filter_indicator_path,
-                 file_fn,
+                 file_valuemap,
                  rename,
+                 file_preprocess,
                  file_min_year,
                  lang_in,
                  lang_out):
@@ -33,8 +34,10 @@ class Processer(object):
             path to folder with data files
         filter_indicator_path: str
             path to filter with indicators to filter
-        file_fn: dict
-            dictionary {'filename': 'processing_fn'}
+        file_preprocess: dict
+            dictionary {'filename': 'preprocess_fn'}
+        file_valuemap: dict
+            dictionary {'filename': 'valuemap_fn'}
         file_min_year: dict
             dictionary {'filename': 'min_year'}
         rename: dict
@@ -54,7 +57,11 @@ class Processer(object):
 
         self.read_path = read_path
 
-        self.file_fn = {k: getattr(self, v) for k, v in file_fn.items()}
+        self.file_valuemap = {
+            k: getattr(self, v) for k, v in file_valuemap.items()}
+
+        self.file_preprocess = {
+            k: getattr(self, v) for k, v in file_preprocess.items()}
 
         self.rename = {v: k for k, v in rename.items()}
 
@@ -100,26 +107,78 @@ class Processer(object):
         with open(self.ind_path, 'r', encoding='utf-8') as fp:
             self.ind_dict = json.load(fp, encoding='utf-8')
 
+    @classmethod
+    def proportion1(cls, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = m/(m+w) proportion in [0, 1]
+        | 0 <= p <= 1
+        | Perfect egality iff abs(p - .5) = 0
+        | Maximum inegality iff abs(p - .5) = .5
+        """
+        return abs(row.value - .5) / .5
 
     @classmethod
-    def proportion1(cls, p):
-        return abs(p - .5) / .5
+    def proportion100(cls, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = m/(m+w) proportion in [0, 100]
+        | 0 <= p <= 100
+        | Perfect egality iff abs(p - 50.) = 0
+        | Maximum inegality iff abs(p - 50.) = 50
+        """
+        row.value = row.value / 100.
+        return cls.proportion1(row)
+
+    def no_preprocess(self, df):
+        return df
+
+    def womenANDmen(self, df):
+        """
+        Dataframe preprocessing
+        """
+
+        df = df[df.AGE == 'TOTAL']
+        df = df[df.Unit == 'Pourcentage']
+
+        hash_cols = set(df.columns.tolist())
+        hash_cols -= set(['SEX', 'Sexe', 'Value'])
+
+        df['hash'] = df.apply(
+            lambda row: hash(
+                ''.join([str(row[c]) for c in hash_cols])), axis=1)
+
+        hash_count = df.groupby(by='hash').count().SEX \
+            .to_frame().reset_index().rename({'SEX': 'hash_count'}, axis=1)
+        valid_hash = hash_count[hash_count.hash_count == 2]
+
+        df = pd.merge(df, valid_hash, how='inner', on=['hash'])
+
+        women_df = df[df['SEX'] == 'WOMEN']
+        men_df = df[df['SEX'] == 'MEN']
+
+        df = pd.merge(women_df,
+                      men_df,
+                      how='inner',
+                      on=list(self.rename.keys())+['hash'],
+                      suffixes=('_women', '_men'))
+
+        df['value'] = df['Value_women'] / (df['Value_women'] + df['Value_men'])
+
+        return df
 
     @classmethod
-    def proportion100(cls, p):
+    def women2men_ratio(cls, row):
         """
-        abs(p - 50.) / 50
-        """
-        return cls.proportion1(p / 100)
+        row: pandas dataframe row
+             row.value contain r = w/r ratio
 
-    @classmethod
-    def women2men_ratio(cls, r):
+        | 0 <= m/(m+w) = 1/(1+r) <= 1
+        | Perfect egality iff m/(m+w) = .5
+        | Maximum inegality iff  abs(m/(m+w) - .5) = .5
         """
-        0 <= m/(m+w) = 1/(1+r) <= 1
-        Perfect egality if and only if m/(m+w)  = 0.5.
-        """
-        return cls.proportion1(1. / (1 + r))
-        # return abs(.5 - r / (1 + r)) / .5
+        row.value = 1. / (1 + row.value)
+        return cls.proportion1(row)
 
     # def uniencode(self, s):
     #     return unidecode.unidecode(self.replace(s))
@@ -149,11 +208,11 @@ class Processer(object):
 
     def to_csv(self, df, in_path):
         out_path = self.get_out_path(in_path)
+        df = df[self.out_values]
         df.to_csv(out_path,
                   index=False,
                   header=False,
                   encoding='utf-8',
-                  columns=self.out_values,
                   sep=self.out_sep)
         print(df.sample(n=2))
         print("{} entries".format(len(df)))
@@ -163,7 +222,7 @@ class Processer(object):
         """
         rename columns and drop rest
         """
-        return df.rename(columns=self.rename)[self.rename.values()]
+        return df.rename(columns=self.rename)
 
     def load_df(self, in_path):
         """
@@ -214,8 +273,14 @@ class Processer(object):
         """
         create map value
         """
-        df['map_value'] = df.value.apply(self.file_fn[name])
+        df['map_value'] = df.apply(self.file_valuemap[name], axis=1)
         return df
+
+    def preprocess(self, df, name):
+        """
+        create map value
+        """
+        return self.file_preprocess[name](df)
 
     def encode_rows(self, df):
         """
@@ -229,17 +294,20 @@ class Processer(object):
 
     def process(self):
 
-        for name in self.file_fn.keys():
+        for name in self.file_valuemap.keys():
 
             in_path = os.path.join(self.read_path, name)
 
             # load
             df = self.load_df(in_path)
 
+            # preprocess data
+            df = self.preprocess(df, name)
+
             # format
             df = self.format_columns(df)
 
-            # map value
+            # compute map value
             df = self.map_value(df, name)
 
             # year
