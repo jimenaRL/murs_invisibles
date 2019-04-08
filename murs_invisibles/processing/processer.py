@@ -109,7 +109,7 @@ class Processer(object):
         return abs(p - .5) / .5
 
     @classmethod
-    def girls2boys_ratio(cls, r):
+    def women2men_ratio(cls, r):
         return abs(.5 - r / (1 + r)) / .5
 
     # def uniencode(self, s):
