@@ -100,19 +100,23 @@ class Processer(object):
         with open(self.ind_path, 'r', encoding='utf-8') as fp:
             self.ind_dict = json.load(fp, encoding='utf-8')
 
-    @classmethod
-    def proportion100(cls, p):
-        return abs(p - 50.) / 50
 
     @classmethod
     def proportion1(cls, p):
         return abs(p - .5) / .5
 
     @classmethod
+    def proportion100(cls, p):
+        """
+        abs(p - 50.) / 50
+        """
+        return cls.proportion1(p / 100)
+
+    @classmethod
     def women2men_ratio(cls, r):
         """
-        0 <= m/(m+w) = alpha = 1/(1+r) <= 1
-        Perfect egality if and only if alpha = 0.5.
+        0 <= m/(m+w) = 1/(1+r) <= 1
+        Perfect egality if and only if m/(m+w)  = 0.5.
         """
         return cls.proportion1(1. / (1 + r))
         # return abs(.5 - r / (1 + r)) / .5
