@@ -13,3 +13,6 @@ PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/developpement/developpement.
 
 echo ">> gouvernance"
 PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/gouvernance/gouvernance.py
+
+echo ">> emploi"
+PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/emploi/emploi.py
