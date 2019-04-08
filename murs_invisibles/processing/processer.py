@@ -110,7 +110,12 @@ class Processer(object):
 
     @classmethod
     def women2men_ratio(cls, r):
-        return abs(.5 - r / (1 + r)) / .5
+        """
+        0 <= m/(m+w) = alpha = 1/(1+r) <= 1
+        Perfect egality if and only if alpha = 0.5.
+        """
+        return cls.proportion1(1. / (1 + r))
+        # return abs(.5 - r / (1 + r)) / .5
 
     # def uniencode(self, s):
     #     return unidecode.unidecode(self.replace(s))
