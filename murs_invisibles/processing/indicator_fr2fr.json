@@ -1,4 +1,14 @@
 {
     "RR_2": "Pourcentage de titres fonciers détenus par les femmes",
-    "RAPFR_WR_PRACT": "Pourcentage des femmes aux postes de direction"
+    "RAPFR_WR_PRACT": "Pourcentage des femmes aux postes de direction",
+    "Taux d'activité, par sexe et groupe d'âge": "Écart taux d'activité",
+    "Rapport emploi/population, par sexe et groupe d’âge": "Écart rapport emploi/population",
+    "Part des employés à temps partiel, par sexe et groupe d'âge": "Écart taux des employés à temps partiel",
+    "Part des employés à temps partiel involontaire, par sexe et groupe d'âge": "Écart taux des employés à temps partiel involontaire",
+    "Part des employés temporaires, par sexe": "Écart taux des employés temporaires",
+    "Part de l'emploi dans l'agriculture, par sexe ": "Écart taux des employés dans l'agriculture",
+    "Part de l'emploi dans l'industrie, par sexe": "Écart taux des employés dans l'industrie",
+    "Part de l'emploi dans les services, par sexe": "Écart taux des employés dans les services",
+    "Part des employés cadres supérieurs, par sexe": "Écart taux employés cadres supérieurs",
+    "Taux de chômage, par sexe et groupe d'âge": "Écart taux de chômage"
 }
