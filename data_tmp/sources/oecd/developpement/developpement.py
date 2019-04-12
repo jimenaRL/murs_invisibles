@@ -25,6 +25,10 @@ proc = Processer(
         # La représentation des femmes aux postes de direction
         'GIDDB2019_02042019002819783.csv': 'proportion1',
     },
+    file_save={
+        'GIDDB2014_02042019001335690.csv': 'one_save',
+        'GIDDB2019_02042019002819783.csv': 'one_save',
+    },
     file_min_year={
         'GIDDB2014_02042019001335690.csv': 2010,
         'GIDDB2019_02042019002819783.csv': 2010,

@@ -24,6 +24,9 @@ proc = Processer(
     file_valuemap={
         'GOV_2017_03042019165415175.csv': 'proportion100',
     },
+    file_save={
+        'GOV_2017_03042019165415175.csv': 'sep_save',
+    },
     file_min_year={
         'GOV_2017_03042019165415175.csv': 2010,
     },

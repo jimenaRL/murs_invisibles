@@ -24,6 +24,9 @@ proc = Processer(
         # All emploi
         'GENDER_EMP_01042019231318532.csv': 'proportion100',
     },
+    file_save={
+        'GENDER_EMP_01042019231318532.csv': 'sep_save',
+    },
     file_min_year={
         'GENDER_EMP_01042019231318532.csv': 2010,
     },

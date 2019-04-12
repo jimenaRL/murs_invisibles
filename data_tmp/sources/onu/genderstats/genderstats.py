@@ -21,6 +21,9 @@ proc = Processer(
     file_valuemap={
         '46 - Share of female police officers_data.csv': 'proportion1',
     },
+    file_save={
+        '46 - Share of female police officers_data.csv': 'one_save',
+    },
     file_min_year={
         '46 - Share of female police officers_data.csv': 2010,
     },
