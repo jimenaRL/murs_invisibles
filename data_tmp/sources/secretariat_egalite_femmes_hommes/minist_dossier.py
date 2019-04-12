@@ -19,7 +19,7 @@ proc = Processer(
         'minist_dossier.csv': 'remove_prop',
     },
     file_valuemap={
-        'minist_dossier.csv': 'proportion1',
+        'minist_dossier.csv': 'proportion100',
     },
     file_save={
         'minist_dossier.csv': 'one_save',
