@@ -24,6 +24,7 @@ class Processer(object):
                  read_path,
                  filter_indicator_path,
                  file_valuemap,
+                 file_save,
                  rename,
                  file_preprocess,
                  file_min_year,
@@ -38,6 +39,8 @@ class Processer(object):
             dictionary {'filename': 'preprocess_fn'}
         file_valuemap: dict
             dictionary {'filename': 'valuemap_fn'}
+        file_save: dict
+            dictionary {'filename': 'save_fn'}
         file_min_year: dict
             dictionary {'filename': 'min_year'}
         rename: dict
@@ -62,6 +65,9 @@ class Processer(object):
 
         self.file_preprocess = {
             k: getattr(self, v) for k, v in file_preprocess.items()}
+
+        self.file_save = {
+            k: getattr(self, v) for k, v in file_save.items()}
 
         self.rename = {v: k for k, v in rename.items()}
 
@@ -131,6 +137,11 @@ class Processer(object):
         return cls.proportion1(row)
 
     def no_preprocess(self, df):
+        return df
+
+    def remove_prop(self, df):
+        df = df[~df.value.isna()]
+        df.value = df.value.apply(lambda s: float(s.replace('%', '')))
         return df
 
     def womenANDmen(self, df):
@@ -206,7 +217,7 @@ class Processer(object):
             os.makedirs(out_dir)
         return out_path
 
-    def to_csv(self, df, in_path):
+    def one_save(self, df, in_path):
         out_path = self.get_out_path(in_path)
         df = df[self.out_values]
         df.to_csv(out_path,
@@ -217,6 +228,31 @@ class Processer(object):
         print(df.sample(n=2))
         print("{} entries".format(len(df)))
         print("Saved at {}\n".format(out_path))
+
+    def get_out_path_indicator(self, in_path, indicator):
+        tmp_path = self.encode(in_path).replace('sources', 'm4l')
+        out_dir = os.path.dirname(tmp_path)
+        out_path = os.path.join(out_dir, indicator.replace('/', '_')+".tsv")
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
+        return out_path
+
+    def sep_save(self, df, in_path):
+        df = df[self.out_values]
+        for indicator in df.indicator.unique():
+            out_path = self.get_out_path_indicator(in_path, indicator)
+            tmp = df[df.indicator == indicator]
+            tmp.to_csv(out_path,
+                       index=False,
+                       header=False,
+                       encoding='utf-8',
+                       sep=self.out_sep)
+            print(tmp.sample(n=2))
+            print("{} entries".format(len(tmp)))
+            print("Saved at {}\n".format(out_path))
+
+    def save(self, name, df, in_path):
+        self.file_save[name](df, in_path)
 
     def format_columns(self, df):
         """
@@ -325,4 +361,4 @@ class Processer(object):
             df = self.encode_rows(df)
 
             # save
-            self.to_csv(df, in_path)
+            self.save(name, df, in_path)
