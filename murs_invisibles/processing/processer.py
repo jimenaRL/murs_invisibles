@@ -7,10 +7,10 @@ import pandas as pd
 
 
 IND_PATH = join(os.path.dirname(os.path.realpath(__file__)),
-                'indicator_{}2{}.json')
+                'indicator_{}.json')
 
 COUNTRY_PATH = join(os.path.dirname(os.path.realpath(__file__)),
-                    'country_{}2{}.json')
+                    'country_{}.json')
 
 FILTER_COUNTRY_PATH = join(os.path.dirname(os.path.realpath(__file__)),
                            'country_filter_{}.txt')
@@ -28,8 +28,9 @@ class Processer(object):
                  rename,
                  file_preprocess,
                  file_min_year,
-                 lang_in,
-                 lang_out):
+                 country_filter_lang,
+                 country_lang,
+                 indicator_lang):
         """
         read_path: str
             path to folder with data files
@@ -45,18 +46,21 @@ class Processer(object):
             dictionary {'filename': 'min_year'}
         rename: dict
             dictionary {'new_columns_name': 'old_columns_name'}
-        lang_in: str
-            languag in (e.g.: 'en')
-        lang_out: str
-            languag out (e.g.: 'fr')
+        country_filter_lang: str
+            country language filter (e.g.: 'fr')
+        country_lang: str
+            country language in2out (e.g.: 'en2fr')
+        indicator_lang: str
+            indicator language in2out (e.g.: 'fr2fr')
         """
 
         self.header = header
         self.encoding = encoding
 
-        self.filter_country_path = FILTER_COUNTRY_PATH.format(lang_in)
-        self.ind_path = IND_PATH.format(lang_in, lang_out)
-        self.country_path = COUNTRY_PATH.format(lang_in, lang_out)
+        self.filter_country_path = FILTER_COUNTRY_PATH.format(
+            country_filter_lang)
+        self.ind_path = IND_PATH.format(indicator_lang)
+        self.country_path = COUNTRY_PATH.format(country_lang)
 
         self.read_path = read_path
 
@@ -165,8 +169,17 @@ class Processer(object):
 
         df = pd.merge(df, valid_hash, how='inner', on=['hash'])
 
-        women_df = df[df['SEX'] == 'WOMEN']
-        men_df = df[df['SEX'] == 'MEN']
+        # /!\  HOTFIX /!\
+        if 'WOMEN' in df['SEX'].unique().tolist():
+            women_df = df[df['SEX'] == 'WOMEN']
+            men_df = df[df['SEX'] == 'MEN']
+        elif 'GIRLS' in df['SEX'].unique().tolist():
+            women_df = df[df['SEX'] == 'GIRLS']
+            men_df = df[df['SEX'] == 'BOYS']
+        else:
+            raise ValueError(
+                "Didn't found \`GIRLS\` nor \`WOMEN\` in df['SEX'].")
+        # /!\  HOTFIX /!\
 
         df = pd.merge(women_df,
                       men_df,
