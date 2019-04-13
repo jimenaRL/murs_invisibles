@@ -30,8 +30,9 @@ proc = Processer(
     file_min_year={
         'GENDER_EMP_01042019231318532.csv': 2010,
     },
-    lang_in='fr',
-    lang_out='fr',
+    country_filter_lang='fr',
+    country_lang='fr2fr',
+    indicator_lang='fr2fr',
 )
 
 proc.process()

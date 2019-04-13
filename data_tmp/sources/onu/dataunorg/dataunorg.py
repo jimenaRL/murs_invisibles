@@ -31,8 +31,9 @@ proc = Processer(
         'SYB61_T05_Seats held by Women in Parliament.csv': 2010,
         'SYB61_T06_Ratio of Girls to Boys in Education.csv': 2010
     },
-    lang_in='en',
-    lang_out='fr',
+    country_filter_lang='en',
+    country_lang='en2fr',
+    indicator_lang='en2fr',
 )
 
 proc.process()

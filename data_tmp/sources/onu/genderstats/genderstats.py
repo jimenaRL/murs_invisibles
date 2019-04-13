@@ -27,8 +27,9 @@ proc = Processer(
     file_min_year={
         '46 - Share of female police officers_data.csv': 2010,
     },
-    lang_in='en',
-    lang_out='fr',
+    country_filter_lang='en',
+    country_lang='en2fr',
+    indicator_lang='en2fr',
 )
 
 proc.process()

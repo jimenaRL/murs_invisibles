@@ -33,8 +33,9 @@ proc = Processer(
         'GIDDB2014_02042019001335690.csv': 2010,
         'GIDDB2019_02042019002819783.csv': 2010,
     },
-    lang_in='fr',
-    lang_out='fr',
+    country_filter_lang='fr',
+    country_lang='fr2fr',
+    indicator_lang='fr2fr',
 )
 
 proc.process()

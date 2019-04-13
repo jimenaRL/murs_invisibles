@@ -30,8 +30,9 @@ proc = Processer(
     file_min_year={
         'GOV_2017_03042019165415175.csv': 2010,
     },
-    lang_in='en',
-    lang_out='fr',
+    country_filter_lang='en',
+    country_lang='en2fr',
+    indicator_lang='en2fr',
 )
 
 proc.process()
