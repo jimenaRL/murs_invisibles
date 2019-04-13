@@ -17,6 +17,10 @@ PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/gouvernance/gouvernance.py
 echo ">> emploi"
 PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/emploi/emploi.py
 
+echo ">> education"
+PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/education/education.py
+
+
 echo "> secretariat_egalite_femmes_hommes"
 
 PYTHONIOENCODING=UTF-8 python data_tmp/sources/secretariat_egalite_femmes_hommes/minist_dossier.py
