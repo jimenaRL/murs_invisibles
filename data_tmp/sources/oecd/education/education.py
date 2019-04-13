@@ -18,11 +18,11 @@ proc = Processer(
     },
     file_preprocess={
         # All emploi
-        'GENDER_EDU_29102017131322363.csv': 'womenANDmen',
+        'GENDER_EDU_29102017131322363.csv': 'diff_wm',
     },
     file_valuemap={
         # All emploi
-        'GENDER_EDU_29102017131322363.csv': 'proportion100',
+        'GENDER_EDU_29102017131322363.csv': 'norm_wm',
     },
     file_save={
         'GENDER_EDU_29102017131322363.csv': 'sep_save',

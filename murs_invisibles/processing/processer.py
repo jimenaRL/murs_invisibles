@@ -140,6 +140,25 @@ class Processer(object):
         row.value = row.value / 100.
         return cls.proportion1(row)
 
+    @classmethod
+    def ecart100(cls, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = m-w where m (resp. women) is the ratio of
+             men (res. women) among all men (resp. women)
+        | -100 <= p <= 100
+        | Perfect egality iff abs(p) = 0
+        | Maximum inegality iff abs(p) = 100
+        """
+        return abs(row.value) / 100.
+
+
+    @classmethod
+    def norm_wm(cls, row):
+        """
+        """
+        return abs(row.value/(row.Value_men+row.Value_women))
+
     def no_preprocess(self, df):
         return df
 
@@ -148,7 +167,7 @@ class Processer(object):
         df.value = df.value.apply(lambda s: float(s.replace('%', '')))
         return df
 
-    def womenANDmen(self, df):
+    def diff_wm(self, df):
         """
         Dataframe preprocessing
         """
@@ -178,16 +197,30 @@ class Processer(object):
             men_df = df[df['SEX'] == 'BOYS']
         else:
             raise ValueError(
-                "Didn't found \`GIRLS\` nor \`WOMEN\` in df['SEX'].")
+                f"Didn't found `GIRLS` nor `WOMEN` in df['SEX']:\
+                    {df['SEX'].unique}")
         # /!\  HOTFIX /!\
+
+        # /!\  HOTFIX /!\
+        merge_on = list(
+            set(self.rename.keys()) - set(['Value']) | set(['hash']))
+        # /!\  HOTFIX /!\
+
 
         df = pd.merge(women_df,
                       men_df,
                       how='inner',
-                      on=list(self.rename.keys())+['hash'],
+                      on=merge_on,
                       suffixes=('_women', '_men'))
 
-        df['value'] = df['Value_women'] / (df['Value_women'] + df['Value_men'])
+        # /!\  HOTFIX /!\
+        df = df[df.Value_men + df.Value_women > 0]
+        # /!\  HOTFIX /!\
+
+        df['value'] = df.apply(lambda row:
+            row.Value_men - row.Value_women, axis=1)
+
+        # print(df[['Indicateur', 'Value_men', 'Value_women', 'value']])
 
         return df
 
