@@ -22,9 +22,14 @@ proc = Processer(
         'ENT4.csv': 'no_preprocess',
         'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_wm',
     },
+    file_postprocess={
+        'ENT4.csv': 'perc',
+        'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_perc',
+
+    },
     file_valuemap={
-        'ENT4.csv': 'proportion100',
-        'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'norm_wm',
+        'ENT4.csv': 'proportion1',
+        'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',  # or 'norm_wm',?
     },
     file_save={
         'ENT4.csv': 'one_save',

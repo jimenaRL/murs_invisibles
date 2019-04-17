@@ -20,6 +20,9 @@ PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/emploi/emploi.py
 echo ">> education"
 PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/education/education.py
 
+echo ">> entrepreneuriat"
+PYTHONIOENCODING=UTF-8 python data_tmp/sources/oecd/entrepreneuriat/entrepreneuriat.py
+
 
 echo "> secretariat_egalite_femmes_hommes"
 
