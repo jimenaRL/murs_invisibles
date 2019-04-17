@@ -19,6 +19,10 @@ proc = Processer(
         'GIDDB2014_02042019001335690.csv': 'no_preprocess',
         'GIDDB2019_02042019002819783.csv': 'no_preprocess',
     },
+    file_postprocess={
+        'GIDDB2014_02042019001335690.csv': 'perc',
+        'GIDDB2019_02042019002819783.csv': 'perc',
+    },
     file_valuemap={
         # Titres fonciers détenus par les femmes
         'GIDDB2014_02042019001335690.csv': 'proportion1',

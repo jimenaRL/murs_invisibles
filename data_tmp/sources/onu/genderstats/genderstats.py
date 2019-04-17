@@ -18,6 +18,9 @@ proc = Processer(
     file_preprocess={
         '46 - Share of female police officers_data.csv': 'no_preprocess',
     },
+    file_postprocess={
+        '46 - Share of female police officers_data.csv': 'perc',
+    },
     file_valuemap={
         '46 - Share of female police officers_data.csv': 'proportion1',
     },

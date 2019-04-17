@@ -27,6 +27,7 @@ class Processer(object):
                  file_save,
                  rename,
                  file_preprocess,
+                 file_postprocess,
                  file_min_year,
                  country_filter_lang,
                  country_lang,
@@ -38,6 +39,8 @@ class Processer(object):
             path to filter with indicators to filter
         file_preprocess: dict
             dictionary {'filename': 'preprocess_fn'}
+        file_postprocess: dict
+            dictionary {'filename': 'postprocess_fn'}
         file_valuemap: dict
             dictionary {'filename': 'valuemap_fn'}
         file_save: dict
@@ -70,6 +73,9 @@ class Processer(object):
         self.file_preprocess = {
             k: getattr(self, v) for k, v in file_preprocess.items()}
 
+        self.file_postprocess = {
+            k: getattr(self, v) for k, v in file_postprocess.items()}
+
         self.file_save = {
             k: getattr(self, v) for k, v in file_save.items()}
 
@@ -88,14 +94,14 @@ class Processer(object):
         ]
 
         self.dico = {
-            # ",": "---",
-            # "'": "-**-",
+            ",": "---",
+            "'": "-**-",
             " ": "_",
         }
 
         self.revers_dico = {
-            # "---": ",",
-            # "-**-": "'",
+            "---": ",",
+            "-**-": "'",
             "_": " ",
             "__": " ",
         }
@@ -152,12 +158,14 @@ class Processer(object):
         """
         return abs(row.value) / 100.
 
+    def postprocess(self, df, name):
+        return self.file_postprocess[name](df)
 
-    @classmethod
-    def norm_wm(cls, row):
-        """
-        """
-        return abs(row.value/(row.Value_men+row.Value_women))
+    # @classmethod
+    # def norm_wm(cls, row):
+    #     """
+    #     """
+    #     return abs(row.value/(row.Value_men+row.Value_women))
 
     def no_preprocess(self, df):
         return df
@@ -206,7 +214,6 @@ class Processer(object):
             set(self.rename.keys()) - set(['Value']) | set(['hash']))
         # /!\  HOTFIX /!\
 
-
         df = pd.merge(women_df,
                       men_df,
                       how='inner',
@@ -217,11 +224,31 @@ class Processer(object):
         df = df[df.Value_men + df.Value_women > 0]
         # /!\  HOTFIX /!\
 
-        df['value'] = df.apply(lambda row:
-            row.Value_men - row.Value_women, axis=1)
+        df['value'] = df.apply(
+            lambda row: row.Value_men - row.Value_women, axis=1)
 
-        # print(df[['Indicateur', 'Value_men', 'Value_women', 'value']])
+        return df
 
+    @classmethod
+    def ratio(cls, df):
+        df['value'] = df.apply(
+            lambda row: row.value / (1 + row.value), axis=1)
+        df['value'] = df.apply(
+            lambda row: '%1.2f' % abs(row.value) + '%', axis=1)
+        return df
+
+    @classmethod
+    def diff_perc(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
+        return df
+        
+    @classmethod
+    def perc(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.2f' % abs(row.value) + '%', axis=1)
         return df
 
     @classmethod
@@ -230,11 +257,11 @@ class Processer(object):
         row: pandas dataframe row
              row.value contain r = w/r ratio
 
-        | 0 <= m/(m+w) = 1/(1+r) <= 1
-        | Perfect egality iff m/(m+w) = .5
-        | Maximum inegality iff  abs(m/(m+w) - .5) = .5
+        | 0 <= w/(m+w) = r/(1+r) <= 1
+        | Perfect egality iff w/(m+w) = .5
+        | Maximum inegality iff  abs(w/(m+w) - .5) = .5
         """
-        row.value = 1. / (1 + row.value)
+        row.value = row.value / (1 + row.value)
         return cls.proportion1(row)
 
     # def uniencode(self, s):
@@ -257,7 +284,7 @@ class Processer(object):
     def get_out_path(self, in_path):
         out_path = self.encode(in_path). \
             replace('sources', 'm4l'). \
-            replace('csv', 'tsv')
+            replace('.csv', '_17avril2019_14h20.tsv')
         out_dir = os.path.dirname(out_path)
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
@@ -278,7 +305,8 @@ class Processer(object):
     def get_out_path_indicator(self, in_path, indicator):
         tmp_path = self.encode(in_path).replace('sources', 'm4l')
         out_dir = os.path.dirname(tmp_path)
-        out_path = os.path.join(out_dir, indicator.replace('/', '_')+".tsv")
+        indicator = indicator.replace('/', '_').replace(',', '_')
+        out_path = os.path.join(out_dir, indicator+"_17avril2019_14h20.tsv")
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
         return out_path
@@ -355,6 +383,7 @@ class Processer(object):
         """
         create map value
         """
+
         df['map_value'] = df.apply(self.file_valuemap[name], axis=1)
         return df
 
@@ -402,6 +431,9 @@ class Processer(object):
             # process indicator
             df = self.filter_indicator(df)
             df = self.translate_indicator(df)
+
+            # postprocess value
+            df = self.postprocess(df, name)
 
             # encode
             df = self.encode_rows(df)

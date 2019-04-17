@@ -21,6 +21,9 @@ proc = Processer(
     file_preprocess={
         'GOV_2017_03042019165415175.csv': 'no_preprocess',
     },
+    file_postprocess={
+        'GOV_2017_03042019165415175.csv': 'perc',
+    },
     file_valuemap={
         'GOV_2017_03042019165415175.csv': 'proportion100',
     },

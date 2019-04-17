@@ -20,6 +20,9 @@ proc = Processer(
     file_preprocess={
         'minist_dossier.csv': 'remove_prop',
     },
+    file_postprocess={
+        'minist_dossier.csv': 'perc',
+    },
     file_valuemap={
         'minist_dossier.csv': 'proportion100',
     },

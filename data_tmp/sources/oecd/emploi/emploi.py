@@ -21,9 +21,13 @@ proc = Processer(
         # All emploi
         'GENDER_EMP_01042019231318532.csv': 'diff_wm',
     },
+    file_postprocess={
+        # All emploi
+        'GENDER_EMP_01042019231318532.csv': 'diff_perc',  # ?????
+    },
     file_valuemap={
         # All emploi
-        'GENDER_EMP_01042019231318532.csv': 'norm_wm',
+        'GENDER_EMP_01042019231318532.csv': 'ecart100',
     },
     file_save={
         'GENDER_EMP_01042019231318532.csv': 'sep_save',
