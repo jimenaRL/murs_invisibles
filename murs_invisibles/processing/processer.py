@@ -225,7 +225,7 @@ class Processer(object):
         # /!\  HOTFIX /!\
 
         df['value'] = df.apply(
-            lambda row: row.Value_men - row.Value_women, axis=1)
+            lambda row: row.Value_women - row.Value_men, axis=1)
 
         return df
 
