@@ -252,6 +252,13 @@ class Processer(object):
         return df
 
     @classmethod
+    def percX100(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.0f' % abs(100*row.value) + '%', axis=1)
+        return df
+
+
+    @classmethod
     def women2men_ratio(cls, row):
         """
         row: pandas dataframe row
