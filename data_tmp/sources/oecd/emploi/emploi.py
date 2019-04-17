@@ -5,10 +5,11 @@ from murs_invisibles import Processer
 
 
 file_dir = os.path.dirname(os.path.realpath(__file__))
+filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
 proc = Processer(
     read_path=file_dir,
-    filter_indicator_path=None,
+    filter_indicator_path=filter_indicator_path,
     header=0,
     encoding='utf-8',
     rename={
