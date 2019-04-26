@@ -1,4 +1,0 @@
-python server.py -indent 0 -in_line_breaks 0 -out_line_breaks 6 -clean 3 -port 9020
-python server.py -indent 0 -in_line_breaks 0 -out_line_breaks 6 -clean 3 -port 9021
-python server.py -indent 0 -in_line_breaks 0 -out_line_breaks 6 -clean 3 -port 9022
-python server.py -indent 0 -in_line_breaks 0 -out_line_breaks 6 -clean 3 -port 9023
