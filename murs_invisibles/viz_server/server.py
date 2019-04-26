@@ -71,7 +71,17 @@ if __name__ == "__main__":
         if endpoint == "/woman":
             country, year, measure, value = map(decode, decoded[2:])
             out = '\n' * in_line_breaks
-            out += '\t' * random.randint(0, indent)
+            rnd = random.randint(0, indent)
+            out += '\t' * rnd
+            dec = False
+            if 'part des femmes' in measure:
+                dec = True
+                measure = measure.replace(
+                    'part des femmes', '\n'+'\t' * rnd + 'part des femmes')
+            if 'par rapport aux hommes' in measure and not dec:
+                measure = measure.replace(
+                    'par rapport aux hommes', '\n'+'\t' * rnd +
+                    'par rapport aux hommes')
             out += "%s %s %s %s" % (country, year, measure, value)
             out += '\n' * out_line_breaks
             print(out)
@@ -79,5 +89,6 @@ if __name__ == "__main__":
         elif endpoint == "/clean":
             print('\n' * clean)
         else:
-            print("Wrong endpoint %s. Must be '/woman' or '/clean'." % endpoint)
+            print(
+                "Wrong endpoint %s. Must be '/woman' or '/clean'." % endpoint)
             continue
