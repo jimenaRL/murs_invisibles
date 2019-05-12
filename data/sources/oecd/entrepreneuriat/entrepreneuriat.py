@@ -29,7 +29,8 @@ proc = Processer(
     },
     file_valuemap={
         'ENT4.csv': 'proportion1',
-        'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',  # or 'norm_wm',?
+        # TO DO: 'ecart100' or 'norm_wm' ?
+        'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',
     },
     file_save={
         'ENT4.csv': 'one_save',
