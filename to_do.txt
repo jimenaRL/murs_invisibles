@@ -1,0 +1,9 @@
+processing
+	- fix ugly floating point precision
+	- code python all
+	- /!\ check DIFF women - men traitment /!\
+	- line 20 onu dataunorg.py : # /!\ problem with ’ character /!\
+	- line 32 oced entrepreneuriat.py : 'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',  # or 'norm_wm',?
+	- line 29 oced eductaion.py : 'GENDER_EDU_29102017131322363.csv': 'ecart100',  # or 'norm_wm',?
+	- line 26 oced emploi.py : 'GENDER_EMP_01042019231318532.csv': 'diff_perc',  # ?????
+
