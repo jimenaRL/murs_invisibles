@@ -1,5 +1,8 @@
-import unidecode
+"""
+Tools for encode/decode string for Max 7 compatibility.
+"""
 
+import unidecode
 
 DICO = {
     ",": "---",
@@ -7,7 +10,7 @@ DICO = {
     " ": "_",
 }
 
-REVERS_DICO = {
+INV_DICO = {
     "---": ",",
     "-**-": "'",
     "_": " ",
@@ -15,22 +18,14 @@ REVERS_DICO = {
 }
 
 
-def replace(s):
+def maxEncode(s):
     for k, v in DICO.items():
         s = s.replace(k, v)
     return s
 
 
-def uniencode(s):
-    return unidecode.unidecode(replace(s))
-
-
-def encode(s):
-    return replace(s)
-
-
-def decode(s):
+def maxDecode(s):
     s = str(s)
-    for k, v in REVERS_DICO.items():
+    for k, v in INV_DICO.items():
         s = s.replace(k, v)
     return s

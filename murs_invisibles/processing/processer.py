@@ -1,10 +1,10 @@
 import os
 import json
-import unidecode
 from glob import glob
 from os.path import join
 import pandas as pd
 
+from murs_invisibles.max_endecoding import maxEncode
 
 IND_PATH = join(os.path.dirname(os.path.realpath(__file__)),
                 'indicator_{}.json')
@@ -92,19 +92,6 @@ class Processer(object):
             "value",
             "map_value"
         ]
-
-        self.dico = {
-            ",": "---",
-            "'": "-**-",
-            " ": "_",
-        }
-
-        self.revers_dico = {
-            "---": ",",
-            "-**-": "'",
-            "_": " ",
-            "__": " ",
-        }
 
         if filter_indicator_path:
             with open(filter_indicator_path, 'r', encoding='utf-8') as fp:
@@ -244,7 +231,7 @@ class Processer(object):
         df['value'] = df.apply(
             lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
         return df
-        
+
     @classmethod
     def perc(cls, df):
         df['value'] = df.apply(
@@ -256,7 +243,6 @@ class Processer(object):
         df['value'] = df.apply(
             lambda row: '%1.0f' % abs(100*row.value) + '%', axis=1)
         return df
-
 
     @classmethod
     def women2men_ratio(cls, row):
@@ -271,25 +257,8 @@ class Processer(object):
         row.value = row.value / (1 + row.value)
         return cls.proportion1(row)
 
-    # def uniencode(self, s):
-    #     return unidecode.unidecode(self.replace(s))
-
-    def decode(self, s):
-        s = str(s)
-        for k, v in self.revers_dico.iteritems():
-            s = s.replace(k, v)
-        return s
-
-    def replace(self, s):
-        for k, v in self.dico.items():
-            s = s.replace(k, v)
-        return s
-
-    def encode(self, s):
-        return self.replace(s)
-
     def get_out_path(self, in_path):
-        out_path = self.encode(in_path). \
+        out_path = maxEncode(in_path). \
             replace('sources', 'm4l'). \
             replace('.csv', '_17avril2019_14h20.tsv')
         out_dir = os.path.dirname(out_path)
@@ -310,7 +279,7 @@ class Processer(object):
         print("Saved at {}\n".format(out_path))
 
     def get_out_path_indicator(self, in_path, indicator):
-        tmp_path = self.encode(in_path).replace('sources', 'm4l')
+        tmp_path = maxEncode(in_path).replace('sources', 'm4l')
         out_dir = os.path.dirname(tmp_path)
         indicator = indicator.replace('/', '_').replace(',', '_')
         out_path = os.path.join(out_dir, indicator+"_17avril2019_14h20.tsv")
@@ -405,9 +374,9 @@ class Processer(object):
         encode country and formulation
         """
         df['country'] = df['country'].apply(
-            lambda x: self.encode(x))
+            lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
-            lambda x: self.encode(x))
+            lambda x: maxEncode(x))
         return df
 
     def process(self):

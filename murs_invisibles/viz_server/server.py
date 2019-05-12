@@ -4,7 +4,7 @@ import random
 import argparse
 
 from osc_py3 import decodeOSC
-from endecoding import decode
+from murs_invisibles.max_endecoding import maxDecode
 
 EXPECTED_DECODED_LENGTH = 6
 
@@ -69,7 +69,7 @@ if __name__ == "__main__":
             continue
         endpoint, _ = decoded[:2]
         if endpoint == "/woman":
-            country, year, measure, value = map(decode, decoded[2:])
+            country, year, measure, value = map(maxDecode, decoded[2:])
             out = '\n' * in_line_breaks
             rnd = random.randint(0, indent)
             out += '\t' * rnd
