@@ -1,3 +1,3 @@
 export PYTHONIOENCODING=UTF-8
-export PYTHONPATH=$PYTHONPATH:/Users/jimenarl/Desktop/chateau_ephemere_r2/murs_invisibles
-conda activate py2
+export PYTHONPATH=$PYTHONPATH:/Users/jimenarl/Desktop/git_murs
+conda activate py3
