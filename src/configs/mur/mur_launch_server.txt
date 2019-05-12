@@ -1,5 +1,0 @@
-python server.py -indent 3 -in_line_breaks 0 -out_line_breaks 2 -port 9030
-python server.py -indent 3 -in_line_breaks 0 -out_line_breaks 2 -port 9031
-python server.py -indent 3 -in_line_breaks 0 -out_line_breaks 2 -port 9032
-python server.py -indent 3 -in_line_breaks 0 -out_line_breaks 2 -port 9033
-python server.py -indent 3 -in_line_breaks 0 -out_line_breaks 2 -port 9034
