@@ -3,7 +3,7 @@ import socket
 import random
 import argparse
 
-from osc import decodeOSC
+from osc_py3 import decodeOSC
 from endecoding import decode
 
 EXPECTED_DECODED_LENGTH = 6
