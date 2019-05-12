@@ -7,35 +7,47 @@ from murs_invisibles import Processer
 file_dir = os.path.dirname(os.path.realpath(__file__))
 filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
-proc = Processer(
-    read_path=file_dir,
-    filter_indicator_path=filter_indicator_path,
-    header=0,
-    encoding='utf-8',
-    rename={
-        'country': 'Country',
-        'year': 'Year',
-        'indicator': 'Indicator',
-        'value': 'Value',
+config = {
+    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "io": {
+        "header": 0,
+        "encoding": 'utf-8',
+        "fns": {
+            'GOV_2017_03042019165415175.csv': 'sep_save',
+        },
     },
-    file_preprocess={
-        'GOV_2017_03042019165415175.csv': 'no_preprocess',
+    "preprocesser": {
+        'fns': {
+            'GOV_2017_03042019165415175.csv': 'no_process',
+        },
+        'rename': {
+            'country': 'Country',
+            'year': 'Year',
+            'indicator': 'Indicator',
+            'value': 'Value',
+        },
     },
-    file_postprocess={
-        'GOV_2017_03042019165415175.csv': 'perc',
+    "mapper": {
+        'fns': {
+            'GOV_2017_03042019165415175.csv': 'proportion100',
+        }
     },
-    file_valuemap={
-        'GOV_2017_03042019165415175.csv': 'proportion100',
+    "filter": {
+        'filter_indicator_path': filter_indicator_path,
+        'country_filter_lang': 'en',
+        'year': {
+            'GOV_2017_03042019165415175.csv': 2010,
+        }
     },
-    file_save={
-        'GOV_2017_03042019165415175.csv': 'sep_save',
+    "translator": {
+        'country_lang': 'en2fr',
+        'indicator_lang': 'en2fr',
     },
-    file_min_year={
-        'GOV_2017_03042019165415175.csv': 2010,
+    "postprocesser": {
+        'fns': {
+            'GOV_2017_03042019165415175.csv': 'perc',
+        }
     },
-    country_filter_lang='en',
-    country_lang='en2fr',
-    indicator_lang='en2fr',
-)
+}
 
-proc.process()
+Processer(config).process()

@@ -1,38 +1,47 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
-
-proc = Processer(
-    read_path=os.path.dirname(os.path.realpath(__file__)),
-    filter_indicator_path=None,
-    header=1,
-    encoding='latin1',
-    rename={
-        'country': 'Country',
-        'year': 'Year',
-        'indicator': 'Indicator Name',
-        'value': 'Value'
+config = {
+    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "io": {
+        "header": 1,
+        "encoding": 'latin1',
+        "fns": {
+            '46 - Share of female police officers_data.csv': 'one_save',
+        }
     },
-    file_preprocess={
-        '46 - Share of female police officers_data.csv': 'no_preprocess',
+    "preprocesser": {
+        'fns': {
+            '46 - Share of female police officers_data.csv': 'no_process',
+        },
+        'rename': {
+            'country': 'Country',
+            'year': 'Year',
+            'indicator': 'Indicator Name',
+            'value': 'Value'
+        },
     },
-    file_postprocess={
+    "mapper": {
+        'fns': {
+            '46 - Share of female police officers_data.csv': 'proportion1',
+        }
+    },
+    "filter": {
+        'filter_indicator_path': None,
+        'country_filter_lang': 'en',
+        'year': {
+            '46 - Share of female police officers_data.csv': 2010,
+        }
+    },
+    "translator": {
+        'country_lang': 'en2fr',
+        'indicator_lang': 'en2fr',
+    },
+    "postprocesser": {
+        'fns': {
         '46 - Share of female police officers_data.csv': 'perc',
+        }
     },
-    file_valuemap={
-        '46 - Share of female police officers_data.csv': 'proportion1',
-    },
-    file_save={
-        '46 - Share of female police officers_data.csv': 'one_save',
-    },
-    file_min_year={
-        '46 - Share of female police officers_data.csv': 2010,
-    },
-    country_filter_lang='en',
-    country_lang='en2fr',
-    indicator_lang='en2fr',
-)
+}
 
-proc.process()
+Processer(config).process()
