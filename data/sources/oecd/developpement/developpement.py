@@ -43,36 +43,3 @@ proc = Processer(
 )
 
 proc.process()
-
-# for name, fn in proc.file_valuemap.items():
-
-#     in_path = os.path.join(proc.read_path, name)
-
-#     # read data frame
-#     df = pd.read_csv(in_path, header=0, encoding='utf-8')
-
-#     # rename columns and drop rest
-#     df = df.rename(columns=proc.rename)[proc.rename.values()]
-
-#     # filter year
-#     df = df[df['année'] >= proc.file_year[name]]
-
-#     # create map value
-#     df['map_value'] = df.value.apply(fn)
-
-#     # filter pays
-#     df = df[df['pays'].apply(lambda x: x not in proc.filter_country)]
-
-#     # NO translate pays
-
-#     # encode pays
-#     df['pays'] = df['pays'].apply(lambda x: proc.encode(x))
-
-#     # translate formulation
-#     df['formulation'] = df['formulation'].apply(
-#         lambda x: proc.ind_en2fr[x])
-#     # encode formulation
-#     df['formulation'] = df['formulation'].apply(lambda x: proc.encode(x))
-
-#     # save
-#     proc.to_csv(df, in_path)
