@@ -16,7 +16,7 @@ REVERS_DICO = {
 
 
 def replace(s):
-    for k, v in DICO.iteritems():
+    for k, v in DICO.items():
         s = s.replace(k, v)
     return s
 
@@ -31,6 +31,6 @@ def encode(s):
 
 def decode(s):
     s = str(s)
-    for k, v in REVERS_DICO.iteritems():
+    for k, v in REVERS_DICO.items():
         s = s.replace(k, v)
     return s
