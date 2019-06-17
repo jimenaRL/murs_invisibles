@@ -3,6 +3,7 @@ import pandas as pd
 from murs_invisibles.max_endecoding import maxEncode
 
 
+
 class IO(object):
 
     def __init__(self, config):
@@ -53,7 +54,7 @@ class IO(object):
     def get_out_path(self, path):
         out_path = maxEncode(path). \
             replace('sources', 'm4l'). \
-            replace('.csv', '_17avril2019_14h20.tsv')
+            replace('.csv', '.tsv')
         out_dir = os.path.dirname(out_path)
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
@@ -75,7 +76,7 @@ class IO(object):
         tmp_path = maxEncode(path).replace('sources', 'm4l')
         out_dir = os.path.dirname(tmp_path)
         indicator = indicator.replace('/', '_').replace(',', '_')
-        out_path = os.path.join(out_dir, indicator+"_17avril2019_14h20.tsv")
+        out_path = os.path.join(out_dir, indicator+".tsv")
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
         return out_path
