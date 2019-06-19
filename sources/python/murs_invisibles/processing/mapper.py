@@ -20,7 +20,7 @@ class Mapper(object):
         row: pandas dataframe row
              row.value contains p = m/(m+w) proportion in [0, 1]
         | 0 <= p <= 1
-        | Perfect egality iff abs(p - .5) = 0
+        | Perfect egality iff  p = .5
         | Maximum inegality iff abs(p - .5) = .5
         """
         return abs(row.value - .5) / .5
