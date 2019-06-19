@@ -16,6 +16,10 @@ if __name__ == "__main__":
                         dest='dry',
                         default=False,
                         action='store_true')
+    parser.add_argument('-linebreak',
+                        dest='dry',
+                        default=False,
+                        action='store_true')
     parser.add_argument('-ip',
                         dest='UDP_IP',
                         type=str,
@@ -31,15 +35,15 @@ if __name__ == "__main__":
     parser.add_argument('-clean',
                         dest="clean",
                         type=int,
-                        default=600)
+                        default=100)
     parser.add_argument('-in_line_breaks',
                         dest="in_line_breaks",
                         type=int,
-                        default=1)
+                        default=0)
     parser.add_argument('-out_line_breaks',
                         dest="out_line_breaks",
                         type=int,
-                        default=1)
+                        default=0)
 
     for k, v in parser.parse_args().__dict__.items():
         locals()[k] = v
@@ -74,14 +78,15 @@ if __name__ == "__main__":
             rnd = random.randint(0, indent)
             out += '\t' * rnd
             dec = False
-            if 'part des femmes' in measure:
-                dec = True
-                measure = measure.replace(
-                    'part des femmes', '\n'+'\t' * rnd + 'part des femmes')
-            if 'par rapport aux hommes' in measure and not dec:
-                measure = measure.replace(
-                    'par rapport aux hommes', '\n'+'\t' * rnd +
-                    'par rapport aux hommes')
+            if linebreak:
+                if 'part des femmes' in measure:
+                    dec = True
+                    measure = measure.replace(
+                        'part des femmes', '\n'+'\t' * rnd + 'part des femmes')
+                if 'par rapport aux hommes' in measure and not dec:
+                    measure = measure.replace(
+                        'par rapport aux hommes', '\n'+'\t' * rnd +
+                        'par rapport aux hommes')
             out += "%s %s %s %s" % (country, year, measure, value)
             out += '\n' * out_line_breaks
             print(out)
