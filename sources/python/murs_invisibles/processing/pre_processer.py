@@ -74,7 +74,6 @@ class PreProcesser(object):
                       on=merge_on,
                       suffixes=('_women', '_men'))
 
-
         # # /!\  HOTFIX /!\
         # df = df[df.value_men + df.value_women > 0]
         # # /!\  HOTFIX /!\

@@ -5,10 +5,10 @@ import pandas as pd
 
 COUNTRY_PATH = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
-    'country_{}.json')
+    'aux/translators/country_{}.json')
 IND_PATH = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
-    'indicator_{}.json')
+    'aux/translators/indicator_{}.json')
 
 
 class Translator(object):
