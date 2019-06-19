@@ -3,7 +3,7 @@ import socket
 import random
 import argparse
 
-from osc_py3 import decodeOSC
+from osc import decodeOSC
 from murs_invisibles.max_endecoding import maxDecode
 
 EXPECTED_DECODED_LENGTH = 6
