@@ -10,16 +10,16 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            "emploi_spect_vivant_cat_so.csv": "one_save",
-            "emploi_spect_vivant.csv": "one_save",
-            "intermitants.csv": "one_save",
+            "ecarts_salaires.csv": "one_save",
+            "part de femmes.csv": "one_save",
+            "hf.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
-            "emploi_spect_vivant_cat_so.csv": "no_process",
-            "emploi_spect_vivant.csv": "no_process",
-            "intermitants.csv": "virg2point",
+            "ecarts_salaires.csv": "remove_prop",
+            "part de femmes.csv": "remove_prop",
+            "hf.csv": "diff_fh",
         },
         'rename': {
             'country': 'pays',
@@ -30,18 +30,18 @@ config = {
     },
     "mapper": {
         'fns': {
-            "emploi_spect_vivant_cat_so.csv": "proportion100",
-            "emploi_spect_vivant.csv": "proportion100",
-            "intermitants.csv": "proportion100",
+            "ecarts_salaires.csv": "ecart100",
+            "part de femmes.csv": "proportion100",
+            "hf.csv": "ecart100",
         }
     },
     "filter": {
         'filter_indicator_path': None,
         'country_filter_lang': 'fr',
         'year': {
-            "emploi_spect_vivant_cat_so.csv": 2010,
-            "emploi_spect_vivant.csv": 2010,
-            "intermitants.csv": 2010,
+            "ecarts_salaires.csv": 2010,
+            "part de femmes.csv": 2010,
+            "hf.csv": 2010,
         }
     },
     "translator": {
@@ -50,9 +50,9 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            "emploi_spect_vivant_cat_so.csv": "diff_perc",
-            "emploi_spect_vivant.csv": "perc",
-            "intermitants.csv": "perc",
+            "ecarts_salaires.csv": "diff_perc",
+            "part de femmes.csv": "perc",
+            "hf.csv": "diff_perc",
         }
     },
 }
