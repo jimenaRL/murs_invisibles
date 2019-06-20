@@ -29,6 +29,11 @@ class PreProcesser(object):
     def no_process(self, df):
         return df
 
+    def virg2point(self, df):
+        df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
+        return df
+
+
     def diff_wm(self, df):
         """
         Dataframe preprocessing

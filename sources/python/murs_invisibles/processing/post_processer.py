@@ -38,7 +38,7 @@ class PostProcesser(object):
     @classmethod
     def perc(cls, df):
         df['value'] = df.apply(
-            lambda row: '%1.2f' % abs(row.value) + '%', axis=1)
+            lambda row: '%1.0f' % abs(row.value) + '%', axis=1)
         return df
 
     @classmethod

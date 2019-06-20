@@ -71,25 +71,32 @@ class Processer(object):
 
         for table in self.tables:
 
+            print(f"***** {table} ****")
             path = os.path.join(self.data_path, table)
 
             # load
             df = self.io.load(path)
+            # print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
+            # print(df.head())
 
             # filter
             df = self.filter.process(table, df)
+            # print(df.head())
 
             # translate
             df = self.translator.process(table, df)
+            # print(df.head())
 
             # compute map value
             df = self.mapper.process(table, df)
+            # print(df.head())
 
             # postprocess
             df = self.postprocesser.process(table, df)
+            # print(df.head())
 
             # save
             self.io.save(table, df, path)
