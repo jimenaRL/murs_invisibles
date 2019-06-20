@@ -76,7 +76,7 @@ class Processer(object):
 
             # load
             df = self.io.load(path)
-            # print(df.head())
+            print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
@@ -88,7 +88,7 @@ class Processer(object):
 
             # translate
             df = self.translator.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # compute map value
             df = self.mapper.process(table, df)

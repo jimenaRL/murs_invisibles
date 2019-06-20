@@ -9,7 +9,8 @@ indicateor_fr2fr = "/Users/jimenarl/Desktop/git_murs/sources/python/murs_invisib
 
 
 folders = [
-    "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/*/*.csv"
+    "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/*/*.csv",
+    "/Users/jimenarl/Desktop/git_murs/data/sources/secretariat_egalite_femmes_hommes_2/*.csv"
 ]
 
 with open(indicateor_fr2fr, 'r', encoding='utf-8') as fp:
