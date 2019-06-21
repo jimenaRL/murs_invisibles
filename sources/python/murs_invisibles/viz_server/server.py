@@ -17,7 +17,7 @@ if __name__ == "__main__":
                         default=False,
                         action='store_true')
     parser.add_argument('-linebreak',
-                        dest='dry',
+                        dest='linebreak',
                         default=False,
                         action='store_true')
     parser.add_argument('-ip',
