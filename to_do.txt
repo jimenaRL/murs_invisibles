@@ -11,6 +11,8 @@ mapper
 		 		GENDER_EDU_29102017131322363.csv
 		 		GENDER_EMP_01042019231318532.csv
 		 		GENDER_ENT1_01042019230825609_remove_ENT4.csv
+		 - secretariat_egalite_femmes_hommes_2
+		 		"ecarts_salaires.csv": "ecart100",
 
 	and meaning of formulae /!\
 
