@@ -12,7 +12,8 @@ folders = [
     "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/*/*.csv",
     "/Users/jimenarl/Desktop/git_murs/data/sources/secretariat_egalite_femmes_hommes_2/*.csv",
     "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/EESR-FR/*.csv",
-    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/parite2019/*.csv"
+    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/EESR-FR/*.csv",
+    "/Users/jimenarl/Desktop/git_murs/data/sources/MINIST-CULT/*.csv"
 ]
 
 with open(indicateor_fr2fr, 'r', encoding='utf-8') as fp:

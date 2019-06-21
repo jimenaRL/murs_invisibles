@@ -96,7 +96,7 @@ class Processer(object):
 
             # postprocess
             df = self.postprocesser.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # save
             self.io.save(table, df, path)
