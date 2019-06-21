@@ -11,7 +11,8 @@ indicateor_fr2fr = "/Users/jimenarl/Desktop/git_murs/sources/python/murs_invisib
 folders = [
     "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/*/*.csv",
     "/Users/jimenarl/Desktop/git_murs/data/sources/secretariat_egalite_femmes_hommes_2/*.csv",
-    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/EESR-FR/*.csv"
+    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/EESR-FR/*.csv",
+    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/parite2019/*.csv"
 ]
 
 with open(indicateor_fr2fr, 'r', encoding='utf-8') as fp:
@@ -24,7 +25,6 @@ for folder in folders:
     paths = glob(folder)
     for p in paths:
         df = pd.read_csv(p, encoding='utf-8')
-        print(df.head())
         indicateurs = df.nom.tolist()
         dicco.update({i: i for i in indicateurs})
 
