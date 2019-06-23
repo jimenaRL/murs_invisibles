@@ -39,7 +39,7 @@ config = {
     },
     "postprocesser": {
         'fns': {
-        '46 - Share of female police officers_data.csv': 'perc',
+        '46 - Share of female police officers_data.csv': 'percX100',
         }
     },
 }
