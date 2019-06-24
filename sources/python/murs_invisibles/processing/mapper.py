@@ -50,6 +50,18 @@ class Mapper(object):
         return abs(row.value) / 100.
 
     # @classmethod
+    # def ecartTempsJournalier(cls, row):
+    #     """
+    #     row: pandas dataframe row
+    #          row.value contains p = m-w where m (resp. women) is the ratio of
+    #          men (res. women) among all men (resp. women)
+    #     | -24*60 <= p <= 24*60
+    #     | Perfect egality iff abs(p) = 0
+    #     | Maximum inegality iff abs(p) = 24*60
+    #     """
+    #     return None #abs(row.value) / (24*60.)
+
+    # @classmethod
     # def norm_wm(cls, row):
     #     """
     #     """
