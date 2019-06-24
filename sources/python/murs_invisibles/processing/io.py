@@ -49,6 +49,7 @@ class IO(object):
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
             lambda x: maxEncode(x))
+        df.year = df.year.astype(int)
         return df
 
     def get_out_path(self, path):

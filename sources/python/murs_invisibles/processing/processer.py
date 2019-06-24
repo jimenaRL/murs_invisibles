@@ -92,11 +92,11 @@ class Processer(object):
 
             # compute map value
             df = self.mapper.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # postprocess
             df = self.postprocesser.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # save
             self.io.save(table, df, path)
