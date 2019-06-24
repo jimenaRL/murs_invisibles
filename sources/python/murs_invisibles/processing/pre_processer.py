@@ -43,8 +43,10 @@ class PreProcesser(object):
 
     def diff_fh(self, df):
         # remove € HOTFIX
-        df.femmes = df.femmes.apply(lambda s: float(str(s).replace('€', '')))
-        df.hommes = df.hommes.apply(lambda s: float(str(s).replace('€', '')))
+        df.femmes = df.femmes.apply(
+            lambda s: float(str(s).replace('€', '').replace('%', '')))
+        df.hommes = df.hommes.apply(
+            lambda s: float(str(s).replace('€', '').replace('%', '')))
         ###
         df['value'] = df.femmes-df.hommes
         return df
