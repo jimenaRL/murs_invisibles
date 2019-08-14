@@ -9,3 +9,5 @@ DOM hors Mayotte
 DOM_hors_Mayotte
 France hors Mayotte
 France_hors_Mayotte
+DOM y compris Mayotte
+DOM_y_compris_Mayotte
