@@ -1,4 +1,0 @@
-- check encoding and deconding
-- fix ugly floating point precision
-- code python all
-- /!\ check DIFF women - men traitment /!\

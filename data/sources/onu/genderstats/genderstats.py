@@ -1,70 +1,47 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
-
-proc = Processer(
-    read_path=os.path.dirname(os.path.realpath(__file__)),
-    filter_indicator_path=None,
-    header=1,
-    encoding='latin1',
-    rename={
-        'country': 'Country',
-        'year': 'Year',
-        'indicator': 'Indicator Name',
-        'value': 'Value'
+config = {
+    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "io": {
+        "header": 1,
+        "encoding": 'latin1',
+        "fns": {
+            '46 - Share of female police officers_data.csv': 'one_save',
+        }
     },
-    file_preprocess={
-        '46 - Share of female police officers_data.csv': 'no_preprocess',
+    "preprocesser": {
+        'fns': {
+            '46 - Share of female police officers_data.csv': 'no_process',
+        },
+        'rename': {
+            'country': 'Country',
+            'year': 'Year',
+            'indicator': 'Indicator Name',
+            'value': 'Value'
+        },
     },
-    file_postprocess={
-        '46 - Share of female police officers_data.csv': 'perc',
+    "mapper": {
+        'fns': {
+            '46 - Share of female police officers_data.csv': 'proportion1',
+        }
     },
-    file_valuemap={
-        '46 - Share of female police officers_data.csv': 'proportion1',
+    "filter": {
+        'filter_indicator_path': None,
+        'country_filter_lang': 'en',
+        'year': {
+            '46 - Share of female police officers_data.csv': 2010,
+        }
     },
-    file_save={
-        '46 - Share of female police officers_data.csv': 'one_save',
+    "translator": {
+        'country_lang': 'en2fr',
+        'indicator_lang': 'en2fr',
     },
-    file_min_year={
-        '46 - Share of female police officers_data.csv': 2010,
+    "postprocesser": {
+        'fns': {
+        '46 - Share of female police officers_data.csv': 'percX100',
+        }
     },
-    country_filter_lang='en',
-    country_lang='en2fr',
-    indicator_lang='en2fr',
-)
+}
 
-proc.process()
-
-# for name, fn in proc.file_valuemap.items():
-
-#     in_path = os.path.join(proc.read_path, name)
-
-#     # read data frame
-#     df = pd.read_csv(in_path, header=1, encoding='latin1')
-
-#     # rename columns and drop rest
-#     df = df.rename(columns=proc.rename)[proc.rename.values()]
-
-#     # filter year
-#     df = df[df['année'] >= proc.file_year[name]]
-
-#     # create map value
-#     df['map_value'] = df.value.apply(fn)
-
-#     # filter pays
-#     df = df[df['pays'].apply(lambda x: x not in proc.filter_country)]
-#     # translate pays
-#     df['pays'] = df['pays'].apply(lambda x: proc.country_dict_en2fr[x])
-#     # encode pays
-#     df['pays'] = df['pays'].apply(lambda x: proc.encode(x))
-
-#     # translate indicator
-#     df['indicator'] = df['indicator'].apply(
-#         lambda x: proc.ind_en2fr[x])
-#     # encode indicator
-#     df['indicator'] = df['indicator'].apply(lambda x: proc.encode(x))
-
-#     # save
-#     proc.to_csv(df, in_path)
+Processer(config).process()
