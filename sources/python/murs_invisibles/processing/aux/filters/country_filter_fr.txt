@@ -5,3 +5,5 @@ Cote_dIvoire
 DOM
 Saint-Vincent-et-les-Grenadines
 Saint-Vincent-et-les-Grenadines
+DOM hors Mayotte
+DOM_hors_Mayotte
