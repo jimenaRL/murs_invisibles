@@ -7,3 +7,5 @@ Saint-Vincent-et-les-Grenadines
 Saint-Vincent-et-les-Grenadines
 DOM hors Mayotte
 DOM_hors_Mayotte
+France hors Mayotte
+France_hors_Mayotte
