@@ -11,3 +11,5 @@ France hors Mayotte
 France_hors_Mayotte
 DOM y compris Mayotte
 DOM_y_compris_Mayotte
+France métropolitaine hors Ile-de-France
+France_métropolitaine_hors_Ile-de-France
