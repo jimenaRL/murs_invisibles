@@ -33,12 +33,21 @@ class PreProcesser(object):
         df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def diff_fh(self, df):
-        # remove_prop HOTFIX
-        df.femmes = df.femmes.apply(lambda s: float(str(s).replace('%', '')))
-        df.hommes = df.hommes.apply(lambda s: float(str(s).replace('%', '')))
-        ###
-        df['value'] = df.femmes-df.hommes
+    def diff_money(self, df):
+        df['value'] = df.apply(
+            lambda row: float(row.femmes) / float(row.hommes), axis=1)
+        return df
+
+    def remove_dollar_and_k(self, df, column):
+        df[column] = df[column].apply(lambda s: float(
+            s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+        df[column]= df[column].apply(lambda s: 1000.*float(s))
+        return df
+
+    def remove_dollar_and_k_diff_money(self, df):
+        df = self.remove_dollar_and_k(df, 'femmes')
+        df = self.remove_dollar_and_k(df, 'hommes')
+        df = self.diff_money(df)
         return df
 
     def diff_fh(self, df):

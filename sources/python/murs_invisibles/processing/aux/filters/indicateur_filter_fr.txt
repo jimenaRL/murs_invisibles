@@ -10,4 +10,4 @@
 "Part des films d'initiative francçaise réalisés par des femmes "
 "Part des films d'initiative française réalisés par des femmes ",
 "Part des films à majorité étrangère réalisés par des femmes "
-"Part des films à majorité étrangère réalisés par des femmes ",
+"Part des films à majorité étrangère réalisés par des femmes "

@@ -44,6 +44,19 @@ class PostProcesser(object):
         return df
 
     @classmethod
+    def diff_money(cls, df):
+
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 1. else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: 100 * (1. - row.value), axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
+
+        return df
+
+
+    @classmethod
     def perc(cls, df):
         df['value'] = df.apply(
             lambda row: '%1.0f' % abs(row.value) + '%', axis=1)
