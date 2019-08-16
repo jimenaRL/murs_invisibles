@@ -11,7 +11,7 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "one_save",
-            "parite2019 - Part des femmes dans les principales formations d’enseignement supérieur 2018.csv": "one_save",
+            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "one_save",
             "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "one_save",
             "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "one_save",
             "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "one_save",
@@ -23,7 +23,7 @@ config = {
     "preprocesser": {
         'fns': {
             "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "diff_fh",
-            "parite2019 - Part des femmes dans les principales formations d’enseignement supérieur 2018.csv": "no_process",
+            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "no_process",
             "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "no_process",
             "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "no_process",
             "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "diff_fh",
@@ -42,7 +42,7 @@ config = {
     "mapper": {
         'fns': {
             "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "ecart100",
-            "parite2019 - Part des femmes dans les principales formations d’enseignement supérieur 2018.csv": "proportion100",
+            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "proportion100",
             "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "proportion100",
             "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "proportion100",
             "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "ecart100",
@@ -56,7 +56,7 @@ config = {
         'country_filter_lang': 'fr',
         'year': {
             "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": 2010,
-            "parite2019 - Part des femmes dans les principales formations d’enseignement supérieur 2018.csv": 2010,
+            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": 2010,
             "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": 2010,
             "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": 2010,
             "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": 2010,
@@ -72,7 +72,7 @@ config = {
     "postprocesser": {
         'fns': {
             "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "diff_perc",
-            "parite2019 - Part des femmes dans les principales formations d’enseignement supérieur 2018.csv": "perc",
+            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "perc",
             "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "perc",
             "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "perc",
             "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "diff_perc",
