@@ -15,6 +15,7 @@ config = {
             "taux.csv": "one_save",
             "revenu_moyens.csv": "one_save",
             "culture.csv": "one_save",
+            "effectif_professions_culture_communications.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -22,6 +23,7 @@ config = {
             "revenu_moyens.csv": "remove_dollar_and_k_diff_money",
             "culture.csv": "no_process",
             "taux.csv": "diff_fh",
+            "effectif_professions_culture_communications.csv": "perc_fsurtotal",
         },
         'rename': {
             'country': 'pays',
@@ -35,6 +37,7 @@ config = {
             "culture.csv": "proportion100",
             "taux.csv": "ecart100",
             "revenu_moyens.csv": "women2men_ratio",
+            "effectif_professions_culture_communications.csv": "proportion100",
         }
     },
     "filter": {
@@ -44,6 +47,7 @@ config = {
             "culture.csv": 2006,
             "taux.csv": 2006,
             "revenu_moyens.csv": 2006,
+            "effectif_professions_culture_communications.csv": 2006,
         }
     },
     "translator": {
@@ -55,6 +59,7 @@ config = {
             "culture.csv": "perc",
             "taux.csv": "diff_perc",
             "revenu_moyens.csv": "diff_money",
+            "effectif_professions_culture_communications.csv": "perc",
         }
     },
     "sorter": {
@@ -62,6 +67,7 @@ config = {
             "taux.csv": "none",
             "revenu_moyens.csv": "none",
             "culture.csv": "none",
+            "effectif_professions_culture_communications.csv": "none",
         }
     },
 }

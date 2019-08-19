@@ -50,6 +50,11 @@ class PreProcesser(object):
         df = self.diff_money(df)
         return df
 
+    def perc_fsurtotal(self, df):
+        df['value'] = df.femmes / (df.hommes+df.femmes)
+        return df
+
+
     def diff_fh(self, df):
         # remove € HOTFIX
         df.femmes = df.femmes.apply(
