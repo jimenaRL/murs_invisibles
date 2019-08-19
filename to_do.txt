@@ -28,3 +28,12 @@ sources
 	- line 32 oced entrepreneuriat.py : 'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',  # or 'norm_wm',?
 	- line 29 oced eductaion.py : 'GENDER_EDU_29102017131322363.csv': 'ecart100',  # or 'norm_wm',?
 	- line 26 oced emploi.py : 'GENDER_EMP_01042019231318532.csv': 'diff_perc',  # ?????
+
+
+/!\ /!\ /!\ FAIRE COMME L'INSEE /!\ /!\ /!\
+https://docs.google.com/spreadsheets/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/edit#gid=2031385405
+
+Montant de la retraite de l'avantage principal de droit direct selon l'âge et le sexe en 2012
+Différence de salaires (F-H)/H (en %)
+
+/!\ /!\ /!\ FAIRE COMME L'INSEE /!\ /!\ /!\
