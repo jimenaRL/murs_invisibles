@@ -10,24 +10,24 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "one_save",
-            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "one_save",
-            "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "one_save",
-            "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "one_save",
-            "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "one_save",
-            "parite2019 - distinction  organismes publics de recherche.csv": "one_save",
+            "insertion_professionnelle.csv": "one_save",
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": "one_save",
+            "titre_ingénieur.csv": "one_save",
+            "personnels_enseignants_titulaires.csv": "one_save",
+            "taux_emploi_titulaire_licence.csv": "one_save",
+            "distinction.csv": "one_save",
             "parite2019_femmes-hommes.csv": "one_save",
             "parite2019_part_des_femmes.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
-            "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "diff_fh",
-            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "no_process",
-            "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "no_process",
-            "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "no_process",
-            "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "diff_fh",
-            "parite2019 - distinction  organismes publics de recherche.csv": "no_process",
+            "insertion_professionnelle.csv": "diff_fh",
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": "no_process",
+            "titre_ingénieur.csv": "no_process",
+            "personnels_enseignants_titulaires.csv": "no_process",
+            "taux_emploi_titulaire_licence.csv": "diff_fh",
+            "distinction.csv": "no_process",
             "parite2019_femmes-hommes.csv": "diff_fh",
             "parite2019_part_des_femmes.csv": "no_process",
 
@@ -41,12 +41,12 @@ config = {
     },
     "mapper": {
         'fns': {
-            "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "ecart100",
-            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "proportion100",
-            "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "proportion100",
-            "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "proportion100",
-            "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "ecart100",
-            "parite2019 - distinction  organismes publics de recherche.csv": "proportion100",
+            "insertion_professionnelle.csv": "ecart100",
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": "proportion100",
+            "titre_ingénieur.csv": "proportion100",
+            "personnels_enseignants_titulaires.csv": "proportion100",
+            "taux_emploi_titulaire_licence.csv": "ecart100",
+            "distinction.csv": "proportion100",
             "parite2019_femmes-hommes.csv": "ecart100",
             "parite2019_part_des_femmes.csv": "proportion100",
         }
@@ -55,12 +55,12 @@ config = {
         'filter_indicator_path': None,
         'country_filter_lang': 'fr',
         'year': {
-            "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": 2010,
-            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": 2010,
-            "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": 2010,
-            "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": 2010,
-            "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": 2010,
-            "parite2019 - distinction  organismes publics de recherche.csv": 2010,
+            "insertion_professionnelle.csv": 2010,
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": 2010,
+            "titre_ingénieur.csv": 2010,
+            "personnels_enseignants_titulaires.csv": 2010,
+            "taux_emploi_titulaire_licence.csv": 2010,
+            "distinction.csv": 2010,
             "parite2019_femmes-hommes.csv": 2010,
             "parite2019_part_des_femmes.csv": 2010,
         }
@@ -71,15 +71,27 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            "parite2019 - Insertion professionnelle en 2017 des diplômés 2015 d’un Master de l’université.csv": "diff_perc",
-            "parite2019 - Part des femmes dans les principales formations d'enseignement supérieur 2018.csv": "perc",
-            "parite2019 - Part des femmes diplômées d’un titre d’ingénieur de 2000 à 2017.csv": "perc",
-            "parite2019 - Personnels enseignants titulaires en activité dans l’enseignement supérieur - 2018.csv": "perc",
-            "parite2019 - Taux d’emploi des titulaires d’un diplôme de niveau Licence ou plus.csv": "diff_perc",
-            "parite2019 - distinction  organismes publics de recherche.csv": "perc",
+            "insertion_professionnelle.csv": "diff_perc",
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": "perc",
+            "titre_ingénieur.csv": "perc",
+            "personnels_enseignants_titulaires.csv": "perc",
+            "taux_emploi_titulaire_licence.csv": "diff_perc",
+            "distinction.csv": "perc",
             "parite2019_femmes-hommes.csv": "diff_perc",
             "parite2019_part_des_femmes.csv": "perc",
 
+        }
+    },
+    "sorter": {
+        'fns': {
+            "insertion_professionnelle.csv": "none",
+            "part_des_femmes_principales_formations_enseignement_supérieur_2018.csv": "none",
+            "titre_ingénieur.csv": "none",
+            "personnels_enseignants_titulaires.csv": "none",
+            "taux_emploi_titulaire_licence.csv": "none",
+            "distinction.csv": "none",
+            "parite2019_femmes-hommes.csv": "none",
+            "parite2019_part_des_femmes.csv": "none",
         }
     },
 }
