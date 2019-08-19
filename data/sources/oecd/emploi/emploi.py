@@ -47,6 +47,11 @@ config = {
            'GENDER_EMP_01042019231318532.csv': 'diff_perc',  # ?????
         }
     },
+    "sorter": {
+        'fns': {
+            'GENDER_EMP_01042019231318532.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

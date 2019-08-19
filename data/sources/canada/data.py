@@ -57,6 +57,13 @@ config = {
             "revenu_moyens.csv": "diff_money",
         }
     },
+    "sorter": {
+        'fns': {
+            "taux.csv": "none",
+            "revenu_moyens.csv": "none",
+            "culture.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()

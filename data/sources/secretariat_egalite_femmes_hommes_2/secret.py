@@ -55,6 +55,13 @@ config = {
             "hf.csv": "diff_perc",
         }
     },
+    "sorter": {
+        'fns': {
+            "ecarts_salaires.csv": "none",
+            "part de femmes.csv": "none",
+            "hf.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()

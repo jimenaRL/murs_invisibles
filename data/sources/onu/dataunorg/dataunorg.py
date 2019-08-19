@@ -50,6 +50,12 @@ config = {
             'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'ratio',
         }
     },
+    "sorter": {
+        'fns': {
+            'SYB61_T05_Seats held by Women in Parliament.csv': 'none',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

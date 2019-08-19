@@ -53,6 +53,12 @@ config = {
             'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_perc',
         }
     },
+    "sorter": {
+        'fns': {
+            'ENT4.csv': 'none',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

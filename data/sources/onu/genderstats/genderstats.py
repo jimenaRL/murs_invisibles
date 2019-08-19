@@ -42,6 +42,11 @@ config = {
         '46 - Share of female police officers_data.csv': 'percX100',
         }
     },
+    "sorter": {
+        'fns': {
+            '46 - Share of female police officers_data.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

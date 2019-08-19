@@ -45,6 +45,11 @@ config = {
             'GENDER_EDU_29102017131322363.csv': 'diff_perc',
         }
     },
+    "sorter": {
+        'fns': {
+            'GENDER_EDU_29102017131322363.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

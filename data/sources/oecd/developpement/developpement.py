@@ -52,6 +52,12 @@ config = {
             'GIDDB2019_02042019002819783.csv': 'percX100',
         }
     },
+    "sorter": {
+        'fns': {
+            'GIDDB2014_02042019001335690.csv': 'none',
+            'GIDDB2019_02042019002819783.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()
