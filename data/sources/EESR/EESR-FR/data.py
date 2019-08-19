@@ -11,17 +11,11 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "all.csv": "one_save",
-            # "apprentis.csv": "one_save",
-            # "personnel.csv": "one_save",
-            # "r&d.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
             "all.csv": "virg2point",
-            # "apprentis.csv": "virg2point",
-            # "personnel.csv": "virg2point",
-            # "r&d.csv": "virg2point",
         },
         'rename': {
             'country': 'pays',
@@ -33,9 +27,6 @@ config = {
     "mapper": {
         'fns': {
             "all.csv": "ecart100",
-            # "apprentis.csv": "ecart100",
-            # "personnel.csv": "ecart100",
-            # "r&d.csv": "ecart100",
         }
     },
     "filter": {
@@ -43,9 +34,6 @@ config = {
         'country_filter_lang': 'fr',
         'year': {
             "all.csv": 2010,
-            # "apprentis.csv": 2010,
-            # "personnel.csv": 2010,
-            # "r&d.csv": 2010,
         }
     },
     "translator": {
@@ -55,9 +43,11 @@ config = {
     "postprocesser": {
         'fns': {
             "all.csv": "perc",
-            # "apprentis.csv": "perc",
-            # "personnel.csv": "perc",
-            # "r&d.csv": "perc",
+        }
+    },
+    "sorter": {
+        'fns': {
+            "all.csv": "none",
         }
     },
 }
