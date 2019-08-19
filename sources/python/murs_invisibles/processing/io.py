@@ -75,7 +75,7 @@ class IO(object):
                   header=False,
                   encoding='utf-8',
                   sep=self.out_sep)
-        print(df.sample(n=3))
+        print(df.sample(n=2))
         print("{} entries".format(len(df)))
         print("Saved at {}\n".format(out_path))
 
@@ -98,7 +98,7 @@ class IO(object):
                        header=False,
                        encoding='utf-8',
                        sep=self.out_sep)
-            print(tmp.sample(n=3))
+            print(tmp.sample(n=2))
             print("{} entries".format(len(tmp)))
             print("Saved at {}\n".format(out_path))
 
