@@ -1,9 +1,17 @@
 #!/bin/bash
 BASEPATH=$(dirname $0)
 
+
+
+echo "> INSEE"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE/insee.py
+
+
 echo "> CNC-Audiens"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
-
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc1/cnc-audiens.py
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc2/cnc-audiens.py
 
 echo "> onu"
 

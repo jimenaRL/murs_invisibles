@@ -6,15 +6,17 @@ from glob import glob
 
 
 folders = [
-    "/Users/jimenarl/Desktop/git_murs/data/sources/EESR/parite2019/*.csv",
+    "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/audiens/*.csv",
 ]
+
+
 
 # with open(indicateor_fr2fr, 'r', encoding='utf-8') as fp:
 #     country_dict = json.load(fp)
 # print(len(country_dict))
 
 
-dicco = {}
+all_indicateurs = set()
 for folder in folders:
     print(folder)
     paths = glob(folder)
@@ -23,7 +25,10 @@ for folder in folders:
         indicateurs = df.nom.tolist()
         # dicco.update({i: i for i in indicateurs})
         for i in indicateurs:
-            print('    '+'"{}": "{}",'.format(i, i))
+            all_indicateurs.add('    '+'"{}": "{}",'.format(i, i))
+
+for i in all_indicateurs:
+    print(i)
 
 # country_dict.update(dicco)
 # print(country_dict)
