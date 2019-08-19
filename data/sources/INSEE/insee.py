@@ -11,7 +11,7 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "18_indicateurs_REG.csv": "one_save",
-            "conditions_de_vie.csv": "one_save",
+            # "conditions_de_vie.csv": "one_save",  # 19 aout 2019 : a refaire data a partir donnees originales
             # "ecarts_salaires_horaires.csv": "one_save",
             "retraite_et_revenus.csv": "one_save",
         },
@@ -19,7 +19,7 @@ config = {
     "preprocesser": {
         'fns': {
             "18_indicateurs_REG.csv": "no_process",
-            "conditions_de_vie.csv": "no_process",
+            # "conditions_de_vie.csv": "no_process",
             # "ecarts_salaires_horaires.csv": "",
             "retraite_et_revenus.csv": "no_process",
         },
@@ -33,7 +33,7 @@ config = {
     "mapper": {
         'fns': {
             "18_indicateurs_REG.csv": "ecart100",
-            "conditions_de_vie.csv": "conditions_de_vie",
+            # "conditions_de_vie.csv": "conditions_de_vie",
             # "ecarts_salaires_horaires.csv": "",
             "retraite_et_revenus.csv": "ecart100",
         }
@@ -43,7 +43,7 @@ config = {
         'country_filter_lang': 'fr',
         'year': {
             "18_indicateurs_REG.csv": 2010,
-            "conditions_de_vie.csv": 2010,
+            # "conditions_de_vie.csv": 2010,
             # "ecarts_salaires_horaires.csv": 2010,
             "retraite_et_revenus.csv": 2010,
         }
@@ -55,9 +55,16 @@ config = {
     "postprocesser": {
         'fns': {
             "18_indicateurs_REG.csv": "no_process",
-            "conditions_de_vie.csv": "conditions_de_vie",
+            # "conditions_de_vie.csv": "conditions_de_vie",
             # "ecarts_salaires_horaires.csv": "",
             "retraite_et_revenus.csv": "diff_perc",
+        }
+    },
+    "sorter": {
+        'fns': {
+            "18_indicateurs_REG.csv": "none",
+            "retraite_et_revenus.csv": "none",
+
         }
     },
 }
