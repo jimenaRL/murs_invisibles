@@ -60,6 +60,14 @@ config = {
             "rep_etud.csv": "perc",
         }
     },
+    "sorter": {
+        'fns': {
+            # "devis_moyen.csv": "",
+            "part_films_nat.csv": "none",
+            "part_films.csv": "none",
+            "rep_etud.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()
