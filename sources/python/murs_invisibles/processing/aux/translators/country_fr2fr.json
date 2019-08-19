@@ -250,7 +250,7 @@
     "Occitanie": "Occitanie",
     "La Réunion": "La Réunion",
     "France": "France",
-    "DOM y compris Mayotte": "DOM y compris Mayotte",
+    "DOM y compris Mayotte": "DOM avec Mayotte",
     "Nouvelle-Aquitaine": "Nouvelle-Aquitaine",
     "Centre-Val de Loire": "Centre-Val de Loire",
     "Guadeloupe": "Guadeloupe",
@@ -260,5 +260,5 @@
     "France métropolitaine hors Ile-de-France": "France métropolitaine hors Ile-de-France",
     "Hauts-de-France": "Hauts-de-France",
     "Québec": "Québec",
-    "Montréal": "Montréal"
+    "Montréal": "Montréal",
 }
