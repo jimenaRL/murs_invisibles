@@ -51,7 +51,7 @@ class PreProcesser(object):
         return df
 
     def perc_fsurtotal(self, df):
-        df['value'] = df.femmes / (df.hommes+df.femmes)
+        df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
 
