@@ -39,8 +39,8 @@ config = {
         'filter_indicator_path': filter_indicator_path,
         'country_filter_lang': 'fr',
         'year': {
-            'ENT4.csv': 2010,
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2010,
+            'ENT4.csv': 2015,
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2015,
         }
     },
     "translator": {
@@ -55,8 +55,8 @@ config = {
     },
     "sorter": {
         'fns': {
-            'ENT4.csv': 'none',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'none',
+            'ENT4.csv': 'date_country',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'date_country',
         }
     },
 }
