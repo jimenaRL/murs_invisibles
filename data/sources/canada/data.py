@@ -20,7 +20,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "revenu_moyens.csv": "remove_dollar_and_k_diff_money",
+            "revenu_moyens.csv": "remove_dollar_and_k_diff_insee",
             "culture.csv": "no_process",
             "taux.csv": "diff_fh",
             "effectif_professions_culture_communications.csv": "perc_fsurtotal",
@@ -36,7 +36,7 @@ config = {
         'fns': {
             "culture.csv": "proportion100",
             "taux.csv": "ecart100",
-            "revenu_moyens.csv": "women2men_ratio",
+            "revenu_moyens.csv": "ecart100",
             "effectif_professions_culture_communications.csv": "proportion100",
         }
     },
@@ -58,7 +58,7 @@ config = {
         'fns': {
             "culture.csv": "perc",
             "taux.csv": "diff_perc",
-            "revenu_moyens.csv": "diff_money",
+            "revenu_moyens.csv": "diff_perc",
             "effectif_professions_culture_communications.csv": "perc",
         }
     },
