@@ -33,10 +33,6 @@ class PreProcesser(object):
         df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def diff_money(self, df):
-        df['value'] = df.apply(
-            lambda row: float(row.femmes) / float(row.hommes), axis=1)
-        return df
 
     def remove_dollar_and_k(self, df, column):
         df[column] = df[column].apply(lambda s: float(
@@ -44,10 +40,10 @@ class PreProcesser(object):
         df[column] = df[column].apply(lambda s: 1000.*float(s))
         return df
 
-    def remove_dollar_and_k_diff_money(self, df):
+    def remove_dollar_and_k_diff_insee(self, df):
         df = self.remove_dollar_and_k(df, 'femmes')
         df = self.remove_dollar_and_k(df, 'hommes')
-        df = self.diff_money(df)
+        df = self.insee(df)
         return df
 
     def perc_fsurtotal(self, df):
