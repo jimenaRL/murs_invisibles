@@ -58,8 +58,8 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            "18_indicateurs_REG.csv": "no_process",
-            "18_indicateurs_REG_revenu.csv": "no_process",
+            "18_indicateurs_REG.csv": "diff_perc",
+            "18_indicateurs_REG_revenu.csv": "diff_perc",
             # "conditions_de_vie.csv": "conditions_de_vie",
             # "ecarts_salaires_horaires.csv": "",
             "retraite_et_revenus.csv": "diff_perc",
