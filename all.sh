@@ -3,6 +3,10 @@ BASEPATH=$(dirname $0)
 
 
 
+echo "> MINIST-CULT"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
+
+
 echo "> INSEE"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE/insee.py
 

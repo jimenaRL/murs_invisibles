@@ -6,7 +6,7 @@ from glob import glob
 
 
 folders = [
-    "/Users/jimenarl/Desktop/git_murs/data/sources/CNC-Audiens/audiens/*.csv",
+    "/Users/jimenarl/Desktop/git_murs/data/sources/MINIST-CULT/*.csv",
 ]
 
 
