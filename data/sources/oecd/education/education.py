@@ -10,12 +10,12 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            # 'GENDER_EDU_29102017131322363.csv': 'sep_save',
+            'GENDER_EDU_29102017131322363.csv': 'sep_save',
         },
     },
     "preprocesser": {
         'fns': {
-            # 'GENDER_EDU_29102017131322363.csv': 'diff_wm',
+            'GENDER_EDU_29102017131322363.csv': 'diff_wm_insee',
         },
         'rename': {
             'country': 'Pays',
@@ -26,14 +26,14 @@ config = {
     },
     "mapper": {
         'fns': {
-            # 'GENDER_EDU_29102017131322363.csv': 'ecart100',  # or 'norm_wm',?
+            'GENDER_EDU_29102017131322363.csv': 'ecart100',
         }
     },
     "filter": {
         'filter_indicator_path': None,
         'country_filter_lang': 'fr',
         'year': {
-            # 'GENDER_EDU_29102017131322363.csv': 2010,
+            'GENDER_EDU_29102017131322363.csv': 2010,
         }
     },
     "translator": {
@@ -42,12 +42,12 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            # 'GENDER_EDU_29102017131322363.csv': 'diff_perc',
+            'GENDER_EDU_29102017131322363.csv': 'diff_perc',
         }
     },
     "sorter": {
         'fns': {
-            # 'GENDER_EDU_29102017131322363.csv': 'none',
+            'GENDER_EDU_29102017131322363.csv': 'date_country',
         }
     },
 }
