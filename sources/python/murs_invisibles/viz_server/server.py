@@ -1,3 +1,4 @@
+import sys
 import time
 import socket
 import random
@@ -7,6 +8,37 @@ from osc import decodeOSC
 from murs_invisibles.max_endecoding import maxDecode
 
 EXPECTED_DECODED_LENGTH = 6
+CLEAN = 100
+
+
+def add_line_breaks(out, indent):
+
+    indent = ' ' * indent
+
+    words = []
+    for w in out.split(' '):
+        words.extend([w, ' '])
+    words = words[:-1]
+    is_space = list(map(lambda c: c == ' ', words))
+    words_lengths = list(map(len, words))
+
+    current_nb_char = 0
+    for i in range(len(words)):
+        word = words[i]
+        current_nb_char += 1
+        if word == ' ':
+            if current_nb_char + words_lengths[i+1] > max_char:
+                words[i] = '\n' + indent
+                current_nb_char = 0
+    words[0] = indent + words[0]
+    out = ''.join(words)
+
+    return out
+
+
+def remove_dash(word):
+    return word.replace(' - ', ' ')
+
 
 if __name__ == "__main__":
 
@@ -16,10 +48,10 @@ if __name__ == "__main__":
                         dest='dry',
                         default=False,
                         action='store_true')
-    parser.add_argument('-linebreak',
-                        dest='linebreak',
-                        default=False,
-                        action='store_true')
+    # parser.add_argument('-linebreak',
+    #                     dest='linebreak',
+    #                     default=False,
+    #                     action='store_true')
     parser.add_argument('-ip',
                         dest='UDP_IP',
                         type=str,
@@ -32,10 +64,6 @@ if __name__ == "__main__":
                         dest="indent",
                         type=int,
                         default=0)
-    parser.add_argument('-clean',
-                        dest="clean",
-                        type=int,
-                        default=100)
     parser.add_argument('-in_line_breaks',
                         dest="in_line_breaks",
                         type=int,
@@ -44,6 +72,10 @@ if __name__ == "__main__":
                         dest="out_line_breaks",
                         type=int,
                         default=0)
+    parser.add_argument('-max_char',
+                        dest="max_char",
+                        type=int,
+                        default=16)
 
     for k, v in parser.parse_args().__dict__.items():
         locals()[k] = v
@@ -72,27 +104,18 @@ if __name__ == "__main__":
                 EXPECTED_DECODED_LENGTH))
             continue
         endpoint, _ = decoded[:2]
+        # print
         if endpoint == "/woman":
             country, year, measure, value = map(maxDecode, decoded[2:])
-            out = '\n' * in_line_breaks
-            rnd = random.randint(0, indent)
-            out += '\t' * rnd
-            dec = False
-            if linebreak:
-                if 'part des femmes' in measure:
-                    dec = True
-                    measure = measure.replace(
-                        'part des femmes', '\n'+'\t' * rnd + 'part des femmes')
-                if 'par rapport aux hommes' in measure and not dec:
-                    measure = measure.replace(
-                        'par rapport aux hommes', '\n'+'\t' * rnd +
-                        'par rapport aux hommes')
-            out += "%s %s %s %s" % (country, year, measure, value)
-            out += '\n' * out_line_breaks
+            measure = remove_dash(measure)
+            out = "%s %s %s %s" % (country, year, measure, value)
+            out = add_line_breaks(out, indent)
+            out = '\n' * in_line_breaks + out
+            out = out + '\n' * out_line_breaks
             print(out)
         # clear window
         elif endpoint == "/clean":
-            print('\n' * clean)
+            print('\n' * CLEAN)
         else:
             print(
                 "Wrong endpoint %s. Must be '/woman' or '/clean'." % endpoint)
