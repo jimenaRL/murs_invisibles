@@ -12,7 +12,7 @@ config = {
         "fns": {
             "OBS_GROUP3_arts.csv": "one_save",
             "OBS_GROUP4_TV.csv": "one_save",
-            "Observatoire_GROUP1 _part.csv": "one_save",
+            "Observatoire_GROUP1_part.csv": "one_save",
             "Observatoire_GROUP1_ecarts.csv": "one_save",
             "Observatoire_group2_TH_.csv": "one_save",
         },
@@ -21,7 +21,7 @@ config = {
         'fns': {
             "OBS_GROUP3_arts.csv": "remove_prop",
             "OBS_GROUP4_TV.csv": "remove_prop",
-            "Observatoire_GROUP1 _part.csv": "remove_prop",
+            "Observatoire_GROUP1_part.csv": "remove_prop",
             "Observatoire_GROUP1_ecarts.csv": "remove_prop",
             "Observatoire_group2_TH_.csv": "remove_prop",
         },
@@ -36,7 +36,7 @@ config = {
         'fns': {
             "OBS_GROUP3_arts.csv": "proportion100",
             "OBS_GROUP4_TV.csv": "proportion100",
-            "Observatoire_GROUP1 _part.csv": "proportion100",
+            "Observatoire_GROUP1_part.csv": "proportion100",
             "Observatoire_GROUP1_ecarts.csv": "proportion100",
             "Observatoire_group2_TH_.csv": "proportion100",
         }
@@ -47,7 +47,7 @@ config = {
         'year': {
             "OBS_GROUP3_arts.csv": 2010,
             "OBS_GROUP4_TV.csv": 2010,
-            "Observatoire_GROUP1 _part.csv": 2010,
+            "Observatoire_GROUP1_part.csv": 2010,
             "Observatoire_GROUP1_ecarts.csv": 2010,
             "Observatoire_group2_TH_.csv": 2010
         }
@@ -60,7 +60,7 @@ config = {
         'fns': {
             "OBS_GROUP3_arts.csv": "perc",
             "OBS_GROUP4_TV.csv": "perc",
-            "Observatoire_GROUP1 _part.csv": "perc",
+            "Observatoire_GROUP1_part.csv": "perc",
             "Observatoire_GROUP1_ecarts.csv": "diff_perc",
             "Observatoire_group2_TH_.csv": "perc",
         }
@@ -69,7 +69,7 @@ config = {
         'fns': {
             "OBS_GROUP3_arts.csv": "none",
             "OBS_GROUP4_TV.csv": "none",
-            "Observatoire_GROUP1 _part.csv": "none",
+            "Observatoire_GROUP1_part.csv": "none",
             "Observatoire_GROUP1_ecarts.csv": "none",
             "Observatoire_group2_TH_.csv": "none",
         }
