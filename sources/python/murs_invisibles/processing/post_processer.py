@@ -21,7 +21,7 @@ class PostProcesser(object):
             lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
         return df
 
-   @classmethod
+    @classmethod
     def percX100(cls, df):
         df['value'] = df.apply(
             lambda row: '%1.0f' % abs(100*row.value) + '%', axis=1)
