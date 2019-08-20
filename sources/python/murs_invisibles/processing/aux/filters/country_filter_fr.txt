@@ -1,19 +1,16 @@
 Hong Kong, Chine
 Moyenne OCDE
 OCDE - Total
-Cote_dIvoire
+Cote dIvoire
 DOM
 Saint-Vincent-et-les-Grenadines
-Saint-Vincent-et-les-Grenadines
 DOM hors Mayotte
-DOM_hors_Mayotte
 France hors Mayotte
 France_hors_Mayotte
 DOM y compris Mayotte
-DOM_y_compris_Mayotte
 France métropolitaine hors Ile-de-France
-France_métropolitaine_hors_Ile-de-France
-_DOM_hors_Mayotte
-DOM_y_compris_Mayotte
-France_hors_Mayotte
-France_métropolitaine_hors_Ile-de-France
+DOM hors Mayotte
+DOM y compris Mayotte
+France hors Mayotte
+France y compris Mayotte
+France métropolitaine hors Ile-de-France
