@@ -38,6 +38,18 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
+    def insee(cls, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = 100 * (w-m)/m where m (resp. w) is the value
+             for men (res. women), for instance salary amount
+        | -100 <= p <= 100 if w < m (our hypothesis here)
+        | Perfect egality iff abs(p) = 0
+        | Maximum inegality iff abs(p) = 100
+        """
+        return abs(row.value)
+
+    @classmethod
     def ecart100(cls, row):
         """
         row: pandas dataframe row
@@ -71,7 +83,7 @@ class Mapper(object):
     def women2men_ratio(cls, row):
         """
         row: pandas dataframe row
-             row.value contain r = w/r ratio
+             row.value contain r = w/m ratio
 
         | 0 <= w/(m+w) = r/(1+r) <= 1
         | Perfect egality iff w/(m+w) = .5
