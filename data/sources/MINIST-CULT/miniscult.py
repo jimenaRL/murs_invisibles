@@ -65,6 +65,15 @@ config = {
             "Observatoire_group2_TH_.csv": "perc",
         }
     },
+    "sorter": {
+        'fns': {
+            "OBS_GROUP3_arts.csv": "none",
+            "OBS_GROUP4_TV.csv": "none",
+            "Observatoire_GROUP1 _part.csv": "none",
+            "Observatoire_GROUP1_ecarts.csv": "none",
+            "Observatoire_group2_TH_.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()
