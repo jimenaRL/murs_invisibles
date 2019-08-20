@@ -36,7 +36,14 @@ class PostProcesser(object):
         return df
 
     @classmethod
-    def ratio(cls, df):
+    def women2men_ratio(cls, df):
+        """
+        row: pandas dataframe row
+             row.value contain r = w/m ratio
+
+        => r/(1+r) = w/(w+m)
+
+        """
         df['value'] = df.apply(
             lambda row: row.value / (1 + row.value), axis=1)
         df['value'] = df.apply(

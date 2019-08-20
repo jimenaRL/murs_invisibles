@@ -47,7 +47,7 @@ config = {
     "postprocesser": {
         'fns': {
             'SYB61_T05_Seats held by Women in Parliament.csv': 'perc',
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'ratio',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'women2men_ratio',
         }
     },
     "sorter": {
