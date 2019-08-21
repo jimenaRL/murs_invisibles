@@ -22,13 +22,20 @@ def add_line_breaks(out, indent):
     is_space = list(map(lambda c: c == ' ', words))
     words_lengths = list(map(len, words))
 
+    # print(words)
+    # print(words_lengths)
     current_nb_char = 0
     for i in range(len(words)):
         word = words[i]
-        current_nb_char += 1
+        current_nb_char += words_lengths[i]
         if word == ' ':
             if current_nb_char + words_lengths[i+1] > max_char:
                 words[i] = '\n' + indent
+                # print("i: {}".format(i))
+                # print("max_char: {}".format(max_char))
+                # print("current_nb_char: {}".format(current_nb_char))
+                # print("current_nb_char + words_lengths[i+1]: {}".format(current_nb_char + words_lengths[i+1]))
+                # print("current_nb_char + words_lengths[i+1] > max_char: {}".format(current_nb_char + words_lengths[i+1] > max_char))
                 current_nb_char = 0
     words[0] = indent + words[0]
     out = ''.join(words)
