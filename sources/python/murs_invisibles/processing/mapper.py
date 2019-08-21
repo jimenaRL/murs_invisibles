@@ -38,6 +38,18 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
+    def ecart1(cls, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = (m-w)/100. where m (resp. women) is the ratio of
+             men (res. women) among all men (resp. women)
+        | -1 <= p <= 1
+        | Perfect egality iff abs(p) = 0
+        | Maximum inegality iff abs(p) = 1
+        """
+        return abs(row.value)
+
+    @classmethod
     def ecart100(cls, row):
         """
         row: pandas dataframe row
