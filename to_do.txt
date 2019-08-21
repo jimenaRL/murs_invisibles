@@ -1,2 +1,3 @@
 (1) Check Canada - Quebec again !!!!!!
-(2) INSEE > conditions_de_vie > minutes !!!
+(2) Check againt diff_wm_insee_1 and co.
+(3) INSEE > conditions_de_vie > minutes !!!
