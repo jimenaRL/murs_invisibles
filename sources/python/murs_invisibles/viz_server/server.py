@@ -39,6 +39,10 @@ def add_line_breaks(out, indent):
                 current_nb_char = 0
     words[0] = indent + words[0]
     out = ''.join(words)
+    ### HOT FIX ###
+    out = out.replace('part\ndes femmes', '\n'+'part des femmes')
+    out = out.replace('part des\nfemmes', '\n'+'part des femmes')
+    ### ### ###  ###
 
     return out
 
