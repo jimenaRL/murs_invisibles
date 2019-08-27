@@ -11,7 +11,7 @@ EXPECTED_DECODED_LENGTH = 6
 CLEAN = 100
 
 
-def add_line_breaks(out, indent):
+def add_line_breaks(out, indent, part_de_femmes):
 
     indent = ' ' * indent
 
@@ -32,10 +32,10 @@ def add_line_breaks(out, indent):
                 current_nb_char = 0
     words[0] = indent + words[0]
     out = ''.join(words)
-    ### HOT FIX ###
-    out = out.replace('part\ndes femmes', '\n'+'part des femmes')
-    out = out.replace('part des\nfemmes', '\n'+'part des femmes')
-    ### ### ###  ###
+    if part_de_femmes:
+        out = out.replace('part\ndes femmes', '\n'+'part des femmes')
+        out = out.replace('part des\nfemmes', '\n'+'part des femmes')
+        out = out.replace('\n\npart des femmes', '\npart des femmes')
 
     return out
 
@@ -52,10 +52,10 @@ if __name__ == "__main__":
                         dest='dry',
                         default=False,
                         action='store_true')
-    # parser.add_argument('-linebreak',
-    #                     dest='linebreak',
-    #                     default=False,
-    #                     action='store_true')
+    parser.add_argument('-pdf',
+                        dest='part_de_femmes',
+                        default=False,
+                        action='store_true')
     parser.add_argument('-ip',
                         dest='UDP_IP',
                         type=str,
@@ -113,7 +113,7 @@ if __name__ == "__main__":
             country, year, measure, value = map(maxDecode, decoded[2:])
             measure = remove_dash(measure)
             out = "%s %s %s %s" % (country, year, measure, value)
-            out = add_line_breaks(out, indent)
+            out = add_line_breaks(out, indent, part_de_femmes)
             out = '\n' * in_line_breaks + out
             out = out + '\n' * out_line_breaks
             print(out)
