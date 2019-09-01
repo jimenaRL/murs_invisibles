@@ -3,19 +3,20 @@ BASEPATH=$(dirname $0)
 
 
 
-echo "> MINIST-CULT"
-PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
+# To check problems
+# echo "> MINIST-CULT"
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
 
 
 echo "> INSEE"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE/insee.py
 
-
-echo "> CNC-Audiens"
-PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
-PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
-PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc1/cnc-audiens.py
-PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc2/cnc-audiens.py
+# To check problems
+# echo "> CNC-Audiens"
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc1/cnc-audiens.py
+#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc2/cnc-audiens.py
 
 echo "> onu"
 
@@ -49,7 +50,7 @@ echo ">> EESR-FR"
 PYTHONIOENCODING=UTF-8 python data/sources/EESR/EESR-FR/data.py
 
 echo ">> parite2019"
-PYTHONIOENCODING=UTF-8 python data/sources/EESR/parite2019/data.py
+PYTHONIOENCODING=UTF-8 python data/sources/EESR/parite2019/parite2019.py
 
 echo "> secretariat_egalite_femmes_hommes_2"
 
