@@ -1,7 +1,7 @@
 import os
 
 from murs_invisibles.processing.mapper import Mapper
-from murs_invisibles.processing.io import IO
+from murs_invisibles.processing.inout import IO
 from murs_invisibles.processing.pre_processer import PreProcesser
 from murs_invisibles.processing.post_processer import PostProcesser
 from murs_invisibles.processing.filter import Filter
