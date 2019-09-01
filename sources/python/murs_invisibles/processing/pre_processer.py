@@ -42,7 +42,7 @@ class PreProcesser(object):
     def remove_dollar_and_k_diff_insee(self, df):
         df = self.remove_dollar_and_k(df, 'femmes')
         df = self.remove_dollar_and_k(df, 'hommes')
-        df = self.insee(df)
+        df = self.insee100(df)
         return df
 
     def perc_fsurtotal(self, df):
