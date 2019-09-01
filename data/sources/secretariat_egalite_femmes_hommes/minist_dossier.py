@@ -7,7 +7,9 @@ file_dir = os.path.dirname(os.path.realpath(__file__))
 filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
 config = {
-    "data_path": file_dir,
+    "base_path": file_dir,
+    "origin_language": "fr",
+    "target_language": "fr",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -33,14 +35,11 @@ config = {
     },
     "filter": {
         'filter_indicator_path': filter_indicator_path,
-        'country_filter_lang': 'fr',
         'year': {
             'minist_dossier.csv': 2010,
         }
     },
     "translator": {
-        'country_lang': 'fr2fr',
-        'indicator_lang': 'fr2fr',
     },
     "postprocesser": {
         'fns': {

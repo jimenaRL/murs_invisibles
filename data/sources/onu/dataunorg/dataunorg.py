@@ -4,7 +4,9 @@ import pandas as pd
 from murs_invisibles import Processer
 
 config = {
-    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "base_path": os.path.dirname(os.path.realpath(__file__)),
+    "origin_language": "en",
+    "target_language": "fr",
     "io": {
         "header": 1,
         "encoding": 'latin1',
@@ -34,15 +36,12 @@ config = {
     },
     "filter": {
         'filter_indicator_path': None,
-        'country_filter_lang': 'en',
         'year': {
             'SYB61_T05_Seats held by Women in Parliament.csv': 2012,
             'SYB61_T06_Ratio of Girls to Boys in Education.csv': 2012
         }
     },
     "translator": {
-        'country_lang': 'en2fr',
-        'indicator_lang': 'en2fr',
     },
     "postprocesser": {
         'fns': {
