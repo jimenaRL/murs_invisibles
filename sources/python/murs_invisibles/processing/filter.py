@@ -4,7 +4,7 @@ import pandas as pd
 
 FILTER_COUNTRY_PATH = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
-    'aux/filters/country_filter_{}.txt')
+    'auxiliar/filters/country_filter_{}.txt')
 
 
 class Filter(object):
