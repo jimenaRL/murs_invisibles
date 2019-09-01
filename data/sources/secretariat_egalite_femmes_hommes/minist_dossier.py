@@ -47,6 +47,11 @@ config = {
             'minist_dossier.csv': 'perc',
         }
     },
+    "sorter": {
+        'fns': {
+            'minist_dossier.csv': 'none',
+        }
+    },
 }
 
 Processer(config).process()

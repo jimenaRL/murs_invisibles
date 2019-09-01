@@ -1,0 +1,16 @@
+"L'accès à l'argent pour démarrer une entreprise"
+"Attitude envers le risque entrepreneurial"
+"Préférences pour le travail indépendant"
+"Faisabilité de travail indépendant"
+"OCDE - Total"
+"Part des travailleurs indépendants parmi les diplômés de l'enseignement tertiaire ayant un emploi"
+"Travailleur·euses indépendants parmi les diplômés de l'enseignement tertiaire ayant un emploi, part des femmes par rapport à celle des hommes"
+"Part des entrées des films réalisés par des femmes"
+"Part des entrées des films réalisés par des femmes",
+"Part des films d'initiative francçaise réalisés par des femmes "
+"Part des films d'initiative française réalisés par des femmes ",
+"Part des films à majorité étrangère réalisés par des femmes "
+"Part des films à majorité étrangère réalisés par des femmes "
+"PISA scores, Reading"
+"PISA scores, Mathematics"
+"PISA scores, Science"

@@ -15,7 +15,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'diff_wm',
+            'GENDER_EDU_29102017131322363.csv': 'diff_wm_insee_100',
         },
         'rename': {
             'country': 'Pays',
@@ -26,7 +26,7 @@ config = {
     },
     "mapper": {
         'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'ecart100',  # or 'norm_wm',?
+            'GENDER_EDU_29102017131322363.csv': 'ecart100',
         }
     },
     "filter": {
@@ -43,6 +43,11 @@ config = {
     "postprocesser": {
         'fns': {
             'GENDER_EDU_29102017131322363.csv': 'diff_perc',
+        }
+    },
+    "sorter": {
+        'fns': {
+            'GENDER_EDU_29102017131322363.csv': 'date_country',
         }
     },
 }

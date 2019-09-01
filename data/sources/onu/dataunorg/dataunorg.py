@@ -36,8 +36,8 @@ config = {
         'filter_indicator_path': None,
         'country_filter_lang': 'en',
         'year': {
-            'SYB61_T05_Seats held by Women in Parliament.csv': 2010,
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 2010
+            'SYB61_T05_Seats held by Women in Parliament.csv': 2012,
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 2012
         }
     },
     "translator": {
@@ -47,7 +47,13 @@ config = {
     "postprocesser": {
         'fns': {
             'SYB61_T05_Seats held by Women in Parliament.csv': 'perc',
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'ratio',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'women2men_ratio',
+        }
+    },
+    "sorter": {
+        'fns': {
+            'SYB61_T05_Seats held by Women in Parliament.csv': 'date_country',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'date_country',
         }
     },
 }

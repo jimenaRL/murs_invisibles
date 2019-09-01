@@ -13,7 +13,6 @@ config = {
             # "devis_moyen.csv": "",
             "part_films_nat.csv": "one_save",
             "part_films.csv": "one_save",
-            "rep_etud.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -21,7 +20,6 @@ config = {
             # "devis_moyen.csv": "",
             "part_films_nat.csv": "no_process",
             "part_films.csv": "no_process",
-            "rep_etud.csv": "no_process",
         },
         'rename': {
             'country': 'pays',
@@ -35,7 +33,6 @@ config = {
             # "devis_moyen.csv": "",
             "part_films_nat.csv": "proportion100",
             "part_films.csv": "proportion100",
-            "rep_etud.csv": "proportion100",
         }
     },
     "filter": {
@@ -45,7 +42,6 @@ config = {
             "devis_moyen.csv": 2010,
             "part_films_nat.csv": 2010,
             "part_films.csv": 2010,
-            "rep_etud.csv": 2010,
         }
     },
     "translator": {
@@ -57,7 +53,13 @@ config = {
             # "devis_moyen.csv": "",
             "part_films_nat.csv": "perc",
             "part_films.csv": "perc",
-            "rep_etud.csv": "perc",
+        }
+    },
+    "sorter": {
+        'fns': {
+            # "devis_moyen.csv": "",
+            "part_films_nat.csv": "none",
+            "part_films.csv": "none",
         }
     },
 }

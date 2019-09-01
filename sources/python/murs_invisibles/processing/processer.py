@@ -6,6 +6,7 @@ from murs_invisibles.processing.pre_processer import PreProcesser
 from murs_invisibles.processing.post_processer import PostProcesser
 from murs_invisibles.processing.filter import Filter
 from murs_invisibles.processing.translator import Translator
+from murs_invisibles.processing.sorter import Sorter
 
 
 class Processer(object):
@@ -66,6 +67,7 @@ class Processer(object):
         self.mapper = Mapper(config['mapper'])
         self.translator = Translator(config['translator'])
         self.postprocesser = PostProcesser(config['postprocesser'])
+        self.sorter = Sorter(config['sorter'])
 
     def process(self):
 
@@ -97,6 +99,9 @@ class Processer(object):
             # postprocess
             df = self.postprocesser.process(table, df)
             # print(df.head())
+
+            # sort
+            df = self.sorter.process(table, df)
 
             # save
             self.io.save(table, df, path)

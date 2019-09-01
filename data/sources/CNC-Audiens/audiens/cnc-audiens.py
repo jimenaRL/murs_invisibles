@@ -55,6 +55,13 @@ config = {
             "intermitants.csv": "perc",
         }
     },
+    "sorter": {
+        'fns': {
+            "emploi_spect_vivant_cat_so.csv": "none",
+            "emploi_spect_vivant.csv": "none",
+            "intermitants.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()

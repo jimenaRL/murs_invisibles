@@ -48,6 +48,11 @@ config = {
             'GOV_2017_03042019165415175.csv': 'perc',
         }
     },
+    "sorter": {
+        'fns': {
+            'GOV_2017_03042019165415175.csv': 'date_country',
+        }
+    },
 }
 
 Processer(config).process()

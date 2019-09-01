@@ -55,6 +55,13 @@ config = {
             "tout_docs_1_part_des_femmes.csv": "perc",
         }
     },
+    "sorter": {
+        'fns': {
+            "audiens_tout.csv": "none",
+            "cnc_tout_doc_2_ecarts.csv": "none",
+            "tout_docs_1_part_des_femmes.csv": "none",
+        }
+    },
 }
 
 Processer(config).process()

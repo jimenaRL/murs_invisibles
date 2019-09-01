@@ -49,8 +49,8 @@ class IO(object):
         df['indicator'] = df['indicator'].apply(
             lambda x: maxEncode(x))
         ### HOT FIXXXXXXXX ###
-        df['value'] = df['value'].apply(
-            lambda x: maxEncode(str(x)+"_"))
+        # df['value'] = df['value'].apply(
+        #     lambda x: maxEncode(str(x)+"_"))
         ### ########### ###
         try:
             df.year = df.year.astype(int)

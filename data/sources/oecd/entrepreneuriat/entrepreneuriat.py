@@ -19,7 +19,7 @@ config = {
     "preprocesser": {
         'fns': {
             'ENT4.csv': 'no_process',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_wm',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_wm_insee_100',
         },
         'rename': {
             'country': 'Pays',
@@ -39,8 +39,8 @@ config = {
         'filter_indicator_path': filter_indicator_path,
         'country_filter_lang': 'fr',
         'year': {
-            'ENT4.csv': 2010,
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2010,
+            'ENT4.csv': 2015,
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2015,
         }
     },
     "translator": {
@@ -51,6 +51,12 @@ config = {
         'fns': {
             'ENT4.csv': 'perc',
             'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_perc',
+        }
+    },
+    "sorter": {
+        'fns': {
+            'ENT4.csv': 'date_country',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'date_country',
         }
     },
 }

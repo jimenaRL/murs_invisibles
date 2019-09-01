@@ -33,12 +33,20 @@ class PreProcesser(object):
         df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def diff_fh(self, df):
-        # remove_prop HOTFIX
-        df.femmes = df.femmes.apply(lambda s: float(str(s).replace('%', '')))
-        df.hommes = df.hommes.apply(lambda s: float(str(s).replace('%', '')))
-        ###
-        df['value'] = df.femmes-df.hommes
+    def remove_dollar_and_k(self, df, column):
+        df[column] = df[column].apply(lambda s: float(
+            s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+        df[column] = df[column].apply(lambda s: 1000.*float(s))
+        return df
+
+    def remove_dollar_and_k_diff_insee(self, df):
+        df = self.remove_dollar_and_k(df, 'femmes')
+        df = self.remove_dollar_and_k(df, 'hommes')
+        df = self.insee(df)
+        return df
+
+    def perc_fsurtotal(self, df):
+        df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
     def diff_fh(self, df):
@@ -51,7 +59,39 @@ class PreProcesser(object):
         df['value'] = df.femmes-df.hommes
         return df
 
-    def diff_wm(self, df):
+    def insee1(self, df):
+        """
+        From Insee différence de salaires (F-H)/H (en %)
+        https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
+        """
+        df['value'] = (df.femmes - df.hommes) / df.hommes
+        return df
+
+    def insee100(self, df):
+        """
+        From Insee différence de salaires (F-H)/H (en %)
+        https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
+        """
+        df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
+        return df
+
+    def women2men(self, df):
+        """
+        """
+        df['value'] = df.femmes / df.hommes
+        return df
+
+    def diff_wm_insee_1(self, df):
+        df = self.diff_wm_insee(df)
+        df = self.insee1(df)
+        return df
+
+    def diff_wm_insee_100(self, df):
+        df = self.diff_wm_insee(df)
+        df = self.insee100(df)
+        return df
+
+    def diff_wm_insee(self, df):
         """
         Dataframe preprocessing
         """
@@ -72,7 +112,6 @@ class PreProcesser(object):
 
         df = pd.merge(df, valid_hash, how='inner', on=['hash'])
 
-        # /!\  HOTFIX /!\
         if 'WOMEN' in df['SEX'].unique().tolist():
             women_df = df[df['SEX'] == 'WOMEN']
             men_df = df[df['SEX'] == 'MEN']
@@ -83,12 +122,9 @@ class PreProcesser(object):
             raise ValueError(
                 f"Didn't found `GIRLS` nor `WOMEN` in df['SEX']:\
                     {df['SEX'].unique}")
-        # /!\  HOTFIX /!\
 
-        # /!\  HOTFIX /!\
         merge_on = list(
             set(self.rename.values()) - set(['value']) | set(['hash']))
-        # /!\  HOTFIX /!\
 
         df = pd.merge(women_df,
                       men_df,
@@ -96,12 +132,12 @@ class PreProcesser(object):
                       on=merge_on,
                       suffixes=('_women', '_men'))
 
-        # # /!\  HOTFIX /!\
-        # df = df[df.value_men + df.value_women > 0]
-        # # /!\  HOTFIX /!\
+        merge_on.remove('hash')
+        keep = merge_on + ['value_men', 'value_women']
+        df = df[keep]
 
-        df['value'] = df.apply(
-            lambda row: row.value_women - row.value_men, axis=1)
+        df = df.rename(
+            {'value_men': 'hommes', 'value_women': 'femmes'}, axis=1)
 
         return df
 

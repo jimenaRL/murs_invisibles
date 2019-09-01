@@ -81,6 +81,18 @@ config = {
             # "écarts des salaires horaires médians des femmes et ceux des hommes dans le cinéma ciné.csv": "",
         }
     },
+    "sorter": {
+        'fns': {
+            "Effectifs par catégorie professionnelle.csv": "none",
+            "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": "none",
+            # "Part des entrées des films réalisés par des femmes.csv": "",
+            "Part des films réalisés par des femmes - Europe.csv": "none",
+            # "Part des films réalisés par des femmes .csv": "none",
+            # "Réalisateur·trices de courts métrages.csv": "",
+            "Répartition des effectifs selon l’année d’agrément et le sexe.csv": "none",
+            # "écarts des salaires horaires médians des femmes et ceux des hommes dans le cinéma ciné.csv": "",
+        }
+    },
 }
 
 Processer(config).process()

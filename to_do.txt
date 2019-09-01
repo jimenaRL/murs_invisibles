@@ -1,30 +1,3 @@
-pre-processing
-	/!\ Check validity of DIFF women - men traitment /!\
-	- Fix HOT_FIXes on diff_wm
-
-mapper
-	/!\ Check validity of:
-
-		 - women2men_ratio
-		 		SYB61_T05_Seats held by Women in Parliament.csv
-		 - ecart100
-		 		GENDER_EDU_29102017131322363.csv
-		 		GENDER_EMP_01042019231318532.csv
-		 		GENDER_ENT1_01042019230825609_remove_ENT4.csv
-		 - secretariat_egalite_femmes_hommes_2
-		 		"ecarts_salaires.csv": "ecart100",
-
-	and meaning of formulae /!\
-
-	INSEE > conditions_de_vie > minutes !!!
-
-post-processing
-	/!\ Check validity of:
-		- diff_perc (Show points instead ?)
-		- ratio (Why do this ?)
-
-sources
-	- line 20 onu dataunorg.py : # /!\ problem with ’ character /!\
-	- line 32 oced entrepreneuriat.py : 'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',  # or 'norm_wm',?
-	- line 29 oced eductaion.py : 'GENDER_EDU_29102017131322363.csv': 'ecart100',  # or 'norm_wm',?
-	- line 26 oced emploi.py : 'GENDER_EMP_01042019231318532.csv': 'diff_perc',  # ?????
+(1) Check Canada - Quebec again !!!!!!
+(2) Check againt diff_wm_insee_1 and co.
+(3) INSEE > conditions_de_vie > minutes !!!
