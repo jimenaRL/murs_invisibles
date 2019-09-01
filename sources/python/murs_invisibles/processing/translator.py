@@ -21,8 +21,6 @@ class Translator(object):
         with open(config['country_dict_path'], 'r', encoding='utf-8') as fp:
             self.country_dict = json.load(fp, encoding='utf-8')
 
-        # with open(config['ind_dict_path'], 'r', encoding='utf-8') as fp:
-        #     self.ind_dict = json.load(fp, encoding='utf-8')
         self.ind_dict  = pd.read_csv(config['ind_dict_path'])
         # HOT FIX #
         self.ind_dict.drop_duplicates(inplace=True)
