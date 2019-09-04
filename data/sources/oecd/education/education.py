@@ -34,7 +34,7 @@ config = {
     },
     "filter": {
         "origin_language": "fr",
-        "filter_indicator_path": null,
+        "filter_indicator_path": None,
         "year": {
             "GENDER_EDU_29102017131322363.csv": 2010
         }
