@@ -18,6 +18,8 @@ class Translator(object):
 
         self.config = config
 
+        self.target_language = self.config['indicator'].split('2')[-1]
+
         with open(config['country_dict_path'], 'r', encoding='utf-8') as fp:
             self.country_dict = json.load(fp, encoding='utf-8')
 
@@ -39,7 +41,7 @@ class Translator(object):
         translate or reformulate indicator
         """
         df = df.merge(self.ind_dict, on='indicator', how='inner')
-        df['indicator'] = df[self.config['indicator'].split('2')[-1]]
+        df['indicator'] = df[self.target_language]
 
         return df
 

@@ -22,6 +22,8 @@ class IO(object):
         self.header = config['header']
         self.encoding = config['encoding']
 
+        self.target_language = config["target_language"]
+
         self.out_sep = '\t'
         self.out_values = [
             "country",
@@ -60,7 +62,7 @@ class IO(object):
 
     def get_out_path(self, path):
         out_path = maxEncode(path). \
-            replace('sources', 'm4l'). \
+            replace('sources', 'm4l/{}'.format(self.target_language)). \
             replace('.csv', '.tsv')
         out_dir = os.path.dirname(out_path)
         if not os.path.exists(out_dir):

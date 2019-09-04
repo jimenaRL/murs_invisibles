@@ -56,6 +56,9 @@ class Processer(object):
 
         return translator_config
 
+    def _set_io_config(self, io_config):
+        io_config["target_language"] = self.config["target_language"]
+        return io_config
 
     def __init__(self, config):
         """
@@ -114,8 +117,6 @@ class Processer(object):
             config["origin_language"],
             config["target_language"])
 
-        self.io = IO(config['io'])
-
         self.preprocesser = PreProcesser(config['preprocesser'])
 
         config['filter'] = self._set_filter_config(config['filter'])
@@ -129,6 +130,9 @@ class Processer(object):
         self.postprocesser = PostProcesser(config['postprocesser'])
 
         self.sorter = Sorter(config['sorter'])
+
+        io_config = self._set_io_config(config['io'])
+        self.io = IO(io_config)
 
     def process(self):
 
