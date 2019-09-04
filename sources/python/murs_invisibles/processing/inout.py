@@ -60,10 +60,13 @@ class IO(object):
             pass
         return df
 
+    def _replace_source_folder(self, path):
+        path = maxEncode(path)
+        return path.replace('sources', 'm4l/{}'.format(self.target_language))
+
+
     def get_out_path(self, path):
-        out_path = maxEncode(path). \
-            replace('sources', 'm4l/{}'.format(self.target_language)). \
-            replace('.csv', '.tsv')
+        out_path = self._replace_source_folder(path).replace('.csv', '.tsv')
         out_dir = os.path.dirname(out_path)
         if not os.path.exists(out_dir):
             os.makedirs(out_dir)
@@ -82,7 +85,7 @@ class IO(object):
         print("Saved at {}\n".format(out_path))
 
     def get_out_path_indicator(self, path, indicator):
-        tmp_path = maxEncode(path).replace('sources', 'm4l')
+        tmp_path = self._replace_source_folder(path)
         out_dir = os.path.dirname(tmp_path)
         indicator = indicator.replace('/', '_').replace(',', '_')
         out_path = os.path.join(out_dir, indicator+".tsv")
