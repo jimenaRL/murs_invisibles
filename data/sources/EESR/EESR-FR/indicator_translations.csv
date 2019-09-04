@@ -1,31 +1,31 @@
-indicator,fr
-"Apprentis préparant un diplôme d'enseignement supérieur, BTS/BTSA","Apprenti·es préparant un diplôme d'enseignement supérieur, BTS/BTSA, part des femmes"
-"Apprentis préparant un diplôme d'enseignement supérieur, DUT","Apprenti·es préparant un diplôme d'enseignement supérieur, DUT, part des femmes"
-"Apprentis préparant un diplôme d'enseignement supérieur, Licence","Apprenti·es préparant un diplôme d'enseignement supérieur, Licence, part des femmes"
-"Apprentis préparant un diplôme d'enseignement supérieur, Diplômes d'ingénieurs","Apprenti·es préparant un diplôme d'enseignement supérieur, Diplômes d'ingénieur·es, part des femmes"
-"Apprentis préparant un diplôme d'enseignement supérieur, Master","Apprenti·es préparant un diplôme d'enseignement supérieur, Master, part des femmes"
-"Ingénieurs, techniciens, de recherche et de formation, Ingénieurs de recherche","Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es de recherche, part des femmes"
-"Ingénieurs, techniciens, de recherche et de formation, Ingénieurs d'étude","Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es d'étude, part des femmes"
-"Ingénieurs, techniciens, de recherche et de formation, Assistants ingénieurs","Ingénieur·es, technicien·nes, de recherche et de formation, Assistant·es ingénieur·es, part des femmes"
-"Ingénieurs, techniciens, de recherche et de formation, Techniciens de recherche","Ingénieur·es, technicien·nes, de recherche et de formation, Technicien·nes de recherche, part des femmes"
-"Ingénieurs, techniciens, de recherche et de formation, Adjoints techniques","Ingénieur·es, technicien·nes de recherche et de formation, adjoint·es techniques, part des femmes"
-"Administratifs, sociaux et de santé, Administrateurs civils","Administratifs, sociaux et de santé, administrateur·trices civils, part des femmes"
-"Administratifs, sociaux et de santé, Personnels de direction AC et EPES","Administratifs, sociaux et de santé, personnels de direction, part des femmes"
-"Administratifs, sociaux et de santé, Attachés d'administration d'État","Administratifs, sociaux et de santé, attaché·es d'administration d'État, part des femmes"
-"Administratifs, sociaux et de santé, Infirmiers","Administratifs, sociaux et de santé, infirmier·es, part des femmes"
-"Administratifs, sociaux et de santé, Secrétaires d'administration","Administratifs, sociaux et de santé, secrétaires d'administration, part des femmes"
-"Administratifs, sociaux et de santé, Assistants de service social & infirmiers","Administratifs, sociaux et de santé, assistant·es de service social & infirmier·es, part des femmes"
-"Administratifs, sociaux et de santé, Adjoints administratifs","Administratifs, sociaux et de santé, adjoint·es administratifs, part des femmes"
-"Administratifs, sociaux et de santé, Adjoints tecniques. des établissement d'enseignement","Administratifs, sociaux et de santé, adjoint·es techniques. des établissemenst d'enseignement, part des femmes"
-"Bibliothèques, Conservateurs des bibliothèque","Conservateur·trices de bibliothèques, part des femmes"
-"Bibliothèques, Bibliothécaires","Bibliothécaires, part des femmes"
-"Bibliothèques, Bibliothécaires adjoints et techniciens","Bibliothèques, Bibliothécaires adjoint·es et technicien·nes, part des femmes"
-"Bibliothèques, Magasiniers","Bibliothèques, magasinier·es, part des femmes"
-"Direction, inspection, éducation, orientation, Inspecteurs de l'éducation nationale et inspecteurs d'académie","Inspecteur·trices de l'éducation nationale et inspecteur·trices d'académie, part des femmes"
-"Direction, inspection, éducation, orientation, Conseiller principal d'éducation","Conseiller·e principal·e d'éducation, part des femmes"
-"Direction, inspection, éducation, orientation, Personnel d'orientation","Education nationale, personnel d'orientation, part des femmes"
-"Direction, inspection, éducation, orientation, Enseignants de catégorie A",Enseignant·es de catégorie A
-"Effectifs en recherche et développement en entreprise, Chercheurs","Effectifs en recherche et développement en entreprise, chercheur·es, part des femmes"
-"Effectifs en recherche et développement en entreprise, Personnels de soutien","Effectifs en recherche et développement en entreprise, personnels de soutien, part des femmes"
-"Effectifs en recherche et développement administration, Chercheurs","Effectifs en recherche et développement administration, chercheur·es, part des femmes"
-"Effectifs en recherche et développement administration, Personnels de soutien","Effectifs en recherche et développement administration, personnels de soutien, part des femmes"
+indicator,fr,es
+"Apprentis préparant un diplôme d'enseignement supérieur, BTS/BTSA","Apprenti·es préparant un diplôme d'enseignement supérieur, BTS/BTSA, part des femmes",
+"Apprentis préparant un diplôme d'enseignement supérieur, DUT","Apprenti·es préparant un diplôme d'enseignement supérieur, DUT, part des femmes",
+"Apprentis préparant un diplôme d'enseignement supérieur, Licence","Apprenti·es préparant un diplôme d'enseignement supérieur, Licence, part des femmes",
+"Apprentis préparant un diplôme d'enseignement supérieur, Diplômes d'ingénieurs","Apprenti·es préparant un diplôme d'enseignement supérieur, Diplômes d'ingénieur·es, part des femmes",
+"Apprentis préparant un diplôme d'enseignement supérieur, Master","Apprenti·es préparant un diplôme d'enseignement supérieur, Master, part des femmes",
+"Ingénieurs, techniciens, de recherche et de formation, Ingénieurs de recherche","Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es de recherche, part des femmes",
+"Ingénieurs, techniciens, de recherche et de formation, Ingénieurs d'étude","Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es d'étude, part des femmes",
+"Ingénieurs, techniciens, de recherche et de formation, Assistants ingénieurs","Ingénieur·es, technicien·nes, de recherche et de formation, Assistant·es ingénieur·es, part des femmes",
+"Ingénieurs, techniciens, de recherche et de formation, Techniciens de recherche","Ingénieur·es, technicien·nes, de recherche et de formation, Technicien·nes de recherche, part des femmes",
+"Ingénieurs, techniciens, de recherche et de formation, Adjoints techniques","Ingénieur·es, technicien·nes de recherche et de formation, adjoint·es techniques, part des femmes",
+"Administratifs, sociaux et de santé, Administrateurs civils","Administratifs, sociaux et de santé, administrateur·trices civils, part des femmes",
+"Administratifs, sociaux et de santé, Personnels de direction AC et EPES","Administratifs, sociaux et de santé, personnels de direction, part des femmes",
+"Administratifs, sociaux et de santé, Attachés d'administration d'État","Administratifs, sociaux et de santé, attaché·es d'administration d'État, part des femmes",
+"Administratifs, sociaux et de santé, Infirmiers","Administratifs, sociaux et de santé, infirmier·es, part des femmes",
+"Administratifs, sociaux et de santé, Secrétaires d'administration","Administratifs, sociaux et de santé, secrétaires d'administration, part des femmes",
+"Administratifs, sociaux et de santé, Assistants de service social & infirmiers","Administratifs, sociaux et de santé, assistant·es de service social & infirmier·es, part des femmes",
+"Administratifs, sociaux et de santé, Adjoints administratifs","Administratifs, sociaux et de santé, adjoint·es administratifs, part des femmes",
+"Administratifs, sociaux et de santé, Adjoints tecniques. des établissement d'enseignement","Administratifs, sociaux et de santé, adjoint·es techniques. des établissemenst d'enseignement, part des femmes",
+"Bibliothèques, Conservateurs des bibliothèque","Conservateur·trices de bibliothèques, part des femmes",
+"Bibliothèques, Bibliothécaires","Bibliothécaires, part des femmes",
+"Bibliothèques, Bibliothécaires adjoints et techniciens","Bibliothèques, Bibliothécaires adjoint·es et technicien·nes, part des femmes",
+"Bibliothèques, Magasiniers","Bibliothèques, magasinier·es, part des femmes",
+"Direction, inspection, éducation, orientation, Inspecteurs de l'éducation nationale et inspecteurs d'académie","Inspecteur·trices de l'éducation nationale et inspecteur·trices d'académie, part des femmes",
+"Direction, inspection, éducation, orientation, Conseiller principal d'éducation","Conseiller·e principal·e d'éducation, part des femmes",
+"Direction, inspection, éducation, orientation, Personnel d'orientation","Education nationale, personnel d'orientation, part des femmes",
+"Direction, inspection, éducation, orientation, Enseignants de catégorie A",Enseignant·es de catégorie A,
+"Effectifs en recherche et développement en entreprise, Chercheurs","Effectifs en recherche et développement en entreprise, chercheur·es, part des femmes",
+"Effectifs en recherche et développement en entreprise, Personnels de soutien","Effectifs en recherche et développement en entreprise, personnels de soutien, part des femmes",
+"Effectifs en recherche et développement administration, Chercheurs","Effectifs en recherche et développement administration, chercheur·es, part des femmes",
+"Effectifs en recherche et développement administration, Personnels de soutien","Effectifs en recherche et développement administration, personnels de soutien, part des femmes",
