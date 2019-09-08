@@ -1,33 +1,33 @@
 indicator,fr,es
-"Étudiants universitaires, part des femmes","Étudiant·es universitaires, part des femmes",
-"Diplômés universités, part des femmes","Diplômé·es universitaires, part des femmes",
-"Employés universitaires grade C, part des femmes","Employé·es universitaires grade C, part des femmes",
-"Employés universitaires grade A, part des femmes","Employé·es universitaires grade A, part des femmes",
-"Employés cadres techniques, part des femmes","Employé·es cadres techniques, part des femmes",
-"Employés DTN (directrice technique nationale), part des femmes","Employé·es directions techniques nationales, part des femmes",
-"Présidentes d'entreprise (PDG), part des femmes","Président·es d'entreprise, part des femmes",
-"Membres exécutifs d'entreprise, part des femmes","Membres exécutifs d'entreprise, part des femmes",
-"Membres non exécutifs d'entreprise, part des femmes","Membres non exécutifs d'entreprise, part des femmes",
-"Maires de France, part des femmes","Maires de France, part des femmes",
-"Conseilleurs municipaux, part des femmes","Sièges aux conseils municipaux, part des femmes",
-"Présidentes de conseils régionaux, part des femmes","Président·es  de conseils régionaux, part des femmes",
-"Conseilleurs régionaux, part des femmes","Sièges aux conseils régionaux, part des femmes",
+"Étudiants universitaires, part des femmes","Étudiant·es universitaires, part des femmes","Estudiantes universitarios, porcentaje de mujeres"
+"Diplômés universités, part des femmes","Diplômé·es universitaires, part des femmes","Títulos universitarios, porcentaje de mujeres"
+"Employés universitaires grade C, part des femmes","Employé·es universitaires grade C, part des femmes","Empleados universitarios grado C, porcentaje de mujeres"
+"Employés universitaires grade A, part des femmes","Employé·es universitaires grade A, part des femmes","Empleados universitarios grado 1, porcentaje de mujeres"
+"Employés cadres techniques, part des femmes","Employé·es cadres techniques, part des femmes","Empleados ejecutivos técnicos, porcentaje de mujeres"
+"Employés DTN (directrice technique nationale), part des femmes","Employé·es directions techniques nationales, part des femmes","Empleados ejecutivos dirección técnica, porcentaje de mujeres"
+"Présidentes d'entreprise (PDG), part des femmes","Président·es d'entreprise, part des femmes","Presidentes de empresas, porcentaje de mujeres"
+"Membres exécutifs d'entreprise, part des femmes","Membres exécutifs d'entreprise, part des femmes","Miembros ejecutivos de empresas, porcentaje de mujeres"
+"Membres non exécutifs d'entreprise, part des femmes","Membres non exécutifs d'entreprise, part des femmes","Miembros no ejecutivos de empresas, porcentaje de mujeres"
+"Maires de France, part des femmes","Maires de France, part des femmes","Alcaldes, porcentaje de mujeres"
+"Conseilleurs municipaux, part des femmes","Sièges aux conseils municipaux, part des femmes","Consejeros municipales, porcentaje de mujeres"
+"Présidentes de conseils régionaux, part des femmes","Président·es  de conseils régionaux, part des femmes","Presidentes de consejos regionales, porcentaje de mujeres"
+"Conseilleurs régionaux, part des femmes","Sièges aux conseils régionaux, part des femmes","Consejos regionales, porcentaje de mujeres"
 "Présidentes de conseils départementaux, part des femmes","Président·es de conseils départementaux, part des femmes",
-"Conseilleurs départementaux, part des femmes","Sièges aux conseils départementaux, part des femmes",
-"Conseilleurs régionaux en affaires sociale, part des femmes","Sièges aux conseils régionaux aux affaires sociales, part des femmes",
-"Conseilleurs régionaux en éducation, part des femmes ","Sièges aux conseils régionaux à l'éducation, part des femmes",
-"Conseilleurs régionaux en budget/finance, part des femmes","Sièges aux conseils régionaux au budget/finance, part des femmes",
-"Conseilleurs régionaux en transport, part des femmes ","Sièges aux conseils régionaux au transport, part des femmes",
-"Directeurs des musées nationaux, part des femmes","Direction des musées nationaux, part des femmes",
-" Artistes dans spectacles cirque, part des femmes","Artistes des arts du cirque, part des femmes",
-" Artistes dans spectacles danse, part des femmes","Artistes des arts chorégraphiques, part des femmes",
-" Artistes dans spectacles théâtre, part des femmes","Artistes des arts dramatiques, part des femmes",
-" Artistes compositeurs, part des femmes","Compositeur·trices, part des femmes",
-" Artistes chefs d'orchestre, part des femmes","Chef·fes d'orchestre, part des femmes",
-" Artistes solistes, part des femmes","Solistes, part des femmes",
-" Artistes travaillant dans la mise en scène opéra, part des femmes","Mise en scène d'opéra, part des femmes",
-"Présentateurs dans les journaux télévision, part des femmes ","Présentateur·trices de journaux télévisés, part des femmes",
-"Présentateurs dans les journaux radio, part des femmes ","Présentateur·trices de journaux radio, part des femmes",
-Pourcentage des femmes parmi les experts invités dans les médias,"Expert·es invité·es dans les média, part des femmes",
-"Directeurs des  entreprises de l'audiovisuel public, part des femmes","Direction des entreprises de l'audiovisuel public, part des femmes",
-"Directeurs des établissement spectacle vivant, part des femmes","Direction des établissements de spectacle vivant, part des femmes",
+"Conseilleurs départementaux, part des femmes","Sièges aux conseils départementaux, part des femmes","Presidentes de consejos departamentales, porcentaje de mujeres"
+"Conseilleurs régionaux en affaires sociale, part des femmes","Sièges aux conseils régionaux aux affaires sociales, part des femmes","Consejos regionales asuntos sociales, porcentaje de mujeres"
+"Conseilleurs régionaux en éducation, part des femmes ","Sièges aux conseils régionaux à l'éducation, part des femmes","Consejos regionales educación, porcentaje de mujeres"
+"Conseilleurs régionaux en budget/finance, part des femmes","Sièges aux conseils régionaux au budget/finance, part des femmes","Consejos regionales finanzas, porcentaje de mujeres"
+"Conseilleurs régionaux en transport, part des femmes ","Sièges aux conseils régionaux au transport, part des femmes","Consejos regionales transporte, porcentaje de mujeres"
+"Directeurs des musées nationaux, part des femmes","Direction des musées nationaux, part des femmes","Dirección museos nacionales, porcentaje de mujeres"
+" Artistes dans spectacles cirque, part des femmes","Artistes des arts du cirque, part des femmes","Circenses, porcentaje de mujeres"
+" Artistes dans spectacles danse, part des femmes","Artistes des arts chorégraphiques, part des femmes","Coreógrafos, porcentaje de mujeres"
+" Artistes dans spectacles théâtre, part des femmes","Artistes des arts dramatiques, part des femmes","Profesionales arte dramático, porcentaje de mujeres"
+" Artistes compositeurs, part des femmes","Compositeur·trices, part des femmes","Compositores, porcentaje de mujeres"
+" Artistes chefs d'orchestre, part des femmes","Chef·fes d'orchestre, part des femmes","Directores de orquestra, porcentaje de mujeres"
+" Artistes solistes, part des femmes","Solistes, part des femmes","Solistas, porcentaje de mujeres"
+" Artistes travaillant dans la mise en scène opéra, part des femmes","Mise en scène d'opéra, part des femmes","Puesta en escena de opera, porcentaje de mujeres"
+"Présentateurs dans les journaux télévision, part des femmes ","Présentateur·trices de journaux télévisés, part des femmes","Presentadores de noticias en la televisión, porcentaje de mujeres"
+"Présentateurs dans les journaux radio, part des femmes ","Présentateur·trices de journaux radio, part des femmes","Presentadores de noticias en la radio, porcentaje de mujeres"
+Pourcentage des femmes parmi les experts invités dans les médias,"Expert·es invité·es dans les média, part des femmes","Expertos en los medios de comunicación, porcentaje de mujeres"
+"Directeurs des  entreprises de l'audiovisuel public, part des femmes","Direction des entreprises de l'audiovisuel public, part des femmes","Dirección de empresas del audiovisual público, porcentaje de mujeres"
+"Directeurs des établissement spectacle vivant, part des femmes","Direction des établissements de spectacle vivant, part des femmes","Dirección de establecimientos de espectáculos, porcentaje de mujeres"
