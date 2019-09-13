@@ -8,7 +8,7 @@ filepath = os.path.dirname(os.path.realpath(__file__))
 config = {
     "base_path": filepath,
     "origin_language": "fr",
-    "target_language": "fr",
+    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": "utf-8",
