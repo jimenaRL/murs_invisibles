@@ -33,6 +33,12 @@ class PreProcesser(object):
         df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
         return df
 
+    def virg2point_hf(self, df):
+        df['femmes'] = df.femmes.apply(lambda row: float(row.replace(',', '.')))
+        df['hommes'] = df.hommes.apply(lambda row: float(row.replace(',', '.')))
+        return df
+
+
     def remove_dollar_and_k(self, df, column):
         df[column] = df[column].apply(lambda s: float(
             s.replace(' k$', '').replace(',', '.').replace(' ', '')))
@@ -66,6 +72,14 @@ class PreProcesser(object):
         """
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
+
+    def virg2point_insee1(self, df):
+        """
+        """
+        df = self.virg2point_hf(df)
+        df = self.insee1(df)
+        return df
+
 
     def insee100(self, df):
         """
