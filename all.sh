@@ -2,11 +2,11 @@
 BASEPATH=$(dirname $0)
 
 # To check problems
-# echo "> CNC-Audiens"
-#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
-#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
-#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc1/cnc-audiens.py
-#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc2/cnc-audiens.py
+echo "> CNC-Audiens"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc1/cnc-audiens.py
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/cnc2/cnc-audiens.py
 
 echo "> EESR"
 
@@ -21,10 +21,8 @@ echo "> INSEE"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE/insee.py
 
 
-# To check problems
-# echo "> MINIST-CULT"
-#PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
-
+echo "> MINIST-CULT"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
 
 echo "> oecd"
 

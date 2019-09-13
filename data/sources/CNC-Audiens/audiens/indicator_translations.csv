@@ -1,25 +1,25 @@
 indicator,fr,es
-part de femmes dans l'emploi spectacle vivant: artistes interprètes,"Spectacle vivant - artistes interprètes, part des femmes",
-part de femmes dans l'emploi spectacle vivant: cadres,"Spectacle vivant - cadres, part des femmes",
-part de femmes dans l'emploi spectacle vivant: non cadres,"Spectacle vivant - non-cadres, part des femmes",
-part de femmes dans l'emploi spectacle vivant,"Spectacle vivant, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'art dramatique,"Professionnel·les de l'art dramatique, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités artistiques,"Professionnel·les des activités artistiques, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'art chorégraphique,"Professionnel·les de l'art chorégraphique, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la musique instrumentale,"Professionnel·les de la musique instrumentale, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la musique vocale,"Professionnel·les de la musique vocale, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s des arts du cirque et des arts visuels,"Professionnel·les des arts du cirque et des arts visuels, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s d'autres activités artistiques,"Professionnel·les d'autres activités artistiques, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités techniques,"Professionnel·les des activités techniques, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la direction technique et de la régie,"Professionnel·le·s de la direction technique et de la régie, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la machinerie et de la structure,"Professionnel·les de la machinerie et de la structure, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s des accessoires,"Spectacle vivant: professionnel·les des accessoires, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'éclairage,"Spectacle vivant: professionnel·les de l'éclairage, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s du son,"Spectacle vivant: professionnel·les du son, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'audiovisuel du spectacle vivant,"Spectacle vivant: professionnel·les de l'audiovisuel du spectacle vivant, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s du décor,"Spectacle vivant: professionnel·les du décor, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s du costume,"spectacle vivant: professionnel·les du costume, part des femmes",
-"part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la coiffure, du maquillage et des masques","Spectacle vivant: professionnel·les de la coiffure, du maquillage et des masques, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités administratives,"Spectacle vivant: professionnel·les des activités administratives, part des femmes",
-part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la production,"Spectacle vivant: professionnel·les de la production, part des femmes",
-part de femmes dans l'emploi spectacle vivant: tous·tes professionnel·le·s,"Spectacle vivant: toutes professions, part des femmes",
+part de femmes dans l'emploi spectacle vivant: artistes interprètes,"Spectacle vivant - artistes interprètes, part des femmes","Espectáculos vivos - artistas intérpretes, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: cadres,"Spectacle vivant - cadres, part des femmes","Espectáculos vivos - ejecutivos, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: non cadres,"Spectacle vivant - non-cadres, part des femmes","Espectáculos vivos -no ejecutivos, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant,"Spectacle vivant, part des femmes","Espectáculos vivos, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'art dramatique,"Professionnel·les de l'art dramatique, part des femmes","Profesionales de arte dramático, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités artistiques,"Professionnel·les des activités artistiques, part des femmes","Profesonales de actividades artísticas, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'art chorégraphique,"Professionnel·les de l'art chorégraphique, part des femmes","Profesionales de arte coreográfico, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la musique instrumentale,"Professionnel·les de la musique instrumentale, part des femmes","Profesionales de música instrumental, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la musique vocale,"Professionnel·les de la musique vocale, part des femmes","Profesionales de música vocal, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s des arts du cirque et des arts visuels,"Professionnel·les des arts du cirque et des arts visuels, part des femmes","Profesionales de arte circense y artes visuales, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s d'autres activités artistiques,"Professionnel·les d'autres activités artistiques, part des femmes","Profesionales de otras actividades artísticas, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités techniques,"Professionnel·les des activités techniques, part des femmes","Profesionales de actividades técnica, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la direction technique et de la régie,"Professionnel·le·s de la direction technique et de la régie, part des femmes","Profesionales de dirección técnica y direccion, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la machinerie et de la structure,"Professionnel·les de la machinerie et de la structure, part des femmes","Profesionales del mecanismo y de la estructura, porcenaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s des accessoires,"Spectacle vivant: professionnel·les des accessoires, part des femmes","Espectáculos vivos: profesionales de accesorios, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'éclairage,"Spectacle vivant: professionnel·les de l'éclairage, part des femmes","Espectáculos vivos: profesionales de iluminación, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s du son,"Spectacle vivant: professionnel·les du son, part des femmes","Espectáculos vivos: profesionales de sonido, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de l'audiovisuel du spectacle vivant,"Spectacle vivant: professionnel·les de l'audiovisuel du spectacle vivant, part des femmes","Espectáculos vivos: profesionales de audiovisuales de espectáculos vivos, porcentaje mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s du décor,"Spectacle vivant: professionnel·les du décor, part des femmes","Espectáculos vivos: profesionales de decoración, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s du costume,"spectacle vivant: professionnel·les du costume, part des femmes","Espectáculos vivos: profesionales de vestuario, porcentaje de mujeres"
+"part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la coiffure, du maquillage et des masques","Spectacle vivant: professionnel·les de la coiffure, du maquillage et des masques, part des femmes","Espectáculos vivos: profesionales de peluquería, maquillaje y máscaras, porcentaje mujeres"
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s des activités administratives,"Spectacle vivant: professionnel·les des activités administratives, part des femmes",Espectáculo vivos: profesionales de actividades administrativas porcentaje de mujeres
+part de femmes dans l'emploi spectacle vivant: professionnel·le·s de la production,"Spectacle vivant: professionnel·les de la production, part des femmes","Espectáculos vivos: profesionales de producción, porcentaje de mujeres"
+part de femmes dans l'emploi spectacle vivant: tous·tes professionnel·le·s,"Spectacle vivant: toutes professions, part des femmes","Espectáculos vivos: todas las profesionales, porcentaje de mujeres"
