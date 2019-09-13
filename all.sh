@@ -1,6 +1,10 @@
 #!/bin/bash
 BASEPATH=$(dirname $0)
 
+echo "> DANE"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/DANE/dane.py
+
+
 # To check problems
 echo "> CNC-Audiens"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
