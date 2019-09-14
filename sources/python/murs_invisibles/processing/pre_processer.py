@@ -30,25 +30,19 @@ class PreProcesser(object):
         return df
 
     def virg2point(self, df):
-        df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
         return df
-
-    def virg2point_hf(self, df):
-        df['femmes'] = df.femmes.apply(lambda row: float(row.replace(',', '.')))
-        df['hommes'] = df.hommes.apply(lambda row: float(row.replace(',', '.')))
-        return df
-
 
     def remove_dollar_and_k(self, df, column):
-        df[column] = df[column].apply(lambda s: float(
-            s.replace(' k$', '').replace(',', '.').replace(' ', '')))
-        df[column] = df[column].apply(lambda s: 1000.*float(s))
-        return df
-
-    def remove_dollar_and_k_diff_insee(self, df):
-        df = self.remove_dollar_and_k(df, 'femmes')
-        df = self.remove_dollar_and_k(df, 'hommes')
-        df = self.insee100(df)
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda s: float(
+                    s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+                df[v] = df[v].apply(lambda s: 1000.*float(s))
         return df
 
     def perc_fsurtotal(self, df):
@@ -76,7 +70,7 @@ class PreProcesser(object):
     def virg2point_insee1(self, df):
         """
         """
-        df = self.virg2point_hf(df)
+        df = self.virg2point(df)
         df = self.insee1(df)
         return df
 

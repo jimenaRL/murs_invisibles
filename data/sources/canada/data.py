@@ -22,7 +22,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "revenu_moyens.csv": "remove_dollar_and_k_diff_insee",
+            "revenu_moyens.csv": "remove_dollar_and_k",
             "culture.csv": "no_process",
             "taux.csv": "diff_fh",
             "effectif_professions_culture_communications.csv": "perc_fsurtotal",
