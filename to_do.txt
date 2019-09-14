@@ -1,5 +1,5 @@
 VOLTAJE
 (1) Make preprocessor as list
 EB
-(2) Check againt diff_wm_insee_1 and co.
+(2) Check againt get_wm_then_insee_1 and co.
 (3) INSEE > conditions_de_vie > minutes !!!
