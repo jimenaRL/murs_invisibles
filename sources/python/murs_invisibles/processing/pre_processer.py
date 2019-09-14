@@ -58,6 +58,9 @@ class PreProcesser(object):
     #     return df
 
     def diff_fh(self, df):
+        """
+        Must be later in pp
+        """
         df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
         return df
@@ -92,17 +95,17 @@ class PreProcesser(object):
         df['value'] = df.femmes / df.hommes
         return df
 
-    def diff_wm_insee_1(self, df):
-        df = self.diff_wm_insee(df)
+    def get_wm_then_insee_1(self, df):
+        df = self.get_wm(df)
         df = self.insee1(df)
         return df
 
-    def diff_wm_insee_100(self, df):
-        df = self.diff_wm_insee(df)
+    def get_wm_then_insee_100(self, df):
+        df = self.get_wm(df)
         df = self.insee100(df)
         return df
 
-    def diff_wm_insee(self, df):
+    def get_wm(self, df):
         """
         Dataframe preprocessing
         """

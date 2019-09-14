@@ -18,7 +18,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "diff_wm_insee_100"
+            "GENDER_EDU_29102017131322363.csv": "get_wm_then_insee_100"
         },
         "rename": {
             "country": "Pays",
