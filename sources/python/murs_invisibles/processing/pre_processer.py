@@ -36,7 +36,7 @@ class PreProcesser(object):
                 df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def remove_dollar_and_k(self, df, column):
+    def remove_dollar_and_k(self, df):
         values = ['value', 'femmes', 'hommes']
         for v in values:
             if v in df.columns:
@@ -45,17 +45,20 @@ class PreProcesser(object):
                 df[v] = df[v].apply(lambda s: 1000.*float(s))
         return df
 
-    def perc_fsurtotal(self, df):
-        df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
+    def remove_euro_and_perc(self, df):
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(
+                    lambda s: float(str(s).replace('€', '').replace('%', '')))
         return df
 
+    # def perc_fsurtotal(self, df):
+    #     df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
+    #     return df
+
     def diff_fh(self, df):
-        # remove € HOTFIX
-        df.femmes = df.femmes.apply(
-            lambda s: float(str(s).replace('€', '').replace('%', '')))
-        df.hommes = df.hommes.apply(
-            lambda s: float(str(s).replace('€', '').replace('%', '')))
-        ###
+        df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
         return df
 
