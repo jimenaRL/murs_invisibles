@@ -62,6 +62,14 @@ class Mapper(object):
         return abs(row.value) / 100.
 
     @classmethod
+    def ecart100_12(cls, row):
+        return abs(row.value) / 12.
+
+    @classmethod
+    def ecart100_52(cls, row):
+        return abs(row.value) / 52.
+
+    @classmethod
     def women2men_ratio(cls, row):
         """
         row: pandas dataframe row
