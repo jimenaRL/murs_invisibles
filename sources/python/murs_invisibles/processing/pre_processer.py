@@ -62,9 +62,9 @@ class PreProcesser(object):
         df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
-    def virg2point_fsurtotal(self, df):
+    def virg2point_perc_fsurtotal(self, df):
         df = self.virg2point(df)
-        df = self.fsurtotal(df)
+        df = self.perc_fsurtotal(df)
         return df
 
     def virg2point_diffFH(self, df):
