@@ -14,6 +14,15 @@ class PostProcesser(object):
         self.fns = config['fns']
 
     @classmethod
+    def diff_pp(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.2f' % abs(row.value) + ' pp', axis=1)
+        return df
+
+
+    @classmethod
     def diff_perc(cls, df):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
