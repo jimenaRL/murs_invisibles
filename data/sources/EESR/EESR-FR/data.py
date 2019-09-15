@@ -28,7 +28,7 @@ config = {
     },
     "mapper": {
         'fns': {
-            "all.csv": "diffFH_100",
+            "all.csv": "proportion100",
         }
     },
     "filter": {

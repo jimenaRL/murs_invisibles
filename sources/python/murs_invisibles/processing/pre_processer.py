@@ -53,7 +53,6 @@ class PreProcesser(object):
                     lambda s: float(str(s).replace('€', '').replace('%', '')))
         return df
 
-
     def fsurtotal(self, df):
         df['value'] = df.femmes / (df.hommes+df.femmes)
         return df
@@ -74,7 +73,7 @@ class PreProcesser(object):
 
     def diffFH(self, df):
         """
-        Must be later in pp
+        Units must be later in pp
         """
         df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
