@@ -33,7 +33,7 @@ config = {
     "mapper": {
         'fns': {
             "audiens_tout.csv": "proportion100",
-            "cnc_tout_doc_2_ecarts.csv": "diffFH_100",
+            "cnc_tout_doc_2_ecarts.csv": "diffFH_50",
             "tout_docs_1_part_des_femmes.csv": "proportion100",
         }
     },
@@ -50,7 +50,7 @@ config = {
     "postprocesser": {
         'fns': {
             "audiens_tout.csv": "perc",
-            "cnc_tout_doc_2_ecarts.csv": "diff_perc",
+            "cnc_tout_doc_2_ecarts.csv": "diff_pp",
             "tout_docs_1_part_des_femmes.csv": "perc",
         }
     },
