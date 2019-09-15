@@ -62,7 +62,7 @@ config = {
     },
     "mapper": {
         'fns': {
-            "Part-des-employés-à-temps-partiel-involontaire-par-sexe-et-groupe-d'âge.csv": "diffFH_100",
+            "Part-des-employés-à-temps-partiel-involontaire-par-sexe-et-groupe-d'âge.csv": "diffFH_1",
             "Taux-d'activité-par-sexe-et-groupe-d'âge.csv": "diffFH_100",
             # "Rapport-emploi-population-par-sexe-et-groupe-d’âge.csv": "diffFH_100",
             "Part-des-employés-à-temps-partiel-par-sexe-et-groupe-d'âge.csv": "diffFH_100",
