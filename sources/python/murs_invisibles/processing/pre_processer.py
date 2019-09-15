@@ -53,9 +53,24 @@ class PreProcesser(object):
                     lambda s: float(str(s).replace('€', '').replace('%', '')))
         return df
 
-    # def perc_fsurtotal(self, df):
-    #     df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
-    #     return df
+
+    def fsurtotal(self, df):
+        df['value'] = df.femmes / (df.hommes+df.femmes)
+        return df
+
+    def perc_fsurtotal(self, df):
+        df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
+        return df
+
+    def virg2point_fsurtotal(self, df):
+        df = self.virg2point(df)
+        df = self.fsurtotal(df)
+        return df
+
+    def virg2point_diff_fh(self, df):
+        df = self.virg2point(df)
+        df = self.diff_fh(df)
+        return df
 
     def diff_fh(self, df):
         """
@@ -80,6 +95,12 @@ class PreProcesser(object):
         df = self.insee1(df)
         return df
 
+    def virg2point_insee100(self, df):
+        """
+        """
+        df = self.virg2point(df)
+        df = self.insee100(df)
+        return df
 
     def insee100(self, df):
         """
