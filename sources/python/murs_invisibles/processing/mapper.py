@@ -38,7 +38,7 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
-    def ecart1(cls, row):
+    def diffFH_1(cls, row):
         """
         row: pandas dataframe row
              row.value contains p = (m-w)/100. where m (resp. women) is the ratio of
@@ -50,7 +50,7 @@ class Mapper(object):
         return abs(row.value)
 
     @classmethod
-    def ecart100(cls, row):
+    def diffFH_100(cls, row):
         """
         row: pandas dataframe row
              row.value contains p = m-w where m (resp. women) is the ratio of
@@ -62,11 +62,11 @@ class Mapper(object):
         return abs(row.value) / 100.
 
     @classmethod
-    def ecart100_12(cls, row):
+    def diffFH_10(cls, row):
         return abs(row.value) / 12.
 
     @classmethod
-    def ecart100_52(cls, row):
+    def diffFH_50(cls, row):
         return abs(row.value) / 52.
 
     @classmethod
