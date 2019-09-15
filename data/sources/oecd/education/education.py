@@ -40,8 +40,8 @@ config = {
         }
     },
     "translator": {
-        "indicator": "en2fr",
-        "country": "fr2fr"
+        "indicator": "en2es",
+        "country": "fr2es"
     },
     "postprocesser": {
         "fns": {
