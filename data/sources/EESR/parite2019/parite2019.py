@@ -20,7 +20,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "parite2019_femmes-hommes.csv": "diffFH",
+            "parite2019_femmes-hommes.csv": "percRel100",
             "parite2019_part_des_femmes.csv": "no_process"
 
         },
@@ -33,7 +33,7 @@ config = {
     },
     "mapper": {
         "fns": {
-            "parite2019_femmes-hommes.csv": "diffFH_100",
+            "parite2019_femmes-hommes.csv": "diffFH_20",
             "parite2019_part_des_femmes.csv": "proportion100"
         }
     },
