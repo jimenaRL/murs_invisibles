@@ -4,14 +4,39 @@ VOLTAJE
     - women2men
     	girl2boys
 	      girl2boys : ok, fix ratio girl2boys data > interesting data for Chad
-    - diffFH
+     - percRel1*
     	education oced : ok
-    	emploi
-    		 Inventores : ok > good values
     	entrepreneuriat
-    - percRel1*
+    		ENT4 - Inventores : ok > good values
+    		GENDER_ENT1_01042019230825609_remove_ENT4 : ok
+      	emploi : ok
 
-(2) Make preprocessor as list
+   - diffFH
+
+   if Must be later in pp
+
+   		EESR/EESR-FR/data : ok
+   		EESR/parite2019/parite2019 : ok
+   		oecd/education/education : ok
+   		oecd/emploi/emploi : ok
+   		oecd/entrepreneuriat/entrepreneuriat : ok
+   		secretariat_egalite_femmes_hommes_2/secret : ok
+   		canada/data : removed
+   		CNC-Audiens/cnc1/cnc-audiens  : ok
+   		CNC-Audiens/tout/cnc-audiens-tout : ok
+   		DANE/dane.py : ok
+   		INSEE/insee :  see below
+
+(2) refaire INSEE
+
+(3) Colombia condensado
+
+(4) Une seule chiffre après virgule
+
+(5) Make preprocessor as list
+
+(6) Clean CNC
+
 
 EB
 (1) Check againt get_wm_then_percRel1 and co.
