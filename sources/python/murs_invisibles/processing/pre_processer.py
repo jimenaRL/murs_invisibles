@@ -22,8 +22,10 @@ class PreProcesser(object):
         return df.rename(columns=self.rename)
 
     def remove_prop(self, df):
-        df = df[~df.value.isna()]
-        df.value = df.value.apply(lambda s: float(s.replace('%', '')))
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
         return df
 
     def no_process(self, df):
@@ -34,6 +36,11 @@ class PreProcesser(object):
         for v in values:
             if v in df.columns:
                 df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
+        return df
+
+    def remove_dollar_and_k_percRel1(self, df):
+        df = self.remove_dollar_and_k(df)
+        df = self.percRel1(df)
         return df
 
     def remove_dollar_and_k(self, df):
