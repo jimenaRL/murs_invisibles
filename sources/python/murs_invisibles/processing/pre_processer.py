@@ -80,7 +80,7 @@ class PreProcesser(object):
         df['value'] = df.femmes-df.hommes
         return df
 
-    def insee1(self, df):
+    def percRel1(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -88,21 +88,21 @@ class PreProcesser(object):
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
 
-    def virg2point_insee1(self, df):
+    def virg2point_percRel1(self, df):
         """
         """
         df = self.virg2point(df)
-        df = self.insee1(df)
+        df = self.percRel1(df)
         return df
 
-    def virg2point_insee100(self, df):
+    def virg2point_percRel100(self, df):
         """
         """
         df = self.virg2point(df)
-        df = self.insee100(df)
+        df = self.percRel100(df)
         return df
 
-    def insee100(self, df):
+    def percRel100(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -118,12 +118,12 @@ class PreProcesser(object):
 
     def get_wm_then_insee_1(self, df):
         df = self.get_wm(df)
-        df = self.insee1(df)
+        df = self.percRel1(df)
         return df
 
     def get_wm_then_insee_100(self, df):
         df = self.get_wm(df)
-        df = self.insee100(df)
+        df = self.percRel100(df)
         return df
 
     def get_wm(self, df):
