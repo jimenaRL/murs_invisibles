@@ -1,5 +1,7 @@
 VOLTAJE
-(1) Make preprocessor as list
+(1) Check all percRel
+(2) Make preprocessor as list
+
 EB
-(2) Check againt get_wm_then_insee_1 and co.
-(3) INSEE > conditions_de_vie > minutes !!!
+(1) Check againt get_wm_then_percRel1 and co.
+(2) INSEE > conditions_de_vie > minutes !!!
