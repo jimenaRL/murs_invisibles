@@ -76,8 +76,8 @@ class Mapper(object):
              row.value contain r = w/m ratio
 
         | 0 <= w/(m+w) = r/(1+r) <= 1
-        | Perfect egality iff w/(m+w) = .5
-        | Maximum inegality iff  abs(w/(m+w) - .5) = .5
+        | Perfect egality <=> w = m <=> w/(m+w) = .5
+        | Maximum inegality <=> abs(w/(m+w) - .5) = .5
         """
         row.value = row.value / (1 + row.value)
         return cls.proportion1(row)

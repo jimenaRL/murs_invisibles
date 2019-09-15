@@ -2,7 +2,13 @@ VOLTAJE
 (1) Check all hommes - femmes preprocessors 
 
     - women2men
+    	girl2boys
+	      girl2boys : ok, fix ratio girl2boys data > interesting data for Chad
     - diffFH
+    	education oced : ok
+    	emploi
+    		 Inventores : ok > good values
+    	entrepreneuriat
     - percRel1*
 
 (2) Make preprocessor as list
