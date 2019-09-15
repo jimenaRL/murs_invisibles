@@ -33,7 +33,6 @@ config = {
     "mapper": {
         'fns': {
             'ENT4.csv': 'proportion100',
-            # TO DO: 'diffFH_100' or 'norm_wm' ?
             'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diffFH_100',
         }
     },
