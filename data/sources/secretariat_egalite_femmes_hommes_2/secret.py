@@ -13,15 +13,13 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "ecarts_salaires.csv": "one_save",
-            "part de femmes.csv": "one_save",
-            "hf.csv": "one_save",
+            "part de femmes.csv": "one_save"
         },
     },
     "preprocesser": {
         'fns': {
             "ecarts_salaires.csv": "remove_prop",
-            "part de femmes.csv": "remove_prop",
-            "hf.csv": "diffFH",
+            "part de femmes.csv": "remove_prop"
         },
         'rename': {
             'country': 'pays',
@@ -33,8 +31,7 @@ config = {
     "mapper": {
         'fns': {
             "ecarts_salaires.csv": "diffFH_100",
-            "part de femmes.csv": "proportion100",
-            "hf.csv": "diffFH_100",
+            "part de femmes.csv": "proportion100"
         }
     },
     "filter": {
@@ -50,15 +47,13 @@ config = {
     "postprocesser": {
         'fns': {
             "ecarts_salaires.csv": "diff_perc",
-            "part de femmes.csv": "perc",
-            "hf.csv": "diff_perc",
+            "part de femmes.csv": "perc"
         }
     },
     "sorter": {
         'fns': {
             "ecarts_salaires.csv": "none",
-            "part de femmes.csv": "none",
-            "hf.csv": "none",
+            "part de femmes.csv": "none"
         }
     },
 }
