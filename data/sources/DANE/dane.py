@@ -15,25 +15,25 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "Servicios -  Personal ocupado.csv": "one_save",
-            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "one_save",
-            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "one_save",
-            "Mercado Laboral - Tasas desempleo - ocupación .csv": "one_save",
             "Pobreza de tiempo e ingreso - Pobreza.csv": "one_save",
-            "Fuerza laboral y educacion - Poblacion activa.csv": "one_save",
-            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "one_save",
-            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "one_save"
+            "Mercado Laboral - Tasas desempleo - ocupación .csv": "one_save",
+            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "one_save",
+            #"Fuerza laboral y educacion - Poblacion activa.csv": "one_save",
+            #"Fuerza laboral y educacion -  Tasa de desempleo.csv": "one_save",
+            #"Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "one_save",
+            #"Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "one_save"
         },
     },
     "preprocesser": {
         'fns': {
             "Servicios -  Personal ocupado.csv": "virg2point",
-            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "virg2point_insee1",
-            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "virg2point_insee1",
-            "Mercado Laboral - Tasas desempleo - ocupación .csv": "virg2point_insee1",
-            "Pobreza de tiempo e ingreso - Pobreza.csv": "virg2point_insee1",
-            "Fuerza laboral y educacion - Poblacion activa.csv": "virg2point_insee1",
-            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "virg2point_insee1",
-            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "virg2point_insee1"
+            "Pobreza de tiempo e ingreso - Pobreza.csv": "virg2point_percRel100",
+            "Mercado Laboral - Tasas desempleo - ocupación .csv": "virg2point_percRel100",
+            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "virg2point_percRel100",
+            "Fuerza laboral y educacion - Poblacion activa.csv": "virg2point_diff_fh",
+            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "virg2point_diff_fh",
+            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "virg2point_fsurtotal",
+            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "virg2point_diff_fh"
         },
         'rename': {
             'country': 'pays',
@@ -46,11 +46,11 @@ config = {
         'fns': {
             "Servicios -  Personal ocupado.csv": "proportion100",
             "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "ecart100",
-            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "ecart100",
+            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "proportion100",
             "Mercado Laboral - Tasas desempleo - ocupación .csv": "ecart100",
-            "Pobreza de tiempo e ingreso - Pobreza.csv": "ecart100",
-            "Fuerza laboral y educacion - Poblacion activa.csv": "ecart100",
-            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "ecart100",
+            "Pobreza de tiempo e ingreso - Pobreza.csv": "ecart100_52",
+            "Fuerza laboral y educacion - Poblacion activa.csv": "ecart100_12",
+            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "ecart100_12",
             "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "ecart100"
         }
     },
@@ -73,12 +73,12 @@ config = {
         'fns': {
             "Servicios -  Personal ocupado.csv": "perc",
             "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "diff_perc",
-            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "diff_perc",
+            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "percX100",
             "Mercado Laboral - Tasas desempleo - ocupación .csv": "diff_perc",
             "Pobreza de tiempo e ingreso - Pobreza.csv": "diff_perc",
-            "Fuerza laboral y educacion - Poblacion activa.csv": "diff_perc",
-            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "diff_perc",
-            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "diff_perc"
+            "Fuerza laboral y educacion - Poblacion activa.csv": "diff_pp",
+            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "diff_pp",
+            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "diff_pp"
     }
     },
     "sorter": {
