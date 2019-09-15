@@ -63,11 +63,11 @@ class Mapper(object):
 
     @classmethod
     def diffFH_10(cls, row):
-        return abs(row.value) / 12.
+        return abs(row.value) / 10.
 
     @classmethod
     def diffFH_50(cls, row):
-        return abs(row.value) / 52.
+        return abs(row.value) / 50.
 
     @classmethod
     def women2men_ratio(cls, row):
