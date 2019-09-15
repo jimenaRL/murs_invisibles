@@ -17,6 +17,8 @@ class IO(object):
             }
         """
 
+        self.n_show = 2
+
         self.save_fns = config['fns']
 
         self.header = config['header']
@@ -50,10 +52,6 @@ class IO(object):
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
             lambda x: maxEncode(x))
-        ### HOT FIXXXXXXXX ###
-        # df['value'] = df['value'].apply(
-        #     lambda x: maxEncode(str(x)+"_"))
-        ### ########### ###
         try:
             df.year = df.year.astype(int)
         except:
@@ -74,13 +72,12 @@ class IO(object):
 
     def one_save(self, df, path):
         out_path = self.get_out_path(path)
-        df = df[self.out_values]
         df.to_csv(out_path,
                   index=False,
                   header=False,
                   encoding='utf-8',
                   sep=self.out_sep)
-        print(df.sample(n=2))
+        print(df.sample(n=self.n_show))
         print("{} entries".format(len(df)))
         print("Saved at {}\n".format(out_path))
 
@@ -94,7 +91,6 @@ class IO(object):
         return out_path
 
     def sep_save(self, df, path):
-        df = df[self.out_values]
         for indicator in df.indicator.unique():
             out_path = self.get_out_path_indicator(path, indicator)
             tmp = df[df.indicator == indicator]
@@ -103,10 +99,21 @@ class IO(object):
                        header=False,
                        encoding='utf-8',
                        sep=self.out_sep)
-            print(tmp.sample(n=2))
+            print(tmp.sample(n=self.n_show))
             print("{} entries".format(len(tmp)))
             print("Saved at {}\n".format(out_path))
 
+    def remove_nan(self, df):
+        nb = len(df)
+        df = df.dropna(axis=0)
+        nb_nan = len(df)
+        if nb_nan < nb:
+            print("/!\ Drop {} rows with NAN values /!\ ".format(
+                nb - nb_nan))
+        return df
+
     def save(self, table, df, path):
         df = self.encode_rows(df)
+        df = df[self.out_values]
+        df = self.remove_nan(df)
         getattr(self, self.save_fns[table])(df, path)
