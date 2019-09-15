@@ -76,7 +76,7 @@ class Processer(object):
                 },
                 "preprocesser": {
                     'fns': {
-                        "taux.csv": "diff_fh",
+                        "taux.csv": "diffFH",
                     },
                     'rename': {
                         'country': 'pays',
@@ -87,7 +87,7 @@ class Processer(object):
                 },
                 "mapper": {
                     'fns': {
-                        "taux.csv": "ecart100",
+                        "taux.csv": "diffFH_100",
                     }
                 },
                 "filter": {

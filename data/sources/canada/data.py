@@ -24,7 +24,7 @@ config = {
         'fns': {
             "revenu_moyens.csv": "remove_dollar_and_k",
             "culture.csv": "no_process",
-            "taux.csv": "diff_fh",
+            "taux.csv": "diffFH",
             "effectif_professions_culture_communications.csv": "perc_fsurtotal",
         },
         'rename': {
@@ -37,8 +37,8 @@ config = {
     "mapper": {
         'fns': {
             "culture.csv": "proportion100",
-            "taux.csv": "ecart100",
-            "revenu_moyens.csv": "ecart100",
+            "taux.csv": "diffFH_100",
+            "revenu_moyens.csv": "diffFH_100",
             "effectif_professions_culture_communications.csv": "proportion100",
         }
     },

@@ -21,7 +21,7 @@ config = {
         'fns': {
             "ecarts_salaires.csv": "remove_prop",
             "part de femmes.csv": "remove_prop",
-            "hf.csv": "diff_fh",
+            "hf.csv": "diffFH",
         },
         'rename': {
             'country': 'pays',
@@ -32,9 +32,9 @@ config = {
     },
     "mapper": {
         'fns': {
-            "ecarts_salaires.csv": "ecart100",
+            "ecarts_salaires.csv": "diffFH_100",
             "part de femmes.csv": "proportion100",
-            "hf.csv": "ecart100",
+            "hf.csv": "diffFH_100",
         }
     },
     "filter": {

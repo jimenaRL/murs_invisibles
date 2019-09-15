@@ -18,7 +18,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "get_wm_then_insee_100"
+            "GENDER_EDU_29102017131322363.csv": "get_wm_then_percRel100"
         },
         "rename": {
             "country": "Pays",
@@ -29,7 +29,7 @@ config = {
     },
     "mapper": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "ecart100"
+            "GENDER_EDU_29102017131322363.csv": "diffFH_100"
         }
     },
     "filter": {

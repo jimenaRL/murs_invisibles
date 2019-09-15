@@ -67,12 +67,12 @@ class PreProcesser(object):
         df = self.fsurtotal(df)
         return df
 
-    def virg2point_diff_fh(self, df):
+    def virg2point_diffFH(self, df):
         df = self.virg2point(df)
-        df = self.diff_fh(df)
+        df = self.diffFH(df)
         return df
 
-    def diff_fh(self, df):
+    def diffFH(self, df):
         """
         Must be later in pp
         """
@@ -116,12 +116,12 @@ class PreProcesser(object):
         df['value'] = df.femmes / df.hommes
         return df
 
-    def get_wm_then_insee_1(self, df):
+    def get_wm_then_percRel1(self, df):
         df = self.get_wm(df)
         df = self.percRel1(df)
         return df
 
-    def get_wm_then_insee_100(self, df):
+    def get_wm_then_percRel100(self, df):
         df = self.get_wm(df)
         df = self.percRel100(df)
         return df

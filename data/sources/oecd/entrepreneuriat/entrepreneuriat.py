@@ -21,7 +21,7 @@ config = {
     "preprocesser": {
         'fns': {
             'ENT4.csv': 'no_process',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'get_wm_then_insee_100',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'get_wm_then_percRel100',
         },
         'rename': {
             'country': 'Pays',
@@ -33,8 +33,8 @@ config = {
     "mapper": {
         'fns': {
             'ENT4.csv': 'proportion1',
-            # TO DO: 'ecart100' or 'norm_wm' ?
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',
+            # TO DO: 'diffFH_100' or 'norm_wm' ?
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diffFH_100',
         }
     },
     "filter": {

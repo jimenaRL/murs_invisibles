@@ -28,7 +28,7 @@ config = {
     },
     "mapper": {
         'fns': {
-            "all.csv": "ecart100",
+            "all.csv": "diffFH_100",
         }
     },
     "filter": {

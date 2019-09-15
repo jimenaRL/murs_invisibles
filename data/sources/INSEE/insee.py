@@ -36,11 +36,11 @@ config = {
     },
     "mapper": {
         'fns': {
-            "18_indicateurs_REG.csv": "ecart100",
-            "18_indicateurs_REG_revenu.csv": "ecart100",
+            "18_indicateurs_REG.csv": "diffFH_100",
+            "18_indicateurs_REG_revenu.csv": "diffFH_100",
             # "conditions_de_vie.csv": "conditions_de_vie",
             # "ecarts_salaires_horaires.csv": "",
-            "retraite_et_revenus.csv": "ecart100",
+            "retraite_et_revenus.csv": "diffFH_100",
         }
     },
     "filter": {
