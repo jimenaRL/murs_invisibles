@@ -1,7 +1,12 @@
 VOLTAJE
-(1) Check all percRel
+(1) Check all hommes - femmes preprocessors 
+
+    - women2men
+    - diffFH
+    - percRel1*
+
 (2) Make preprocessor as list
 
 EB
 (1) Check againt get_wm_then_percRel1 and co.
-(2) INSEE > conditions_de_vie > minutes !!!
+(2) INSEE > conditions_de_vie > minutes !!!%
