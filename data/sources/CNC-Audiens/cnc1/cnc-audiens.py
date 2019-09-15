@@ -27,7 +27,7 @@ config = {
         'fns': {
             "Effectifs par catégorie professionnelle.csv": "no_process",
             "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": "no_process",
-            # "Part des entrées des films réalisés par des femmes.csv": "diff_fh",
+            # "Part des entrées des films réalisés par des femmes.csv": "diffFH",
             "Part des films réalisés par des femmes - Europe.csv": "no_process",
             # "Part des films réalisés par des femmes .csv": "no_process",
             # "Réalisateur·trices de courts métrages.csv": "no_process",

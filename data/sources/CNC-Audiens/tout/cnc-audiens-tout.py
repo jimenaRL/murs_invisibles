@@ -33,7 +33,7 @@ config = {
     "mapper": {
         'fns': {
             "audiens_tout.csv": "proportion100",
-            "cnc_tout_doc_2_ecarts.csv": "ecart100",
+            "cnc_tout_doc_2_ecarts.csv": "diffFH_100",
             "tout_docs_1_part_des_femmes.csv": "proportion100",
         }
     },
