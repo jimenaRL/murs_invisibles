@@ -110,11 +110,11 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
-    def women2men(self, df):
-        """
-        """
-        df['value'] = df.femmes / df.hommes
-        return df
+    # def women2men(self, df):
+    #     """
+    #     """
+    #     df['value'] = df.femmes / df.hommes
+    #     return df
 
     def get_wm_then_percRel1(self, df):
         df = self.get_wm(df)
