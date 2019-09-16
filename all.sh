@@ -22,6 +22,8 @@ PYTHONIOENCODING=UTF-8 python data/sources/EESR/parite2019/parite2019.py
 echo "> INSEE"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE/insee.py
 
+echo "> INSEE2"
+PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/INSEE2/insee2.py
 
 echo "> MINIST-CULT"
 PYTHONIOENCODING=UTF-8 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
