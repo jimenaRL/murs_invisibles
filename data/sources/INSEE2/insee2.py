@@ -3,6 +3,8 @@ import json
 import pandas as pd
 from murs_invisibles import Processer
 
+file_dir = os.path.dirname(os.path.realpath(__file__))
+filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
@@ -41,7 +43,7 @@ config = {
         }
     },
     "filter": {
-        'filter_indicator_path': None,
+        'filter_indicator_path': filter_indicator_path,
         'year': {
             "Conditions de vie_Société.csv": 2010,
             "Enseignement_Education.csv": 2010,
