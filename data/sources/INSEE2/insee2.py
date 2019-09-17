@@ -36,9 +36,9 @@ config = {
     },
     "mapper": {
         'fns': {
-            "Conditions de vie_Société.csv": "diffFH_100",
-            "Enseignement_Education.csv": "diffFH_10",
-            "Revenus_Salaires.csv": "diffFH_100",
+            "Conditions de vie_Société.csv": "diffFH_20",
+            "Enseignement_Education.csv": "diffFH_20",
+            "Revenus_Salaires.csv": "diffFH_20",
             "Travail_Emploi.csv": "diffFH_20",
         }
     },
