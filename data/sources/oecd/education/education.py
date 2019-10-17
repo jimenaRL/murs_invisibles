@@ -39,8 +39,8 @@ config = {
         }
     },
     "translator": {
-        "indicator": "en2es",
-        "country": "fr2es"
+        "indicator_origin_language": "en",
+        "country_origin_language": "fr"
     },
     "postprocesser": {
         "fns": {
