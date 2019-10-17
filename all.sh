@@ -1,11 +1,6 @@
 #!/bin/bash
 BASEPATH=$(dirname $0)
 
-echo "> DANE"
-python $BASEPATH/data/sources/DANE/dane.py
-
-
-# To check problems
 echo "> CNC-Audiens"
 python $BASEPATH/data/sources/CNC-Audiens/tout/cnc-audiens-tout.py
 python $BASEPATH/data/sources/CNC-Audiens/audiens/cnc-audiens.py
@@ -22,11 +17,14 @@ python data/sources/EESR/parite2019/parite2019.py
 echo "> INSEE"
 python $BASEPATH/data/sources/INSEE/insee.py
 
+
 echo "> INSEE2"
 python $BASEPATH/data/sources/INSEE2/insee2.py
 
+
 echo "> MINIST-CULT"
 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
+
 
 echo "> OECD"
 echo ">> developpement"
@@ -52,6 +50,3 @@ echo "> secretariat_egalite_femmes_hommes"
 python $BASEPATH/data/sources/secretariat_egalite_femmes_hommes/minist_dossier.py
 echo "> secretariat_egalite_femmes_hommes_2"
 python $BASEPATH/data/sources/secretariat_egalite_femmes_hommes_2/secret.py
-
-
-
