@@ -16,9 +16,9 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'SYB61_T05_Seats held by Women in Parliament.csv': 'no_process',
+            'SYB61_T05_Seats held by Women in Parliament.csv': ['no_process'],
             # /!\ problem with ’ character /!\ #
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'no_process',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': ['no_process'],
         },
         'rename': {
             'country': 'Unnamed: 1',

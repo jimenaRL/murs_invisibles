@@ -25,14 +25,14 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "Servicios -  Personal ocupado.csv": "virg2point",
-            "Pobreza de tiempo e ingreso - Pobreza.csv": "virg2point_percRel100",
-            "Mercado Laboral - Tasas desempleo - ocupación .csv": "virg2point_percRel100",
-            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": "virg2point_percRel100",
-            "Fuerza laboral y educacion - Poblacion activa.csv": "virg2point_diffFH",
-            "Fuerza laboral y educacion -  Tasa de desempleo.csv": "virg2point_diffFH",
-            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": "virg2point_diffFH",
-            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": "virg2point_perc_fsurtotal",
+            "Servicios -  Personal ocupado.csv": ["virg2point"],
+            "Pobreza de tiempo e ingreso - Pobreza.csv": ["virg2point_percRel100"],
+            "Mercado Laboral - Tasas desempleo - ocupación .csv": ["virg2point_percRel100"],
+            "Mercado Laboral - Tiempo trabajo (horas a la semana).csv": ["virg2point_percRel100"],
+            "Fuerza laboral y educacion - Poblacion activa.csv": ["virg2point_diffFH"],
+            "Fuerza laboral y educacion -  Tasa de desempleo.csv": ["virg2point_diffFH"],
+            "Economía del cuidado - Porcentaje de participación H_M en el TDCNR.csv": ["virg2point_diffFH"],
+            "Economía del cuidado - Valor económico del TDCNR según funcionalidad y sexo.csv": ["virg2point_perc_fsurtotal"],
         },
         'rename': {
             'country': 'pays',

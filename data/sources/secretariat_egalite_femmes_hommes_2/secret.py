@@ -17,8 +17,8 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "ecarts_salaires.csv": "remove_prop",
-            "part de femmes.csv": "remove_prop"
+            "ecarts_salaires.csv": ["remove_prop"],
+            "part de femmes.csv": ["remove_prop"]
         },
         'rename': {
             'country': 'pays',

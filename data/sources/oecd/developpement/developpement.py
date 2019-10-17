@@ -17,8 +17,8 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'GIDDB2014_titres_fonciers.csv': 'no_process',
-            'GIDDB2019_poste_de_direction.csv': 'no_process',
+            'GIDDB2014_titres_fonciers.csv': ['no_process'],
+            'GIDDB2019_poste_de_direction.csv': ['no_process'],
         },
         'rename': {
             'country': 'Pays',

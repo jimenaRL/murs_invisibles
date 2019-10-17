@@ -16,7 +16,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "all.csv": "virg2point",
+            "all.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',

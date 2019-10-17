@@ -13,7 +13,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            '46 - Share of female police officers_data.csv': 'no_process',
+            '46 - Share of female police officers_data.csv': ['no_process'],
         },
         'rename': {
             'country': 'Country',

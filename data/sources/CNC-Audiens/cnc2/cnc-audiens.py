@@ -19,8 +19,8 @@ config = {
     "preprocesser": {
         'fns': {
             # "devis_moyen.csv": "",
-            "part_films_nat.csv": "no_process",
-            "part_films.csv": "no_process",
+            "part_films_nat.csv": ["no_process"],
+            "part_films.csv": ["no_process"],
         },
         'rename': {
             'country': 'pays',

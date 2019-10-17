@@ -18,9 +18,9 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "audiens_tout.csv": "no_process",
-            "cnc_tout_doc_2_ecarts.csv": "no_process",
-            "tout_docs_1_part_des_femmes.csv": "no_process",
+            "audiens_tout.csv": ["no_process"],
+            "cnc_tout_doc_2_ecarts.csv": ["no_process"],
+            "tout_docs_1_part_des_femmes.csv": ["no_process"],
         },
         'rename': {
             'country': 'pays',

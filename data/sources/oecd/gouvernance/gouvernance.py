@@ -19,7 +19,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'GOV_2017_03042019165415175.csv': 'no_process',
+            'GOV_2017_03042019165415175.csv': ['no_process'],
         },
         'rename': {
             'country': 'Country',

@@ -24,14 +24,14 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "Effectifs par catégorie professionnelle.csv": "no_process",
-            "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": "no_process",
+            "Effectifs par catégorie professionnelle.csv": ["no_process"],
+            "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": ["no_process"],
             # "Part des entrées des films réalisés par des femmes.csv": "diffFH",
-            "Part des films réalisés par des femmes - Europe.csv": "no_process",
-            # "Part des films réalisés par des femmes .csv": "no_process",
-            # "Réalisateur·trices de courts métrages.csv": "no_process",
-            "Répartition des effectifs selon l’année d’agrément et le sexe.csv": "virg2point",
-            "écarts des salaires horaires médians des femmes et ceux des hommes dans le cinéma ciné.csv": "virg2point",
+            "Part des films réalisés par des femmes - Europe.csv": ["no_process"],
+            # "Part des films réalisés par des femmes .csv": ["no_process"],
+            # "Réalisateur·trices de courts métrages.csv": ["no_process"],
+            "Répartition des effectifs selon l’année d’agrément et le sexe.csv": ["virg2point"],
+            "écarts des salaires horaires médians des femmes et ceux des hommes dans le cinéma ciné.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',

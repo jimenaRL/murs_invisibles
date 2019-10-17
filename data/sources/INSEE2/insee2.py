@@ -21,10 +21,10 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "Conditions de vie_Société.csv": "virg2point",
-            "Enseignement_Education.csv": "virg2point",
-            "Revenus_Salaires.csv": "virg2point",
-            "Travail_Emploi.csv": "virg2point",
+            "Conditions de vie_Société.csv": ["virg2point"],
+            "Enseignement_Education.csv": ["virg2point"],
+            "Revenus_Salaires.csv": ["virg2point"],
+            "Travail_Emploi.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',

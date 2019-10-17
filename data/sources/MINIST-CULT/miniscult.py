@@ -20,11 +20,11 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "OBS_GROUP3_arts.csv": "remove_prop",
-            "OBS_GROUP4_TV.csv": "remove_prop",
-            "Observatoire_GROUP1_part.csv": "remove_prop",
-            "Observatoire_GROUP1_ecarts.csv": "remove_prop",
-            "Observatoire_group2_TH_.csv": "remove_prop",
+            "OBS_GROUP3_arts.csv": ["remove_prop"],
+            "OBS_GROUP4_TV.csv": ["remove_prop"],
+            "Observatoire_GROUP1_part.csv": ["remove_prop"],
+            "Observatoire_GROUP1_ecarts.csv": ["remove_prop"],
+            "Observatoire_group2_TH_.csv": ["remove_prop"]
         },
         'rename': {
             'country': 'pays',

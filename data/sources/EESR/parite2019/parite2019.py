@@ -19,8 +19,8 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "parite2019_femmes-hommes.csv": "percRel100",
-            "parite2019_part_des_femmes.csv": "no_process"
+            "parite2019_femmes-hommes.csv": ["percRel100"],
+            "parite2019_part_des_femmes.csv": ["no_process"]
 
         },
         "rename": {

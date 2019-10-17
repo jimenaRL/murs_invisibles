@@ -20,11 +20,11 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "18_indicateurs_REG.csv": "no_process",
-            "18_indicateurs_REG_revenu.csv": "no_process",
-            # "conditions_de_vie.csv": "no_process",
+            "18_indicateurs_REG.csv": ["no_process"],
+            "18_indicateurs_REG_revenu.csv": ["no_process"],
+            # "conditions_de_vie.csv": ["no_process"],
             # "ecarts_salaires_horaires.csv": "",
-            "retraite_et_revenus.csv": "no_process",
+            "retraite_et_revenus.csv": ["no_process"],
         },
         'rename': {
             'country': 'pays',

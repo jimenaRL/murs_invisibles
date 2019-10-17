@@ -19,8 +19,8 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'ENT4.csv': 'no_process',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'get_wm_then_percRel100',
+            'ENT4.csv': ['no_process'],
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': ['get_wm_then_percRel100'],
         },
         'rename': {
             'country': 'Pays',

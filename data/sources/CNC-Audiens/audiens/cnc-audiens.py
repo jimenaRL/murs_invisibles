@@ -18,9 +18,9 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "emploi_spect_vivant_cat_so.csv": "no_process",
-            "emploi_spect_vivant.csv": "no_process",
-            "intermitants.csv": "virg2point",
+            "emploi_spect_vivant_cat_so.csv": ["no_process"],
+            "emploi_spect_vivant.csv": ["no_process"],
+            "intermitants.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',

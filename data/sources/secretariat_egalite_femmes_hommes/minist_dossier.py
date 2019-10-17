@@ -18,7 +18,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'minist_dossier.csv': 'remove_prop',
+            'minist_dossier.csv': ['remove_prop'],
         },
         'rename': {
             'country': 'pays',
