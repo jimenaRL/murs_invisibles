@@ -3,31 +3,30 @@ import json
 import pandas as pd
 
 
-COUNTRY_PATH = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'aux/translators/country_{}.json')
-IND_PATH = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'aux/translators/indicator_{}.json')
-
-
 class Translator(object):
 
     def __init__(self, config):
         """
         Config example:
             {
-                'country_lang': 'en2fr',
-                'indicator_lang':'en2fr',
+                'indicator': 'en2fr',
+                'country': 'fr2fr'
+                'country_dict_path': ''
+                'ind_dict_path': ''
             }
         """
-        with open(COUNTRY_PATH.format(config['country_lang']), 'r',
-                  encoding='utf-8') as fp:
+
+        self.config = config
+
+        self.target_language = self.config['indicator'].split('2')[-1]
+
+        with open(config['country_dict_path'], 'r', encoding='utf-8') as fp:
             self.country_dict = json.load(fp, encoding='utf-8')
 
-        with open(IND_PATH.format(config['indicator_lang']), 'r',
-                  encoding='utf-8') as fp:
-            self.ind_dict = json.load(fp, encoding='utf-8')
+        self.ind_dict  = pd.read_csv(config['ind_dict_path'])
+        # HOT FIX #
+        self.ind_dict.drop_duplicates(inplace=True)
+
 
     def translate_country(self, df):
         """
@@ -41,8 +40,9 @@ class Translator(object):
         """
         translate or reformulate indicator
         """
-        df['indicator'] = df['indicator'].apply(
-            lambda x: self.ind_dict[x])
+        df = df.merge(self.ind_dict, on='indicator', how='inner')
+        df['indicator'] = df[self.target_language]
+
         return df
 
     def process(self, table, df):

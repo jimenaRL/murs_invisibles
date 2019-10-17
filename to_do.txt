@@ -1,3 +1,47 @@
-(1) Check Canada - Quebec again !!!!!!
-(2) Check againt diff_wm_insee_1 and co.
-(3) INSEE > conditions_de_vie > minutes !!!
+VOLTAJE
+
+(3) refaire INSEE + conditions_de_vie with minutes !
+
+    18_indicateurs_REG
+    18_indicateurs_REG_revenu
+    retraite_et_revenus
+    # conditions_de_vie
+    # ecarts_salaires_horaires.csv
+
+
+(4) Une seule chiffre après virgule
+
+(5) Make preprocessor as list
+
+(6) Clean CNC
+
+[ok] Colombia condensado
+
+[ok] Check all hommes - femmes preprocessors 
+
+    - women2men
+    	girl2boys
+	      girl2boys : ok, fix ratio girl2boys data > interesting data for Chad
+     - percRel1*
+    	education oced : ok
+    	entrepreneuriat
+    		ENT4 - Inventores : ok > good values
+    		GENDER_ENT1_01042019230825609_remove_ENT4 : ok
+      	emploi : ok
+
+   - diffFH
+
+   if Must be later in pp
+
+   		EESR/EESR-FR/data : ok
+   		EESR/parite2019/parite2019 : ok
+   		oecd/education/education : ok
+   		oecd/emploi/emploi : ok
+   		oecd/entrepreneuriat/entrepreneuriat : ok
+   		secretariat_egalite_femmes_hommes_2/secret : ok
+   		canada/data : removed
+   		CNC-Audiens/cnc1/cnc-audiens  : ok
+   		CNC-Audiens/tout/cnc-audiens-tout : ok
+   		DANE/dane.py : ok
+   		INSEE/insee :  see below
+

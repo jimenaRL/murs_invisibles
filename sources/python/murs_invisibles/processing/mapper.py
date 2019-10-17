@@ -38,7 +38,7 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
-    def ecart1(cls, row):
+    def diffFH_1(cls, row):
         """
         row: pandas dataframe row
              row.value contains p = (m-w)/100. where m (resp. women) is the ratio of
@@ -50,7 +50,7 @@ class Mapper(object):
         return abs(row.value)
 
     @classmethod
-    def ecart100(cls, row):
+    def diffFH_100(cls, row):
         """
         row: pandas dataframe row
              row.value contains p = m-w where m (resp. women) is the ratio of
@@ -62,14 +62,26 @@ class Mapper(object):
         return abs(row.value) / 100.
 
     @classmethod
+    def diffFH_10(cls, row):
+        return abs(row.value) / 10.
+
+    @classmethod
+    def diffFH_20(cls, row):
+        return abs(row.value) / 20.
+
+    @classmethod
+    def diffFH_50(cls, row):
+        return abs(row.value) / 50.
+
+    @classmethod
     def women2men_ratio(cls, row):
         """
         row: pandas dataframe row
              row.value contain r = w/m ratio
 
         | 0 <= w/(m+w) = r/(1+r) <= 1
-        | Perfect egality iff w/(m+w) = .5
-        | Maximum inegality iff  abs(w/(m+w) - .5) = .5
+        | Perfect egality <=> w = m <=> w/(m+w) = .5
+        | Maximum inegality <=> abs(w/(m+w) - .5) = .5
         """
         row.value = row.value / (1 + row.value)
         return cls.proportion1(row)

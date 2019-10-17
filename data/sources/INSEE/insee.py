@@ -5,7 +5,9 @@ from murs_invisibles import Processer
 
 
 config = {
-    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "base_path": os.path.dirname(os.path.realpath(__file__)),
+    "origin_language": "fr",
+    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -34,16 +36,15 @@ config = {
     },
     "mapper": {
         'fns': {
-            "18_indicateurs_REG.csv": "ecart100",
-            "18_indicateurs_REG_revenu.csv": "ecart100",
+            "18_indicateurs_REG.csv": "diffFH_100",
+            "18_indicateurs_REG_revenu.csv": "diffFH_100",
             # "conditions_de_vie.csv": "conditions_de_vie",
             # "ecarts_salaires_horaires.csv": "",
-            "retraite_et_revenus.csv": "ecart100",
+            "retraite_et_revenus.csv": "diffFH_100",
         }
     },
     "filter": {
         'filter_indicator_path': None,
-        'country_filter_lang': 'fr',
         'year': {
             "18_indicateurs_REG.csv": 2010,
             "18_indicateurs_REG_revenu.csv": 2010,
@@ -53,8 +54,6 @@ config = {
         }
     },
     "translator": {
-        'country_lang': 'fr2fr',
-        'indicator_lang': 'fr2fr',
     },
     "postprocesser": {
         'fns': {

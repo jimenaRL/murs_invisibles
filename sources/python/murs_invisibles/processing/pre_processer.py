@@ -22,44 +22,71 @@ class PreProcesser(object):
         return df.rename(columns=self.rename)
 
     def remove_prop(self, df):
-        df = df[~df.value.isna()]
-        df.value = df.value.apply(lambda s: float(s.replace('%', '')))
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
         return df
 
     def no_process(self, df):
         return df
 
     def virg2point(self, df):
-        df['value'] = df.value.apply(lambda row: float(row.replace(',', '.')))
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def remove_dollar_and_k(self, df, column):
-        df[column] = df[column].apply(lambda s: float(
-            s.replace(' k$', '').replace(',', '.').replace(' ', '')))
-        df[column] = df[column].apply(lambda s: 1000.*float(s))
+    def remove_dollar_and_k_percRel1(self, df):
+        df = self.remove_dollar_and_k(df)
+        df = self.percRel1(df)
         return df
 
-    def remove_dollar_and_k_diff_insee(self, df):
-        df = self.remove_dollar_and_k(df, 'femmes')
-        df = self.remove_dollar_and_k(df, 'hommes')
-        df = self.insee(df)
+    def remove_dollar_and_k(self, df):
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(lambda s: float(
+                    s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+                df[v] = df[v].apply(lambda s: 1000.*float(s))
+        return df
+
+    def remove_euro_and_perc(self, df):
+        values = ['value', 'femmes', 'hommes']
+        for v in values:
+            if v in df.columns:
+                df[v] = df[v].apply(
+                    lambda s: float(str(s).replace('€', '').replace('%', '')))
+        return df
+
+    def fsurtotal(self, df):
+        df['value'] = df.femmes / (df.hommes+df.femmes)
         return df
 
     def perc_fsurtotal(self, df):
         df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
-    def diff_fh(self, df):
-        # remove € HOTFIX
-        df.femmes = df.femmes.apply(
-            lambda s: float(str(s).replace('€', '').replace('%', '')))
-        df.hommes = df.hommes.apply(
-            lambda s: float(str(s).replace('€', '').replace('%', '')))
-        ###
+    def virg2point_perc_fsurtotal(self, df):
+        df = self.virg2point(df)
+        df = self.perc_fsurtotal(df)
+        return df
+
+    def virg2point_diffFH(self, df):
+        df = self.virg2point(df)
+        df = self.diffFH(df)
+        return df
+
+    def diffFH(self, df):
+        """
+        Units must be later in pp
+        """
+        df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
         return df
 
-    def insee1(self, df):
+    def percRel1(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -67,7 +94,21 @@ class PreProcesser(object):
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
 
-    def insee100(self, df):
+    def virg2point_percRel1(self, df):
+        """
+        """
+        df = self.virg2point(df)
+        df = self.percRel1(df)
+        return df
+
+    def virg2point_percRel100(self, df):
+        """
+        """
+        df = self.virg2point(df)
+        df = self.percRel100(df)
+        return df
+
+    def percRel100(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -75,23 +116,23 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
-    def women2men(self, df):
-        """
-        """
-        df['value'] = df.femmes / df.hommes
+    # def women2men(self, df):
+    #     """
+    #     """
+    #     df['value'] = df.femmes / df.hommes
+    #     return df
+
+    def get_wm_then_percRel1(self, df):
+        df = self.get_wm(df)
+        df = self.percRel1(df)
         return df
 
-    def diff_wm_insee_1(self, df):
-        df = self.diff_wm_insee(df)
-        df = self.insee1(df)
+    def get_wm_then_percRel100(self, df):
+        df = self.get_wm(df)
+        df = self.percRel100(df)
         return df
 
-    def diff_wm_insee_100(self, df):
-        df = self.diff_wm_insee(df)
-        df = self.insee100(df)
-        return df
-
-    def diff_wm_insee(self, df):
+    def get_wm(self, df):
         """
         Dataframe preprocessing
         """

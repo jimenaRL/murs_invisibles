@@ -7,7 +7,9 @@ file_dir = os.path.dirname(os.path.realpath(__file__))
 filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
 config = {
-    "data_path": file_dir,
+    "base_path": file_dir,
+    "origin_language": "fr",
+    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -19,7 +21,7 @@ config = {
     "preprocesser": {
         'fns': {
             'ENT4.csv': 'no_process',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diff_wm_insee_100',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'get_wm_then_percRel100',
         },
         'rename': {
             'country': 'Pays',
@@ -30,22 +32,18 @@ config = {
     },
     "mapper": {
         'fns': {
-            'ENT4.csv': 'proportion1',
-            # TO DO: 'ecart100' or 'norm_wm' ?
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'ecart100',
+            'ENT4.csv': 'proportion100',
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'diffFH_100',
         }
     },
     "filter": {
         'filter_indicator_path': filter_indicator_path,
-        'country_filter_lang': 'fr',
         'year': {
             'ENT4.csv': 2015,
             'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2015,
         }
     },
     "translator": {
-        'country_lang': 'fr2fr',
-        'indicator_lang': 'fr2fr',
     },
     "postprocesser": {
         'fns': {

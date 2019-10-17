@@ -3,53 +3,60 @@ import json
 import pandas as pd
 from murs_invisibles import Processer
 
+filepath = os.path.dirname(os.path.realpath(__file__))
 
 config = {
-    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "base_path": filepath,
+    "origin_language": "fr",
+    "target_language": "es",
     "io": {
         "header": 0,
-        "encoding": 'utf-8',
+        "encoding": "utf-8",
         "fns": {
-            'GENDER_EDU_29102017131322363.csv': 'sep_save',
-        },
+            "GENDER_EDU_29102017131322363.csv": "sep_save"
+        }
     },
     "preprocesser": {
-        'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'diff_wm_insee_100',
+        "fns": {
+            "GENDER_EDU_29102017131322363.csv": "get_wm_then_percRel100"
         },
-        'rename': {
-            'country': 'Pays',
-            'year': 'TIME',
-            'indicator': 'Indicateur',
-            'value': 'Value'
-        },
+        "rename": {
+            "country": "Pays",
+            "year": "TIME",
+            "indicator": "Indicateur",
+            "value": "Value"
+        }
     },
     "mapper": {
-        'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'ecart100',
+        "fns": {
+            "GENDER_EDU_29102017131322363.csv": "diffFH_100"
         }
     },
     "filter": {
-        'filter_indicator_path': None,
-        'country_filter_lang': 'fr',
-        'year': {
-            'GENDER_EDU_29102017131322363.csv': 2010,
+        "origin_language": "fr",
+        "filter_indicator_path": None,
+        "year": {
+            "GENDER_EDU_29102017131322363.csv": 2010
         }
     },
     "translator": {
-        'country_lang': 'fr2fr',
-        'indicator_lang': 'en2fr',
+        "indicator": "en2es",
+        "country": "fr2es"
     },
     "postprocesser": {
-        'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'diff_perc',
+        "fns": {
+            "GENDER_EDU_29102017131322363.csv": "diff_perc"
         }
     },
     "sorter": {
-        'fns': {
-            'GENDER_EDU_29102017131322363.csv': 'date_country',
+        "fns": {
+            "GENDER_EDU_29102017131322363.csv": "date_country"
         }
-    },
+    }
 }
 
-Processer(config).process()
+
+
+processer = Processer(config)
+
+processer.process()

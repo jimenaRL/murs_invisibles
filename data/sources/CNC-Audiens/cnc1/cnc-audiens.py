@@ -6,7 +6,9 @@ from murs_invisibles import Processer
 
 
 config = {
-    "data_path": os.path.dirname(os.path.realpath(__file__)),
+    "base_path": os.path.dirname(os.path.realpath(__file__)),
+    "origin_language": "fr",
+    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -25,7 +27,7 @@ config = {
         'fns': {
             "Effectifs par catégorie professionnelle.csv": "no_process",
             "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": "no_process",
-            # "Part des entrées des films réalisés par des femmes.csv": "diff_fh",
+            # "Part des entrées des films réalisés par des femmes.csv": "diffFH",
             "Part des films réalisés par des femmes - Europe.csv": "no_process",
             # "Part des films réalisés par des femmes .csv": "no_process",
             # "Réalisateur·trices de courts métrages.csv": "no_process",
@@ -53,7 +55,6 @@ config = {
     },
     "filter": {
         'filter_indicator_path': None,
-        'country_filter_lang': 'fr',
         'year': {
             "Effectifs par catégorie professionnelle.csv": 2010,
             "Films d’initiative française selon le genre des films et le sexe des réalisateur-trices.csv": 2010,
@@ -66,8 +67,6 @@ config = {
         }
     },
     "translator": {
-        'country_lang': 'fr2fr',
-        'indicator_lang': 'fr2fr',
     },
     "postprocesser": {
         'fns': {

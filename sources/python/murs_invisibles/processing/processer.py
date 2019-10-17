@@ -1,7 +1,9 @@
 import os
+from copy import deepcopy
+import pandas as pd
 
 from murs_invisibles.processing.mapper import Mapper
-from murs_invisibles.processing.io import IO
+from murs_invisibles.processing.inout import IO
 from murs_invisibles.processing.pre_processer import PreProcesser
 from murs_invisibles.processing.post_processer import PostProcesser
 from murs_invisibles.processing.filter import Filter
@@ -9,72 +11,135 @@ from murs_invisibles.processing.translator import Translator
 from murs_invisibles.processing.sorter import Sorter
 
 
+TRANSLATOR_COUNTRY_PATH = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'auxiliar/translators/country_{}.json')
+
+FILTER_COUNTRY_PATH = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'auxiliar/filters/country_filter_{}.txt')
+
+
 class Processer(object):
+
+    def _set_filter_config(self, filter_config):
+        if not "origin_language" in filter_config:
+            filter_config.update({
+                "origin_language": self.config["origin_language"]
+                })
+        filter_config.update({
+                "filter_country_path": FILTER_COUNTRY_PATH.format(
+                    self.config['origin_language'])
+                })
+        return filter_config
+
+    def _set_translator_config(self, translator_config):
+
+        if not "indicator" in translator_config:
+            translator_config.update({
+                "indicator": self.default_translation
+            })
+        translator_config.update({
+            "ind_dict_path": os.path.join(
+                self.base_path,
+                "indicator_translations.csv")
+            })
+
+        if not "country" in translator_config:
+            translator_config.update({
+                "country": self.default_translation
+                })
+        translator_config.update({
+                "country_dict_path": TRANSLATOR_COUNTRY_PATH.format(
+                    self.default_translation)
+                })
+
+        return translator_config
+
+    def _set_io_config(self, io_config):
+        io_config["target_language"] = self.config["target_language"]
+        return io_config
 
     def __init__(self, config):
         """
         Config example:
             {
-                "data_path": "path/to/folder/with/raw/data",
+                "base_path": file_dir,
+                "origin_language": "fr",
+                "target_language": "fr",
                 "io": {
-                    "header": 1,
-                    "encoding": 'latin1',
+                    "header": 0,
+                    "encoding": 'utf-8',
                     "fns": {
-                        'filename': 'save_fn'
+                        "taux.csv": "one_save",
                     },
                 },
                 "preprocesser": {
                     'fns': {
-                        'filename': 'preprocess_fn'
+                        "taux.csv": "diffFH",
                     },
                     'rename': {
-                        'country': 'Unnamed: 1',
-                        'year': 'Year',
-                        'indicator': 'Series',
-                        'value': 'Value'
+                        'country': 'pays',
+                        'year': 'annee',
+                        'indicator': 'nom',
+                        'value': 'part de femmes',
                     },
                 },
                 "mapper": {
                     'fns': {
-                        'filename': 'map_value_fn',
+                        "taux.csv": "diffFH_100",
                     }
                 },
                 "filter": {
-                    'filter_indicator_path': None,
-                    'country_filter_lang': 'en',
+                    'filter_indicator_path': filter_indicator_path,
                     'year': {
-                        'filename': 'min_year_threshold'
+                        "taux.csv": 2006,
                     }
                 },
                 "translator": {
-                    'country_lang': 'en2fr',
-                    'indicator_lang': 'en2fr',
                 },
                 "postprocesser": {
                     'fns': {
-                        'filename': 'postprocess_fn'
+                        "taux.csv": "diff_perc",
                     }
+                },
+                "sorter": {
+                    'fns': {
+                        "taux.csv": "none",
                 },
             }
         """
 
-        self.data_path = config['data_path']
+        self.config = config
+        self.base_path = config['base_path']
         self.tables = config['io']['fns'].keys()
+        self.default_translation = '{}2{}'.format(
+            config["origin_language"],
+            config["target_language"])
 
-        self.io = IO(config['io'])
         self.preprocesser = PreProcesser(config['preprocesser'])
+
+        config['filter'] = self._set_filter_config(config['filter'])
         self.filter = Filter(config['filter'])
+
         self.mapper = Mapper(config['mapper'])
+
+        config['translator'] = self._set_translator_config(config['translator'])
         self.translator = Translator(config['translator'])
+
         self.postprocesser = PostProcesser(config['postprocesser'])
+
         self.sorter = Sorter(config['sorter'])
+
+        io_config = self._set_io_config(config['io'])
+        self.io = IO(io_config)
 
     def process(self):
 
         for table in self.tables:
 
             print(f"***** {table} ****")
-            path = os.path.join(self.data_path, table)
+            path = os.path.join(self.base_path, table)
 
             # load
             df = self.io.load(path)

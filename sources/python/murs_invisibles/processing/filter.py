@@ -2,11 +2,6 @@ import os
 import json
 import pandas as pd
 
-FILTER_COUNTRY_PATH = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'aux/filters/country_filter_{}.txt')
-
-
 class Filter(object):
 
     def __init__(self, config):
@@ -16,14 +11,13 @@ class Filter(object):
                 'table_min_year': {
                     'filename': 2010
                 }
-                'country_filter_lang': 'fr',
+                'origin_language': 'fr',
                 'filter_indicator_path': None,
             }
         """
 
         self.years = config['year']
-        self.filter_country_path = FILTER_COUNTRY_PATH.format(
-            config['country_filter_lang'])
+        self.filter_country_path = config['filter_country_path']
 
         if config['filter_indicator_path']:
             with open(config['filter_indicator_path'], 'r',
