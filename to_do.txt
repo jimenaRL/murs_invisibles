@@ -1,6 +1,33 @@
-VOLTAJE
+MAUBISSON
 
-(3) refaire INSEE + conditions_de_vie with minutes !
+(-1) Résoudre problèmes avec les tirés dans le dates (e.g.: 2017-2018)
+
+
+(0) Décider avec A&A sur pp vs points vs %% vs %:
+
+-----
+-----
+-France 2010    Acteur·trices_cinéma---_salaires_horaires_médians_des_femmes_par_rapport_aux_hommes_    -7.60pp 0.152
++France 2010    Acteur·trices_cinéma---_salaires_horaires_médians_des_femmes_par_rapport_aux_hommes_    -7.60%  0.076
+
+dans
+
+    data/m4l/es/CNC-Audiens/tout/cnc_tout_doc_2_ecarts.tsv
+    data/m4l/fr/CNC-Audiens/tout/cnc_tout_doc_2_ecarts.tsv
+-----
+-----
+-Región_Atlántica       2017    Participación_mujeres_en_trabajo_doméstico_y_de_cuidados_no_remunerado---_suministro_de_alimentos       +57.29pp        1.1458
++Región_Atlántica       2017    Participación_mujeres_en_trabajo_doméstico_y_de_cuidados_no_remunerado---_suministro_de_alimentos       +57.29_puntos_% 1.1458
+
+dans
+
+    data/m4l/es/DANE/Economía_del_cuidado_-_Porcentaje_de_participación_H_M_en_el_TDCNR.tsv
+    data/m4l/es/DANE/Fuerza_laboral_y_educacion_-_Poblacion_activa.tsv
+    data/m4l/es/DANE/Fuerza_laboral_y_educacion_-__Tasa_de_desempleo.tsv
+    data/m4l/es/INSEE2/Conditions_de_vie_Société.tsv
+-----
+-----
+(1) refaire INSEE + conditions_de_vie with minutes !
 
     18_indicateurs_REG
     18_indicateurs_REG_revenu
@@ -8,40 +35,8 @@ VOLTAJE
     # conditions_de_vie
     # ecarts_salaires_horaires.csv
 
+(2) Une seule chiffre après virgule
 
-(4) Une seule chiffre après virgule
+(3) Make preprocessor as list
 
-(5) Make preprocessor as list
-
-(6) Clean CNC
-
-[ok] Colombia condensado
-
-[ok] Check all hommes - femmes preprocessors 
-
-    - women2men
-    	girl2boys
-	      girl2boys : ok, fix ratio girl2boys data > interesting data for Chad
-     - percRel1*
-    	education oced : ok
-    	entrepreneuriat
-    		ENT4 - Inventores : ok > good values
-    		GENDER_ENT1_01042019230825609_remove_ENT4 : ok
-      	emploi : ok
-
-   - diffFH
-
-   if Must be later in pp
-
-   		EESR/EESR-FR/data : ok
-   		EESR/parite2019/parite2019 : ok
-   		oecd/education/education : ok
-   		oecd/emploi/emploi : ok
-   		oecd/entrepreneuriat/entrepreneuriat : ok
-   		secretariat_egalite_femmes_hommes_2/secret : ok
-   		canada/data : removed
-   		CNC-Audiens/cnc1/cnc-audiens  : ok
-   		CNC-Audiens/tout/cnc-audiens-tout : ok
-   		DANE/dane.py : ok
-   		INSEE/insee :  see below
-
+(4) Clean CNC
