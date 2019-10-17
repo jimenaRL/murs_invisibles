@@ -161,7 +161,7 @@ class Processer(object):
 
             # load
             df = self.io.load(path)
-            print(df.head())
+            #print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
