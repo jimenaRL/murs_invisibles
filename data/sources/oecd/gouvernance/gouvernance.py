@@ -10,7 +10,6 @@ filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "en",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',

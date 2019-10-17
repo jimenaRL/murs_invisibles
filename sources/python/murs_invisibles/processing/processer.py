@@ -10,6 +10,8 @@ from murs_invisibles.processing.filter import Filter
 from murs_invisibles.processing.translator import Translator
 from murs_invisibles.processing.sorter import Sorter
 
+TARGET_LANG_ENV_VAR = 'MURS_INVIBLES_TARGET_LANG'
+VALID_LANGS = ['es', 'fr']
 
 TRANSLATOR_COUNTRY_PATH = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
@@ -57,8 +59,21 @@ class Processer(object):
         return translator_config
 
     def _set_io_config(self, io_config):
-        io_config["target_language"] = self.config["target_language"]
+        io_config["target_language"] = self.get_global_target_language()
         return io_config
+
+    def get_global_target_language(self):
+        if TARGET_LANG_ENV_VAR in os.environ.keys():
+            target_lang = os.environ[TARGET_LANG_ENV_VAR]
+            if target_lang in VALID_LANGS:
+                return target_lang
+            else:
+                msg = f"{TARGET_LANG_ENV_VAR} environ variable must be one of: "
+                msg += ' '.join([f"'{_}'" for _ in VALID_LANGS])
+                msg += f", got '{target_lang}'."
+                raise ValueError(msg)
+
+        raise ValueError(f"Missing {TARGET_LANG_ENV_VAR} environ variable.")
 
     def __init__(self, config):
         """
@@ -66,7 +81,6 @@ class Processer(object):
             {
                 "base_path": file_dir,
                 "origin_language": "fr",
-                "target_language": "fr",
                 "io": {
                     "header": 0,
                     "encoding": 'utf-8',
@@ -115,7 +129,7 @@ class Processer(object):
         self.tables = config['io']['fns'].keys()
         self.default_translation = '{}2{}'.format(
             config["origin_language"],
-            config["target_language"])
+            self.get_global_target_language())
 
         self.preprocesser = PreProcesser(config['preprocesser'])
 

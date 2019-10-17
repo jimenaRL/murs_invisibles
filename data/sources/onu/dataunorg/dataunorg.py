@@ -6,7 +6,6 @@ from murs_invisibles import Processer
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "en",
-    "target_language": "es",
     "io": {
         "header": 1,
         "encoding": 'latin1',
