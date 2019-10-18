@@ -38,11 +38,6 @@ class PreProcesser(object):
                 df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
         return df
 
-    def remove_dollar_and_k_percRel1(self, df):
-        df = self.remove_dollar_and_k(df)
-        df = self.percRel1(df)
-        return df
-
     def remove_dollar_and_k(self, df):
         values = ['value', 'femmes', 'hommes']
         for v in values:
@@ -68,21 +63,10 @@ class PreProcesser(object):
         df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
-    def virg2point_perc_fsurtotal(self, df):
-        df = self.virg2point(df)
-        df = self.perc_fsurtotal(df)
-        return df
-
-    def virg2point_diffFH(self, df):
-        df = self.virg2point(df)
-        df = self.diffFH(df)
-        return df
-
     def diffFH(self, df):
         """
         Units must be later in pp
         """
-        df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
         return df
 
@@ -94,42 +78,12 @@ class PreProcesser(object):
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
 
-    def virg2point_percRel1(self, df):
-        """
-        """
-        df = self.virg2point(df)
-        df = self.percRel1(df)
-        return df
-
-    def virg2point_percRel100(self, df):
-        """
-        """
-        df = self.virg2point(df)
-        df = self.percRel100(df)
-        return df
-
     def percRel100(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
         """
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
-        return df
-
-    # def women2men(self, df):
-    #     """
-    #     """
-    #     df['value'] = df.femmes / df.hommes
-    #     return df
-
-    def get_wm_then_percRel1(self, df):
-        df = self.get_wm(df)
-        df = self.percRel1(df)
-        return df
-
-    def get_wm_then_percRel100(self, df):
-        df = self.get_wm(df)
-        df = self.percRel100(df)
         return df
 
     def get_wm(self, df):

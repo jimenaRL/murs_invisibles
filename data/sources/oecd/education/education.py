@@ -17,7 +17,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": ["get_wm_then_percRel100"]
+            "GENDER_EDU_29102017131322363.csv": ["get_wm", "percRel100"]
         },
         "rename": {
             "country": "Pays",
