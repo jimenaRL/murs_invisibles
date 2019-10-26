@@ -16,6 +16,8 @@ mapper
 
 	and meaning of formulae /!\
 
+	INSEE > conditions_de_vie > minutes !!!
+
 post-processing
 	/!\ Check validity of:
 		- diff_perc (Show points instead ?)

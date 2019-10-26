@@ -3,7 +3,6 @@ import pandas as pd
 from murs_invisibles.max_endecoding import maxEncode
 
 
-
 class IO(object):
 
     def __init__(self, config):
@@ -49,6 +48,10 @@ class IO(object):
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
             lambda x: maxEncode(x))
+        ### HOT FIXXXXXXXX ###
+        df['value'] = df['value'].apply(
+            lambda x: maxEncode(str(x)+"_"))
+        ### ########### ###
         try:
             df.year = df.year.astype(int)
         except:
