@@ -1,4 +1,4 @@
 # case gauche
 python server.py -dry
 # case droite
-python server.py -in_line_breaks 6 -out_line_breaks 7 -max_char 8 -port 9081
+python server.py -in_line_breaks 4 -out_line_breaks 9 -max_char 10 -port 9081
