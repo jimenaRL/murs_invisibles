@@ -139,6 +139,5 @@ class PreProcesser(object):
     def process(self, table, df):
         df = self.format_columns(df)
         for fn in self.fns[table]:
-            print(fn)
             df = getattr(self, fn)(df)
         return df
