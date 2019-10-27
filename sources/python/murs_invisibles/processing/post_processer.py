@@ -27,7 +27,7 @@ class PostProcesser(object):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
         df['value'] = df.apply(
-            lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
+            lambda row: row.sign + '%1.1f' % abs(row.value) + '%', axis=1)
         return df
 
     @classmethod
@@ -48,7 +48,7 @@ class PostProcesser(object):
         df['value'] = df.apply(
             lambda row: row.value / (1 + row.value), axis=1)
         df['value'] = df.apply(
-            lambda row: '%1.2f' % abs(100 * row.value) + '%', axis=1)
+            lambda row: '%1.0f' % abs(100 * row.value) + '%', axis=1)
         return df
 
     @classmethod
