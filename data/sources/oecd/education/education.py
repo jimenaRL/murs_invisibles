@@ -17,7 +17,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": ["get_wm", "percRel100"]
+            "GENDER_EDU_29102017131322363.csv": ["get_wm", "diffFH"]
         },
         "rename": {
             "country": "Pays",
@@ -28,7 +28,7 @@ config = {
     },
     "mapper": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "diffFH_100"
+            "GENDER_EDU_29102017131322363.csv": "diffFH_20"
         }
     },
     "filter": {
@@ -44,7 +44,7 @@ config = {
     },
     "postprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "diff_perc"
+            "GENDER_EDU_29102017131322363.csv": "diff_pp"
         }
     },
     "sorter": {
