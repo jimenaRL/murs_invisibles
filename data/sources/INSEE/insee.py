@@ -13,9 +13,9 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            "Conditions de vie_Société.csv": "one_save",
+            "Conditions de vie_Société.csv": "split2",
             "Enseignement_Education.csv": "one_save",
-            "Revenus_Salaires.csv": "one_save",
+            "Revenus_Salaires.csv": "split2",
             "Travail_Emploi.csv": "one_save",
             "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
