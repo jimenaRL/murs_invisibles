@@ -17,6 +17,7 @@ config = {
             "Enseignement_Education.csv": "one_save",
             "Revenus_Salaires.csv": "one_save",
             "Travail_Emploi.csv": "one_save",
+            "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -25,6 +26,7 @@ config = {
             "Enseignement_Education.csv": ["virg2point"],
             "Revenus_Salaires.csv": ["virg2point"],
             "Travail_Emploi.csv": ["virg2point"],
+            "Conditions de vie_2015 - temps_sociaux.csv": [],
         },
         'rename': {
             'country': 'pays',
@@ -33,14 +35,6 @@ config = {
             'value': 'valeur',
         },
     },
-    "mapper": {
-        'fns': {
-            "Conditions de vie_Société.csv": "diffFH_50",
-            "Enseignement_Education.csv": "diffFH_20",
-            "Revenus_Salaires.csv": "diffFH_20",
-            "Travail_Emploi.csv": "diffFH_20",
-        }
-    },
     "filter": {
         'filter_indicator_path': filter_indicator_path,
         'year': {
@@ -48,7 +42,16 @@ config = {
             "Enseignement_Education.csv": 2010,
             "Revenus_Salaires.csv": 2010,
             "Travail_Emploi.csv": 2010,
-
+            "Conditions de vie_2015 - temps_sociaux.csv": 1980
+        }
+    },
+    "mapper": {
+        'fns': {
+            "Conditions de vie_Société.csv": "diffFH_50",
+            "Enseignement_Education.csv": "diffFH_20",
+            "Revenus_Salaires.csv": "diffFH_20",
+            "Travail_Emploi.csv": "diffFH_20",
+            "Conditions de vie_2015 - temps_sociaux.csv": "diff_fm_minutes",
         }
     },
     "translator": {
@@ -59,6 +62,7 @@ config = {
             "Enseignement_Education.csv": "diff_pp",
             "Revenus_Salaires.csv": "diff_perc",
             "Travail_Emploi.csv": "diff_pp",
+            "Conditions de vie_2015 - temps_sociaux.csv": "diff_minutes",
         }
     },
     "sorter": {
@@ -67,6 +71,7 @@ config = {
             "Enseignement_Education.csv": "none",
             "Revenus_Salaires.csv": "none",
             "Travail_Emploi.csv": "none",
+            "Conditions de vie_2015 - temps_sociaux.csv": "date_country",
         }
     },
 }
