@@ -31,12 +31,30 @@ class PostProcesser(object):
         return df
 
     @classmethod
+    def diff_euro(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.1f' % abs(row.value) + '€', axis=1)
+        return df
+
+
+    @classmethod
     def diff_perc(cls, df):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
         df['value'] = df.apply(
             lambda row: row.sign + '%1.1f' % abs(row.value) + '%', axis=1)
         return df
+
+    @classmethod
+    def diff_perc_0v(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.0f' % abs(row.value) + '%', axis=1)
+        return df
+
 
     @classmethod
     def percX100(cls, df):
