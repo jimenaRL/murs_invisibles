@@ -13,12 +13,13 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            "Conditions de vie_Société.csv": "one_save",
-            "Enseignement_Education.csv": "one_save",
-            "Revenus_Salaires.csv": "one_save",
-            "Travail_Emploi.csv": "one_save",
-            "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
-            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
+            # "Conditions de vie_Société.csv": "one_save",
+            # "Enseignement_Education.csv": "one_save",
+            # "Revenus_Salaires.csv": "one_save",
+            # "Travail_Emploi.csv": "one_save",
+            # "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
+            # "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -29,6 +30,8 @@ config = {
             "Travail_Emploi.csv": ["virg2point"],
             "Conditions de vie_2015 - temps_sociaux.csv": [],
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": ["virg2point", "remove_euro_and_perc", "percRel100"],
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": ["virg2point"],
+
         },
         'rename': {
             'country': 'pays',
@@ -46,6 +49,7 @@ config = {
             "Travail_Emploi.csv": 2010,
             "Conditions de vie_2015 - temps_sociaux.csv": 1980,
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": 1980,
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": 1980,
         }
     },
     "mapper": {
@@ -56,6 +60,7 @@ config = {
             "Travail_Emploi.csv": "diffFH_20",
             "Conditions de vie_2015 - temps_sociaux.csv": "diff_fm_minutes",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diffFH_20",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diffFH_25",
         }
     },
     "translator": {
@@ -68,6 +73,7 @@ config = {
             "Travail_Emploi.csv": "diff_pp",
             "Conditions de vie_2015 - temps_sociaux.csv": "diff_minutes",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diff_perc_0v",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diff_perc_0v",
         }
     },
     "sorter": {
@@ -78,6 +84,7 @@ config = {
             "Travail_Emploi.csv": "none",
             "Conditions de vie_2015 - temps_sociaux.csv": "date_country",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "date_country",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "date_country",
         }
     },
 }
