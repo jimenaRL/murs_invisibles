@@ -57,7 +57,7 @@ config = {
         'fns': {
             "Conditions de vie_Société.csv": "diff_pp",
             "Enseignement_Education.csv": "diff_pp",
-            "Revenus_Salaires.csv": "diff_pp",
+            "Revenus_Salaires.csv": "diff_perc",
             "Travail_Emploi.csv": "diff_pp",
         }
     },
