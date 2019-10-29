@@ -17,7 +17,7 @@ class IO(object):
             }
         """
 
-        self.n_show = 2
+        self.n_show = 10
 
         self.save_fns = config['fns']
 
@@ -77,7 +77,7 @@ class IO(object):
                   header=False,
                   encoding='utf-8',
                   sep=self.out_sep)
-        print(df.sample(n=self.n_show))
+        print(df.sample(n=min(self.n_show, len(df))))
         print("{} entries".format(len(df)))
         print("Saved at {}\n".format(out_path))
 
@@ -99,7 +99,7 @@ class IO(object):
                        header=False,
                        encoding='utf-8',
                        sep=self.out_sep)
-            print(tmp.sample(n=self.n_show))
+            print(tmp.sample(n=min(self.n_show, len(tmp))))
             print("{} entries".format(len(tmp)))
             print("Saved at {}\n".format(out_path))
 
