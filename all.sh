@@ -18,10 +18,6 @@ echo "> INSEE"
 python $BASEPATH/data/sources/INSEE/insee.py
 
 
-echo "> INSEE2"
-python $BASEPATH/data/sources/INSEE2/insee2.py
-
-
 echo "> MINIST-CULT"
 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
 

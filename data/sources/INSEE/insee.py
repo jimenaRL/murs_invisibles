@@ -3,6 +3,8 @@ import json
 import pandas as pd
 from murs_invisibles import Processer
 
+file_dir = os.path.dirname(os.path.realpath(__file__))
+filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
@@ -10,20 +12,26 @@ config = {
     "io": {
         "header": 0,
         "encoding": 'utf-8',
-        "fns": {
-            "18_indicateurs_REG.csv": "one_save",
-            "18_indicateurs_REG_revenu.csv": "one_save",
-            # "conditions_de_vie.csv": "one_save",  # 19 aout 2019 : a refaire data a partir donnees originales
-            # "ecarts_salaires_horaires.csv": "one_save",
+        'fns': {
+            "Conditions de vie_Société.csv": "one_save",
+            "Enseignement_Education.csv": "one_save",
+            "Revenus_Salaires.csv": "one_save",
+            "Travail_Emploi.csv": "one_save",
+            "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
             "retraite_et_revenus.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
-            "18_indicateurs_REG.csv": ["no_process"],
-            "18_indicateurs_REG_revenu.csv": ["no_process"],
-            # "conditions_de_vie.csv": ["no_process"],
-            # "ecarts_salaires_horaires.csv": "",
+            "Conditions de vie_Société.csv": ["virg2point"],
+            "Enseignement_Education.csv": ["virg2point"],
+            "Revenus_Salaires.csv": ["virg2point"],
+            "Travail_Emploi.csv": ["virg2point"],
+            "Conditions de vie_2015 - temps_sociaux.csv": [],
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": ["virg2point", "remove_euro_and_perc", "percRel100"],
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": ["virg2point"],
             "retraite_et_revenus.csv": ["no_process"],
         },
         'rename': {
@@ -33,42 +41,55 @@ config = {
             'value': 'valeur',
         },
     },
-    "mapper": {
-        'fns': {
-            "18_indicateurs_REG.csv": "diffFH_100",
-            "18_indicateurs_REG_revenu.csv": "diffFH_100",
-            # "conditions_de_vie.csv": "conditions_de_vie",
-            # "ecarts_salaires_horaires.csv": "",
-            "retraite_et_revenus.csv": "diffFH_100",
+    "filter": {
+        'filter_indicator_path': filter_indicator_path,
+        'year': {
+            "Conditions de vie_Société.csv": 2010,
+            "Enseignement_Education.csv": 2010,
+            "Revenus_Salaires.csv": 2010,
+            "Travail_Emploi.csv": 2010,
+            "Conditions de vie_2015 - temps_sociaux.csv": 1980,
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": 1980,
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": 1980,
+            "retraite_et_revenus.csv": 2010,
         }
     },
-    "filter": {
-        'filter_indicator_path': None,
-        'year': {
-            "18_indicateurs_REG.csv": 2010,
-            "18_indicateurs_REG_revenu.csv": 2010,
-            # "conditions_de_vie.csv": 2010,
-            # "ecarts_salaires_horaires.csv": 2010,
-            "retraite_et_revenus.csv": 2010,
+    "mapper": {
+        'fns': {
+            "Conditions de vie_Société.csv": "diffFH_50",
+            "Enseignement_Education.csv": "diffFH_20",
+            "Revenus_Salaires.csv": "diffFH_20",
+            "Travail_Emploi.csv": "diffFH_20",
+            "Conditions de vie_2015 - temps_sociaux.csv": "diff_fm_minutes",
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diffFH_20",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diffFH_25",
+            "retraite_et_revenus.csv": "diffFH_50",
         }
     },
     "translator": {
     },
     "postprocesser": {
         'fns': {
-            "18_indicateurs_REG.csv": "diff_perc",
-            "18_indicateurs_REG_revenu.csv": "diff_perc",
-            # "conditions_de_vie.csv": "conditions_de_vie",
-            # "ecarts_salaires_horaires.csv": "",
-            "retraite_et_revenus.csv": "diff_perc",
+            "Conditions de vie_Société.csv": "diff_pp",
+            "Enseignement_Education.csv": "diff_pp",
+            "Revenus_Salaires.csv": "diff_perc",
+            "Travail_Emploi.csv": "diff_pp",
+            "Conditions de vie_2015 - temps_sociaux.csv": "diff_minutes",
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diff_perc_0v",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diff_perc_0v",
+            "retraite_et_revenus.csv": "diff_perc_0v",
         }
     },
     "sorter": {
         'fns': {
-            "18_indicateurs_REG.csv": "none",
-            "18_indicateurs_REG_revenu.csv": "none",
-            "retraite_et_revenus.csv": "none",
-
+            "Conditions de vie_Société.csv": "none",
+            "Enseignement_Education.csv": "none",
+            "Revenus_Salaires.csv": "none",
+            "Travail_Emploi.csv": "none",
+            "Conditions de vie_2015 - temps_sociaux.csv": "date_country",
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "date_country",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "date_country",
+            "retraite_et_revenus.csv": "date_country",
         }
     },
 }
