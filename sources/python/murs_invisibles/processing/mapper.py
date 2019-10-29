@@ -38,6 +38,10 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
+    def diff_fm_minutes(cls, row):
+        return abs(row.value) / 180.
+
+    @classmethod
     def diffFH_1(cls, row):
         """
         row: pandas dataframe row
