@@ -14,6 +14,8 @@ class PreProcesser(object):
 
         self.fns = config['fns']
         self.rename = {v: k for k, v in config['rename'].items()}
+        self.values = ['value', 'femmes', 'hommes']
+
 
     def format_columns(self, df):
         """
@@ -22,8 +24,7 @@ class PreProcesser(object):
         return df.rename(columns=self.rename)
 
     def remove_prop(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
                 df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
         return df
@@ -32,27 +33,24 @@ class PreProcesser(object):
         return df
 
     def virg2point(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
+                df[v] = df[v].apply(lambda row: row.replace(',', '.'))
         return df
 
     def remove_dollar_and_k(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda s: float(
-                    s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+                df[v] = df[v].apply(lambda s: 
+                    s.replace(' k$', '').replace(',', '.').replace(' ', ''))
                 df[v] = df[v].apply(lambda s: 1000.*float(s))
         return df
 
     def remove_euro_and_perc(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
                 df[v] = df[v].apply(
-                    lambda s: float(str(s).replace('€', '').replace('%', '')))
+                    lambda s: str(s).replace('€', '').replace('%', ''))
         return df
 
     def fsurtotal(self, df):
@@ -136,8 +134,19 @@ class PreProcesser(object):
 
         return df
 
+    def try_float_conversion(self, df):
+        for v in self.values:
+            if v in df.columns:
+                try:
+                    df[v] = df[v].apply(lambda s: float(s))
+                except:
+                    pass
+        return df
+
+
     def process(self, table, df):
         df = self.format_columns(df)
         for fn in self.fns[table]:
             df = getattr(self, fn)(df)
+            df = self.try_float_conversion(df)
         return df
