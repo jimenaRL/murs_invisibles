@@ -49,7 +49,7 @@ config = {
     "postprocesser": {
         'fns': {
             "audiens_tout.csv": "perc",
-            "cnc_tout_doc_2_ecarts.csv": "diff_pp",
+            "cnc_tout_doc_2_ecarts.csv": "perc_1v",
             "tout_docs_1_part_des_femmes.csv": "perc",
         }
     },
