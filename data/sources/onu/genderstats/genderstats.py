@@ -8,7 +8,7 @@ config = {
         "header": 1,
         "encoding": 'latin1',
         "fns": {
-            '46 - Share of female police officers_data.csv': 'one_save',
+            '46 - Share of female police officers_data.csv': 'split4',
         }
     },
     "preprocesser": {
