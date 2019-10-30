@@ -78,6 +78,18 @@ class PostProcesser(object):
         return df
 
     @classmethod
+    def perc_1v(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.1f' % abs(row.value) + '%', axis=1)
+        return df
+
+    @classmethod
+    def perc_2v(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.2f' % abs(row.value) + '%', axis=1)
+        return df
+
+    @classmethod
     def perc(cls, df):
         df['value'] = df.apply(
             lambda row: '%1.0f' % abs(row.value) + '%', axis=1)
