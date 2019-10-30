@@ -82,11 +82,12 @@ class IO(object):
         print("Saved at {}\n".format(out_path))
 
     def split(self, n, df, path):
+        df.reset_index(drop=True, inplace=True)
         batch_size = int(len(df) / n)
         out_path = self.get_out_path(path)
         for i in range(n):
             this_out_path = out_path.split('.tsv')[0] + "_{}.tsv".format(i)
-            tmp = df.loc[batch_size*i:batch_size*(i+1)]
+            tmp = df.iloc[batch_size*i:batch_size*(i+1)]
             tmp.to_csv(this_out_path,
                       index=False,
                       header=False,
@@ -99,6 +100,12 @@ class IO(object):
 
     def split2(self, df, path):
         self.split(2, df, path)
+
+    def split3(self, df, path):
+        self.split(3, df, path)
+
+    def split4(self, df, path):
+        self.split(4, df, path)
 
     def get_out_path_indicator(self, path, indicator):
         tmp_path = self._replace_source_folder(path)
