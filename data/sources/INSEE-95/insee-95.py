@@ -19,6 +19,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": "one_save",
             "INSEE-95 - taux de temps partiel.csv": "one_save",
             "INSEE-95 - part des cadres.csv": "one_save",
+            "INSEE-95 - mixité des métiers.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -29,6 +30,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": ["virg2point"],
             "INSEE-95 - taux de temps partiel.csv": ["virg2point"],
             "INSEE-95 - part des cadres.csv": ["virg2point"],
+            "INSEE-95 - mixité des métiers.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',
@@ -46,6 +48,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": 2010,
             "INSEE-95 - taux de temps partiel.csv": 2010,
             "INSEE-95 - part des cadres.csv": 2010,
+            "INSEE-95 - mixité des métiers.csv": 2010,
         }
     },
     "mapper": {
@@ -56,6 +59,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": "diffFH_10",
             "INSEE-95 - taux de temps partiel.csv": "diffFH_20",
             "INSEE-95 - part des cadres.csv": "diffFH_15",
+            "INSEE-95 - mixité des métiers.csv": "proportion100",
         }
     },
     "translator": {
@@ -68,6 +72,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": "diff_pp",
             "INSEE-95 - taux de temps partiel.csv": "diff_pp",
             "INSEE-95 - part des cadres.csv": "diff_pp",
+            "INSEE-95 - mixité des métiers.csv": "diff_perc",
         }
     },
     "sorter": {
@@ -78,6 +83,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": "none",
             "INSEE-95 - taux de temps partiel.csv": "none",
             "INSEE-95 - part des cadres.csv": "none",
+            "INSEE-95 - mixité des métiers.csv": "none",
         }
     },
 }
