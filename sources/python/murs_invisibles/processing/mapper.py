@@ -70,6 +70,10 @@ class Mapper(object):
         return abs(row.value) / 10.
 
     @classmethod
+    def diffFH_15(cls, row):
+        return abs(row.value) / 15.
+
+    @classmethod
     def diffFH_20(cls, row):
         return abs(row.value) / 20.
 

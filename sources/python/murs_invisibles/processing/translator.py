@@ -40,12 +40,16 @@ class Translator(object):
         """
         translate or reformulate indicator
         """
-        nb_lins = len(df)
+        indicators = set(df.indicator.unique().tolist())
+        nb_rows = len(df)
         df = df.merge(self.ind_dict, on='indicator', how='inner')
         df['indicator'] = df[self.target_language]
-        if not nb_lins == len(df):
+        if not nb_rows == len(df):
+            missing_indicators = set(indicators) - set(df.indicator.unique().tolist())
+            print("Missing entries in translation dictionary.")
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-            print("Number of line were changed after translation. Missing  entries in dict.")
+            for i in missing_indicators:
+                print('"{}","{}",'.format(i, i))
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         return df
 
