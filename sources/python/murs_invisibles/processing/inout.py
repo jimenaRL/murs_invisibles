@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from murs_invisibles.max_endecoding import maxEncode
+from murs_invisibles.max_endecoding import (maxEncode, maxIntHackEncode)
 
 
 class IO(object):
@@ -48,6 +48,8 @@ class IO(object):
         """
         encode country and formulation
         """
+        df['year'] = df['year'].apply(
+            lambda x: maxIntHackEncode(x))
         df['country'] = df['country'].apply(
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
