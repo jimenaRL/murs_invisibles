@@ -17,6 +17,8 @@ python data/sources/EESR/parite2019/parite2019.py
 echo "> INSEE"
 python $BASEPATH/data/sources/INSEE/insee.py
 
+echo "> INSEE-95"
+python $BASEPATH/data/sources/INSEE-95/insee-95.py
 
 echo "> MINIST-CULT"
 python $BASEPATH/data/sources/MINIST-CULT/miniscult.py
