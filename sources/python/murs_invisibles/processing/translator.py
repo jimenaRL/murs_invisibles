@@ -40,9 +40,13 @@ class Translator(object):
         """
         translate or reformulate indicator
         """
+        nb_lins = len(df)
         df = df.merge(self.ind_dict, on='indicator', how='inner')
         df['indicator'] = df[self.target_language]
-
+        if not nb_lins == len(df):
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("Number of line were changed after translation. Missing  entries in dict.")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         return df
 
     def process(self, table, df):
