@@ -1,8 +1,5 @@
 MAUBISSON
 
-(-1) Résoudre problèmes avec les tirés dans le dates (e.g.: 2017-2018)
-
-
 (0) Décider avec A&A sur pp vs points vs %% vs %:
 
 -----
@@ -27,17 +24,3 @@ dans
     data/m4l/es/INSEE2/Conditions_de_vie_Société.tsv
 -----
 -----
-
-(1) refaire INSEE + conditions_de_vie with minutes !
-
-    18_indicateurs_REG
-    18_indicateurs_REG_revenu
-    retraite_et_revenus
-    # conditions_de_vie
-    # ecarts_salaires_horaires.csv
-
-(2) Une seule chiffre après virgule
-
-(3) Make preprocessor as list
-
-(4) Clean CNC
