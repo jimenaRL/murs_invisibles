@@ -1,0 +1,12 @@
+pays,annee,nom,femmes,hommes,valeur,tableau
+Val-d'Oise,2016,Ecart femmes-hommes taux d'activité,71.6,78.3,-6.7,EMP T2
+Val-d'Oise,2016,"Ecart femmes-hommes taux d'activité, 15 à 24 ans",37.5,41.5,-4,
+Val-d'Oise,2016,"Ecart femmes-hommes taux d'activité, 25 à 54 ans",86.1,94.1,-8,
+Val-d'Oise,2016,"Ecart femmes-hommes taux d'activité, 55 à 64 ans",57.3,65.2,-7.9,
+Val-d'Oise,2016,Ecart femmes-hommes taux de temps partiel,7.5,19.8,-12.3,ACT T3
+Val-d'Oise,2016,"Ecart femmes-hommes taux de temps partiel, 15 à 24 ans",29,37.6,-8.6,
+Val-d'Oise,2016,"Ecart femmes-hommes taux de temps partiel, 25 à 54 ans",4.9,17.7,-12.8,
+Val-d'Oise,2016,"Ecart femmes-hommes taux de temps partiel, 55 à 64 ans",6.5,20,-13.5,
+Val-d'Oise,2015,"Ecart femmes-hommes salaire net horaire moyen total, 18 à 25 ans",9.6,10.2,-5.882352941,SAL T1
+Val-d'Oise,2015,"Ecart femmes-hommes salaire net horaire moyen total, 26 à 50 ans",14.3,15.8,-9.493670886,
+Val-d'Oise,2015,"Ecart femmes-hommes salaire net horaire moyen total, plus de 50 ans",16.4,20.3,-19.21182266,

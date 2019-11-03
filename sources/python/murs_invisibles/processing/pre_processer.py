@@ -53,6 +53,10 @@ class PreProcesser(object):
                     lambda s: str(s).replace('€', '').replace('%', ''))
         return df
 
+    def x100(self, df):
+        df['value'] = 100 * df['value']
+        return df
+
     def fsurtotal(self, df):
         df['value'] = df.femmes / (df.hommes+df.femmes)
         return df

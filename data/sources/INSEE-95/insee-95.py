@@ -20,6 +20,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": "one_save",
             "INSEE-95 - part des cadres.csv": "one_save",
             "INSEE-95 - mixité des métiers.csv": "one_save",
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": "one_save",
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -31,6 +33,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": ["virg2point"],
             "INSEE-95 - part des cadres.csv": ["virg2point"],
             "INSEE-95 - mixité des métiers.csv": ["virg2point"],
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": [],
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": ["x100"],
         },
         'rename': {
             'country': 'pays',
@@ -49,6 +53,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": 2010,
             "INSEE-95 - part des cadres.csv": 2010,
             "INSEE-95 - mixité des métiers.csv": 2010,
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": 2010,
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": 2010,
         }
     },
     "mapper": {
@@ -60,6 +66,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": "diffFH_20",
             "INSEE-95 - part des cadres.csv": "diffFH_15",
             "INSEE-95 - mixité des métiers.csv": "proportion100",
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": "diffFH_10",
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": "proportion100",
         }
     },
     "translator": {
@@ -73,6 +81,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": "diff_pp",
             "INSEE-95 - part des cadres.csv": "diff_pp",
             "INSEE-95 - mixité des métiers.csv": "diff_perc",
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": "diff_perc_0v",
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": "perc",
         }
     },
     "sorter": {
@@ -84,6 +94,8 @@ config = {
             "INSEE-95 - taux de temps partiel.csv": "none",
             "INSEE-95 - part des cadres.csv": "none",
             "INSEE-95 - mixité des métiers.csv": "none",
+            "INSEE-95 - dossier complet val d'oise - ecart.csv": "none",
+            "INSEE-95 - dossier complet val d'oise - pourcentage.csv": "none",
         }
     },
 }

@@ -1,0 +1,9 @@
+pays,annee,nom,femmes,hommes,valeur,tableau
+Val-d'Oise,2016,Agricult·eurs exploitants,178,446,0.2852564103,POP T6
+Val-d'Oise,2016,"Artisans, commerçant·es, chef·fes d'entreprise",6524,22392,0.2256190344,
+Val-d'Oise,2016,Cadres et professions intellectuelles supérieures,44340,63493,0.4111913793,
+Val-d'Oise,2016,Professions intermédiaires,90181,75596,0.5439898176,
+Val-d'Oise,2016,Employé·es,129559,52354,0.7122030861,
+Val-d'Oise,2016,Ouvrier·es,17332,88283,0.1641054774,
+Val-d'Oise,2016,Autres personnes sans activité professionnelle,107053,70882,0.6016410487,
+Val-d'Oise,2016,Familles monoparentales personnes seul·es avec enfants,48969,10089,0.8291679366,FAM T3
