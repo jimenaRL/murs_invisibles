@@ -80,7 +80,7 @@ config = {
             "INSEE-95 - taux d'emploi.csv": "diff_pp",
             "INSEE-95 - taux de temps partiel.csv": "diff_pp",
             "INSEE-95 - part des cadres.csv": "diff_pp",
-            "INSEE-95 - mixité des métiers.csv": "diff_perc",
+            "INSEE-95 - mixité des métiers.csv": "perc",
             "INSEE-95 - dossier complet val d'oise - ecart.csv": "diff_perc_0v",
             "INSEE-95 - dossier complet val d'oise - pourcentage.csv": "perc",
         }
