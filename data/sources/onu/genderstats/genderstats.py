@@ -9,7 +9,7 @@ config = {
         "encoding": 'latin1',
         "fns": {
             '46 - Share of female police officers_data.csv': 'split4',
-            "43 - Women’s share of government ministerial positions_data.csv": "split4",
+            "43 - Women’s share of government ministerial positions_data.csv": "split2",
             "25 - Share of female science  technology  engineering and mathematics graduates at tertiary level_data.csv": "split4",
 
             # "11 - Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider  by sex_data.csv": "split4",
