@@ -88,6 +88,17 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
+
+    def get_wm_onu_gender_wages_gap(self, df):
+
+        df.Occupation = df.Occupation
+        df.indicator = df.indicator+ ' ' + df.Occupation
+        df = df.drop('Occupation', axis=1)
+
+        return self.get_wm_onu(df)
+
+
+
     def get_wm_onu_age(self, df):
 
         df.indicator = df.indicator+ ' ' + df.Age

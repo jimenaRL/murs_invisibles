@@ -38,6 +38,11 @@ class Mapper(object):
         return cls.proportion1(row)
 
     @classmethod
+    def percRel100_30(cls, row):
+        return abs(row.value) / 30.
+
+
+    @classmethod
     def diff_fm_minutes(cls, row):
         return abs(row.value) / 180.
 
