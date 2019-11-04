@@ -153,4 +153,5 @@ class PreProcesser(object):
         for fn in self.fns[table]:
             df = getattr(self, fn)(df)
             df = self.try_float_conversion(df)
+        df = df[self.rename.values()]
         return df
