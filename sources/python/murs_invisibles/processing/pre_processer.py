@@ -88,7 +88,7 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
-    def get_wm(self, df):
+    def get_wm_oecd(self, df):
         """
         Dataframe preprocessing
         """

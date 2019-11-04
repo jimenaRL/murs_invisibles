@@ -20,7 +20,7 @@ config = {
     "preprocesser": {
         'fns': {
             'ENT4.csv': ['no_process'],
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': ['get_wm', 'percRel100'],
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': ['get_wm_oecd', 'percRel100'],
         },
         'rename': {
             'country': 'Pays',
