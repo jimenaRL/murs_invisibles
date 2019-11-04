@@ -31,6 +31,15 @@ class PostProcesser(object):
         return df
 
     @classmethod
+    def diff_hours(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%i' % abs(60 * row.value) + " min", axis=1)
+        return df
+
+
+    @classmethod
     def diff_euro(cls, df):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)

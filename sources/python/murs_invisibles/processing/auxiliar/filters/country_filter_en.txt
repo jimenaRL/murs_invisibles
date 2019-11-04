@@ -52,3 +52,5 @@ RÃ©union
 Micronesia (Federated States of)
 Swaziland
 Sint Maarten (Dutch part)
+-
+Cayman Islands

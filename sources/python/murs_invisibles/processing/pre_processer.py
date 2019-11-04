@@ -88,6 +88,53 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
+    def get_wm_onu_age(self, df):
+
+        df.indicator = df.indicator+ ' ' + df.Age
+        df = df.drop('Age', axis=1)
+
+        return self.get_wm_onu(df)
+
+
+    def get_wm_onu(self, df):
+
+        df = df[df.Sex != 'Both sexes']
+
+        hash_cols = set(df.columns.tolist())
+        hash_cols -= set(['value', 'Sex'])
+
+        df['hash'] = df.apply(
+            lambda row: hash(
+                ''.join([str(row[c]) for c in hash_cols])), axis=1)
+
+        hash_count = df.groupby(by='hash').count().Sex \
+            .to_frame().reset_index().rename({'Sex': 'hash_count'}, axis=1)
+        valid_hash = hash_count[hash_count.hash_count == 2]
+
+        df = pd.merge(df, valid_hash, how='inner', on=['hash'])
+
+        women_df = df[df['Sex'] == 'Female']
+        men_df = df[df['Sex'] == 'Male']
+
+        merge_on = list(
+            set(self.rename.values()) - set(['value']) | set(['hash']))
+
+        df = pd.merge(women_df,
+                      men_df,
+                      how='inner',
+                      on=merge_on,
+                      suffixes=('_women', '_men'))
+
+        merge_on.remove('hash')
+        keep = merge_on + ['value_men', 'value_women']
+        df = df[keep]
+
+        df = df.rename(
+            {'value_men': 'hommes', 'value_women': 'femmes'}, axis=1)
+
+        return df
+
+
     def get_wm_oecd(self, df):
         """
         Dataframe preprocessing
