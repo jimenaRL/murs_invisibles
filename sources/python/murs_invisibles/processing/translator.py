@@ -44,7 +44,7 @@ class Translator(object):
         nb_rows = len(df)
         df = df.merge(self.ind_dict, on='indicator', how='inner')
         df['indicator'] = df[self.target_language]
-        if not nb_rows == len(df):
+        if nb_rows < len(df):
             missing_indicators = set(indicators) - set(df.indicator.unique().tolist())
             print("Missing entries in translation dictionary.")
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
