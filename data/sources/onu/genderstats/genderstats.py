@@ -82,7 +82,7 @@ config = {
             "43 - Women’s share of government ministerial positions_data.csv": "perc",
             "25 - Share of female science  technology  engineering and mathematics graduates at tertiary level_data.csv": "perc",
             "11 - Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider  by sex_data.csv": "diff_pp",
-            "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": "diff_pp",
+            "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": "diff_hours",
             "5 - Proportion of employed who are contributing family workers  by sex_data.csv": "diff_pp",
             "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": "diff_hours",
             "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": "diff_hours",
