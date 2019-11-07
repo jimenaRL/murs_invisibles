@@ -54,6 +54,8 @@ class IO(object):
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
             lambda x: maxEncode(x))
+        df['value'] = df['value'].apply(
+            lambda x: maxEncode(x))
         try:
             df.year = df.year.astype(int)
         except:
