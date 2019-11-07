@@ -46,3 +46,6 @@ python $BASEPATH/data/sources/onu/dataunorg/dataunorg.py
 
 echo "> secretariat_egalite_femmes_hommes"
 python $BASEPATH/data/sources/secretariat_egalite_femmes_hommes/secret.py
+
+echo "> VIOLENCES"
+python $BASEPATH/data/sources/VIOLENCES/violences.py
