@@ -74,7 +74,7 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            "INSEE-95 - conseils municipaux.csv": "diff_perc",
+            "INSEE-95 - conseils municipaux.csv": "perc",
             "INSEE-95 - temps partiel.csv": "diff_pp",
             "INSEE-95 - accès à l'emploi.csv": "diff_pp",
             "INSEE-95 - taux d'emploi.csv": "diff_pp",
