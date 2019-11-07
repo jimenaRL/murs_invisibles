@@ -12,7 +12,7 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "audiens_tout.csv": "one_save",
-            "cnc_tout_doc_2_ecarts.csv": "one_save",
+            #"cnc_tout_doc_2_ecarts.csv": "one_save",  # A VERIFIER SAISI !!!!!
             "tout_docs_1_part_des_femmes.csv": "one_save",
         },
     },
