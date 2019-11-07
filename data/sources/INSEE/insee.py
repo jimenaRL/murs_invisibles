@@ -73,7 +73,7 @@ config = {
             "Conditions de vie_Société.csv": "diff_pp",
             "Enseignement_Education.csv": "diff_pp",
             "Revenus_Salaires.csv": "diff_perc",
-            "Travail_Emploi.csv": "diff_pp",
+            "Travail_Emploi.csv": "diff_perc",
             "Conditions de vie_2015 - temps_sociaux.csv": "diff_minutes",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diff_perc_0v",
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diff_perc_0v",
