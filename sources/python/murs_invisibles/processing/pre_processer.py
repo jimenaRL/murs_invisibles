@@ -26,7 +26,11 @@ class PreProcesser(object):
     def remove_prop(self, df):
         for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
+                try:
+                    df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
+                except Exception as e:
+                    print("WARNING: unnable to remove '%' from {} columns: {}" \
+                        .format(v, e))
         return df
 
     def no_process(self, df):
