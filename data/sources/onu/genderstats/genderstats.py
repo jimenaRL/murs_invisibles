@@ -13,7 +13,7 @@ config = {
             "25 - Share of female science  technology  engineering and mathematics graduates at tertiary level_data.csv": "split4",
 
             "11 - Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider  by sex_data.csv": "split4",
-            "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": "split4",
+            "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": "one_save",
             "5 - Proportion of employed who are contributing family workers  by sex_data.csv": "split4",
 
             "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": "split4",

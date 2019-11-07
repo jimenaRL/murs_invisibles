@@ -14,7 +14,7 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            'GOV_2017_03042019165415175.csv': 'sep_save',
+            # 'GOV_2017_03042019165415175.csv': 'sep_save',
         },
     },
     "preprocesser": {
