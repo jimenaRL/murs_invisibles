@@ -20,7 +20,7 @@ config = {
             "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": "split4",
             "1c - Average number of hours spent on unpaid care work  by sex  age and location_data.csv": "split4",
 
-            "13 - Gender gap in wages  by occupation  age and persons with disabilities_data.csv": "split4",
+            "13 - Gender gap in wages  by occupation  age and persons with disabilities_data.csv": "split2",
 
         }
     },
