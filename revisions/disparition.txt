@@ -221,15 +221,15 @@
 	Membres exécutifs d'entreprise, part de femmes
 	Membres non exécutifs d'entreprise, part de femmes
 	Maires de France, part de femmes
-	Conseiller·ères municipaux, part de femmes
+	Conseiller·ères municipaux·ales, part de femmes
 	Présidentes de conseils régionaux, part de femmes
-	Conseilleurs régionaux, part de femmes
-	Présidentes de conseils départementaux, part de femmes
-	Conseilleurs départementaux, part de femmes
-	Conseilleurs régionaux en affaires sociale, part de femmes
-	Conseilleurs régionaux en éducation, part des femmes 
-	Conseilleurs régionaux en budget/finance, part de femmes
-	Conseilleurs régionaux en transport, part de femmes
+	Conseiller·ères régionaux·ales, part de femmes
+	Président·es de conseils départementaux, part de femmes
+	Conseiler·ères départementaux·ales, part de femmes
+	Conseiler·ères régionaux·ales en affaires sociales, part de femmes
+	Conseiler·ères régionaux·ales en éducation, part des femmes 
+	Conseiler·ères régionaux·ales en budget/finance, part de femmes
+	Conseiler·ères régionaux·ales en transport, part de femmes
 	Directeurs des musées nationaux, part de femmes
 	Artistes dans spectacles cirque, part de femmes
 	Artistes dans spectacles danse, part de femmes
