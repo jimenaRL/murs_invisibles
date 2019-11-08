@@ -163,9 +163,9 @@
 	Commissaires de grandes expositions, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/secretariat_egalite_femmes_hommes/part_de_femmes.tsv
 	Part des tâches domestiques réalisées par les femmes
-	Université Lettres, sciences humaines, part de femmes
+	Université Lettres, Sciences humaines, part de femmes
 	Formations paramédicales et sociales, part de femmes
-	Université Sciences et sport STAPS, part de femmes
+	Université Sciences et Sport STAPS, part de femmes
 	Formations d'ingénieur·es, part de femmes
 	Sciences fondamentales et applications, part de femmes
 	Travail secteur numérique, part de femmes
@@ -210,18 +210,18 @@
 	Fonction publique hospitalière, catégorie A, part de femmes
 	Fonction publique hospitalière catégorie A+, part de femmes
 	Fonction publique hospitalière, encadrement supérieur et direction, part de femmes
-	École Nationale d'administration, part de femmes
-	Étudiants universitaires, part de femmes
-	Diplômés universités, part de femmes
-	Employés universitaires grade C, part de femmes
-	Employés universitaires grade A, part de femmes
-	Employés cadres techniques, part de femmes
-	Employés DTN (directrice technique nationale), part de femmes
-	Présidentes d'entreprise (PDG), part de femmes
+	École Nationale d'Administration, part de femmes
+	Étudiant·es universitaires, part de femmes
+	Diplômé·es universités, part de femmes
+	Employé·es universitaires grade C, part de femmes
+	Employé·es universitaires grade A, part de femmes
+	Employé·es cadres techniques, part de femmes
+	Employé·es DTN (directeur·trice technique nationale), part de femmes
+	Président·es d'entreprise (PDG), part de femmes
 	Membres exécutifs d'entreprise, part de femmes
 	Membres non exécutifs d'entreprise, part de femmes
 	Maires de France, part de femmes
-	Conseilleurs municipaux, part de femmes
+	Conseiller·ères municipaux, part de femmes
 	Présidentes de conseils régionaux, part de femmes
 	Conseilleurs régionaux, part de femmes
 	Présidentes de conseils départementaux, part de femmes
