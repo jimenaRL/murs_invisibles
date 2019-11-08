@@ -8,7 +8,7 @@
 	Emploi spectacle vivant, part de femmes
 	Spectacle vivant: professionnel·les de l'art dramatique, part de femmes
 	Spectacle vivant: professionnel·les des activités artistiques, part de femmes
-	Spectacle vivant: professionnel·les de l'art chorégraphique part de femmes
+	Spectacle vivant: professionnel·les de l'art chorégraphique, part de femmes
 	Spectacle vivant: professionnel·les de la musique instrumentale, part de femmes
 	Spectacle vivant: professionnel·les de la musique vocale, part de femmes
 	Spectacle vivant: professionnel·les des arts du cirque et des arts visuels, part de femmes
@@ -19,7 +19,7 @@
 	Spectacle vivant: professionnel·les des accessoires, part de femmes
 	Spectacle vivant: professionnel·les de l'éclairage, part de femmes
 	Spectacle vivant: professionnel·les du son, part de femmes
-	Spectacle vivant: professionnel·les de l'audiovisuel du spectacle vivant, part de femmes
+	Spectacle vivant: professionnel·les de l'audiovisuel, part de femmes
 	Spectacle vivant: professionnel·les du décor, part de femmes
 	Spectacle vivant: professionnel·les du costume, part de femmes
 	Spectacle vivant: professionnel·les de la coiffure, du maquillage et des masques, part de femmes
