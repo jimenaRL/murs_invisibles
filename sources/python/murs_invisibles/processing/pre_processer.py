@@ -113,7 +113,15 @@ class PreProcesser(object):
 
     def get_wm_onu(self, df):
 
+        if 'Location' in df and 'All areas' in df.Location.unique():
+            df = df[df.Location == 'All areas']
         df = df[df.Sex != 'Both sexes']
+
+        df = df.drop(['Location', 'Region', 'Occupation', 'LowerBound',
+            'UpperBound', 'Unit', 'NatureData', 'OriginData', 'Country Code',
+            'Footnote1', 'Footnote2', 'Footnote3', 'Footnote4', 'Footnote5',
+            'Footnote6', 'Coverage'],
+            axis=1, errors='ignore')
 
         hash_cols = set(df.columns.tolist())
         hash_cols -= set(['value', 'Sex'])
