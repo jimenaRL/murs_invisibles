@@ -142,7 +142,7 @@
 	Formations d'enseignement supérieur, Universités - médecine, odontologie, pharmacie, part de femmes
 	Formations d'enseignement supérieur, Universités - droit, économie, AES, part de femmes
 	Formations d'enseignement supérieur, Écoles de commerce, gestion et comptabilité, part de femmes
-	Formations d'enseignement supérieur, sciences, Technologies, Santé, part de femmes
+	Formations d'enseignement supérieur, Sciences, Technologies, Santé, part de femmes
 	Classes préparatoires aux grandes écoles, part de femmes
 	Formations d'enseignement supérieur, Université - Sport et STAPS, part de femmes
 	Formations d'enseignement supérieur, Université - Sciences, part de femmes
@@ -157,7 +157,7 @@
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/MINIST-CULT/OBS_GROUP3_arts.tsv
 	Artistes exposé·es dans les fonds régionaux d'art contemporain, part de femmes
 	Artistes exposé·es dans les centres d'art contemporain, part de femmes
-	Acquisitions Fond National d'art contemporain, part des œuvres de femmes
+	Acquisitions Fonds national d'art contemporain, part des œuvres de femmes
 	Acquisitions Fonds régionaux d'art contemporain, part des œuvres de femmes
 	Acquisitions Fonds national d'art contemporain, part des œuvres de femmes
 	Commissaires de grandes expositions, part de femmes
