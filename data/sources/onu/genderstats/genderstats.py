@@ -1,14 +1,18 @@
 import os
 from murs_invisibles import Processer
 
+file_dir = os.path.dirname(os.path.realpath(__file__))
+filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
+
+
 config = {
-    "base_path": os.path.dirname(os.path.realpath(__file__)),
+    "base_path": file_dir,
     "origin_language": "en",
     "io": {
         "header": 1,
         "encoding": 'latin1',
         "fns": {
-            '46 - Share of female police officers_data.csv': 'split4',
+            '46 - Share of female police officers_data.csv': 'one_save',
             "43 - Women’s share of government ministerial positions_data.csv": "split2",
             "25 - Share of female science  technology  engineering and mathematics graduates at tertiary level_data.csv": "split4",
 
@@ -20,7 +24,7 @@ config = {
             "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": "split2",
             "1c - Average number of hours spent on unpaid care work  by sex  age and location_data.csv": "split2",
 
-            "13 - Gender gap in wages  by occupation  age and persons with disabilities_data.csv": "split2",
+            "13 - Gender gap in wages  by occupation  age and persons with disabilities_data.csv": "one_save",
 
         }
     },
@@ -46,10 +50,10 @@ config = {
         },
     },
     "filter": {
-        'filter_indicator_path': None,
+        'filter_indicator_path': filter_indicator_path,
         'year': {
             "43 - Women’s share of government ministerial positions_data.csv": 2010,
-            '46 - Share of female police officers_data.csv': 2010,
+            '46 - Share of female police officers_data.csv': 2015,
             "25 - Share of female science  technology  engineering and mathematics graduates at tertiary level_data.csv": 2010,
             "11 - Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider  by sex_data.csv": 2010,
             "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": 2010,
