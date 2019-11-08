@@ -58,8 +58,8 @@ config = {
             "11 - Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider  by sex_data.csv": 2010,
             "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": 2010,
             "5 - Proportion of employed who are contributing family workers  by sex_data.csv": 2010,
-            "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": 2010,
-            "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": 2010,
+            "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": 2014,
+            "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": 2013,
             "1c - Average number of hours spent on unpaid care work  by sex  age and location_data.csv": 2010,
             "13 - Gender gap in wages  by occupation  age and persons with disabilities_data.csv": 2014,
         }
