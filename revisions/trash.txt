@@ -34,19 +34,19 @@
 	Temps libre par jour des femmes par rapport aux hommes
 	Temps passé en trajet et transports des femmes par rapport aux hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE/Conditions_de_vie_Société_0.tsv
-	chef·fes de famille monoparentale propriétaires, par de femmes par rapport aux hommes
-	Cadres dirigeants, part de femmes par rapport aux hommes
-	Licencié·es de sport, part de femmes par rapport aux hommes
+	Chef·fes de famille monoparentale propriétaires, part de femmes par rapport à celle des hommes
+	Cadres dirigeants, part de femmes par rapport à celle des hommes
+	Licencié·es de sport, part de femmes par rapport à celle des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE/Conditions_de_vie_Société_1.tsv
-	Licencié·es de sport, part de femmes par rapport aux hommes
-	Maires, part de femmes par rapport aux hommes
-	Conseils municipaux, adjoint·es et conseiller·es, part de femmes par rapport aux hommes
+	Licencié·es de sport, part de femmes par rapport à celle des hommes
+	Maires, part de femmes par rapport à celle des hommes
+	Conseils municipaux, adjoint·es et conseiller·es, part de femmes par rapport à celle des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_accès_à_l*emploi.tsv
 	Taux de chômage des femmes par rapport à celui des hommes
 	Taux d’emploi des femmes par rapport à celui des hommes
 	Taux d’activité des femmes par rapport à celui des hommes
-	Salarié·es en contrat à durée indéterminée, part de femmes par rapport aux hommes
-	Emploi à temps partiel, part de femmes par rapport aux hommes
+	Salarié·es en contrat à durée indéterminée, part de femmes par rapport à celle des hommes
+	Emploi à temps partiel, part de femmes par rapport à celle des hommes
 	Cadres, part de femmes par rapport aux hommes 
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_conseils_municipaux.tsv
 	Conseils municipaux, part de femmes
@@ -54,51 +54,51 @@
 	Conseils municipaux, 1000 habitants au plus, part de femmes
 	Maires, part de femmes 
 	Maires, moins de 1000 habitants, part de femmes
-	Maires, 1000 habitants au plus, part de femmes
+	Maires, 1000 habitants ou plus, part de femmes
 	Maires adjoint·es et conseiller·es, part de femmes
 	Maires adjoint·es et conseiller·es, moins de 1000 habitants, part de femmes
-	Maires adjoint·es et conseiller·es, 1000 habitants au plus, part de femmes
+	Maires adjoint·es et conseiller·es, 1000 habitants ou plus, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_dossier_complet_val_d*oise_-_ecart.tsv
 	Taux d'activité des femmes par rapport à celui des hommes
 	15 à 24 ans, Taux d'activité des femmes par rapport à celui des hommes
 	55 à 64 ans, Taux d'activité des femmes par rapport à celui des hommes
 	Taux de temps partiel des femmes par rapport à celui des hommes
-	15 à 24 ans,Taux de temps partiel des femmes par rapport à celui des hommes
-	Temps partiel, 25 à 54 ans, taux des femmes par rapport à celui des hommes
+	15 à 24 ans, Temps partiel, taux des femmes par rapport à celui des hommes
+	25 à 54 ans, Temps partiel, taux des femmes par rapport à celui des hommes
 	55 à 64 ans, Temps partiel, taux des femmes par rapport à celui des hommes
 	18 à 25 ans, Salaire net horaire moyen total des femmes par rapport à celui des hommes 
 	26 à 50 ans, Salaire net horaire moyen total des femmes par rapport aux hommes
 	Plus de 50 ans, Salaire net horaire moyen total des femmes par rapport à celui des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_dossier_complet_val_d*oise_-_pourcentage.tsv
-	Agriculteur·trices exploitants, part de femmes
+	Agriculteur·trices exploitant·es, part de femmes
 	Artisan·es, commerçant·es, chef·fes d'entreprise, part de femmes
 	Cadres et professions intellectuelles supérieures, part de femmes
 	Professions intermédiaires, part de femmes
 	Employé·es, part de femmes
 	Ouvrier·es, part de femmes
-	Personnes sans activité professionnelle, part des femmes
-	Familles monoparentales personnes seul·es avec enfants, part de femmes
+	Personnes sans activité professionnelle, part de femmes
+	Familles monoparentales, personnes seules avec enfants, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_part_des_cadres.tsv
-	Part des cadres, part de femmes par rapport aux hommes
+	Part des cadres, part des femmes par rapport à celle des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_taux_d*emploi.tsv
 	Taux d'emploi des femmes par rapport à celui des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_taux_de_temps_partiel.tsv
 	Taux de temps partiel des femmes par rapport à celui des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/INSEE-95/INSEE-95_-_temps_partiel.tsv
-	Travailleur·euses à temps partiel, sans enfant, part de femmes par rapport aux hommes
-	Travailleur·euses à temps partiel, avec 1 enfant, part de femmes par rapport aux hommes
-	Travailleur·euses à temps partiel, avec 2 enfants, part de femmes par rapport aux hommes
-	Travailleur·euses à temps partiel, avec 3 enfants ou plus, part de femmes par rapport aux hommes
+	Travailleur·euses à temps partiel, sans enfant, part des femmes par rapport à celle des hommes
+	Travailleur·euses à temps partiel, avec 1 enfant, part des femmes par rapport à celle des hommes
+	Travailleur·euses à temps partiel, avec 2 enfants, part des femmes par rapport à celle des hommes
+	Travailleur·euses à temps partiel, avec 3 enfants ou plus, part des femmes par rapport à celle des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/EESR/parite2019/parite2019_femmes-hommes.tsv
-	Insertion professionnelle des diplômé·es d'un master 30 mois après, taux d'insertion des femmes par rapport à celui des hommes
-	Insertion professionnelle des diplômé·es d'un master 30 mois après, taux d'emploi stable des femmes par rapport à celui des hommes
-	Insertion professionnelle des diplômé·es d'un master 30 mois après, taux d'emploi à temps plein des femmes par rapport à celui des hommes
-	Insertion professionnelle des diplômé·es d'un master 30 mois après, taux d'emplois cadres des femmes par rapport à celui des hommes
-	Titulaires d’un diplôme de niveau Licence ou plus, taux d'emplois des femmes par rapport à celui des hommes
+	Diplômé·es d'un master, 30 mois après l'obtention, taux d'insertion des femmes par rapport à celui des hommes
+	Diplômé·es d'un master, 30 mois après l'obtention, taux d'emploi stable des femmes par rapport à celui des hommes
+	Diplômé·es d'un master, 30 mois après l'obtention, taux d'emploi à temps plein des femmes par rapport à celui des hommes
+	Diplômé·es d'un master, 30 mois après l'obtention, taux d'emploi de cadre des femmes par rapport à celui des hommes
+	Titulaires d’un diplôme de niveau Licence ou plus, taux d'emploi des femmes par rapport à celui des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/oecd/gouvernance/Cour_suprême=_ou_plus_haute_juridiction=_part_de_femmes.tsv
 	Cour suprême, ou plus haute juridiction, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/oecd/developpement/GIDDB2014_titres_fonciers.tsv
-	Détention de titres fonciers (propriétaire), part de femmes
+	Détention de titres fonciers (propriétaire, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/oecd/emploi/Part-de-l*emploi-dans-les-services-par-sexe.tsv
 	Emploi dans les services, part des femmes par rapport à celle des hommes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/oecd/emploi/Part-de-l*emploi-dans-les-services-par-sexe.tsv
