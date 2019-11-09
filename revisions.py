@@ -72,8 +72,6 @@ tableau_disparition = [
 	"onu/genderstats/43_-_Women’s_share_of_government_ministerial_positions_data_0.tsv",
 ]
 
-#export(datas=tableau_disparition, name='disparition')
-
 
 
 
