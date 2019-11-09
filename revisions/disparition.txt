@@ -8,7 +8,7 @@
 	Emploi spectacle vivant, part de femmes
 	Spectacle vivant: professionnel·les de l'art dramatique, part de femmes
 	Spectacle vivant: professionnel·les des activités artistiques, part de femmes
-	Spectacle vivant: professionnel·les de l'art chorégraphique, part de femmes
+	Spectacle vivant: professionnel·les de l'art chorégraphique part de femmes
 	Spectacle vivant: professionnel·les de la musique instrumentale, part de femmes
 	Spectacle vivant: professionnel·les de la musique vocale, part de femmes
 	Spectacle vivant: professionnel·les des arts du cirque et des arts visuels, part de femmes
@@ -19,7 +19,7 @@
 	Spectacle vivant: professionnel·les des accessoires, part de femmes
 	Spectacle vivant: professionnel·les de l'éclairage, part de femmes
 	Spectacle vivant: professionnel·les du son, part de femmes
-	Spectacle vivant: professionnel·les de l'audiovisuel, part de femmes
+	Spectacle vivant: professionnel·les de l'audiovisuel du spectacle vivant, part de femmes
 	Spectacle vivant: professionnel·les du décor, part de femmes
 	Spectacle vivant: professionnel·les du costume, part de femmes
 	Spectacle vivant: professionnel·les de la coiffure, du maquillage et des masques, part de femmes
@@ -119,19 +119,19 @@
 	Administratifs, sociaux et de santé, infirmier·es, part de femmes
 	Administratifs, sociaux et de santé, secrétaires d'administration part de femmes
 	Administratifs, sociaux et de santé, assistant·es de service social & infirmier·es, part de femmes
-	Administratifs, sociaux et de santé, adjoint·es administratif.ves, part de femmes
-	Administratifs, sociaux et de santé, adjoint·es techniques des établissemenst d'enseignement, part de femmes
-	Conservateur·trices de bibliothèques, part de femmes
+	Administratifs, sociaux et de santé, adjoint·es administratifs, part de femmes
+	Administratifs, sociaux et de santé, adjoint·es techniques. des établissemenst d'enseignement, part de femmes
+	Conservateur ·trices de bibliothèques, part de femmes
 	Bibliothécaires, part de femmes
 	Bibliothèques, Bibliothécaires adjoint·es et technicien·nes, part de femmes
-	Bibliothèques, Magasinier·es, part de femmes
+	Bibliothèques, magasinier·es, part de femmes
 	Inspecteur·trices de l'éducation nationale et inspecteur·trices d'académie, part des femmes
 	Conseiller·e principal·e d'éducation, part de femmes
 	Education nationale, personnel d'orientation, part de femmes
 	Enseignant·es de catégorie A
 	Effectifs en recherche et développement en entreprise, chercheur·euses, part de femmes
 	Effectifs en recherche et développement en entreprise, personnels de soutien, part de femmes
-	Effectifs en recherche et développement administration, chercheur·euses, part de femmes
+	Effectifs en recherche et développement administration, chercheur·es, part de femmes
 	Effectifs en recherche et développement administration, personnels de soutien, part de femmes
 	Distinction organismes publics de recherche, INRIA, part de femmes
 	Distinction organismes publics de recherche, CNRS, part de femmes
@@ -142,7 +142,7 @@
 	Formations d'enseignement supérieur, Universités - médecine, odontologie, pharmacie, part de femmes
 	Formations d'enseignement supérieur, Universités - droit, économie, AES, part de femmes
 	Formations d'enseignement supérieur, Écoles de commerce, gestion et comptabilité, part de femmes
-	Formations d'enseignement supérieur, Sciences, Technologies, Santé, part de femmes
+	Formations d'enseignement supérieur, sciences, Technologies, Santé, part de femmes
 	Classes préparatoires aux grandes écoles, part de femmes
 	Formations d'enseignement supérieur, Université - Sport et STAPS, part de femmes
 	Formations d'enseignement supérieur, Université - Sciences, part de femmes
@@ -157,15 +157,15 @@
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/MINIST-CULT/OBS_GROUP3_arts.tsv
 	Artistes exposé·es dans les fonds régionaux d'art contemporain, part de femmes
 	Artistes exposé·es dans les centres d'art contemporain, part de femmes
-	Acquisitions Fonds national d'art contemporain, part des œuvres de femmes
+	Acquisitions Fond National d'art contemporain, part des œuvres de femmes
 	Acquisitions Fonds régionaux d'art contemporain, part des œuvres de femmes
 	Acquisitions Fonds national d'art contemporain, part des œuvres de femmes
 	Commissaires de grandes expositions, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/secretariat_egalite_femmes_hommes/part_de_femmes.tsv
 	Part des tâches domestiques réalisées par les femmes
-	Université Lettres, Sciences humaines, part de femmes
+	Université Lettres, sciences humaines, part de femmes
 	Formations paramédicales et sociales, part de femmes
-	Université Sciences et Sport STAPS, part de femmes
+	Université Sciences et sport STAPS, part de femmes
 	Formations d'ingénieur·es, part de femmes
 	Sciences fondamentales et applications, part de femmes
 	Travail secteur numérique, part de femmes
@@ -210,26 +210,26 @@
 	Fonction publique hospitalière, catégorie A, part de femmes
 	Fonction publique hospitalière catégorie A+, part de femmes
 	Fonction publique hospitalière, encadrement supérieur et direction, part de femmes
-	École Nationale d'Administration, part de femmes
-	Étudiant·es universitaires, part de femmes
-	Diplômé·es universités, part de femmes
-	Employé·es universitaires grade C, part de femmes
-	Employé·es universitaires grade A, part de femmes
-	Employé·es cadres techniques, part de femmes
-	Employé·es DTN (directeur·trice technique nationale), part de femmes
-	Président·es d'entreprise (PDG), part de femmes
+	École Nationale d'administration, part de femmes
+	Étudiants universitaires, part de femmes
+	Diplômés universités, part de femmes
+	Employés universitaires grade C, part de femmes
+	Employés universitaires grade A, part de femmes
+	Employés cadres techniques, part de femmes
+	Employés DTN (directrice technique nationale), part de femmes
+	Présidentes d'entreprise (PDG), part de femmes
 	Membres exécutifs d'entreprise, part de femmes
 	Membres non exécutifs d'entreprise, part de femmes
 	Maires de France, part de femmes
-	Conseiller·ères municipaux·ales, part de femmes
+	Conseilleurs municipaux, part de femmes
 	Présidentes de conseils régionaux, part de femmes
-	Conseiller·ères régionaux·ales, part de femmes
-	Président·es de conseils départementaux, part de femmes
-	Conseiler·ères départementaux·ales, part de femmes
-	Conseiler·ères régionaux·ales en affaires sociales, part de femmes
-	Conseiler·ères régionaux·ales en éducation, part des femmes 
-	Conseiler·ères régionaux·ales en budget/finance, part de femmes
-	Conseiler·ères régionaux·ales en transport, part de femmes
+	Conseilleurs régionaux, part de femmes
+	Présidentes de conseils départementaux, part de femmes
+	Conseilleurs départementaux, part de femmes
+	Conseilleurs régionaux en affaires sociale, part de femmes
+	Conseilleurs régionaux en éducation, part des femmes 
+	Conseilleurs régionaux en budget/finance, part de femmes
+	Conseilleurs régionaux en transport, part de femmes
 	Directeurs des musées nationaux, part de femmes
 	Artistes dans spectacles cirque, part de femmes
 	Artistes dans spectacles danse, part de femmes
@@ -246,4 +246,3 @@
 	Directeurs des établissement spectacle vivant, part de femmes
 /Users/jimenarl/Desktop/git_murs/data/m4l/fr/onu/genderstats/43_-_Women’s_share_of_government_ministerial_positions_data_0.tsv
 	Ministres, part de femmes
-	
