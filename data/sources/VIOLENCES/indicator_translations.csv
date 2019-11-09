@@ -1,7 +1,5 @@
 indicator,fr,es
 "Personnes tuées par leur (ex)-partenaire, part de femmes","Personnes tuées par leur (ex)-partenaire, part de femmes",
-"Personnes tuées par leur (ex)-partenaire, dont couples officiels, part de femmes","Personnes tuées par leur (ex)-partenaire, dont couples officiels, part de femmes",
-"Personnes tuées par leur (ex)-partenaire, dont couples non-officiels, part de femmes","Personnes tuées par leur (ex)-partenaire, dont couples non-officiels, part de femmes",
 "Victimes de harcèlement et autres menaces commises par le·la partenaire enregistrées par les forces de sécurité, part de femmes","Victimes de harcèlement et autres menaces commises par le·la partenaire enregistrées par les forces de sécurité, part de femmes",
 "Victimes de viols commits par le·la partenaire enregistrées par les forces de sécurité, part de femmes","Victimes de viols commits par le·la partenaire enregistrées par les forces de sécurité, part de femmes",
 "Victimes de violences volontaires commises par le·la partenaire enregistrées par les forces de sécurité, part de femmes","Victimes de violences volontaires commises par le·la partenaire enregistrées par les forces de sécurité, part de femmes",
@@ -39,3 +37,5 @@ indicator,fr,es
 "Victimes de meurtre au sein du couple, part de femmes","Victimes de meurtre au sein du couple, part de femmes",
 "Victimes d'assassinat au sein du couple, part de femmes","Victimes d'assassinat au sein du couple, part de femmes",
 " Auteurs·trices morts violentes au sein du couple, part de hommes","Auteurs·trices morts violentes au sein du couple, part de hommes",
+"Personnes tuées par leur (ex)-partenaire, dont couples officiels, part de femmes","Personnes tuées par leur (ex)-partenaire, couples officiels, part de femmes",
+"Personnes tuées par leur (ex)-partenaire, dont couples non-officiels, part de femmes","Personnes tuées par leur (ex)-partenaire, couples non-officiels, part de femmes",
