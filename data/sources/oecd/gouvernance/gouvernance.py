@@ -14,7 +14,7 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            # 'GOV_2017_03042019165415175.csv': 'sep_save',
+            'GOV_2017_03042019165415175.csv': 'sep_save',
         },
     },
     "preprocesser": {
@@ -36,7 +36,7 @@ config = {
     "filter": {
         'filter_indicator_path': filter_indicator_path,
         'year': {
-            'GOV_2017_03042019165415175.csv': 2010,
+            'GOV_2017_03042019165415175.csv': 2015,
         }
     },
     "translator": {
