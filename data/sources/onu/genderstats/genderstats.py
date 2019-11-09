@@ -20,7 +20,7 @@ config = {
             "2 - Average number of hours spent on total work combined (total work burden)  by sex_data.csv": "split2",
             "5 - Proportion of employed who are contributing family workers  by sex_data.csv": "split4",
 
-            "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": "split2",
+            "1a - Average number of hours spent on domestic chores and care work  by sex  age and location_data.csv": "one_save",
             "1b - Average number of hours spent on unpaid domestic chores  by sex  age and location_data.csv": "split2",
             "1c - Average number of hours spent on unpaid care work  by sex  age and location_data.csv": "split2",
 
