@@ -16,6 +16,10 @@ class PreProcesser(object):
         self.rename = {v: k for k, v in config['rename'].items()}
         self.values = ['value', 'femmes', 'hommes']
 
+    def remove_google_sheet_nan(self, df):
+        df = df[df.value != '#DIV/0!']
+        df = df[df.value != '#VALUE!']
+        return df
 
     def format_columns(self, df):
         """
