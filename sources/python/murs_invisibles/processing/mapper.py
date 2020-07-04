@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 class Mapper(object):
@@ -13,6 +14,13 @@ class Mapper(object):
         """
 
         self.fns = config['fns']
+
+    @classmethod
+    def abstanh(cls, row):
+        """
+        """
+        return np.tanh(0.01 * np.abs(row.value))
+
 
     @classmethod
     def proportion1(cls, row):

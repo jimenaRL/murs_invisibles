@@ -17,11 +17,10 @@ Gender gap in wages  by occupation  age and persons with disabilities Armed forc
 Gender gap in wages  by occupation  age and persons with disabilities Skilled agricultural and fishery workers (isco-88)
 Gender gap in wages  by occupation  age and persons with disabilities Not elsewhere classified (isco-08)
 Gender gap in wages  by occupation  age and persons with disabilities Armed forces (isco-88)
-Average number of hours spent on unpaid domestic chores  by sex  age and location 65 years old and over
-Average number of hours spent on unpaid domestic chores  by sex  age and location 12 to 24 years old
-Average number of hours spent on unpaid care work  by sex  age and location 85 years old and over
-Average number of hours spent on unpaid care work  by sex  age and location 65 years old and over
-Average number of hours spent on unpaid care work  by sex  age and location 12 to 14 years old
-Average number of hours spent on unpaid care work  by sex  age and location 12 to 24 years old
-Average number of hours spent on unpaid care work  by sex  age and location 65 to 74 years old
-Average number of hours spent on unpaid care work  by sex  age and location 65 to 84 years old
+Average number of hours spent on domestic chores and care work  by sex  age and location 65 years old and over
+Average number of hours spent on domestic chores and care work  by sex  age and location 85 years old and over 
+Average number of hours spent on domestic chores and care work  by sex  age and location 10 to 14 years old
+Average number of hours spent on domestic chores and care work  by sex  age and location 75 to 84 years old
+Average number of hours spent on domestic chores and care work  by sex  age and location 65 to 74 years old
+Average number of hours spent on domestic chores and care work  by sex  age and location 55 to 64 years old
+Average number of hours spent on domestic chores and care work  by sex  age and location 45 to 54 years old
