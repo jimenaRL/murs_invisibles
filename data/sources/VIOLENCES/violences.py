@@ -13,25 +13,20 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": "one_save",
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": "one_save",
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv": "one_save",
-            "INED - T4 Victimes violences sexuelles dans l'année.csv": "one_save",
-            "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv": "one_save",
-            "INED - T6 Victimes violences sexuelles au cours de la vie.csv": "one_save",
-            "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv": "one_save",
-
-        },
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": "one_save",
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": "one_save",
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": "one_save",
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv": "one_save",
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv": "one_save",
+        }, 
     },
     "preprocesser": {
         'fns': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": ["remove_prop"],
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": ["remove_prop"],
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv": [],
-            "INED - T4 Victimes violences sexuelles dans l'année.csv": [],
-            "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv": ["remove_google_sheet_nan"],
-            "INED - T6 Victimes violences sexuelles au cours de la vie.csv": ["remove_google_sheet_nan"],
-            "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv": ["remove_google_sheet_nan"],
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": ["remove_prop"],
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": ["remove_prop"],
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": ["remove_prop"],
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv": [],
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv": [],
         },
         'rename': {
             'country': 'pays',
@@ -43,34 +38,31 @@ config = {
     "filter": {
         'filter_indicator_path': filter_indicator_path,
         'year': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": 2010,
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": 2010,
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv": 2010,
-            "INED - T4 Victimes violences sexuelles dans l'année.csv": 2010,
-            "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv": 2010,
-            "INED - T6 Victimes violences sexuelles au cours de la vie.csv": 2010,
-            "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv": 2010,
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": 2010,
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": 2010,
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": 2010,
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv": 2010,
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv": 2010,
         }
     },
     "mapper": {
         'fns': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": "proportion100",
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": "proportion100",
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv":  "proportion100",
-            "INED - T4 Victimes violences sexuelles dans l'année.csv":  "proportion100",
-            "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv":  "proportion100",
-            "INED - T6 Victimes violences sexuelles au cours de la vie.csv":  "proportion100",
-            "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv":  "proportion100",
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": "proportion100",
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": "proportion100",
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": "proportion100",
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv":  "proportion100",
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv":  "proportion100",
         }
     },
     "translator": {
     },
     "postprocesser": {
         'fns': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": "perc",
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": "perc",
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv":  "perc",
-            "INED - T4 Victimes violences sexuelles dans l'année.csv":  "perc",
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": "perc",
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": "perc",
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": "perc",
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv":  "perc",
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv":  "perc",
             "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv":  "perc",
             "INED - T6 Victimes violences sexuelles au cours de la vie.csv":  "perc",
             "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv":  "perc",
@@ -78,13 +70,11 @@ config = {
     },
     "sorter": {
         'fns': {
-            "stop-violences - Violences au sein du couple et violences sexuelles 2018.csv": "none",
-            "Etude nationale sur les morts violentes au sein du couple - 2014-2018-2020.csv": "none",
-            "INED - T3 Victimes estimés de violences sexuelles dans les 12 derniers mois.csv":  "none",
-            "INED - T4 Victimes violences sexuelles dans l'année.csv":  "none",
-            "INED - T5 violences sexuelles  par catégorie juridique et espace de vie etdans les 12 derniers mois .csv":  "none",
-            "INED - T6 Victimes violences sexuelles au cours de la vie.csv":  "none",
-            "INED - T8 Victimes d'agressions sexuelles dans les 12 derniers mois, par age.csv":  "none",
+            "stop-violences - Autrices Violences au sein du couple 2018.csv": "none",
+            "stop-violences - STOP VIOLENCE 2018 Victimes + INED T8.csv": "none",
+            "Etude nationale sur les morts violentes au sein du couple+ INED Virage T6 - Et NAT violence + INED T6.csv": "none",
+            "INED - T5 + T3 violences sexuelles par cat juridique dans les 12 derniers mois.csv":  "none",
+            "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv":  "none",
         }
     },
 }
