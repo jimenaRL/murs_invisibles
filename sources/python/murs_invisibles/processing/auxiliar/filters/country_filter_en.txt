@@ -34,6 +34,8 @@ China  Hong Kong Special Administrative Region
 China, Hong Kong SAR
 China  Macao Special Administrative Region
 China, Macao SAR
+Macao Special Administrative Region of China
+Hong Kong Special Administrative Region of China
 Aruba
 Dominique
 Montserrat
@@ -54,3 +56,9 @@ Swaziland
 Sint Maarten (Dutch part)
 -
 Cayman Islands
+St. Vincent and the Grenadines
+Saint Vincent and the Grenadines
+United Kingdom (England and Wales)
+United Kingdom (Northern Ireland)
+United Kingdom (Scotland)
+Kosovo under UNSCR 1244

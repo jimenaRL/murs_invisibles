@@ -154,6 +154,7 @@ class Processer(object):
 
     def process(self):
 
+        out = {}
         for table in self.tables:
 
             print(f"***** {table} ****")
@@ -187,4 +188,15 @@ class Processer(object):
             df = self.sorter.process(table, df)
 
             # save
-            self.io.save(table, df, path)
+            df = self.io.save(table, df, path)
+
+            # store df for postmerge
+            out[table] = df
+
+        # post merge
+        print(f"MERGED")
+        for nom, datas in self.config['merge'].items():
+            print(f">>>> {nom} <<<<")
+            df_merged = pd.concat([out[data] for data in datas])
+            merged_path = self.io.get_out_path_indicator(path, nom)
+            self.io.one_save(df_merged, merged_path)
