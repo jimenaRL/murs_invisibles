@@ -10,14 +10,12 @@ from murs_invisibles.processing.filter import Filter
 from murs_invisibles.processing.translator import Translator
 from murs_invisibles.processing.sorter import Sorter
 
-
-TRANSLATOR_COUNTRY_PATH = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'auxiliar/translators/country_{}.json')
-
-FILTER_COUNTRY_PATH = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
-    'auxiliar/filters/country_filter_{}.txt')
+from murs_invisibles.processing.config import (
+    VALID_LANGS,
+    TARGET_LANG_ENV_VAR,
+    TRANSLATOR_COUNTRY_PATH,
+    FILTER_COUNTRY_PATH
+)
 
 
 class Processer(object):
@@ -35,20 +33,28 @@ class Processer(object):
 
     def _set_translator_config(self, translator_config):
 
-        if not "indicator" in translator_config:
-            translator_config.update({
-                "indicator": self.default_translation
-            })
+        # set config to translate indicators
+        if not "indicator_origin_language" in translator_config:
+            indicator_translation = self.default_translation
+        else:
+            indicator_translation = '{}2{}'.format(
+                translator_config["indicator_origin_language"],
+                self.get_global_target_language())
+        translator_config.update({"indicator": indicator_translation})
         translator_config.update({
             "ind_dict_path": os.path.join(
                 self.base_path,
                 "indicator_translations.csv")
             })
 
-        if not "country" in translator_config:
-            translator_config.update({
-                "country": self.default_translation
-                })
+        # set config to translate countries
+        if not "country_origin_language" in translator_config:
+            country_translation = self.default_translation
+        else:
+            country_translation = '{}2{}'.format(
+                translator_config["country_origin_language"],
+                self.get_global_target_language())
+        translator_config.update({"country": country_translation})
         translator_config.update({
                 "country_dict_path": TRANSLATOR_COUNTRY_PATH.format(
                     self.default_translation)
@@ -57,8 +63,21 @@ class Processer(object):
         return translator_config
 
     def _set_io_config(self, io_config):
-        io_config["target_language"] = self.config["target_language"]
+        io_config["target_language"] = self.get_global_target_language()
         return io_config
+
+    def get_global_target_language(self):
+        if TARGET_LANG_ENV_VAR in os.environ.keys():
+            target_lang = os.environ[TARGET_LANG_ENV_VAR]
+            if target_lang in VALID_LANGS:
+                return target_lang
+            else:
+                msg = f"{TARGET_LANG_ENV_VAR} environ variable must be one of: "
+                msg += ' '.join([f"'{_}'" for _ in VALID_LANGS])
+                msg += f", got '{target_lang}'."
+                raise ValueError(msg)
+
+        raise ValueError(f"Missing {TARGET_LANG_ENV_VAR} environ variable.")
 
     def __init__(self, config):
         """
@@ -66,7 +85,6 @@ class Processer(object):
             {
                 "base_path": file_dir,
                 "origin_language": "fr",
-                "target_language": "fr",
                 "io": {
                     "header": 0,
                     "encoding": 'utf-8',
@@ -115,7 +133,7 @@ class Processer(object):
         self.tables = config['io']['fns'].keys()
         self.default_translation = '{}2{}'.format(
             config["origin_language"],
-            config["target_language"])
+            self.get_global_target_language())
 
         self.preprocesser = PreProcesser(config['preprocesser'])
 
@@ -143,7 +161,7 @@ class Processer(object):
 
             # load
             df = self.io.load(path)
-            # print(df.head())
+            #print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)

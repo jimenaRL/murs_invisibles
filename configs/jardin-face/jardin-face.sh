@@ -1,1 +1,4 @@
-python server.py -in_line_breaks 4 -out_line_breaks 1 -max_char 8 -port 9010
+python server.py -in_line_breaks 7 -out_line_breaks 2 -max_char 16 -port 9030
+TRASH
+python server.py -in_line_breaks 7 -out_line_breaks 2 -max_char 16 -port 9030
+Violence

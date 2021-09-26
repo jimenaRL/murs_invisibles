@@ -18,6 +18,7 @@ class Translator(object):
 
         self.config = config
 
+        self.origin_language = self.config['indicator'].split('2')[0]
         self.target_language = self.config['indicator'].split('2')[-1]
 
         with open(config['country_dict_path'], 'r', encoding='utf-8') as fp:
@@ -40,9 +41,18 @@ class Translator(object):
         """
         translate or reformulate indicator
         """
+        indicators = set(df.indicator.unique().tolist())
+        avaliable_trads = set(self.ind_dict['indicator'].unique().tolist())
+        missing_trads = indicators - avaliable_trads
+        if missing_trads:
+            print("Missing entries in translation dictionary.")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            for i in missing_trads:
+                print('"{}","{}",'.format(i, i))
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            input("Press Enter to continue...")
         df = df.merge(self.ind_dict, on='indicator', how='inner')
         df['indicator'] = df[self.target_language]
-
         return df
 
     def process(self, table, df):

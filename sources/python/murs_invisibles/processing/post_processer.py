@@ -18,7 +18,33 @@ class PostProcesser(object):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
         df['value'] = df.apply(
-            lambda row: row.sign + '%1.2f' % abs(row.value) + 'pp', axis=1)
+            lambda row: row.sign + '%1.1f' % abs(row.value) + 'p%', axis=1)
+        return df
+
+
+    @classmethod
+    def diff_minutes(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%i' % abs(row.value) + "min", axis=1)
+        return df
+
+    @classmethod
+    def diff_hours(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%i' % abs(60 * row.value) + " min", axis=1)
+        return df
+
+
+    @classmethod
+    def diff_euro(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.1f' % abs(row.value) + '€', axis=1)
         return df
 
 
@@ -27,8 +53,17 @@ class PostProcesser(object):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
         df['value'] = df.apply(
-            lambda row: row.sign + '%1.2f' % abs(row.value) + '%', axis=1)
+            lambda row: row.sign + '%1.1f' % abs(row.value) + '%', axis=1)
         return df
+
+    @classmethod
+    def diff_perc_0v(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '+' if row.value >= 0 else '-', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.0f' % abs(row.value) + '%', axis=1)
+        return df
+
 
     @classmethod
     def percX100(cls, df):
@@ -48,7 +83,19 @@ class PostProcesser(object):
         df['value'] = df.apply(
             lambda row: row.value / (1 + row.value), axis=1)
         df['value'] = df.apply(
-            lambda row: '%1.2f' % abs(100 * row.value) + '%', axis=1)
+            lambda row: '%1.0f' % abs(100 * row.value) + '%', axis=1)
+        return df
+
+    @classmethod
+    def perc_1v(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.1f' % abs(row.value) + '%', axis=1)
+        return df
+
+    @classmethod
+    def perc_2v(cls, df):
+        df['value'] = df.apply(
+            lambda row: '%1.2f' % abs(row.value) + '%', axis=1)
         return df
 
     @classmethod

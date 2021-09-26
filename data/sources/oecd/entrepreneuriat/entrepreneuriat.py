@@ -9,7 +9,6 @@ filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 config = {
     "base_path": file_dir,
     "origin_language": "fr",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -20,8 +19,8 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'ENT4.csv': 'no_process',
-            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 'get_wm_then_percRel100',
+            'ENT4.csv': ['no_process'],
+            'GENDER_ENT1_01042019230825609_remove_ENT4.csv': ['get_wm_oecd', 'percRel100'],
         },
         'rename': {
             'country': 'Pays',

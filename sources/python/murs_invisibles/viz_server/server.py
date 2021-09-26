@@ -106,6 +106,7 @@ if __name__ == "__main__":
                 nb_errors,
                 len(decoded),
                 EXPECTED_DECODED_LENGTH))
+            print(decoded)
             continue
         endpoint, _ = decoded[:2]
         # print

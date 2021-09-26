@@ -8,7 +8,6 @@ filepath = os.path.dirname(os.path.realpath(__file__))
 config = {
     "base_path": filepath,
     "origin_language": "fr",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": "utf-8",
@@ -18,7 +17,7 @@ config = {
     },
     "preprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "get_wm_then_percRel100"
+            "GENDER_EDU_29102017131322363.csv": ["get_wm_oecd", "diffFH"]
         },
         "rename": {
             "country": "Pays",
@@ -29,7 +28,7 @@ config = {
     },
     "mapper": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "diffFH_100"
+            "GENDER_EDU_29102017131322363.csv": "diffFH_20"
         }
     },
     "filter": {
@@ -40,12 +39,12 @@ config = {
         }
     },
     "translator": {
-        "indicator": "en2es",
-        "country": "fr2es"
+        "indicator_origin_language": "en",
+        "country_origin_language": "fr"
     },
     "postprocesser": {
         "fns": {
-            "GENDER_EDU_29102017131322363.csv": "diff_perc"
+            "GENDER_EDU_29102017131322363.csv": "diff_pp"
         }
     },
     "sorter": {

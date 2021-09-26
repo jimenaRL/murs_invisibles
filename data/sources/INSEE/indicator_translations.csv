@@ -1,17 +1,43 @@
 indicator,fr,es
-"Inscrit·es en bac professionnel, part des femmes par rapport à celles des hommes","Inscrit·es en bac professionnel, part des femmes par rapport à celles des hommes","Inscritos al bachillerato profesional, porcentaje de mujeres con respecto al de hombres"
-"Diplômé·es du supérieur chez les 25 à 54 ans, part des femmes par rapport à celles des hommes","Diplômé·es du supérieur chez les 25 à 54 ans, part des femmes par rapport à celles des hommes","Titulados de la educación superior, 25 a 54 años, porcentaje de mujeres con respecto al de hombres"
-25 à 54 ans - Taux d’emploi des non diplômé·es - femmes par rapport aux hommes,25 à 54 ans - Taux d’emploi des non diplômé·es - femmes par rapport aux hommes,"25 a 54 años, tasa de empleo de mujeres no tituladas con respecto al de hombres"
-25 à 54 ans - Taux d’activité des femmes par rapport à celui des hommes,25 à 54 ans - Taux d’activité des femmes par rapport à celui des hommes,"Tasa de actividad de mujeres de 25 a 54 años con respecto al de hombres"
-"25 à 54 ans - Salarié·es à temps partiel, part des femmes par rapport à celles des hommes","25 à 54 ans - Salarié·es à temps partiel, part des femmes par rapport à celles des hommes","Tasa de empleo a tiempo parcial de mujeres de 25 a 54 años con respecto al de hombres"
-25 à 54 ans - Taux de chômage des femmes par rapport à celui des hommes,25 à 54 ans - Taux de chômage des femmes par rapport à celui des hommes,"Tasa de desempleo de mujeres de 25 a 54 años con respecto al de hombres"
-"Chef·fes de famille monoparentale propriétaires, part des femmes par rapport aux hommes","Chef·fes de famille monoparentale propriétaires, part des femmes par rapport aux hommes","Jefes de familia monoparentales propietarios, porcentaje de mujeres con respecto a la de hombres"
-"Licencié·e·s de sport, part des femmes par rapport à celles des hommes","Licencié·e·s de sport, part des femmes par rapport à celles des hommes","Deportistas acreditados, porcentaje de mujeres con respecto a la de hombres"
-"Maires, part des des femmes par rapport aux hommes","Maires, part des des femmes par rapport aux hommes","Alcaldes, part des des femmes par rapport aux hommes"
-"Mairie - adjoint·es et conseiller·es, part des des femmes par rapport aux hommes","Mairie - adjoint·es et conseiller·es, part des des femmes par rapport aux hommes","Alcadías - adjuntos y consejeros, porcentaje de mujeres con respecto a la de hombres"
-Salaire net annuel moyen des femmes par rapport aux hommes,Salaire net annuel moyen des femmes par rapport aux hommes,"Salario neto anual promedio de mujeres con respecto al de hombres"
-Cadres - Salaire net annuel moyen des femmes par rapport aux hommes,Cadres - Salaire net annuel moyen des femmes par rapport aux hommes,"Ejecutivos - Salario neto anual promedio de mujeres con respecto al de hombres"
-Revenu salarial net annuel moyen des femmes par rapport aux hommes,Revenu salarial net annuel moyen des femmes par rapport aux hommes,"Ejecutivos - Ingreso salarial neto anual promedio de mujeres con respecto al de hombre"
+Part de chefs de famille monoparentale propriétaires,"Chef·fes de famille monoparentale propriétaires, part de femmes par rapport aux hommes","Brecha mujeres-hommes, jefes de familia monoparentales propietarios"
+Proportion parmi les cadres dirigeants,"Cadres dirigeants, part de femmes par rapport à celle de hommes","Brecha mujeres-hommes, proporción de ejecutivos"
+"Proportion parmi les licenciés de sport ","Licencié·es de sport, part de femmes par rapport à celle de hommes","Brecha mujeres-hommes, deportistas acreditados"
+"Proportion dans les conseils municipaux, maires","Maires, part de femmes par rapport à celle des hommes","Brecha mujeres-hommes, alcaldes"
+"Proportion dans les conseils municipaux, adjoints et conseillers","Conseils municipaux, adjoint·es et conseiller·es, part de femmes par rapport à celle des hommes","Brecha mujeres-hommes, consejeros municipales"
+Salaire net annuel moyen en EQTP,"Salaire net annuel moyen en EQTP des femmes par rapport aux hommes","Brecha mujeres-hommes, salario neto anual en equivalente tiempo completo"
+Salaire net annuel moyen en EQTP des cadres,"Cadres, salaire net annuel moyen en EQTP des femmes par rapport aux hommes","Brecha mujeres-hommes, salario de cadres neto anual en equivalente tiempo completo"
+Revenu salarial net annuel moyen,"Revenu salarial net annuel moyen des femmes par rapport aux hommes","Brecha mujeres-hommes, salario neto anual promedio"
+Taux d’activité chez les 25 à 54 ans,"25 à 54 ans, taux d’activité des femmes par rapport aux hommes","Brecha mujeres-hommes, tasa de actividad entre 25 y 54 años"
+Nombre de familles professionnelles concentrant la moitié des emplois,"Écart femmes-hommes, nombre de familles professionnelles concentrant la moitié des emplois","Brecha mujeres-hommes, familias monoparentales concentrando la mitad de los empleos"
+Part de salariés à temps partiel chez les 25 à 54 ans,"25 à 54 ans, salarié·es à temps partiel, femmes par rapport aux hommes ","Brecha mujeres-hommes, trabajadores a tiempo parcial"
+Taux de chômage chez les 25 à 54 ans,"25 à 54 ans, taux de chômage des femmes par rapport aux hommes","Brecha mujeres-hommes,  tasa de desempleo entre 25 y 54 años"
+ taux de scolarisation à 18 ans,"Taux de scolarisation à 18 ans des femmes par rapport aux hommes","Brecha mujeres-hommes, tasa de escolarización"
+ part d’inscrits en bac professionnel,"Part d’inscrit·es en bac professionnel, femmes par rapport aux hommes","Brecha mujeres-hommes, porcentaje de inscritos al bachillerato"
+ part de diplômés du supérieur chez les 25 à 54 ans,"Part de diplômé·es du supérieur chez les 25 à 54 ans, femmes par rapport aux hommes","Brecha mujeres-hommes, titulados de la educación superior"
+taux d’emploi des non diplômés chez les 25 à 54 ans,"Taux d’emploi des non diplômé·es chez les 25 à 54 ans, femmes par rapport aux hommes","Brecha mujeres-hommes, tasa de empleo no tituladas"
+"Temps journalier physiologique (repos, hygiène) des femmes par rapport aux hommes","Temps journalier physiologique (repos, hygiène) des femmes par rapport aux hommes",
+"Temps journalier dédié au travail, études, formation  des femmes par rapport aux hommes","Temps journalier dédié au travail, études, formation  des femmes par rapport aux hommes",
+"Temps journalier de travail domestique des femmes par rapport aux hommes","Temps journalier de travail domestique des femmes par rapport aux hommes",
+"Temps journalier de travail domestique ménage et courses des femmes par rapport aux hommes","Temps journalier de travail domestique ménage et courses des femmes par rapport aux hommes",
+"Temps journalier des soins aux enfants des femmes par rapport aux hommes","Temps journalier des soins aux enfants des femmes par rapport aux hommes",
+"Temps journalier de travail domestique jardinage et bricolage des femmes par rapport aux hommes","Temps journalier de travail domestique jardinage et bricolage des femmes par rapport aux hommes",
+"Temps libre par jour des femmes par rapport aux hommes","Temps libre par jour des femmes par rapport aux hommes",
+"Temps passé en trajet et transports des femmes par rapport aux hommes","Temps passé en trajet et transports des femmes par rapport aux hommes",
+"Temps journalier physiologique (repos, hygiène) des femmes par rapport aux hommes","Temps journalier physiologique (repos, hygiène) des femmes par rapport aux hommes",
+"Temps journalier dédié au travail, études, formation  des femmes par rapport aux hommes","Temps journalier dédié au travail, études, formation  des femmes par rapport aux hommes",
+"Temps journalier de travail domestique des femmes par rapport aux hommes","Temps journalier de travail domestique des femmes par rapport aux hommes",
+"Temps journalier de travail domestique ménage et courses des femmes par rapport aux hommes","Temps journalier de travail domestique ménage et courses des femmes par rapport aux hommes",
+"Temps journalier des soins aux enfants des femmes par rapport aux hommes","Temps journalier des soins aux enfants des femmes par rapport aux hommes",
+"Temps journalier de travail domestique jardinage et bricolage des femmes par rapport aux hommes","Temps journalier de travail domestique jardinage et bricolage des femmes par rapport aux hommes",
+"Temps libre par jour des femmes par rapport aux hommes","Temps libre par jour des femmes par rapport aux hommes",
+"Temps passé en trajet et transports des femmes par rapport aux hommes","Temps passé en trajet et transports des femmes par rapport aux hommes",
+"Secteur privé salaires horaires nets moyens en temps complet des femmes par rapport aux hommes","Secteur privé salaires horaires nets moyens en temps complet des femmes par rapport aux hommes",
+"Secteur privé salaires horaires nets moyens en temps non complet des femmes par rapport aux hommes","Secteur privé salaires horaires nets moyens en temps non complet des femmes par rapport aux hommes",
+"Cadres, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes","Cadres, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes",
+"Professions intermédiaires, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes","Professions intermédiaires, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes",
+"Employé·es, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes","Employé·es, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes",
+"Ouvrier·es, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes","Ouvrier·es, différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes",
+"Différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes","Différence de salaires mensuels moyens nets en EQTP des femmes par rapport aux hommes",
 65 à 69 ans - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,65 à 69 ans - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres entre 65 y 69 años con respecto a la de hombres"
 65 à 69 ans - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,65 à 69 ans - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres con carrera completa entre 65 y 69 años con respecto a la de hombres"
 70 à 74 ans - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,70 à 74 ans - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres entre 70 y 74 años con respecto a la de hombres"
@@ -24,8 +50,3 @@ Revenu salarial net annuel moyen des femmes par rapport aux hommes,Revenu salari
 85 à 89 ans - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,85 à 89 ans - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres con carrera completa entre 85 y 89 años con respecto a la de hombres"
 Ensemble - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,Ensemble - Toute carrière - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres con respecto a la de hombres"
 Ensemble - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,Ensemble - Toute carrière dont carrière complète - Montant de la retraite des femmes par rapport à celles des hommes,"Jubilación de mujeres con carrera completa con respecto a la de hombres"
-Salaire des femmes par rapport à celui des hommes,Salaire des femmes par rapport à celui des hommes,"Salario de mujeres con respecto al de hombres"
-Cadres - Salaire des femmes par rapport à celui des hommes,Cadres - Salaire des femmes par rapport à celui des hommes,"Ejecutivos, salario de mujeres con respecto al de hombres"
-Professions intermédiaires - Salaire des femmes par rapport à celui des hommes,Professions intermédiaires - Salaire des femmes par rapport à celui des hommes,"Profesiones intermediarias, salario de mujeres con respecto al de hombres"
-Employé·es - Salaire des femmes par rapport à celui des hommes,Employé·es - Salaire des femmes par rapport à celui des hommes,"Empleados, salario de mujeres con respecto al de hombres"
-Ouvrier·es - Salaire des femmes par rapport à celui des hommes,Ouvrier·es - Salaire des femmes par rapport à celui des hommes,"Obreros, salario de mujeres con respecto al de hombres"

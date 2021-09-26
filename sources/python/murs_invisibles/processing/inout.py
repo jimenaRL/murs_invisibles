@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from murs_invisibles.max_endecoding import maxEncode
+from murs_invisibles.max_endecoding import (maxEncode, maxIntHackEncode)
 
 
 class IO(object):
@@ -17,7 +17,7 @@ class IO(object):
             }
         """
 
-        self.n_show = 2
+        self.n_show = 10
 
         self.save_fns = config['fns']
 
@@ -48,9 +48,13 @@ class IO(object):
         """
         encode country and formulation
         """
+        df['year'] = df['year'].apply(
+            lambda x: maxIntHackEncode(x))
         df['country'] = df['country'].apply(
             lambda x: maxEncode(x))
         df['indicator'] = df['indicator'].apply(
+            lambda x: maxEncode(x))
+        df['value'] = df['value'].apply(
             lambda x: maxEncode(x))
         try:
             df.year = df.year.astype(int)
@@ -77,9 +81,35 @@ class IO(object):
                   header=False,
                   encoding='utf-8',
                   sep=self.out_sep)
-        print(df.sample(n=self.n_show))
+        print(df.sample(n=min(self.n_show, len(df))))
         print("{} entries".format(len(df)))
         print("Saved at {}\n".format(out_path))
+
+    def split(self, n, df, path):
+        df.reset_index(drop=True, inplace=True)
+        batch_size = int(len(df) / n)
+        out_path = self.get_out_path(path)
+        for i in range(n):
+            this_out_path = out_path.split('.tsv')[0] + "_{}.tsv".format(i)
+            tmp = df.iloc[batch_size*i:batch_size*(i+1)]
+            tmp.to_csv(this_out_path,
+                      index=False,
+                      header=False,
+                      encoding='utf-8',
+                      sep=self.out_sep)
+            print(tmp.sample(n=min(self.n_show, len(tmp))))
+            print("{} entries".format(len(tmp)))
+            print("Saved at {}\n".format(this_out_path))
+
+
+    def split2(self, df, path):
+        self.split(2, df, path)
+
+    def split3(self, df, path):
+        self.split(3, df, path)
+
+    def split4(self, df, path):
+        self.split(4, df, path)
 
     def get_out_path_indicator(self, path, indicator):
         tmp_path = self._replace_source_folder(path)
@@ -99,7 +129,7 @@ class IO(object):
                        header=False,
                        encoding='utf-8',
                        sep=self.out_sep)
-            print(tmp.sample(n=self.n_show))
+            print(tmp.sample(n=min(self.n_show, len(tmp))))
             print("{} entries".format(len(tmp)))
             print("Saved at {}\n".format(out_path))
 

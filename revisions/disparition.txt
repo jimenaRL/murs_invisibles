@@ -1,0 +1,248 @@
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/CNC-Audiens/tout/audiens_tout.tsv
+	Direction des scènes de musiques actuelles, part de femmes
+	Groupes programmés de musiques actuelles avec au moins une femme
+	Victoires de la musique meilleur album depuis 1895, part de femmes
+	Fréquentation de studio de répétition, part de femmes
+	Sociétaires de la SACEM (droits d'auteur·e), part de femmes
+	Diplômé·es des écoles d'enseignement artistique supérieur du spectacle vivant, part de femmes
+	Emploi spectacle vivant, part de femmes
+	Spectacle vivant: professionnel·les de l'art dramatique, part de femmes
+	Spectacle vivant: professionnel·les des activités artistiques, part de femmes
+	Spectacle vivant: professionnel·les de l'art chorégraphique part de femmes
+	Spectacle vivant: professionnel·les de la musique instrumentale, part de femmes
+	Spectacle vivant: professionnel·les de la musique vocale, part de femmes
+	Spectacle vivant: professionnel·les des arts du cirque et des arts visuels, part de femmes
+	Spectacle vivant: professionnel·les d'autres activités artistiques, part de femmes
+	Spectacle vivant: professionnel·les des activités techniques, part de femmes
+	Spectacle vivant: professionnel·les de la direction technique et de la régie, part de femmes
+	Spectacle vivant: professionnel·les de la machinerie et de la structure, part de femmes
+	Spectacle vivant: professionnel·les des accessoires, part de femmes
+	Spectacle vivant: professionnel·les de l'éclairage, part de femmes
+	Spectacle vivant: professionnel·les du son, part de femmes
+	Spectacle vivant: professionnel·les de l'audiovisuel du spectacle vivant, part de femmes
+	Spectacle vivant: professionnel·les du décor, part de femmes
+	Spectacle vivant: professionnel·les du costume, part de femmes
+	Spectacle vivant: professionnel·les de la coiffure, du maquillage et des masques, part de femmes
+	Spectacle vivant: professionnel·les des activités administratives, part de femmes
+	Spectacle vivant: professionnel·les de la production, part de femmes
+	Spectacle vivant: toutes professions, part de femmes
+	Spectacle vivant: artistes interprètes, part de femmes
+	Spectacle vivant: cadres, part de femmes
+	Spectacle vivant: non cadres, part de femmes
+	Production cinématographique de fiction, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/MINIST-CULT/OBS_GROUP4_TV.tsv
+	A l'antenne, programmes fiction, part de femmes
+	A l'antenne, programmes information, part de femmes
+	A l'antenne, magazines et documentaires, part de femmes
+	A l'antenne, programmes divertissement, part de femmes
+	A l'antenne, programmes sport, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/oecd/developpement/GIDDB2019_poste_de_direction.tsv
+	Postes de direction, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/MINIST-CULT/Observatoire_group2_TH_.tsv
+	Mise en scène de spectacles jeune public des théâtres nationaux, part de femmes
+	Mise en scène de spectacles jeune public des centres dramatiques nationaux et régionaux, part de femmes
+	Mise en scène de spectacles jeune public - scènes nationales, part de femmes
+	Mise en scène de spectacles jeune public - scènes conventionnées, part de femmes
+	Mise en scène de spectacles jeune public - pôles nationaux des arts du cirque, part de femmes
+	Mise en scène de spectacles jeune public des centres de développement chorégraphiques, part de femmes
+	Mise en scène de spectacles jeune public, ensemble, part de femmes
+	Ecriture de spectacles - théâtres nationaux, part de femmes
+	Adaptation de spectacles - théâtres nationaux, part de femmes
+	Traduction de spectacles - théâtres nationaux, part de femmes
+	Mise en scène de spectacles - théâtres nationaux, part de femmes
+	Scénographie de spectacles - théâtres nationaux, part de femmes
+	Chorégraphie de spectacles - théâtres nationaux, part de femmes
+	Ecriture de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Adaptation de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Traduction de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Mise en scène de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Scénographie de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Chorégraphie de spectacles - centres dramatiques nationaux et régionaux, part de femmes
+	Ecriture de spectacles - scènes nationales, part de femmes
+	Adaptation de spectacles - scènes nationales, part de femmes
+	Traduction de spectacles - scènes nationales, part de femmes
+	Mise en scène de spectacles - scènes nationales, part des femmes
+	Scénographie de spectacles - scènes nationales, part de femmes
+	Chorégraphie de spectacles - scènes nationales, part de femmes
+	Ecriture de spectacles - scènes conventionnées, part de femmes
+	Adaptation de spectacles - scènes conventionnées, part de femmes
+	Traduction de spectacles - scènes conventionnées, part de femmes
+	Mise en scène de spectacles - scènes conventionnées, part de femmes
+	Scénographie de spectacles - scènes conventionnées, part de femmes
+	Chorégraphie de spectacles - scènes conventionnées, part de femmes
+	Ecriture de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Adaptation de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Traduction de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Mise en scène de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Scénographie de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Chorégraphie de spectacles - pôles nationaux des arts du cirque, part de femmes
+	Ecriture de spectacles - centres de développement chorégraphiques, part de femmes
+	Mise en scène de spectacles - centres de développement chorégraphiques, part de femmes
+	Scénographie de spectacles - centres de développement chorégraphiques, part de femmes
+	Chorégraphie de spectacles - centres de développement chorégraphiques, part de femmes
+	Ecriture de spectacles tous lieux confondus, part de femmes
+	Adaptation de spectacles  tous lieux confondus, part de femmes
+	Traduction de spectacles tous lieux confondus, part de femmes
+	Mise en scène de spectacles tous lieux confondus, part de femmes
+	Scénographie de spectacles tous lieux confondus, part de femmes
+	Chorégraphie de spectacles tous lieux confondus, part de femmes
+	Représentations dans des lieux musicaux, part de femmes
+	Spectacles dans des lieux musicaux, part de femmes
+	Spectacles jeune public dans des lieux musicaux, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/CNC-Audiens/tout/tout_docs_1_part_des_femmes.tsv
+	Réalisation de films à plus de 7 M€, part de femmes
+	Réalisation de  films à moins de 1 M€, part de femmes
+	Part des films réalisés par des femmes
+	Cadres dans la production cinématographique, part de femmes
+	Non-cadres dans la production cinématographique, part de femmes
+	Artistes dans la production cinématographique, part de femmes
+	Effectifs dans la production cinématographique, part de femmes
+	Réalisation de courts-métrages, part de femmes
+	Réalisation de courts-métrages animation, part de femmes
+	Réalisation de courts-métrages documentaire, part de femmes
+	Réalisation de courts-métrages expérimental, part de femmes
+	Réalisation de courts-métrages fiction, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/EESR/EESR-FR/all.tsv
+	Apprenti·es préparant un diplôme d'enseignement supérieur, BTS/BTSA, part de femmes
+	Apprenti·es préparant un diplôme d'enseignement supérieur, DUT, part de femmes
+	Apprenti·es préparant un diplôme d'enseignement supérieur, Licence, part de femmes
+	Apprenti·es préparant un diplôme d'enseignement supérieur, Diplômes d'ingénieur·es, part de femmes
+	Apprenti·es préparant un diplôme d'enseignement supérieur, Master, part de femmes
+	Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es de recherche, part de femmes
+	Ingénieur·es, technicien·nes, de recherche et de formation, Ingénieur·es d'étude, part de femmes
+	Ingénieur·es, technicien·nes, de recherche et de formation, Assistant·es ingénieur·es, part de femmes
+	Ingénieur·es, technicien·nes, de recherche et de formation, Technicien·nes de recherche, part de femmes
+	Ingénieur·es, technicien·nes de recherche et de formation, adjoint·es techniques, part de femmes
+	Administratifs, sociaux et de santé, administrateur·trices civils part de femmes
+	Administratifs, sociaux et de santé, personnels de direction, part de femmes
+	Administratifs, sociaux et de santé, attaché·es d'administration d'État, part de femmes
+	Administratifs, sociaux et de santé, infirmier·es, part de femmes
+	Administratifs, sociaux et de santé, secrétaires d'administration part de femmes
+	Administratifs, sociaux et de santé, assistant·es de service social & infirmier·es, part de femmes
+	Administratifs, sociaux et de santé, adjoint·es administratifs, part de femmes
+	Administratifs, sociaux et de santé, adjoint·es techniques. des établissemenst d'enseignement, part de femmes
+	Conservateur ·trices de bibliothèques, part de femmes
+	Bibliothécaires, part de femmes
+	Bibliothèques, Bibliothécaires adjoint·es et technicien·nes, part de femmes
+	Bibliothèques, magasinier·es, part de femmes
+	Inspecteur·trices de l'éducation nationale et inspecteur·trices d'académie, part des femmes
+	Conseiller·e principal·e d'éducation, part de femmes
+	Education nationale, personnel d'orientation, part de femmes
+	Enseignant·es de catégorie A
+	Effectifs en recherche et développement en entreprise, chercheur·euses, part de femmes
+	Effectifs en recherche et développement en entreprise, personnels de soutien, part de femmes
+	Effectifs en recherche et développement administration, chercheur·es, part de femmes
+	Effectifs en recherche et développement administration, personnels de soutien, part de femmes
+	Distinction organismes publics de recherche, INRIA, part de femmes
+	Distinction organismes publics de recherche, CNRS, part de femmes
+	Distinction organismes publics de recherche, INSERM, part de femmes
+	Distinction organismes publics de recherche, INRA, part de femmes
+	Formations d'enseignement supérieur, Formations paramédicales et sociales, part de femmes
+	Formations d'enseignement supérieur, Universités - langues, lettres, sciences humaines, part de femmes
+	Formations d'enseignement supérieur, Universités - médecine, odontologie, pharmacie, part de femmes
+	Formations d'enseignement supérieur, Universités - droit, économie, AES, part de femmes
+	Formations d'enseignement supérieur, Écoles de commerce, gestion et comptabilité, part de femmes
+	Formations d'enseignement supérieur, sciences, Technologies, Santé, part de femmes
+	Classes préparatoires aux grandes écoles, part de femmes
+	Formations d'enseignement supérieur, Université - Sport et STAPS, part de femmes
+	Formations d'enseignement supérieur, Université - Sciences, part de femmes
+	Formations d'enseignement supérieur, Formations d'ingénieur·es, part de femmes
+	Diplômé·es d’un titre d’ingénieur·es, part de femmes
+	Personnels enseignants titulaires dans l’enseignement supérieur, filière universitaire, part de femmes
+	Personnels enseignants titulaires dans l’enseignement supérieur, corps spécifiques, part de femmes
+	Personnels enseignants titulaires dans l’enseignement supérieur, filière hospitalo-universitaire, part de femmes
+	Personnels enseignants titulaires dans l’enseignement supérieur, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/onu/dataunorg/SYB61_T05_Seats_held_by_Women_in_Parliament_0.tsv
+	Femmes au parlement national
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/MINIST-CULT/OBS_GROUP3_arts.tsv
+	Artistes exposé·es dans les fonds régionaux d'art contemporain, part de femmes
+	Artistes exposé·es dans les centres d'art contemporain, part de femmes
+	Acquisitions Fond National d'art contemporain, part des œuvres de femmes
+	Acquisitions Fonds régionaux d'art contemporain, part des œuvres de femmes
+	Acquisitions Fonds national d'art contemporain, part des œuvres de femmes
+	Commissaires de grandes expositions, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/secretariat_egalite_femmes_hommes/part_de_femmes.tsv
+	Part des tâches domestiques réalisées par les femmes
+	Université Lettres, sciences humaines, part de femmes
+	Formations paramédicales et sociales, part de femmes
+	Université Sciences et sport STAPS, part de femmes
+	Formations d'ingénieur·es, part de femmes
+	Sciences fondamentales et applications, part de femmes
+	Travail secteur numérique, part de femmes
+	Part consacrée à la retransmission du sport féminin à la télévision
+	Expert·es à la télévision et à la radio, part de femmes
+	Présence de femmes dans des publicités pour le soin du corps
+	Présence de femmes dans des publicités pour du parfum
+	Présence de femmes dans des publicités pour des jeux d'argent
+	Présence de femmes dans des publicités pour des automobiles
+	Bourse, Entreprises SBF 120, part de femmes
+	Bourse, Entreprises CAC 40, part de femmes
+	Bourse, Entreprises MIB 40, part de femmes
+	Bourse, Entreprises FTSE 100, part de femmes
+	Bourse, Entreprises HDAX, part de femmes
+	Direction, présidence d'établissements - spectacle vivant, part de femmes
+	Direction, présidence de Musées Nationaux, part de femmes
+	Direction, présidence d'entreprises de l'audiovisuel public, part de femmes
+	Cadres techniques, part de femmes
+	Direction technique nationale, part de femmes
+	Allocataires du RSA, part de femmes
+	Bénéficiaires prime d'activité, part de femmes
+	Assemblée Nationale, part de femmes
+	Sénat, part de femmes
+	Gouvernement, part de femmes
+	Présidences de commissions Assemblée Nationale, part de femmes
+	Présidences de commissions au Sénat part de femmes
+	Délégations secteur Affaires sociales et santé des conseils régionaux, part de femmes
+	Délégations secteur Education et lycée des conseils régionaux, part de femmes
+	Délégations secteur Budget et Finances des conseils régionaux, part de femmes
+	Délégations secteur Transport des conseils régionaux, part de femmes
+	Programmation artistique théâtre et danse, part des artistes femmes
+	Exposition, et acquisition dans les FRAC , part des artistes femmes
+	Programmation artistique lieux musicaux, part des artistes femmes
+	Réalisation de films longs métrages, part de femmes
+	Fédérations sportives, licencié·es, part de femmes
+	Fonction publique d'État, catégorie A, part de femmes
+	Fonction publique d'État, catégorie A+, part de femmes
+	Fonction publique d'État, encadrement supérieur et direction, part de femmes
+	Fonction publique territoriale, catégorie A, part de femmes
+	Fonction publique territoriale, catégorie A+, part de femmes
+	Fonction publique territoriale, encadrement supérieur et direction, part de femmes
+	Fonction publique hospitalière, catégorie A, part de femmes
+	Fonction publique hospitalière catégorie A+, part de femmes
+	Fonction publique hospitalière, encadrement supérieur et direction, part de femmes
+	École Nationale d'administration, part de femmes
+	Étudiants universitaires, part de femmes
+	Diplômés universités, part de femmes
+	Employés universitaires grade C, part de femmes
+	Employés universitaires grade A, part de femmes
+	Employés cadres techniques, part de femmes
+	Employés DTN (directrice technique nationale), part de femmes
+	Présidentes d'entreprise (PDG), part de femmes
+	Membres exécutifs d'entreprise, part de femmes
+	Membres non exécutifs d'entreprise, part de femmes
+	Maires de France, part de femmes
+	Conseilleurs municipaux, part de femmes
+	Présidentes de conseils régionaux, part de femmes
+	Conseilleurs régionaux, part de femmes
+	Présidentes de conseils départementaux, part de femmes
+	Conseilleurs départementaux, part de femmes
+	Conseilleurs régionaux en affaires sociale, part de femmes
+	Conseilleurs régionaux en éducation, part des femmes 
+	Conseilleurs régionaux en budget/finance, part de femmes
+	Conseilleurs régionaux en transport, part de femmes
+	Directeurs des musées nationaux, part de femmes
+	Artistes dans spectacles cirque, part de femmes
+	Artistes dans spectacles danse, part de femmes
+	Artistes dans spectacles théâtre, part de femmes
+	Artistes compositeurs, part de femmes
+	Artistes chefs d'orchestre, part de femmes
+	Artistes solistes, part des femmes
+	Artistes travaillant dans la mise en scène opéra, part de femmes
+	Présentateurs dans les journaux télévision, part des femmes 
+	Présentateurs dans les journaux radio, part des femmes 
+	Pourcentage des femmes parmi les experts invités dans les médias
+	Pourcentage des femmes ayant subi une attitude sexiste
+	Directeurs des  entreprises de l'audiovisuel public, part de femmes
+	Directeurs des établissement spectacle vivant, part de femmes
+/Users/jimenarl/Desktop/git_murs/data/m4l/fr/onu/genderstats/43_-_Women’s_share_of_government_ministerial_positions_data_0.tsv
+	Ministres, part de femmes

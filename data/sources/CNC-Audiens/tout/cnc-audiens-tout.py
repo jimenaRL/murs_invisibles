@@ -7,21 +7,20 @@ from murs_invisibles import Processer
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "fr",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
             "audiens_tout.csv": "one_save",
-            "cnc_tout_doc_2_ecarts.csv": "one_save",
+            #"cnc_tout_doc_2_ecarts.csv": "one_save",  # A VERIFIER SAISI !!!!!
             "tout_docs_1_part_des_femmes.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
-            "audiens_tout.csv": "no_process",
-            "cnc_tout_doc_2_ecarts.csv": "no_process",
-            "tout_docs_1_part_des_femmes.csv": "no_process",
+            "audiens_tout.csv": ["no_process"],
+            "cnc_tout_doc_2_ecarts.csv": ["no_process"],
+            "tout_docs_1_part_des_femmes.csv": ["no_process"],
         },
         'rename': {
             'country': 'pays',
@@ -50,7 +49,7 @@ config = {
     "postprocesser": {
         'fns': {
             "audiens_tout.csv": "perc",
-            "cnc_tout_doc_2_ecarts.csv": "diff_pp",
+            "cnc_tout_doc_2_ecarts.csv": "perc_1v",
             "tout_docs_1_part_des_femmes.csv": "perc",
         }
     },

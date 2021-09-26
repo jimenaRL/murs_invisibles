@@ -7,7 +7,6 @@ from murs_invisibles import Processer
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "fr",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -18,8 +17,8 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'GIDDB2014_titres_fonciers.csv': 'no_process',
-            'GIDDB2019_poste_de_direction.csv': 'no_process',
+            'GIDDB2014_titres_fonciers.csv': ['no_process'],
+            'GIDDB2019_poste_de_direction.csv': ['no_process'],
         },
         'rename': {
             'country': 'Pays',

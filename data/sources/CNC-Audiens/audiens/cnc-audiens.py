@@ -7,7 +7,6 @@ from murs_invisibles import Processer
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "fr",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -19,9 +18,9 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            "emploi_spect_vivant_cat_so.csv": "no_process",
-            "emploi_spect_vivant.csv": "no_process",
-            "intermitants.csv": "virg2point",
+            "emploi_spect_vivant_cat_so.csv": ["no_process"],
+            "emploi_spect_vivant.csv": ["no_process"],
+            "intermitants.csv": ["virg2point"],
         },
         'rename': {
             'country': 'pays',

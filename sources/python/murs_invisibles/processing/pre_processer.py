@@ -14,6 +14,12 @@ class PreProcesser(object):
 
         self.fns = config['fns']
         self.rename = {v: k for k, v in config['rename'].items()}
+        self.values = ['value', 'femmes', 'hommes']
+
+    def remove_google_sheet_nan(self, df):
+        df = df[df.value != '#DIV/0!']
+        df = df[df.value != '#VALUE!']
+        return df
 
     def format_columns(self, df):
         """
@@ -22,42 +28,41 @@ class PreProcesser(object):
         return df.rename(columns=self.rename)
 
     def remove_prop(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
+                try:
+                    df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
+                except Exception as e:
+                    print("WARNING: unnable to remove '%' from {} columns: {}" \
+                        .format(v, e))
         return df
 
     def no_process(self, df):
         return df
 
     def virg2point(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda row: float(row.replace(',', '.')))
-        return df
-
-    def remove_dollar_and_k_percRel1(self, df):
-        df = self.remove_dollar_and_k(df)
-        df = self.percRel1(df)
+                df[v] = df[v].apply(lambda row: row.replace(',', '.'))
         return df
 
     def remove_dollar_and_k(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda s: float(
-                    s.replace(' k$', '').replace(',', '.').replace(' ', '')))
+                df[v] = df[v].apply(lambda s: 
+                    s.replace(' k$', '').replace(',', '.').replace(' ', ''))
                 df[v] = df[v].apply(lambda s: 1000.*float(s))
         return df
 
     def remove_euro_and_perc(self, df):
-        values = ['value', 'femmes', 'hommes']
-        for v in values:
+        for v in self.values:
             if v in df.columns:
                 df[v] = df[v].apply(
-                    lambda s: float(str(s).replace('€', '').replace('%', '')))
+                    lambda s: str(s).replace('€', '').replace('%', ''))
+        return df
+
+    def x100(self, df):
+        df['value'] = 100 * df['value']
         return df
 
     def fsurtotal(self, df):
@@ -68,21 +73,10 @@ class PreProcesser(object):
         df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
         return df
 
-    def virg2point_perc_fsurtotal(self, df):
-        df = self.virg2point(df)
-        df = self.perc_fsurtotal(df)
-        return df
-
-    def virg2point_diffFH(self, df):
-        df = self.virg2point(df)
-        df = self.diffFH(df)
-        return df
-
     def diffFH(self, df):
         """
         Units must be later in pp
         """
-        df = self.remove_euro_and_perc(df)
         df['value'] = df.femmes-df.hommes
         return df
 
@@ -94,20 +88,6 @@ class PreProcesser(object):
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
 
-    def virg2point_percRel1(self, df):
-        """
-        """
-        df = self.virg2point(df)
-        df = self.percRel1(df)
-        return df
-
-    def virg2point_percRel100(self, df):
-        """
-        """
-        df = self.virg2point(df)
-        df = self.percRel100(df)
-        return df
-
     def percRel100(self, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
@@ -116,23 +96,73 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
-    # def women2men(self, df):
-    #     """
-    #     """
-    #     df['value'] = df.femmes / df.hommes
-    #     return df
 
-    def get_wm_then_percRel1(self, df):
-        df = self.get_wm(df)
-        df = self.percRel1(df)
+    def get_wm_onu_gender_wages_gap(self, df):
+
+        df.Occupation = df.Occupation
+        df.indicator = df.indicator+ ' ' + df.Occupation
+        df = df.drop('Occupation', axis=1)
+
+        return self.get_wm_onu(df)
+
+
+
+    def get_wm_onu_age(self, df):
+
+        df.indicator = df.indicator+ ' ' + df.Age
+        df = df.drop('Age', axis=1)
+
+        return self.get_wm_onu(df)
+
+
+    def get_wm_onu(self, df):
+
+        if 'Location' in df and 'All areas' in df.Location.unique():
+            df = df[df.Location == 'All areas']
+        df = df[df.Sex != 'Both sexes']
+
+        df = df.drop(['Location', 'Region', 'Occupation', 'LowerBound',
+            'UpperBound', 'Unit', 'NatureData', 'OriginData', 'Country Code',
+            'Footnote1', 'Footnote2', 'Footnote3', 'Footnote4', 'Footnote5',
+            'Footnote6', 'Coverage'],
+            axis=1, errors='ignore')
+
+        hash_cols = set(df.columns.tolist())
+        hash_cols -= set(['value', 'Sex'])
+
+        df['hash'] = df.apply(
+            lambda row: hash(
+                ''.join([str(row[c]) for c in hash_cols])), axis=1)
+
+        hash_count = df.groupby(by='hash').count().Sex \
+            .to_frame().reset_index().rename({'Sex': 'hash_count'}, axis=1)
+        valid_hash = hash_count[hash_count.hash_count == 2]
+
+        df = pd.merge(df, valid_hash, how='inner', on=['hash'])
+
+        women_df = df[df['Sex'] == 'Female']
+        men_df = df[df['Sex'] == 'Male']
+
+        merge_on = list(
+            set(self.rename.values()) - set(['value']) | set(['hash']))
+
+        df = pd.merge(women_df,
+                      men_df,
+                      how='inner',
+                      on=merge_on,
+                      suffixes=('_women', '_men'))
+
+        merge_on.remove('hash')
+        keep = merge_on + ['value_men', 'value_women']
+        df = df[keep]
+
+        df = df.rename(
+            {'value_men': 'hommes', 'value_women': 'femmes'}, axis=1)
+
         return df
 
-    def get_wm_then_percRel100(self, df):
-        df = self.get_wm(df)
-        df = self.percRel100(df)
-        return df
 
-    def get_wm(self, df):
+    def get_wm_oecd(self, df):
         """
         Dataframe preprocessing
         """
@@ -182,6 +212,20 @@ class PreProcesser(object):
 
         return df
 
+    def try_float_conversion(self, df):
+        for v in self.values:
+            if v in df.columns:
+                try:
+                    df[v] = df[v].apply(lambda s: float(s))
+                except:
+                    pass
+        return df
+
+
     def process(self, table, df):
         df = self.format_columns(df)
-        return getattr(self, self.fns[table])(df)
+        for fn in self.fns[table]:
+            df = getattr(self, fn)(df)
+            df = self.try_float_conversion(df)
+        df = df[self.rename.values()]
+        return df

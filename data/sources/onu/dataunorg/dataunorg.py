@@ -6,20 +6,19 @@ from murs_invisibles import Processer
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "en",
-    "target_language": "es",
     "io": {
         "header": 1,
         "encoding": 'latin1',
         "fns": {
-            'SYB61_T05_Seats held by Women in Parliament.csv': 'one_save',
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'one_save',
+            'SYB61_T05_Seats held by Women in Parliament.csv': 'split4',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'split4',
         },
     },
     "preprocesser": {
         'fns': {
-            'SYB61_T05_Seats held by Women in Parliament.csv': 'no_process',
+            'SYB61_T05_Seats held by Women in Parliament.csv': ['no_process'],
             # /!\ problem with ’ character /!\ #
-            'SYB61_T06_Ratio of Girls to Boys in Education.csv': 'no_process',
+            'SYB61_T06_Ratio of Girls to Boys in Education.csv': ['no_process'],
         },
         'rename': {
             'country': 'Unnamed: 1',

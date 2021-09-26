@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 class Mapper(object):
@@ -13,6 +14,13 @@ class Mapper(object):
         """
 
         self.fns = config['fns']
+
+    @classmethod
+    def abstanh(cls, row):
+        """
+        """
+        return np.tanh(0.01 * np.abs(row.value))
+
 
     @classmethod
     def proportion1(cls, row):
@@ -36,6 +44,15 @@ class Mapper(object):
         """
         row.value = row.value / 100.
         return cls.proportion1(row)
+
+    @classmethod
+    def percRel100_30(cls, row):
+        return abs(row.value) / 30.
+
+
+    @classmethod
+    def diff_fm_minutes(cls, row):
+        return abs(row.value) / 180.
 
     @classmethod
     def diffFH_1(cls, row):
@@ -66,8 +83,24 @@ class Mapper(object):
         return abs(row.value) / 10.
 
     @classmethod
+    def diffFH_15(cls, row):
+        return abs(row.value) / 15.
+
+    @classmethod
     def diffFH_20(cls, row):
         return abs(row.value) / 20.
+
+    @classmethod
+    def diffFH_25(cls, row):
+        return abs(row.value) / 25.
+
+    @classmethod
+    def diffFH_hours_1(cls, row):
+        return abs(row.value) / 1.
+
+    @classmethod
+    def diffFH_hours_4(cls, row):
+        return abs(row.value) / 4.
 
     @classmethod
     def diffFH_50(cls, row):

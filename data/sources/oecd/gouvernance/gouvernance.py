@@ -10,7 +10,6 @@ filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "en",
-    "target_language": "es",
     "io": {
         "header": 0,
         "encoding": 'utf-8',
@@ -20,7 +19,7 @@ config = {
     },
     "preprocesser": {
         'fns': {
-            'GOV_2017_03042019165415175.csv': 'no_process',
+            'GOV_2017_03042019165415175.csv': ['no_process'],
         },
         'rename': {
             'country': 'Country',
@@ -37,7 +36,7 @@ config = {
     "filter": {
         'filter_indicator_path': filter_indicator_path,
         'year': {
-            'GOV_2017_03042019165415175.csv': 2010,
+            'GOV_2017_03042019165415175.csv': 2015,
         }
     },
     "translator": {
