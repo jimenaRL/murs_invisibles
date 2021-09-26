@@ -3,3 +3,7 @@
 *.mov
 *.png
 *google_api_key*
+*.*.sh
+*.*.js
+*.*.amxd
+*.*.tsv
