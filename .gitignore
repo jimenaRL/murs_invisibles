@@ -3,3 +3,4 @@
 *.mov
 *.png
 *google_api_key*
+*token.txt
