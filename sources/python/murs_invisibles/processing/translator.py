@@ -48,7 +48,7 @@ class Translator(object):
             print("Missing entries in translation dictionary.")
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             for i in missing_trads:
-                print('"{}","{}",\n'.format(i, i))
+                print('"{}","{}",'.format(i, i))
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             input("Press Enter to continue...")
         df = df.merge(self.ind_dict, on='indicator', how='inner')
