@@ -194,7 +194,7 @@ class Processer(object):
             out[table] = df
 
         # post merge
-        if self.config['merge']:
+        if 'merge' in self.config:
             print(f"MERGED")
             for nom, datas in self.config['merge'].items():
                 print(f">>>> {nom} <<<<")

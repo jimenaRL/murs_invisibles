@@ -13,7 +13,7 @@ class PreProcesser(object):
         """
 
         self.fns = config['fns']
-        self.rename = {v: k for k, v in config['rename'].items()}
+        self.rename = {v: k for k, l in config['rename'].items() for v in l }
         self.values = ['value', 'femmes', 'hommes']
 
     def remove_google_sheet_nan(self, df):
@@ -227,5 +227,5 @@ class PreProcesser(object):
         for fn in self.fns[table]:
             df = getattr(self, fn)(df)
             df = self.try_float_conversion(df)
-        df = df[self.rename.values()]
+        df = df[set(self.rename.values())]
         return df
