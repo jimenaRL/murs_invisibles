@@ -30,10 +30,10 @@ config = {
             "INED - INED T4 Viol sex + Etude Nat Viol sex 2018 2020.csv": [],
         },
         'rename': {
-            'country': 'pays',
-            'year': 'annee',
-            'indicator': 'nom',
-            'value': 'valeur',
+            'country': ['pays'],
+            'year': ['annee'],
+            'indicator': ['nom'],
+            'value': ['valeur'],
         },
     },
     "filter": {
