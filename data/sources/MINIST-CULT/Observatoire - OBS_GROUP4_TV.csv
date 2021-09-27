@@ -1,0 +1,121 @@
+annee,pays,nom,valeur
+2013,France,"A l'antenne, programmes fiction, part de femmes",37%
+2014,France,"A l'antenne, programmes fiction, part de femmes",37%
+2015,France,"A l'antenne, programmes fiction, part de femmes",39%
+2016,France,"A l'antenne, programmes fiction, part de femmes",35%
+2013,France,"A l'antenne, programmes information, part de femmes",35%
+2014,France,"A l'antenne, programmes information, part de femmes",36%
+2015,France,"A l'antenne, programmes information, part de femmes",36%
+2016,France,"A l'antenne, programmes information, part de femmes",37%
+2013,France,"A l'antenne, magazines et documentaires, part de femmes",37%
+2014,France,"A l'antenne, magazines et documentaires, part de femmes",34%
+2015,France,"A l'antenne, magazines et documentaires, part de femmes",35%
+2016,France,"A l'antenne, magazines et documentaires, part de femmes",32%
+2013,France,"A l'antenne, programmes divertissement, part de femmes",41%
+2014,France,"A l'antenne, programmes divertissement, part de femmes",39%
+2016,France,"A l'antenne, programmes divertissement, part de femmes",41%
+2013,France,"A l'antenne, programmes sport, part de femmes",15%
+2014,France,"A l'antenne, programmes sport, part de femmes",16%
+2016,France,"A l'antenne, programmes sport, part de femmes",17%
+2018,France,"A l'antenne, programmes fiction, part de femmes",40%
+2018,France,"A l'antenne, programmes information, part de femmes",38%
+2018,France,"A l'antenne, magazines et documentaires, part de femmes",36%
+2018,France,"A l'antenne, programmes divertissement, part de femmes",43%
+2018,France,"A l'antenne, programmes sport, part de femmes",24%
+2019,France,"A l'antenne, programmes fiction, part de femmes",41%
+2019,France,"A l'antenne, programmes information, part de femmes",39%
+2019,France,"A l'antenne, magazines et documentaires, part de femmes",38%
+2019,France,"A l'antenne, programmes divertissement, part de femmes",40%
+2019,France,"A l'antenne, programmes sport, part de femmes",15%
+2017,France,"Présentateurs, France Info, part de femmes",19%
+2017,France,"Présentateurs, France inter, part de femmes",36%
+2017,France,"Présentateurs, France Culture, part de femmes",52%
+2017,France,"Présentateurs, France Musique, part de femmes",49%
+2017,France,"Présentateurs, RFI, part de femmes",42%
+2017,France,"Présentateurs, RMC, part de femmes",17%
+2017,France,"Présentateurs, RTL, part de femmes",32%
+2017,France,"Présentateurs, Europe 1, part de femmes",48%
+2017,France,"Experts, France Info, part de femmes",31%
+2017,France,"Experts, France inter, part de femmes",34%
+2017,France,"Experts, France Culture, part de femmes",33%
+2017,France,"Experts, France Musique, part de femmes",28%
+2017,France,"Experts, RFI, part de femmes",32%
+2017,France,"Experts, RMC, part de femmes",24%
+2017,France,"Experts, RTL, part de femmes",31%
+2017,France,"Experts, Europe 1, part de femmes",48%
+2017,France,"Journalistes, France Info, part de femmes",38%
+2017,France,"Journalistes, France inter, part de femmes",46%
+2017,France,"Journalistes, France Culture, part de femmes",48%
+2017,France,"Journalistes, France Musique, part de femmes",52%
+2017,France,"Journalistes, RFI, part de femmes",37%
+2017,France,"Journalistes, RMC, part de femmes",20%
+2017,France,"Journalistes, RTL, part de femmes",42%
+2017,France,"Journalistes, Europe 1, part de femmes",52%
+2018,France,"Présentateurs, France Info, part de femmes",27%
+2018,France,"Présentateurs, France inter, part de femmes",39%
+2018,France,"Présentateurs, France Culture, part de femmes",48%
+2018,France,"Présentateurs, France Musique, part de femmes",57%
+2018,France,"Présentateurs, RFI, part de femmes",43%
+2018,France,"Présentateurs, RMC, part de femmes",18%
+2018,France,"Présentateurs, RTL, part de femmes",33%
+2018,France,"Présentateurs, Europe 1, part de femmes",36%
+2018,France,"Experts, France Info, part de femmes",27%
+2018,France,"Experts, France inter, part de femmes",36%
+2018,France,"Experts, France Culture, part de femmes",36%
+2018,France,"Experts, France Musique, part de femmes",50%
+2018,France,"Experts, RFI, part de femmes",35%
+2018,France,"Experts, RMC, part de femmes",20%
+2018,France,"Experts, RTL, part de femmes",31%
+2018,France,"Experts, Europe 1, part de femmes",44%
+2018,France,"Journalistes, France Info, part de femmes",36%
+2018,France,"Journalistes, France inter, part de femmes",46%
+2018,France,"Journalistes, France Culture, part de femmes",47%
+2018,France,"Journalistes, France Musique, part de femmes",44%
+2018,France,"Journalistes, RFI, part de femmes",40%
+2018,France,"Journalistes, RMC, part de femmes",19%
+2018,France,"Journalistes, RTL, part de femmes",31%
+2018,France,"Journalistes, Europe 1, part de femmes",44%
+2019,France,"Présentateurs, France Info, part de femmes",35%
+2019,France,"Présentateurs, France inter, part de femmes",42%
+2019,France,"Présentateurs, France Culture, part de femmes",47%
+2019,France,"Présentateurs, France Musique, part de femmes",47%
+2019,France,"Présentateurs, RFI, part de femmes",47%
+2019,France,"Présentateurs, RMC, part de femmes",11%
+2019,France,"Présentateurs, RTL, part de femmes",49%
+2019,France,"Présentateurs, Europe 1, part de femmes",47%
+2019,France,"Experts, France Info, part de femmes",46%
+2019,France,"Experts, France inter, part de femmes",38%
+2019,France,"Experts, France Culture, part de femmes",39%
+2019,France,"Experts, France Musique, part de femmes",51%
+2019,France,"Experts, RFI, part de femmes",36%
+2019,France,"Experts, RMC, part de femmes",15%
+2019,France,"Experts, RTL, part de femmes",42%
+2019,France,"Experts, Europe 1, part de femmes",38%
+2019,France,"Journalistes, France Info, part de femmes",40%
+2019,France,"Journalistes, France inter, part de femmes",49%
+2019,France,"Journalistes, France Culture, part de femmes",51%
+2019,France,"Journalistes, France Musique, part de femmes",58%
+2019,France,"Journalistes, RFI, part de femmes",35%
+2019,France,"Journalistes, RMC, part de femmes",25%
+2019,France,"Journalistes, RTL, part de femmes",31%
+2019,France,"Journalistes, Europe 1, part de femmes",65%
+2018,France,"Experts, France 2, part de femmes",34%
+2018,France,"Experts, France 3, part de femmes",56%
+2018,France,"Experts, France 5, part de femmes",50%
+2018,France,"Experts, TF1, part de femmes",43%
+2018,France,"Experts, Canal+, part de femmes",28%
+2018,France,"Experts, M6 part de femmes",20%
+2018,France,"Experts, Paris Première, part de femmes",39%
+2019,France,"Experts, France 2, part de femmes",41%
+2019,France,"Experts, France 3, part de femmes",29%
+2019,France,"Experts, France 5, part de femmes",39%
+2019,France,"Experts, TF1, part de femmes",50%
+2019,France,"Experts, Canal+, part de femmes",35%
+2019,France,"Experts, M6 part de femmes",39%
+2019,France,"Experts, Paris Première, part de femmes",39%
+2019,France,"Télévision, programmes diffusés aux heures de forte audience, part de femmes",33%
+2018,France,"Télévision, programmes diffusés aux heures de forte audience, part de femmes",39%
+2017,France,"Télévision, programmes diffusés aux heures de forte audience, part de femmes",29%
+2016,France,"Télévision, programmes diffusés aux heures de forte audience, part de femmes",25%
+2020,France,"Experts dans la presse nationale pendant le premier confinement, part de femmes",26%
+2020,France,"A la une des journaux pendant le premier confinement, part de femmes",17%
