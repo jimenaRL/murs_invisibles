@@ -30,10 +30,10 @@ config = {
             '46 - Share of female police officers_data.csv': ['no_process'],
         },
         'rename': {
-            'country': 'country',
-            'year': 'year',
-            'indicator': 'indicator',
-            'value': 'value'
+            'country': ['country'],
+            'year': ['year'],
+            'indicator': ['indicator'],
+            'value': ['value']
         },
     },
     "mapper": {
