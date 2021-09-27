@@ -194,9 +194,10 @@ class Processer(object):
             out[table] = df
 
         # post merge
-        print(f"MERGED")
-        for nom, datas in self.config['merge'].items():
-            print(f">>>> {nom} <<<<")
-            df_merged = pd.concat([out[data] for data in datas])
-            merged_path = self.io.get_out_path_indicator(path, nom)
-            self.io.one_save(df_merged, merged_path)
+        if self.config['merge']:
+            print(f"MERGED")
+            for nom, datas in self.config['merge'].items():
+                print(f">>>> {nom} <<<<")
+                df_merged = pd.concat([out[data] for data in datas])
+                merged_path = self.io.get_out_path_indicator(path, nom)
+                self.io.one_save(df_merged, merged_path)
