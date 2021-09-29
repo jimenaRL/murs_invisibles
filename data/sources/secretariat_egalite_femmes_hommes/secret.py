@@ -12,7 +12,7 @@ config = {
         "encoding": 'utf-8',
         "fns": {
             "ecarts_salaires.csv": "one_save",
-            "part de femmes.csv": "one_save"
+            "part de femmes.csv": "split3"
         },
     },
     "preprocesser": {
@@ -21,10 +21,10 @@ config = {
             "part de femmes.csv": ["remove_prop"]
         },
         'rename': {
-            'country': 'pays',
-            'year': 'annee',
-            'indicator': 'nom',
-            'value': 'part de femmes',
+            'country': ['pays'],
+            'year': ['annee'],
+            'indicator': ['nom'],
+            'value': ['part de femmes'],
         },
     },
     "mapper": {
