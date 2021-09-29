@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class Sorter(object):
+class Sorter():
 
     def __init__(self, config):
         """

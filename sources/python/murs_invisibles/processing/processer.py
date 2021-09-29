@@ -1,5 +1,8 @@
+"""
+Main data processer
+"""
+
 import os
-from copy import deepcopy
 import pandas as pd
 
 from murs_invisibles.processing.mapper import Mapper
@@ -18,66 +21,67 @@ from murs_invisibles.processing.config import (
 )
 
 
-class Processer(object):
+class Processer():
+    """
+    Main data processer class.
+    """
 
     def _set_filter_config(self, filter_config):
-        if not "origin_language" in filter_config:
+        if "origin_language" not in filter_config:
             filter_config.update({
-                "origin_language": self.config["origin_language"]
-                })
+                "origin_language": self.config["origin_language"]})
         filter_config.update({
-                "filter_country_path": FILTER_COUNTRY_PATH.format(
-                    self.config['origin_language'])
-                })
+            "filter_country_path": FILTER_COUNTRY_PATH.format(
+                self.config['origin_language'])
+        })
         return filter_config
 
     def _set_translator_config(self, translator_config):
 
         # set config to translate indicators
-        if not "indicator_origin_language" in translator_config:
+        if "indicator_origin_language" not in translator_config:
             indicator_translation = self.default_translation
         else:
-            indicator_translation = '{}2{}'.format(
-                translator_config["indicator_origin_language"],
-                self.get_global_target_language())
+            tcf = translator_config["indicator_origin_language"]
+            gtl = self._get_global_target_language()
+            indicator_translation = f'{tcf}2{gtl}'
         translator_config.update({"indicator": indicator_translation})
         translator_config.update({
             "ind_dict_path": os.path.join(
                 self.base_path,
                 "indicator_translations.csv")
-            })
+        })
 
         # set config to translate countries
-        if not "country_origin_language" in translator_config:
+        if "country_origin_language" not in translator_config:
             country_translation = self.default_translation
         else:
-            country_translation = '{}2{}'.format(
-                translator_config["country_origin_language"],
-                self.get_global_target_language())
+            trc = translator_config["country_origin_language"]
+            gtl = self._get_global_target_language()
+            country_translation = f'{trc}2{gtl}'
         translator_config.update({"country": country_translation})
         translator_config.update({
-                "country_dict_path": TRANSLATOR_COUNTRY_PATH.format(
-                    self.default_translation)
-                })
+            "country_dict_path": TRANSLATOR_COUNTRY_PATH.format(
+                self.default_translation)
+        })
 
         return translator_config
 
     def _set_io_config(self, io_config):
-        io_config["target_language"] = self.get_global_target_language()
+        io_config["target_language"] = self._get_global_target_language()
         return io_config
 
-    def get_global_target_language(self):
-        if TARGET_LANG_ENV_VAR in os.environ.keys():
-            target_lang = os.environ[TARGET_LANG_ENV_VAR]
-            if target_lang in VALID_LANGS:
-                return target_lang
-            else:
-                msg = f"{TARGET_LANG_ENV_VAR} environ variable must be one of: "
-                msg += ' '.join([f"'{_}'" for _ in VALID_LANGS])
-                msg += f", got '{target_lang}'."
-                raise ValueError(msg)
-
-        raise ValueError(f"Missing {TARGET_LANG_ENV_VAR} environ variable.")
+    @classmethod
+    def _get_global_target_language(cls):
+        if TARGET_LANG_ENV_VAR not in os.environ:
+            raise ValueError(f"Missing {TARGET_LANG_ENV_VAR} env variable.")
+        target_lang = os.environ[TARGET_LANG_ENV_VAR]
+        if target_lang in VALID_LANGS:
+            return target_lang
+        msg = f"{TARGET_LANG_ENV_VAR} env variable must be one of: "
+        msg += ' '.join([f"'{_}'" for _ in VALID_LANGS])
+        msg += f", got '{target_lang}'."
+        raise ValueError(msg)
 
     def __init__(self, config):
         """
@@ -131,10 +135,9 @@ class Processer(object):
         self.config = config
         self.base_path = config['base_path']
         self.tables = config['io']['fns'].keys()
-        self.default_translation = '{}2{}'.format(
-            config["origin_language"],
-            self.get_global_target_language())
-
+        ola = config["origin_language"]
+        gtl = self._get_global_target_language()
+        self.default_translation = f'{ola}2{gtl}'
         self.preprocesser = PreProcesser(config['preprocesser'])
 
         config['filter'] = self._set_filter_config(config['filter'])
@@ -142,7 +145,9 @@ class Processer(object):
 
         self.mapper = Mapper(config['mapper'])
 
-        config['translator'] = self._set_translator_config(config['translator'])
+        config['translator'] = self._set_translator_config(
+            config['translator']
+        )
         self.translator = Translator(config['translator'])
 
         self.postprocesser = PostProcesser(config['postprocesser'])
@@ -153,6 +158,7 @@ class Processer(object):
         self.io = IO(io_config)
 
     def process(self):
+        """ Data pipeline."""
 
         out = {}
         for table in self.tables:
@@ -162,7 +168,7 @@ class Processer(object):
 
             # load
             df = self.io.load(path)
-            #print(df.head())
+            # print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
@@ -195,7 +201,7 @@ class Processer(object):
 
         # post merge
         if 'merge' in self.config:
-            print(f"MERGED")
+            print("MERGED")
             for nom, datas in self.config['merge'].items():
                 print(f">>>> {nom} <<<<")
                 df_merged = pd.concat([out[data] for data in datas])
