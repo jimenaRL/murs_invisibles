@@ -1,6 +1,4 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
 
@@ -11,12 +9,12 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            "Observatoire - OBS_GROUP3_arts.csv": "one_save",
-            "Observatoire - OBS_GROUP4_TV.csv": "one_save",
             "Observatoire - Observatoire_GROUP1_part.csv": "one_save",
             "Observatoire - Observatoire_GROUP1_ecarts.csv": "one_save",
-            "Observatoire - Observatoire_group2_TH_.csv": "one_save",
-            "Observatoire - OBS_GROUP5_arts culture.csv": "one_save",
+            "Observatoire - Observatoire_group2_TH_.csv": "split3",
+            "Observatoire - OBS_GROUP3_arts.csv": "split2",
+            "Observatoire - OBS_GROUP4_TV.csv": "split3",
+            "Observatoire - OBS_GROUP5_arts culture.csv": "split2",
         },
     },
     "preprocesser": {
@@ -40,6 +38,7 @@ config = {
             "Observatoire - OBS_GROUP3_arts.csv": "proportion100",
             "Observatoire - OBS_GROUP4_TV.csv": "proportion100",
             "Observatoire - Observatoire_GROUP1_part.csv": "proportion100",
+            # mmmm... écarts!
             "Observatoire - Observatoire_GROUP1_ecarts.csv": "proportion100",
             "Observatoire - Observatoire_group2_TH_.csv": "proportion100",
             "Observatoire - OBS_GROUP5_arts culture.csv": "proportion100"
