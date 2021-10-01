@@ -23,7 +23,7 @@ config = {
         'rename': {
             'country': ['Pays'],
             'year': ['TIME'],
-            'indicator': ['VAR', 'Indicateur'],
+            'indicator': ['VAR'],
             'value': ['Value'],
         },
     },
