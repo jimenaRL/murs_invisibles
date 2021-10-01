@@ -1,7 +1,5 @@
-import pandas as pd
 
-
-class PostProcesser(object):
+class PostProcesser():
 
     def __init__(self, config):
         """
@@ -21,7 +19,6 @@ class PostProcesser(object):
             lambda row: row.sign + '%1.1f' % abs(row.value) + 'p%', axis=1)
         return df
 
-
     @classmethod
     def diff_minutes(cls, df):
         df['sign'] = df.apply(
@@ -38,7 +35,6 @@ class PostProcesser(object):
             lambda row: row.sign + '%i' % abs(60 * row.value) + " min", axis=1)
         return df
 
-
     @classmethod
     def diff_euro(cls, df):
         df['sign'] = df.apply(
@@ -46,7 +42,6 @@ class PostProcesser(object):
         df['value'] = df.apply(
             lambda row: row.sign + '%1.1f' % abs(row.value) + '€', axis=1)
         return df
-
 
     @classmethod
     def diff_perc(cls, df):
@@ -64,11 +59,10 @@ class PostProcesser(object):
             lambda row: row.sign + '%1.0f' % abs(row.value) + '%', axis=1)
         return df
 
-
     @classmethod
     def percX100(cls, df):
         df['value'] = df.apply(
-            lambda row: '%1.0f' % abs(100*row.value) + '%', axis=1)
+            lambda row: '%1.0f' % abs(100 * row.value) + '%', axis=1)
         return df
 
     @classmethod
@@ -109,4 +103,5 @@ class PostProcesser(object):
         return df
 
     def process(self, table, df):
-        return getattr(self, self.fns[table])(df)
+        df = getattr(self, self.fns[table])(df)
+        return df.drop_duplicates(keep='first')
