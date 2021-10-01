@@ -1,12 +1,12 @@
 annee,pays,nom,valeur
-2016,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part des femmes",31%
-2015,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part des femmes",23%
-2014,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part des femmes ",23%
-2013,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part des femmes ",23%
-2016,France,"Artistes exposé·e·s dans les centres d’art contemporain, part des femmes ",33%
-2015,France,"Artistes exposé·e·s dans les centres d’art contemporain, part des femmes ",31%
-2014,France,"Artistes exposé·e·s dans les centres d’art contemporain, part des femmes ",31%
-2013,France,"Artistes exposé·e·s dans les centres d’art contemporain, part des femmes ",33%
+2016,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part de femmes",31%
+2015,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part de femmes",23%
+2014,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part de femmes ",23%
+2013,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part de femmes ",23%
+2016,France,"Artistes exposé·e·s dans les centres d’art contemporain, part de femmes ",33%
+2015,France,"Artistes exposé·e·s dans les centres d’art contemporain, part de femmes ",31%
+2014,France,"Artistes exposé·e·s dans les centres d’art contemporain, part de femmes ",31%
+2013,France,"Artistes exposé·e·s dans les centres d’art contemporain, part de femmes ",33%
 2016,France,"Acquisitions fonds national d’art contemporain (fnac), part des œuvres de femmes",12%
 2015,France,"Acquisitions fonds national d’art contemporain (fnac), part des œuvres de femmes",43%
 2014,France,"Acquisitions fonds national d’art contemporain (fnac), part des œuvres de femmes",31%
@@ -18,12 +18,34 @@ annee,pays,nom,valeur
 2014,France,"Acquisitions Fonds national d’art contemporain (fnac), part des œuvres de femmes",25%
 2013,France,"Acquisitions Fonds national d’art contemporain (fnac), part des œuvres de femmes",28%
 2012,France,"Acquisitions Fonds national d’art contemporain (fnac), part des œuvres de femmes",19%
-2015,France,"Commissaires d’expositions de quelques grandes expositions, part des femmes",49%
-2016,France,"Commissaires d’expositions de quelques grandes expositions, part des femmes",58%
-2017,France,"Commissaires d’expositions de quelques grandes expositions, part des femmes",54%
-2018,France,"Commissaires d’expositions de quelques grandes expositions, part des femmes",50%
+2015,France,"Commissaires d’expositions de quelques grandes expositions, part de femmes",49%
+2016,France,"Commissaires d’expositions de quelques grandes expositions, part de femmes",58%
+2017,France,"Commissaires d’expositions de quelques grandes expositions, part de femmes",54%
+2018,France,"Commissaires d’expositions de quelques grandes expositions, part de femmes",50%
 2019,France,"Acquisitions fonds national d’art contemporain (fnac), part des œuvres de femmes",47%
 2019,France,"Acquisitions fonds régionaux d’art contemporain (frac), part des œuvres de femmes",38%
-2019,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part des femmes ",30%
-2019,France,"Artistes exposé·e·s dans les centres d’art contemporain, part des femmes ",38%
-2019,France,"Commissaires d’expositions de quelques grandes expositions, part des femmes",57%
+2019,France,"Artistes exposé·e·s dans les fonds régionaux d’art contemporain, part de femmes ",30%
+2019,France,"Artistes exposé·e·s dans les centres d’art contemporain, part de femmes ",38%
+2019,France,"Commissaires d’expositions de quelques grandes expositions, part de femmes",57%
+2018,France,"Photographes, part de femmes",35%
+2018,France,"Photographes âgé·es de plus de 40 ans, part de femmes",55%
+2018,France,"Photographes âgé·es de moins de 40 ans, part de femmes",19%
+2019,France,"Photographes exposé·es dans les festivals, part de femmes",32%
+2014,France,"Photographes représenté·es dans les collections du cnap, part de femmes",25%
+2016,France,"Photographes représenté·es dans les acquisitions des frac, part de femmes",40%
+2019,France,"Photographes lauréat·es de prix, part de femmes",41%
+2019,France,"Photographes exposé·es à Paris-Photo, part de femmes",25%
+2018,France,"Bénéficiaires des aides à l'écriture d'œuvres musicales accordées par le ministère de la Culture, part de femmes",13
+2018,France,"Bénéficiaires des aides à l'écriture dramatique accordées par le ministère de la Culture, part de femmes",57
+2018,France,"Bénéficiaires des aides déconcentrées pour la danse accordées par le ministère de la Culture, part de femmes",42
+2018,France,"Bénéficiaires des aides déconcentrées pour la musique accordées par le ministère de la Culture, part de femmes",22
+2018,France,"Bénéficiaires des aides déconcentrées pour le théâtre accordées par le ministère de la Culture, part de femmes",36
+2018,France,"Bénéficiaires des aides à la création artistique accordées par le ministère de la Culture, part de femmes",33
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Bande dessinée, part de femmes",24%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Histoire et shs, part de femmes",46%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Jeunesse, part de femmes",75%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Littératures étrangères, part de femmes",39%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Philosophie, part de femmes",50%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Poésie, part de femmes",42%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Roman, part de femmes",43%
+2018,France,"Bénéficiaires des aides accordées par le Centre national du livre  - Théâtre, part de femmes",50%

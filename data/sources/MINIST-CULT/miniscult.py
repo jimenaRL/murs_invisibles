@@ -11,7 +11,7 @@ config = {
         "fns": {
             "Observatoire - Observatoire_GROUP1_part.csv": "one_save",
             "Observatoire - Observatoire_GROUP1_ecarts.csv": "one_save",
-            # "Observatoire - Observatoire_group2_TH_.csv": "split3",
+            "Observatoire - Observatoire_group2_TH_.csv": "split3",
             "Observatoire - OBS_GROUP3_arts.csv": "split2",
             "Observatoire - OBS_GROUP4_TV.csv": "split3",
             "Observatoire - OBS_GROUP5_arts culture.csv": "split2",
