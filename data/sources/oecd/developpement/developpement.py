@@ -21,10 +21,10 @@ config = {
             'GIDDB2019_poste_de_direction.csv': ['no_process'],
         },
         'rename': {
-            'country': 'Pays',
-            'year': 'TIME',
-            'indicator': 'VAR',
-            'value': 'Value',
+            'country': ['Pays'],
+            'year': ['TIME'],
+            'indicator': ['VAR'],
+            'value': ['Value'],
         },
     },
     "mapper": {
