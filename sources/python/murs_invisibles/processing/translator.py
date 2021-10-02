@@ -1,9 +1,8 @@
-import os
 import json
 import pandas as pd
 
 
-class Translator(object):
+class Translator():
 
     def __init__(self, config):
         """
@@ -24,10 +23,9 @@ class Translator(object):
         with open(config['country_dict_path'], 'r', encoding='utf-8') as fp:
             self.country_dict = json.load(fp, encoding='utf-8')
 
-        self.ind_dict  = pd.read_csv(config['ind_dict_path'])
+        self.ind_dict = pd.read_csv(config['ind_dict_path'])
         # HOT FIX #
         self.ind_dict.drop_duplicates(inplace=True)
-
 
     def translate_country(self, df):
         """
@@ -48,7 +46,7 @@ class Translator(object):
             print("Missing entries in translation dictionary.")
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             for i in missing_trads:
-                print('"{}","{}",'.format(i, i))
+                print(f'"{i}","{i}",')
             print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             input("Press Enter to continue...")
         df = df.merge(self.ind_dict, on='indicator', how='inner')
