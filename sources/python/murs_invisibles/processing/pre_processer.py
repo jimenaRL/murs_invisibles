@@ -13,10 +13,11 @@ class PreProcesser(object):
         """
 
         self.fns = config['fns']
-        self.rename = {v: k for k, l in config['rename'].items() for v in l }
+        self.rename = {v: k for k, l in config['rename'].items() for v in l}
         self.values = ['value', 'femmes', 'hommes']
 
-    def remove_google_sheet_nan(self, df):
+    @classmethod
+    def remove_google_sheet_nan(cls, df):
         df = df[df.value != '#DIV/0!']
         df = df[df.value != '#VALUE!']
         return df
@@ -33,11 +34,13 @@ class PreProcesser(object):
                 try:
                     df[v] = df[v].apply(lambda s: float(s.replace('%', '')))
                 except Exception as e:
-                    print("WARNING: unnable to remove '%' from {} columns: {}" \
-                        .format(v, e))
+                    msg = f"WARNING: unnable to remove '%' from {v} columns"
+                    print(msg)
+                    print(e)
         return df
 
-    def no_process(self, df):
+    @classmethod
+    def no_process(cls, df):
         return df
 
     def virg2point(self, df):
@@ -49,9 +52,9 @@ class PreProcesser(object):
     def remove_dollar_and_k(self, df):
         for v in self.values:
             if v in df.columns:
-                df[v] = df[v].apply(lambda s: 
+                df[v] = df[v].apply(lambda s:
                     s.replace(' k$', '').replace(',', '.').replace(' ', ''))
-                df[v] = df[v].apply(lambda s: 1000.*float(s))
+                df[v] = df[v].apply(lambda s: 1000. * float(s))
         return df
 
     def remove_euro_and_perc(self, df):
@@ -61,26 +64,31 @@ class PreProcesser(object):
                     lambda s: str(s).replace('€', '').replace('%', ''))
         return df
 
-    def x100(self, df):
+    @classmethod
+    def x100(cls, df):
         df['value'] = 100 * df['value']
         return df
 
-    def fsurtotal(self, df):
-        df['value'] = df.femmes / (df.hommes+df.femmes)
+    @classmethod
+    def fsurtotal(cls, df):
+        df['value'] = df.femmes / (df.hommes + df.femmes)
         return df
 
-    def perc_fsurtotal(self, df):
-        df['value'] = 100. * df.femmes / (df.hommes+df.femmes)
+    @classmethod
+    def perc_fsurtotal(cls, df):
+        df['value'] = 100. * df.femmes / (df.hommes + df.femmes)
         return df
 
-    def diffFH(self, df):
+    @classmethod
+    def diffFH(cls, df):
         """
         Units must be later in pp
         """
-        df['value'] = df.femmes-df.hommes
+        df['value'] = df.femmes - df.hommes
         return df
 
-    def percRel1(self, df):
+    @classmethod
+    def percRel1(cls, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -88,7 +96,8 @@ class PreProcesser(object):
         df['value'] = (df.femmes - df.hommes) / df.hommes
         return df
 
-    def percRel100(self, df):
+    @classmethod
+    def percRel100(cls, df):
         """
         From Insee différence de salaires (F-H)/H (en %)
         https://drive.google.com/file/d/1iG7Zlq7eSL84n9bX-oROzYxK8GPhiMqA/view?usp=sharing
@@ -96,32 +105,23 @@ class PreProcesser(object):
         df['value'] = 100 * (df.femmes - df.hommes) / df.hommes
         return df
 
-
     def get_wm_onu_gender_wages_gap(self, df):
-
         df.Occupation = df.Occupation
-        df.indicator = df.indicator+ ' ' + df.Occupation
+        df.indicator = df.indicator + ' ' + df.Occupation
         df = df.drop('Occupation', axis=1)
-
         return self.get_wm_onu(df)
-
-
 
     def get_wm_onu_age(self, df):
-
-        df.indicator = df.indicator+ ' ' + df.Age
+        df.indicator = df.indicator + ' ' + df.Age
         df = df.drop('Age', axis=1)
-
         return self.get_wm_onu(df)
 
-
     def get_wm_onu(self, df):
-
         if 'Location' in df and 'All areas' in df.Location.unique():
             df = df[df.Location == 'All areas']
         df = df[df.Sex != 'Both sexes']
-
-        df = df.drop(['Location', 'Region', 'Occupation', 'LowerBound',
+        df = df.drop([
+            'Location', 'Region', 'Occupation', 'LowerBound',
             'UpperBound', 'Unit', 'NatureData', 'OriginData', 'Country Code',
             'Footnote1', 'Footnote2', 'Footnote3', 'Footnote4', 'Footnote5',
             'Footnote6', 'Coverage'],
@@ -160,7 +160,6 @@ class PreProcesser(object):
             {'value_men': 'hommes', 'value_women': 'femmes'}, axis=1)
 
         return df
-
 
     def get_wm_oecd(self, df):
         """
@@ -216,11 +215,10 @@ class PreProcesser(object):
         for v in self.values:
             if v in df.columns:
                 try:
-                    df[v] = df[v].apply(lambda s: float(s))
+                    df[v] = df[v].apply(float)
                 except:
                     pass
         return df
-
 
     def process(self, table, df):
         df = self.format_columns(df)
