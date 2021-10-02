@@ -81,7 +81,7 @@ France	2017°	Secteur_musique_et_chant=_arrangement_musical=_part_de_femmes	6%	0
 France	2017°	Secteur_Musique_et_chant=_Musicien·ne=_part_de_femmes	21%	0.5800000000000001
 France	2017°	Secteur_Musique_et_chant=_Chef·fe__de_Choeurs=_part_de_femmes	52%	0.040000000000000036
 France	2017°	Secteur_Musique_et_chant=_Chef·fe__de_Chant=_part_de_femmes	51%	0.020000000000000018
-France	2017°	Secteur_Musique_et_chant=_chanteur·euse=_part_de_femmes	54%	0.08000000000000007
+France	2017°	Secteur_Musique_et_chant=_chanteur·eusse=_part_de_femmes	54%	0.08000000000000007
 France	2017°	Secteur_musique_et_chant=_autres_emplois=_part_de_femmes	39%	0.21999999999999997
 France	2017°	Emplois_du_cirque_et_des_arts_visuels=_part_de_femmes	35%	0.30000000000000004
 France	2017°	Emplois_du_cirque_et_des_arts_visuels=_artiste_de_cirque=_part_de_femmes	38%	0.24
@@ -103,7 +103,7 @@ France	2017°	Spectacle_vivant=_technicien·ne_de_plateau=_part_de_femmes	11%	0.
 France	2017°	Spectacle_vivant=_manutension_plateau=_part_de_femmes	6%	0.88
 France	2017°	Spectacle_vivant=_emplois_de_l*accroche_et_de_la_structure=_part_de_femmes	6%	0.88
 France	2017°	Spectacle_vivant=_direction_de_structure=_part_de_femmes	7%	0.86
-France	2017°	Spectacle_vivant=_régisseur·euse__de_structure=_part_de_femmes	1%	0.98
+France	2017°	Spectacle_vivant=_régisseur·eusse__de_structure=_part_de_femmes	1%	0.98
 France	2017°	Spectacle_vivant=_technicien·ne_de_structure=_part_de_femmes	5%	0.9
 France	2017°	Spectacle_vivant=_Chef·fe_accrocheur-rigger=_part_de_femmes	0%	1.0
 France	2017°	Spectacle_vivant=_accrocheur·rigger=_part_de_femmes	5%	0.9
@@ -118,7 +118,7 @@ France	2017°	Spectacle_vivant=_technicien·ne_lumière=_part_de_femmes	12%	0.76
 France	2017°	Spectacle_vivant=_chef_électricien·ne=_part_de_femmes	15%	0.7
 France	2017°	Spectacle_vivant=_Costumier=_part_de_femmes	88%	0.76
 France	2017°	Spectacle_vivant=_emplois_du_costume=_Tailleur=_part_de_femmes	76%	0.52
-France	2017°	Spectacle_vivant=_régisseur·euse_son=_part_de_femmes	7%	0.86
+France	2017°	Spectacle_vivant=_régisseur·eusse_son=_part_de_femmes	7%	0.86
 France	2017°	Spectacle_vivant=_technicien·ne_son=_part_de_femmes	7%	0.86
 France	2017°	Spectacle_vivant=_technicien·ne_instruments_-_backliner=_part_de_femmes	8%	0.84
 France	2017°	Spectacle_vivant=_Autres_emplois_du_son=_part_de_femmes	4%	0.92
@@ -146,7 +146,7 @@ France	2017°	Spectacle_vivant=_conception_costume=_part_de_femmes	90%	0.8
 France	2017°	Spectacle_vivant=_décor=_chef·fe_serrurier·ère=_part_de_femmes	3%	0.94
 France	2017°	Spectacle_vivant=_décor=_serrurier=_part_de_femmes	12%	0.76
 France	2017°	Spectacle_vivant=_emplois_du_costume=_couturier·ère=_part_de_femmes	92%	0.8400000000000001
-France	2017°	Spectacle_vivant=_emplois_du_costume=_teinturier·euse-patineur·euse=_part_de_femmes	77%	0.54
+France	2017°	Spectacle_vivant=_emplois_du_costume=_teinturier·eusse-patineur=_part_de_femmes	77%	0.54
 France	2017°	Spectacle_vivant=_réalisateur·rice_de_piéces_de_costume=_part_de_femmes	90%	0.8
 France	2017°	Spectacle_vivant=_chef·fe_habilleur=_part_de_femmes	94%	0.8799999999999999
 France	2017°	Spectacle_vivant=_habilleur·eusse=_part_de_femmes	96%	0.9199999999999999
@@ -155,9 +155,9 @@ France	2017°	Spectacle_vivant=_emplois_du_costume=_linger_-_raccomodeur·eusse=
 France	2017°	Spectacle_vivant=_nanutentionnaire=_part_de_femmes	9%	0.8200000000000001
 France	2017°	Spectacle_vivant=_chauffeur·eusse_-_livreur·eusse=_part_de_femmes	9%	0.8200000000000001
 France	2017°	Spectacle_vivant=_décor=_sculpteur·rice_-_staffeur·rice=_part_de_femmes	39%	0.21999999999999997
-France	2017°	Spectacle_vivant=_chef·fe_maquilleur=_part_de_femmes	87%	0.74
+France	2017°	Spectacle_vivant=_chef·fe_maquilleur·eusse=_part_de_femmes	87%	0.74
 France	2017°	Spectacle_vivant=_maquilleur·eusse=_part_de_femmes	91%	0.8200000000000001
-France	2017°	Spectacle_vivant=_perruquier·ère_-_posticheur·euse=_part_de_femmes	89%	0.78
+France	2017°	Spectacle_vivant=_perruquier·ère_-_posticheur·eusse=_part_de_femmes	89%	0.78
 France	2017°	Spectacle_vivant=_emplois_des_services_généraux=_part_de_femmes	26%	0.48
 France	2017°	Spectacle_vivant=_gardien·ne_-_Agent·e_d*entretien=_part_de_femmes	60%	0.19999999999999996
 France	2017°	Spectacle_vivant=_informaticien=_part_de_femmes	13%	0.74
@@ -165,6 +165,6 @@ France	2017°	Spectacle_vivant=_emplois_de_la_coiffure=_du_maquillage_et_des_mas
 France	2017°	Spectacle_vivant=_responsable_de_sécurité=_part_de_femmes	13%	0.74
 France	2017°	Spectacle_vivant=_direction=_part_de_femmes	32%	0.36
 France	2017°	Spectacle_vivant=_administration=_part_de_femmes	71%	0.41999999999999993
-France	2017°	Spectacle_vivant=_Chef·fe_coiffeur=_part_de_femmes	82%	0.6399999999999999
+France	2017°	Spectacle_vivant=_Chef·fe_coiffeur·eusse=_part_de_femmes	82%	0.6399999999999999
 France	2017°	Spectacle_vivant=_Coiffeur·eusse=_part_de_femmes	67%	0.3400000000000001
 France	2018°	Compositeur·rices_musicaux·ales=_sociétaires_de_la_SACEM=_part_de_femmes	17%	0.6599999999999999
