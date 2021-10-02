@@ -8,6 +8,12 @@ filter_indicator_path = os.path.join(file_dir, 'indicator_filter.txt')
 config = {
     "base_path": os.path.dirname(os.path.realpath(__file__)),
     "origin_language": "en",
+    "merge": {
+        "Women-ministers-AND-Women-parliamentarians": [
+            'DP_LIVE_27092021102520552-Women-ministers-Percentage-2005-2019.csv',
+            'DP_LIVE_27092021102630661-Women-parliamentarians-Percentage-2002-2019.csv',
+        ],
+    },
     "io": {
         "header": 0,
         "encoding": 'utf-8',
