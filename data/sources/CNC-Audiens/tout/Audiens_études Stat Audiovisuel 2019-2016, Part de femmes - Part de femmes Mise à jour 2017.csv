@@ -77,11 +77,11 @@ annee,pays,nom,valeur
 2019,France,"Secteur Films d'animation, Gestion de production, Masse salariale, part de femmes",65%
 2017,France,"Secteur Musique et chant, emploi, part de femmes",26%
 2017,France,"Secteur Musique et chant, Direction musicale, part de femmes",29%
-2017,France,"Secteur Musique et chant, Chef.fe d'orchestre, part de femmes",11%
+2017,France,"Secteur Musique et chant, Chef·fe d'orchestre, part de femmes",11%
 2017,France,"Secteur Musique et chant, Arrangement musical, part de femmes",6%
-2017,France,"Secteur Musique et chant, Musicien-ne, part de femmes",21%
-2017,France,"Secteur Musique et chant, Chef.fe de Choeurs, part de femmes",52%
-2017,France,"Secteur Musique et chant, Chef.fe de Chant, part de femmes",51%
+2017,France,"Secteur Musique et chant, Musicien·ne, part de femmes",21%
+2017,France,"Secteur Musique et chant, Chef·fe  de Choeurs, part de femmes",52%
+2017,France,"Secteur Musique et chant, Chef·fe  de Chant, part de femmes",51%
 2017,France,"Secteur Musique et chant, Chanteur-euse, part de femmes",54%
 2017,France,"Secteur Musique et chant, autres emplois, part de femmes",39%
 2017,France,"Emplois du cirque et des arts visuels, part de femmes",35%
@@ -106,10 +106,10 @@ annee,pays,nom,valeur
 2017,France,"Spectacle vivant, Direction de structure, part de femmes",7%
 2017,France,"Spectacle vivant, Régisseur de structure, part de femmes",1%
 2017,France,"Spectacle vivant, Technicien de structure, part de femmes",5%
-2017,France,"Spectacle vivant, Chef accrocheur-rigger, part de femmes",0%
+2017,France,"Spectacle vivant, Chef·fe accrocheur-rigger, part de femmes",0%
 2017,France,"Spectacle vivant, Accrocheur-rigger, part de femmes",5%
 2017,France,"Spectacle vivant, Emplois des accessoires et des effets spéciaux, part de femmes",25%
-2017,France,"Spectacle vivant, Chef accessoiriste, part de femmes",7%
+2017,France,"Spectacle vivant, Chef·fe accessoiriste, part de femmes",7%
 2017,France,"Spectacle vivant, Accessoiriste, part de femmes",49%
 2017,France,"Spectacle vivant, Technicien des effets spéciaux, part de femmes",15%
 2017,France,"Spectacle vivant, Emplois de la lumière et de l'électricité, part de femmes",13%
@@ -166,6 +166,6 @@ annee,pays,nom,valeur
 2017,France,"Spectacle vivant, Responsable de sécurité, part de femmes",13%
 2017,France,"Spectacle vivant, Direction, part de femmes",32%
 2017,France,"Spectacle vivant, Administration, part de femmes",71%
-2017,France,"Spectacle vivant, Chef coiffeur, part de femmes",82%
+2017,France,"Spectacle vivant, Chef·fe coiffeur, part de femmes",82%
 2017,France,"Spectacle vivant, Coiffeur, part de femmes",67%
-2018,France,"Compositeur·rice·s musicaux·ales, sociétaires de la SACEM, part de femmes",17%
+2018,France,"Compositeur·rices musicaux·ales, sociétaires de la SACEM, part de femmes",17%
