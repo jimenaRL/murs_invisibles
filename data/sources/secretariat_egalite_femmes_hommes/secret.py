@@ -11,32 +11,32 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         "fns": {
-            "ecarts_salaires.csv": "one_save",
+            "secret - écart salaire hommes et femmes.csv": "one_save",
             "secret - part de femmes.csv": "split3"
         },
     },
     "preprocesser": {
         'fns': {
-            "ecarts_salaires.csv": ["remove_prop"],
+            "secret - écart salaire hommes et femmes.csv": ["remove_prop"],
             "secret - part de femmes.csv": ["remove_prop"]
         },
         'rename': {
             'country': ['pays'],
             'year': ['annee'],
             'indicator': ['nom'],
-            'value': ['part de femmes'],
+            'value': ['part de femmes', 'écart salaire hommes et femmes'],
         },
     },
     "mapper": {
         'fns': {
-            "ecarts_salaires.csv": "diffFH_100",
+            "secret - écart salaire hommes et femmes.csv": "diffFH_100",
             "secret - part de femmes.csv": "proportion100"
         }
     },
     "filter": {
         'filter_indicator_path': None,
         'year': {
-            "ecarts_salaires.csv": 2010,
+            "secret - écart salaire hommes et femmes.csv": 2010,
             "secret - part de femmes.csv": 2010,
             "hf.csv": 2010,
         }
@@ -45,13 +45,13 @@ config = {
     },
     "postprocesser": {
         'fns': {
-            "ecarts_salaires.csv": "diff_perc",
+            "secret - écart salaire hommes et femmes.csv": "diff_perc",
             "secret - part de femmes.csv": "perc"
         }
     },
     "sorter": {
         'fns': {
-            "ecarts_salaires.csv": "none",
+            "secret - écart salaire hommes et femmes.csv": "none",
             "secret - part de femmes.csv": "none"
         }
     },
