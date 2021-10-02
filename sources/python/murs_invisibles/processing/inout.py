@@ -81,16 +81,42 @@ class IO():
         print(f"{len(df)} entries")
         print(f"Saved at {out_path}\n")
 
-    # def none(self, *args):
-    #     return
-
-    def split(self, nb, df, path):
+    @classmethod
+    def sort(cls, df):
         df.reset_index(drop=True, inplace=True)
         df = df.assign(ind_len=df.indicator.apply(len))
-        df = df.sort_values(by='ind_len', axis=0).drop('ind_len', axis=1)
-        batch_size = int(len(df) / nb)
+        return df.sort_values(by='ind_len', axis=0).drop('ind_len', axis=1)
+
+    @classmethod
+    def get_cuts(cls, df, props):
+        cuts = [0]
+        length = len(df)
+        for p in props:
+            cuts.append(cuts[-1] + int(p * length / sum(props)))
+        return cuts
+
+    def split_prop(self, props, df, path):
+        df = self.sort(df)
+        cuts = self.get_cuts(df, props)
         out_path = self.get_out_path(path)
-        for i in range(nb):
+        for c in range(len(cuts) - 1):
+            this_out_path = out_path.split('.tsv', maxsplit=1)[0] + f"_{c}.tsv"
+            tmp = df.iloc[cuts[c]:cuts[c + 1]]
+            tmp.to_csv(
+                this_out_path,
+                index=False,
+                header=False,
+                encoding='utf-8',
+                sep=self.out_sep)
+            print(tmp.sample(n=min(self.n_show, len(tmp))))
+            print(f"{len(tmp)} entries")
+            print(f"Saved at {this_out_path}\n")
+
+    def split(self, nb_outs, df, path):
+        df = self.sort(df)
+        batch_size = int(len(df) / nb_outs)
+        out_path = self.get_out_path(path)
+        for i in range(nb_outs):
             this_out_path = out_path.split('.tsv', maxsplit=1)[0] + f"_{i}.tsv"
             tmp = df.iloc[batch_size * i:batch_size * (i + 1)]
             tmp.to_csv(
@@ -102,6 +128,11 @@ class IO():
             print(tmp.sample(n=min(self.n_show, len(tmp))))
             print(f"{len(tmp)} entries")
             print(f"Saved at {this_out_path}\n")
+
+    def split_prop_12(self, df, path):
+        # save first the whole dataframe
+        self.one_save(df, path)
+        self.split_prop([1, 2], df, path)
 
     def split2(self, df, path):
         # save first the whole dataframe
