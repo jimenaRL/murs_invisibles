@@ -1,8 +1,7 @@
-import pandas as pd
 import numpy as np
 
 
-class Mapper(object):
+class Mapper():
 
     def __init__(self, config):
         """
@@ -17,10 +16,7 @@ class Mapper(object):
 
     @classmethod
     def abstanh(cls, row):
-        """
-        """
         return np.tanh(0.01 * np.abs(row.value))
-
 
     @classmethod
     def proportion1(cls, row):
@@ -49,7 +45,6 @@ class Mapper(object):
     def percRel100_30(cls, row):
         return abs(row.value) / 30.
 
-
     @classmethod
     def diff_fm_minutes(cls, row):
         return abs(row.value) / 180.
@@ -58,7 +53,8 @@ class Mapper(object):
     def diffFH_1(cls, row):
         """
         row: pandas dataframe row
-             row.value contains p = (m-w)/100. where m (resp. women) is the ratio of
+             row.value contains p = (m-w)/100.
+             where m (resp. women) is the ratio of
              men (res. women) among all men (resp. women)
         | -1 <= p <= 1
         | Perfect egality iff abs(p) = 0
