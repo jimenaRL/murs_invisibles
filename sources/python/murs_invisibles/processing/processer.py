@@ -202,8 +202,10 @@ class Processer():
         # post merge
         if 'merge' in self.config:
             print("MERGED")
-            for nom, datas in self.config['merge'].items():
-                print(f">>>> {nom} <<<<")
-                df_merged = pd.concat([out[data] for data in datas])
-                merged_path = self.io.get_out_path_indicator(path, nom)
+            for dicc in self.config['merge']:
+                print(f">>>> {dicc['name']} <<<<")
+                df_merged = pd.concat([out[data] for data in dicc["datas"]])
+                df_merged = self.sorter.process(dicc["name"], df_merged)
+                merged_path = self.io.get_out_path_indicator(
+                    path, dicc['name'])
                 self.io.one_save(df_merged, merged_path)
