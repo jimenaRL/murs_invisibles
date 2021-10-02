@@ -1,6 +1,4 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
 
@@ -16,7 +14,8 @@ config = {
         "fns": {
             'GOV_2017_03042019165415175.csv': 'sep_save',
             'DP_LIVE_27092021102520552-Women-ministers-Percentage-2005-2019.csv': 'one_save',
-            'DP_LIVE_27092021102630661-Women-parliamentarians-Percentage-2002-2019.csv': 'one_save',        },
+            'DP_LIVE_27092021102630661-Women-parliamentarians-Percentage-2002-2019.csv': 'one_save',
+        },
     },
     "preprocesser": {
         'fns': {
@@ -43,7 +42,7 @@ config = {
         'year': {
             'GOV_2017_03042019165415175.csv': 2015,
             'DP_LIVE_27092021102520552-Women-ministers-Percentage-2005-2019.csv': 2015,
-            'DP_LIVE_27092021102630661-Women-parliamentarians-Percentage-2002-2019.csv': 2015,
+            'DP_LIVE_27092021102630661-Women-parliamentarians-Percentage-2002-2019.csv': 2016,
         }
     },
     "translator": {
