@@ -10,7 +10,7 @@ config = {
     "merge": [
         {
             'name': 'ENT4_GIDDB2019_poste_de_direction',
-            'datas': [
+            'tables': [
                 'ENT4.csv',
                 'GIDDB2019_poste_de_direction.csv',
             ],
@@ -55,6 +55,7 @@ config = {
             'ENT4.csv': 2015,
             'GENDER_ENT1_01042019230825609_remove_ENT4.csv': 2015,
             'GIDDB2019_poste_de_direction.csv': 2010,
+            'ENT4_GIDDB2019_poste_de_direction': 2017,
         }
     },
     "translator": {
