@@ -168,33 +168,35 @@ class Processer():
 
             # load
             df = self.io.load(path)
-            # print(df.head())
+            print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # filter
             df = self.filter.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # translate
             df = self.translator.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # compute map value
             df = self.mapper.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # postprocess
             df = self.postprocesser.process(table, df)
-            # print(df.head())
+            print(df.head())
 
             # sort
             df = self.sorter.process(table, df)
+            print(df.head())
 
             # save
             df = self.io.save(table, df, path)
+            print(df.head())
 
             # store df for postmerge
             out[table] = df
@@ -204,8 +206,21 @@ class Processer():
             print("MERGED")
             for dicc in self.config['merge']:
                 print(f">>>> {dicc['name']} <<<<")
-                df_merged = pd.concat([out[data] for data in dicc["datas"]])
-                df_merged = self.sorter.process(dicc["name"], df_merged)
+                df_merged = []
+                for table in dicc["tables"]:
+                    path = os.path.join(self.base_path, table)
+                    df = self.io.load(path)
+                    df = self.preprocesser.process(table, df)
+                    df = self.filter.process(dicc['name'], df)
+                    df = self.translator.process(table, df)
+                    df = self.mapper.process(table, df)
+                    df = self.postprocesser.process(table, df)
+                    df = self.sorter.process(dicc["name"], df)
+                    df_merged.append(df)
+                df_merged = pd.concat(df_merged)
                 merged_path = self.io.get_out_path_indicator(
                     path, dicc['name'])
+                df_merged = self.io.encode_rows(df_merged)
+                df_merged = df_merged[self.io.out_values]
+                df_merged = self.io.remove_nan(df_merged)
                 self.io.one_save(df_merged, merged_path)
