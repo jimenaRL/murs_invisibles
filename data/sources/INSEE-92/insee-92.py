@@ -11,8 +11,8 @@ config = {
         {
             'name': 'insee_92',
             'tables': [
-                "INSEE-IDF - conseils municipaux_2021.csv",
-                "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv",
+                "INSEE-92a - conseils municipaux_2021.csv",
+                "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv",
             ],
             'sorter': "date_country"
         },
@@ -21,14 +21,14 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            "INSEE-IDF - conseils municipaux_2021.csv": "one_save",
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": "one_save",
+            "INSEE-92a - conseils municipaux_2021.csv": "one_save",
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
-            "INSEE-IDF - conseils municipaux_2021.csv": ["virg2point"],
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": ["remove_prop"],
+            "INSEE-92a - conseils municipaux_2021.csv": ["virg2point"],
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": ["remove_prop"],
         },
         'rename': {
             'country': ['pays'],
@@ -40,29 +40,29 @@ config = {
     "filter": {
         'filter_indicator_path': filter_indicator_path,
         'year': {
-            "INSEE-IDF - conseils municipaux_2021.csv": 2010,
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": 2010,
+            "INSEE-92a - conseils municipaux_2021.csv": 2010,
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": 2010,
             "insee_92": 2010,
         }
     },
     "mapper": {
         'fns': {
-            "INSEE-IDF - conseils municipaux_2021.csv": "proportion100",
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": "proportion100",
+            "INSEE-92a - conseils municipaux_2021.csv": "proportion100",
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "proportion100",
         }
     },
     "translator": {
     },
     "postprocesser": {
         'fns': {
-            "INSEE-IDF - conseils municipaux_2021.csv": "perc",
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": "perc",
+            "INSEE-92a - conseils municipaux_2021.csv": "perc",
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "perc",
         }
     },
     "sorter": {
         'fns': {
-            "INSEE-IDF - conseils municipaux_2021.csv": "none",
-            "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": "none",
+            "INSEE-92a - conseils municipaux_2021.csv": "none",
+            "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "none",
             "insee_92": "none"
         }
     },
