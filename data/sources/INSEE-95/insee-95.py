@@ -1,6 +1,4 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
 file_dir = os.path.dirname(os.path.realpath(__file__))
