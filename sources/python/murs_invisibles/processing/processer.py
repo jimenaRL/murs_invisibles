@@ -168,35 +168,35 @@ class Processer():
 
             # load
             df = self.io.load(path)
-            print(df.head())
+            # print(df.head())
 
             # preprocess
             df = self.preprocesser.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # filter
             df = self.filter.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # translate
             df = self.translator.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # compute map value
             df = self.mapper.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # postprocess
             df = self.postprocesser.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # sort
             df = self.sorter.process(table, df)
-            print(df.head())
+            # print(df.head())
 
             # save
             df = self.io.save(table, df, path)
-            print(df.head())
+            # print(df.head())
 
             # store df for postmerge
             out[table] = df

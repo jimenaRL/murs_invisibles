@@ -49,6 +49,18 @@ class Mapper():
     def diff_fm_minutes(cls, row):
         return abs(row.value) / 180.
 
+    def diffHFPROP(self, row):
+        """
+        row: pandas dataframe row
+             row.value contains p = 100 * (m-w)/m.
+             where m is men wage and w is women wage.
+        | -1 <= p <= 1
+        | Perfect egality iff abs(p) = 0
+        | Maximum inegality iff abs(p) = 1
+        """
+        row.value = abs(row.value)
+        return self.proportion100(row)
+
     @classmethod
     def diffFH_1(cls, row):
         """

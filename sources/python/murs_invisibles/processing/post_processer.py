@@ -52,6 +52,14 @@ class PostProcesser():
         return df
 
     @classmethod
+    def minus_diff_perc(cls, df):
+        df['sign'] = df.apply(
+            lambda row: '-' if row.value >= 0 else '+', axis=1)
+        df['value'] = df.apply(
+            lambda row: row.sign + '%1.1f' % abs(row.value) + '%', axis=1)
+        return df
+
+    @classmethod
     def diff_perc_0v(cls, df):
         df['sign'] = df.apply(
             lambda row: '+' if row.value >= 0 else '-', axis=1)
