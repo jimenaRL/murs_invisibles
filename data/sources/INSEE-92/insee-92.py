@@ -9,8 +9,8 @@ config = {
     "origin_language": "fr",
     "merge": [
         {
-            'name': 'insee_idf',
-            'datas': [
+            'name': 'insee_92',
+            'tables': [
                 "INSEE-IDF - conseils municipaux_2021.csv",
                 "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv",
             ],
@@ -42,6 +42,7 @@ config = {
         'year': {
             "INSEE-IDF - conseils municipaux_2021.csv": 2010,
             "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": 2010,
+            "insee_92": 2010,
         }
     },
     "mapper": {
@@ -62,7 +63,7 @@ config = {
         'fns': {
             "INSEE-IDF - conseils municipaux_2021.csv": "none",
             "INSEE-IDF - Part Femmes Cube & CSP Hauts de seine.csv": "none",
-            "insee_idf": "none"
+            "insee_92": "none"
         }
     },
 }
