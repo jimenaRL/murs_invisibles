@@ -30,6 +30,7 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": "one_save",
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "one_save",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "one_save",
+            "GENDER_EMP_04102021171506869.csv": "sep_save"
         },
     },
     "preprocesser": {
@@ -51,6 +52,7 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": ["get_wm_oecd", "percRel100"],
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": ["get_wm_oecd", "percRel100"],
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": ["get_wm_oecd", "percRel100"],
+            "GENDER_EMP_04102021171506869.csv": ['no_process'],
         },
         'rename': {
             'country': ['Pays'],
@@ -78,6 +80,8 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": "diffFH_100",
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "diffFH_100",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "diffFH_100",
+            "GENDER_EMP_04102021171506869.csv": "diffHFPROP",
+
         }
     },
     "filter": {
@@ -100,6 +104,7 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": 2016,
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": 2016,
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": 2016,
+            "GENDER_EMP_04102021171506869.csv": 2016,
         }
     },
     "translator": {
@@ -123,6 +128,7 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": "diff_perc",
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "diff_perc",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "diff_perc",
+            "GENDER_EMP_04102021171506869.csv": "minus_diff_perc",
         }
     },
     "sorter": {
@@ -144,6 +150,8 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": "date_country",
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "date_country",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "date_country",
+            "GENDER_EMP_04102021171506869.csv": "date_country",
+
         }
     },
 }
