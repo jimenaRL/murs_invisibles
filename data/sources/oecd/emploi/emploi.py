@@ -53,10 +53,10 @@ config = {
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": ["get_wm_oecd", "percRel100"],
         },
         'rename': {
-            'country': 'Pays',
-            'year': 'TIME',
-            'indicator': 'Indicateur',
-            'value': 'Value'
+            'country': ['Pays'],
+            'year': ['TIME'],
+            'indicator': ['Indicateur'],
+            'value': ['Value']
         },
     },
     "mapper": {
