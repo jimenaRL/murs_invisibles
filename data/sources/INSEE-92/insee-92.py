@@ -24,6 +24,14 @@ config = {
             ],
             'sorter': "date_country"
         },
+        {
+            'name': 'insee_92b-ecarts-salaires',
+            'tables': [
+                "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv",
+                "INSEE-92b - ECARTS Salaires Hauts de seine.csv",
+            ],
+            'sorter': "date_country"
+        },
     ],
     "io": {
         "header": 0,
@@ -33,6 +41,8 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "one_save",
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": "one_save",
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": "one_save",
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": "one_save",
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -41,6 +51,8 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": ["remove_prop"],
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": [],
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": [],
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": [],
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": [],
         },
         'rename': {
             'country': ['pays'],
@@ -56,8 +68,11 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": 2010,
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": 2010,
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": 2010,
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": 2010,
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": 2010,
             "insee_92a": 2010,
-            "insee_92b-ecarts-taux": 2010
+            "insee_92b-ecarts-taux": 2010,
+            "insee_92b-ecarts-salaires": 2010
         }
     },
     "mapper": {
@@ -66,6 +81,8 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "proportion100",
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": "diffFH_10",
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": "diffFH_10",
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": "proportion100",
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": "proportion100",
         }
     },
     "translator": {
@@ -76,6 +93,8 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "perc",
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": "diff_pp",
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": "diff_pp",
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": "diff_perc",
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": "diff_perc",
         }
     },
     "sorter": {
@@ -84,8 +103,11 @@ config = {
             "INSEE-92a - Part Femmes Cube & CSP Hauts de seine.csv": "none",
             "INSEE-92b - Ecart taux diplomes Hauts de seine.csv": "none",
             "INSEE-92b - ECARTS Taux Hauts de seine.csv": "none",
+            "INSEE-92b - Ecarts Salaires 2019- Villes Haut de Seine.csv": "none",
+            "INSEE-92b - ECARTS Salaires Hauts de seine.csv": "none",
             "insee_92a": "none",
-            "insee_92b-ecarts-taux": "none"
+            "insee_92b-ecarts-taux": "none",
+            "insee_92b-ecarts-salaires": "none"
         }
     },
 }
