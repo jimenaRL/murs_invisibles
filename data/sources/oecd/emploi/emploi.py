@@ -30,7 +30,8 @@ config = {
             # "Part-des-femmes-au-conseil-d'administration-des-plus-grandes-sociétés-cotées-en-bourse.csv": "one_save",
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "one_save",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "one_save",
-            "GENDER_EMP_04102021171506869.csv": "sep_save"
+            "GENDER_EMP_04102021171506869.csv": "sep_save",
+            "GENDER_EMP_05102021161903833.csv": "sep_save",
         },
     },
     "preprocesser": {
@@ -53,6 +54,7 @@ config = {
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": ["get_wm_oecd", "percRel100"],
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": ["get_wm_oecd", "percRel100"],
             "GENDER_EMP_04102021171506869.csv": ['no_process'],
+            "GENDER_EMP_05102021161903833.csv":  ["get_wm_oecd", "diffFH"],
         },
         'rename': {
             'country': ['Pays'],
@@ -81,6 +83,7 @@ config = {
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "diffFH_100",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "diffFH_100",
             "GENDER_EMP_04102021171506869.csv": "diffHFPROP",
+            "GENDER_EMP_05102021161903833.csv": "diffFH_25",
 
         }
     },
@@ -105,6 +108,7 @@ config = {
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": 2016,
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": 2016,
             "GENDER_EMP_04102021171506869.csv": 2016,
+            "GENDER_EMP_05102021161903833.csv": 2018,
         }
     },
     "translator": {
@@ -129,6 +133,7 @@ config = {
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "diff_perc",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "diff_perc",
             "GENDER_EMP_04102021171506869.csv": "minus_diff_perc",
+            "GENDER_EMP_05102021161903833.csv": "diff_pp",
         }
     },
     "sorter": {
@@ -151,6 +156,7 @@ config = {
             "Taux-de-chômage-par-sexe-et-groupe-d'âge.csv": "date_country",
             # "Taux-d'emploi-équivalent-plein-temps-par-sexe.csv": "date_country",
             "GENDER_EMP_04102021171506869.csv": "date_country",
+            "GENDER_EMP_05102021161903833.csv": "date_country",
 
         }
     },
