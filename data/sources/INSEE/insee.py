@@ -11,20 +11,22 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            # "Conditions de vie_Société.csv": "split2",
-            # "Enseignement_Education.csv": "one_save",
-            # "Revenus_Salaires.csv": "split2",
-            # "Travail_Emploi.csv": "one_save",
-            # "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
-            # "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
-            # "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
-            # "retraite_et_revenus.csv": "one_save",
+            "Conditions de vie_Société.csv": "split2",
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": "one_save",
+            "Enseignement_Education.csv": "one_save",
+            "Revenus_Salaires.csv": "split2",
+            "Travail_Emploi.csv": "one_save",
+            "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
+            "retraite_et_revenus.csv": "one_save",
             "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv": "one_save",
         },
     },
     "preprocesser": {
         'fns': {
             "Conditions de vie_Société.csv": ["virg2point"],
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": ["virg2point"],
             "Enseignement_Education.csv": ["virg2point"],
             "Revenus_Salaires.csv": ["virg2point"],
             "Travail_Emploi.csv": ["virg2point"],
@@ -46,6 +48,7 @@ config = {
         'filter_indicator_path': filter_indicator_path,
         'year': {
             "Conditions de vie_Société.csv": 2010,
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": 2010,
             "Enseignement_Education.csv": 2010,
             "Revenus_Salaires.csv": 2010,
             "Travail_Emploi.csv": 2010,
@@ -59,6 +62,7 @@ config = {
     "mapper": {
         'fns': {
             "Conditions de vie_Société.csv": "diffFH_50",
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": "diffFH_50",
             "Enseignement_Education.csv": "diffFH_20",
             "Revenus_Salaires.csv": "diffFH_20",
             "Travail_Emploi.csv": "diffFH_20",
@@ -74,19 +78,21 @@ config = {
     "postprocesser": {
         'fns': {
             "Conditions de vie_Société.csv": "diff_pp",
-            "Enseignement_Education.csv": "diff_pp",
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": "diff_pp",
+            "Enseignement_Education.csv": "diff_pp", 
             "Revenus_Salaires.csv": "diff_perc",
             "Travail_Emploi.csv": "diff_perc",
             "Conditions de vie_2015 - temps_sociaux.csv": "diff_minutes",
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diff_perc_0v",
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diff_perc_0v",
             "retraite_et_revenus.csv": "diff_perc_0v",
-            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  "diff_perc",
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv": "diff_perc",
         }
     },
     "sorter": {
         'fns': {
             "Conditions de vie_Société.csv": "none",
+            "INSEE - Conditions de vie_18REG_Société_MAJ_2021.csv": "none",
             "Enseignement_Education.csv": "none",
             "Revenus_Salaires.csv": "none",
             "Travail_Emploi.csv": "none",
