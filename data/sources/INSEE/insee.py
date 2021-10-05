@@ -1,6 +1,4 @@
 import os
-import json
-import pandas as pd
 from murs_invisibles import Processer
 
 file_dir = os.path.dirname(os.path.realpath(__file__))
@@ -13,14 +11,15 @@ config = {
         "header": 0,
         "encoding": 'utf-8',
         'fns': {
-            "Conditions de vie_Société.csv": "split2",
-            "Enseignement_Education.csv": "one_save",
-            "Revenus_Salaires.csv": "split2",
-            "Travail_Emploi.csv": "one_save",
-            "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
-            "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
-            "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
-            "retraite_et_revenus.csv": "one_save",
+            # "Conditions de vie_Société.csv": "split2",
+            # "Enseignement_Education.csv": "one_save",
+            # "Revenus_Salaires.csv": "split2",
+            # "Travail_Emploi.csv": "one_save",
+            # "Conditions de vie_2015 - temps_sociaux.csv": "one_save",
+            # "marc-salair-net-mens-sexe-csp-2 - hor.csv": "one_save",
+            # "marc-salair-net-mens-sexe-csp-2 - sal.csv": "one_save",
+            # "retraite_et_revenus.csv": "one_save",
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv": "one_save",
         },
     },
     "preprocesser": {
@@ -33,12 +32,14 @@ config = {
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": ["virg2point", "remove_euro_and_perc", "percRel100"],
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": ["virg2point"],
             "retraite_et_revenus.csv": ["no_process"],
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  ["virg2point"],
+
         },
         'rename': {
-            'country': 'pays',
-            'year': 'annee',
-            'indicator': 'nom',
-            'value': 'valeur',
+            'country': ['pays'],
+            'year': ['annee'],
+            'indicator': ['nom'],
+            'value': ['valeur'],
         },
     },
     "filter": {
@@ -52,6 +53,7 @@ config = {
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": 1980,
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": 1980,
             "retraite_et_revenus.csv": 2010,
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  2010,
         }
     },
     "mapper": {
@@ -64,6 +66,7 @@ config = {
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diffFH_20",
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diffFH_25",
             "retraite_et_revenus.csv": "diffFH_50",
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  "diffFH_20",
         }
     },
     "translator": {
@@ -78,6 +81,7 @@ config = {
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "diff_perc_0v",
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": "diff_perc_0v",
             "retraite_et_revenus.csv": "diff_perc_0v",
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  "diff_perc",
         }
     },
     "sorter": {
@@ -90,6 +94,7 @@ config = {
             "marc-salair-net-mens-sexe-csp-2 - hor.csv": "date_country",
             "marc-salair-net-mens-sexe-csp-2 - sal.csv": "date_country",
             "retraite_et_revenus.csv": "date_country",
+            "marc-salair-net-mens-sexe-csp-2 - FUSION INSEE Salaires Retraites et Inc 18 salaires.csv":  "none",
         }
     },
 }
