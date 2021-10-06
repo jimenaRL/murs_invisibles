@@ -15,8 +15,8 @@ class Mapper():
         self.fns = config['fns']
 
     @classmethod
-    def abstanh(cls, row):
-        return np.tanh(0.01 * np.abs(row.value))
+    def abstanh(cls, row, factor=0.1):
+        return np.tanh(factor * np.abs(row.value))
 
     @classmethod
     def proportion1(cls, row):
@@ -58,8 +58,7 @@ class Mapper():
         | Perfect egality iff abs(p) = 0
         | Maximum inegality iff abs(p) = 1
         """
-        row.value = abs(row.value)
-        return self.proportion100(row)
+        return abs(self.abstanh(row, factor=0.05))
 
     @classmethod
     def diffFH_1(cls, row):
