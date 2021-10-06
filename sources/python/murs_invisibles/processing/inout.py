@@ -77,6 +77,7 @@ class IO():
                   header=False,
                   encoding='utf-8',
                   sep=self.out_sep)
+        print(df)
         print(df.sample(n=min(self.n_show, len(df))))
         print(f"{len(df)} entries")
         print(f"Saved at {out_path}\n")

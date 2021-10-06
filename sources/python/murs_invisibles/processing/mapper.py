@@ -110,8 +110,8 @@ class Mapper():
         return abs(row.value) / 4.
 
     @classmethod
-    def diffFH_50(cls, row):
-        return abs(row.value) / 50.
+    def diffFH_50(self, row):
+        return abs(self.abstanh(row, factor=0.05))
 
     @classmethod
     def women2men_ratio(cls, row):
